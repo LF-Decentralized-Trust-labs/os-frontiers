@@ -1,3 +1,5 @@
+<img width="1351" height="767" alt="cover andamio github" src="https://github.com/user-attachments/assets/3fd8b1db-4bc9-406b-b5f6-815871d082d1" />
+
 # Andamio: Infrastructure for Trust, Scaffolding for Action
 
 [Andamio](https://www.andamio.io/) is an open-source protocol and platform built on a simple, powerful belief: **A credential should mean that someone did the work and a qualified reviewer accepted it.**
