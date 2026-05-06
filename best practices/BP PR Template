@@ -1,0 +1,206 @@
+# Open Source Frontiers Lab — Best Practices Submission Template
+
+## Best Practice Title
+<!-- Short descriptive title -->
+
+---
+
+# Overview
+
+## Summary
+<!-- High level explanation of the best practice -->
+
+## Objective
+<!-- What operational, governance, sustainability, or technical issue does this best practice improve? -->
+
+## Why This Matters
+<!-- Why should ecosystems adopt this practice? -->
+
+---
+
+# Practice Classification
+
+## Category
+- [ ] Open Source Sustainability
+- [ ] Governance
+- [ ] Treasury Coordination
+- [ ] Contributor Management
+- [ ] Security & Incident Response
+- [ ] Documentation
+- [ ] Lifecycle Management
+- [ ] Public Goods Funding
+- [ ] Ecosystem Coordination
+- [ ] Developer Experience
+- [ ] Compliance & Policy
+- [ ] Analytics & Metrics
+- [ ] Community Operations
+- [ ] Maintainer Support
+- [ ] Interoperability
+- [ ] Other: ___________
+
+---
+
+# Ecosystem Context
+
+## Ecosystem / Organization
+<!-- Ecosystem(s) or organization(s) where this practice is used -->
+
+- 
+- 
+- 
+
+## Stakeholders
+<!-- Who benefits from this practice? -->
+
+- 
+- 
+- 
+
+## Problem Being Solved
+<!-- What operational or systemic issue existed before this practice? -->
+
+---
+
+# Best Practice Details
+
+## Description
+<!-- Detailed explanation of the practice -->
+
+## Implementation Approach
+<!-- How is the practice implemented operationally? -->
+
+## Governance Considerations
+<!-- Governance, accountability, escalation, ownership, transparency -->
+
+## Technical Considerations
+<!-- Infrastructure, tooling, dependencies, integrations -->
+
+## Operational Requirements
+<!-- Staffing, coordination, funding, infrastructure -->
+
+---
+
+# Process Flow
+
+## Workflow Overview
+<!-- Step-by-step operational flow -->
+
+1. 
+2. 
+3. 
+4. 
+5. 
+
+## Decision Making Structure
+<!-- Who makes decisions and how? -->
+
+## Accountability Mechanisms
+<!-- Reporting, audits, transparency, reviews -->
+
+---
+
+# Outcomes & Impact
+
+## Expected Benefits
+<!-- Sustainability, efficiency, coordination, transparency, resilience -->
+
+## Risks & Tradeoffs
+<!-- Operational, governance, economic, or technical risks -->
+
+## Failure Conditions
+<!-- What can cause this practice to fail? -->
+
+---
+
+# Metrics & Evaluation
+
+## Success Metrics
+
+| Metric | Description |
+|---|---|
+|  |  |
+|  |  |
+|  |  |
+
+## Observability / Reporting
+<!-- Dashboards, KPIs, public reporting, analytics -->
+
+---
+
+# Maturity & Adoption
+
+## Current Maturity
+- [ ] Experimental
+- [ ] Emerging
+- [ ] Established
+- [ ] Widely Adopted
+- [ ] Industry Standard
+
+## Known Implementations
+<!-- Ecosystems or organizations using this practice -->
+
+- 
+- 
+- 
+
+## Lessons Learned
+<!-- Key insights from implementation -->
+
+---
+
+# Alignment With Open Source Frontiers
+
+## Relevant Focus Areas
+- [ ] Open Source Sustainability
+- [ ] Decentralized Governance
+- [ ] Contributor Incentives
+- [ ] Treasury Coordination
+- [ ] Security & Resilience
+- [ ] Ecosystem Analytics
+- [ ] Lifecycle Stewardship
+- [ ] Public Goods Funding
+- [ ] Cross Ecosystem Collaboration
+- [ ] Infrastructure Neutrality
+- [ ] Other: ___________
+
+## Why This Best Practice Fits the Lab
+<!-- Explain why this best practice is relevant to Open Source Frontiers -->
+
+---
+
+# Supporting Materials
+
+## References
+<!-- Papers, repositories, governance discussions, articles -->
+
+- 
+- 
+- 
+
+## Related Tools / Frameworks
+<!-- Associated tooling or methodologies -->
+
+- 
+- 
+- 
+
+## Additional Notes
+<!-- Anything else reviewers should know -->
+
+---
+
+# Contributor Information
+
+## Primary Contact
+<!-- Name / organization / GitHub / email -->
+
+## Contributors
+
+- 
+- 
+- 
+
+## Submission Date
+<!-- YYYY-MM-DD -->
+
+---
