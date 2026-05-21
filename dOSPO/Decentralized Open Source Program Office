@@ -1,0 +1,316 @@
+# dOSPO — Decentralized Open Source Program Office
+
+> **A governance primitive for sustaining open source infrastructure in Web3 ecosystems.**
+> Coordination without ownership. Execution without sovereignty. Authority that decays unless earned.
+
+---
+
+## Table of Contents
+
+- [What This Is](#what-this-is)
+- [When To Use This](#when-to-use-this)
+- [Repository Structure](#repository-structure)
+- [Architecture Overview](#architecture-overview)
+- [The Three Policy Domains](#the-three-policy-domains)
+- [Core Functions](#core-functions)
+- [Governance Constraints](#governance-constraints)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## What This Is
+
+A **dOSPO** (Decentralized Open Source Program Office) is a community-mandated coordination layer that:
+
+- **Separates policy authority from operational execution** — community governance sets direction; a bounded operator executes it
+- **Provides coordination without consolidation** — no project ownership, no roadmap control, no IP accumulation
+- **Decays unless renewed** — mandates expire on a 2–4 year charter cycle; continuation requires active community re-authorization
+- **Fills the gap** that DAOs, foundations, and corporate OSPOs each leave open: bounded, accountable execution in distributed authority environments
+
+This repository provides a **reference architecture** — a set of templates, governance documents, and operational specs — that any sufficiently mature Web3 ecosystem can fork and adapt.
+
+> ⚠️ A dOSPO is **not** appropriate for small or experimental ecosystems. It is designed for ecosystems with high dependency depth, distributed authority across multiple independent entities, and failures that impose ecosystem-wide cost. See [When Not To Use This](#when-to-use-this).
+
+---
+
+## When To Use This
+
+**✅ Use a dOSPO when your ecosystem has:**
+
+- Multiple independent entities (protocol orgs, foundations, DAOs, commercial ventures) that all depend on the same shared open source infrastructure
+- Critical infrastructure maintained by individuals with no formal obligation, compensation, or succession plan
+- Security incidents that require rapid cross-team coordination with no clear authority to organize response
+- Treasury funds but no systematic way to fund maintenance vs. new features
+- Duplicated effort across projects with no portfolio-level visibility
+
+**❌ Do not use a dOSPO when:**
+
+- The ecosystem is small and experimental (< a handful of active projects)
+- Dependency failures are localized and recoverable
+- Authority is already legitimately centralized
+- Coordination cost exceeds failure cost
+- You are looking for a governance body that sets direction — that is the community's job, not the dOSPO's
+
+---
+
+## Repository Structure
+
+```
+dospo-architecture/
+├── README.md                        ← You are here
+├── CHARTER.md                       ← Mandate template, renewal conditions, dissolution triggers
+├── NON-POWERS.md                    ← Explicit list of what the operator cannot do
+│
+├── governance/
+│   ├── open-source-domain.md        ← Stewardship policy: lifecycle, funding eligibility, standards
+│   ├── technical-domain.md          ← Cross-project standards, dependency management, architectural alignment
+│   ├── security-domain.md           ← Disclosure policy, severity taxonomy, incident authority
+│   └── policy-execution-separation.md ← How policy bodies and the operator relate
+│
+├── security/
+│   ├── incident-response-playbook.md   ← Step-by-step coordinated response workflow
+│   ├── disclosure-policy.md            ← Responsible disclosure paths and embargo procedures
+│   ├── severity-taxonomy.md            ← Shared severity classification across projects
+│   └── post-incident-template.md       ← Required post-mortem format
+│
+├── funding/
+│   ├── funding-principles.md           ← Lifecycle alignment, time-bounded support, portfolio discipline
+│   ├── delivery-oriented.md            ← Grants and scoped contracts (early/growth stage)
+│   ├── continuity-oriented.md          ← Retainers, service commitments (mature/critical infra)
+│   ├── shared-infrastructure.md        ← Public goods funding (CI, SDKs, security tooling)
+│   └── renewal-criteria.md             ← Evidence-based renewal standards
+│
+├── community/
+│   ├── onboarding.md                   ← Contributor onboarding paths
+│   ├── builder-profiles.md             ← Verified achievement and reputation framework
+│   ├── contribution-framework.md       ← Cross-project contribution standards
+│   └── code-governance.md              ← Repository standards, licensing policy, dApp governance
+│
+├── docs/
+│   ├── governance-triangle.md          ← DAO vs Foundation vs Corp OSPO vs dOSPO comparison
+│   ├── anti-patterns.md                ← Foundation-in-Disguise, Hero Operator, Security Exceptionalism, etc.
+│   ├── cost-model.md                   ← Coordination cost reference ranges
+│   └── ecosystem-evidence.md           ← Ethereum Protocol Guild, Polkadot OpenGov, Cardano Intersect
+│
+└── templates/
+    ├── mandate-renewal-template.md     ← Community re-authorization proposal format
+    ├── program-sunset-template.md      ← Default program expiry and evidence-based continuation
+    ├── transparency-report-template.md ← Quarterly reporting format
+    └── incident-timeline-template.md   ← Incident documentation format
+```
+
+---
+
+## Architecture Overview
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│         Community Governance                                        │
+│   (token holders · delegates · constitutional processes)            │
+│                          │ mandate                                  │
+└──────────────────────────┼──────────────────────────────────────────┘
+                           │
+         ┌─────────────────┼─────────────────┐
+         ▼                 ▼                 ▼
+┌──────────────┐  ┌──────────────┐  ┌──────────────────┐
+│  Open Source │  │  Technical   │  │    Security      │
+│    Domain    │  │   Domain     │  │     Domain       │
+│              │  │              │  │                  │
+│  Lifecycle   │  │  Standards   │  │  Disclosure      │
+│  criteria    │  │  Dependency  │  │  policy          │
+│  Funding     │  │  mgmt        │  │  Severity        │
+│  eligibility │  │  Arch.       │  │  taxonomy        │
+│  Contribution│  │  alignment   │  │  Incident auth   │
+│  standards   │  │              │  │                  │
+└──────┬───────┘  └──────┬───────┘  └────────┬─────────┘
+       │                 │                   │
+       └─────────────────┼───────────────────┘
+                         │ delegation with constraints
+                         ▼
+         ┌───────────────────────────────────┐
+         │       dOSPO Operator              │
+         │    (Coordination Function)        │
+         │                                   │
+         │  · Intake & triage                │
+         │  · Funding coordination           │
+         │  · Cross-entity alignment         │
+         │  · Incident response              │
+         │  · Transparency reporting         │
+         │                                   │
+         │  Bounded authority                │
+         │  Time-limited mandate             │
+         │  Replaceable by design            │
+         └──────────────────┬────────────────┘
+                            │
+                            ▼
+         ┌───────────────────────────────────┐
+         │  Ecosystem Projects, Maintainers, │
+         │       and Infrastructure          │
+         │                                   │
+         │  Retain autonomy · ownership      │
+         │  Right to fork · right to exit    │
+         └───────────────────────────────────┘
+
+  ┌─────────────────────┐    ┌──────────────────────────────────┐
+  │   Renewal Cycle     │    │      Enforcement Mechanisms      │
+  │                     │    │                                  │
+  │ · 2–4 yr charter    │    │ · Automatic scope decay          │
+  │ · Evidence-based    │    │ · Budget cliffs (hard expiry)    │
+  │   renewal           │    │ · Mandatory re-chartering        │
+  │ · Community         │    │ · Program sunset clauses         │
+  │   re-authorization  │    │ · Published transparency         │
+  │ · Dissolution if    │    │   artifacts                      │
+  │   unjustified       │    │                                  │
+  └─────────────────────┘    └──────────────────────────────────┘
+```
+
+---
+
+## The Three Policy Domains
+
+Policy authority is distributed across three community-mandated bodies. The operator executes within the frameworks these bodies define — it does not define them.
+
+### 🟦 Open Source Domain
+> *"What does it mean for a project to be well-maintained in this ecosystem?"*
+
+Governed by a **Stewardship Committee** or **Open Source Council**. Sets:
+- Project lifecycle criteria (exploration → growth → maturity → sunset)
+- Funding eligibility standards
+- Transparency and reporting requirements
+- Contribution guidelines and repository standards
+- Licensing policy for the broader open source portfolio (including dApps)
+
+→ [`governance/open-source-domain.md`](governance/open-source-domain.md)
+
+---
+
+### 🟩 Technical Domain
+> *"How do projects that share infrastructure make decisions together?"*
+
+Governed by a **Technical Steering Group** or **Technical Council**. Sets:
+- Interoperability requirements across projects
+- Cross-project dependency conflict resolution
+- Technical gating for lifecycle transitions
+- Quality and integration standards for funded work
+- Architectural alignment for shared infrastructure changes
+
+→ [`governance/technical-domain.md`](governance/technical-domain.md)
+
+---
+
+### 🟥 Security Domain
+> *"Who has the authority to act fast during an incident, and for how long?"*
+
+Governed by a **Security Council** or **Security Advisory Board**. Sets:
+- Responsible disclosure policy and embargo timelines
+- Severity taxonomy (shared across all ecosystem projects)
+- Pre-authorized emergency execution authority for the operator
+- Conditions under which emergency authority expands — and contracts
+- Post-incident review requirements
+
+→ [`governance/security-domain.md`](governance/security-domain.md)
+
+---
+
+## Core Functions
+
+The dOSPO operator performs coordination that the ecosystem cannot reliably perform through ad hoc alignment:
+
+| Function | Description |
+|---|---|
+| **Intake & triage** | Single intake surface for ecosystem-wide proposals and issues |
+| **Portfolio visibility** | Dependency map, project health dashboards, builder profiles |
+| **Funding coordination** | Administer lifecycle-aligned funding programs approved by governance |
+| **Cross-project alignment** | Facilitate coordination where dependencies overlap |
+| **Security coordination** | Organize incident response per Security Domain policy |
+| **Transparency reporting** | Quarterly outcomes reports tied to mandate criteria |
+| **Developer community stewardship** | Onboarding paths, contribution frameworks, cross-project visibility |
+
+**The operator does not:**
+- Set ecosystem roadmaps
+- Allocate funds outside governance-approved programs
+- Own repositories or IP
+- Replace maintainers outside a published governance process
+- Operate programs without sunset clauses
+
+→ Full non-powers list: [`NON-POWERS.md`](NON-POWERS.md)
+
+---
+
+## Governance Constraints
+
+The dOSPO is designed to **fail safely by expiring** rather than entrenching. Key mechanisms:
+
+### Mandate Renewal
+- Initial charter: **2–4 years**
+- Continuation requires community re-authorization with scope redefinition
+- Re-chartering ≠ dissolution; it means affirmative continuation with opportunity to adjust authority
+
+### Automatic Scope Decay
+- Mandates narrow over time unless explicitly renewed
+- Budget cliffs: funding allocated in discrete periods with hard expiry — no rollover
+
+### Program Sunset Clauses
+- Every program operates under a default sunset
+- Continuation requires evidence-based renewal, not just advocacy
+
+### Transparency Requirements
+Published artifacts required each reporting cycle:
+- Decision rationales
+- Funding allocations and eligibility criteria
+- Outcome reporting tied to mandate criteria
+- Incident timelines with post-mortems
+
+### The Defining Test
+> *If the ecosystem cannot function without the dOSPO, it has violated its design constraints and should be restructured or dismantled.*
+
+---
+
+## Getting Started
+
+### For ecosystems considering a dOSPO
+
+1. **Assess readiness** — Review the [When To Use This](#when-to-use-this) criteria. Does your ecosystem have multi-entity distributed authority and ecosystem-wide failure risk?
+2. **Identify existing coordination gaps** — Which of the four structural failures (dependency risk, incident latency, funding mismatch, governance gap) are you experiencing?
+3. **Start narrow** — You do not need all three domains operational at once. Security coordination, lifecycle gating, or portfolio visibility each deliver value independently.
+4. **Draft a charter** — Use [`CHARTER.md`](CHARTER.md) as your starting template. Define scope, mandate period, renewal criteria, and dissolution triggers before standing anything up.
+5. **Establish policy bodies first** — The operator function should not exist before the policy bodies that constrain it.
+
+### For ecosystems adapting this architecture
+
+Fork this repository. Every document here is a template — replace placeholder language with your ecosystem's specifics. Governance structures, committee names, voting mechanisms, and funding instruments will differ. The structural constraints (policy-execution separation, time-bounded mandate, replaceability, transparency) should not.
+
+---
+
+## Contributing
+
+This architecture is itself an open source artifact. Contributions, critiques, and ecosystem-specific adaptations are welcome.
+
+- **Issues**: Use GitHub Issues to raise gaps, ambiguities, or real-world friction points
+- **PRs**: Improvements to templates, governance docs, and operational playbooks
+- **Discussion**: Use GitHub Discussions for ecosystem-specific questions or implementation experiences
+- **Anti-patterns**: If you encounter a failure mode not documented in [`docs/anti-patterns.md`](docs/anti-patterns.md), please document it
+
+Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull request.
+
+---
+
+## Further Reading
+
+- [`docs/governance-triangle.md`](docs/governance-triangle.md) — Detailed comparison: DAO-only, Foundation, Corporate OSPO, dOSPO
+- [`docs/ecosystem-evidence.md`](docs/ecosystem-evidence.md) — Ethereum Protocol Guild, Polkadot OpenGov, Cardano Intersect
+- [`docs/anti-patterns.md`](docs/anti-patterns.md) — Foundation-in-Disguise, Process-as-Authority, Hero Operator, Security Exceptionalism
+- [`docs/cost-model.md`](docs/cost-model.md) — Coordination cost reference ranges by model
+- [dOSPO Whitepaper](https://opensourcecowboy.com) — Original theoretical basis by Christian Taylor & Terence McCutcheon, Open Source Cowboy Consulting
+
+---
+
+## License
+
+This architecture is released under [Apache 2.0](LICENSE). Fork it, adapt it, and make it yours — that is the point.
+
+---
+
+*A dOSPO should not be allowed to persist by inertia. It should exist only where dependency, risk, and scale demand it, and only so long as it continues to justify its mandate. When it no longer does, it should be dismantled without ceremony.*
