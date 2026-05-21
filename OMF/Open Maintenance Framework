@@ -1,0 +1,372 @@
+# OMF — Open Maintenance Framework
+
+> **A portable operational architecture for sustaining open source infrastructure in Web3 ecosystems.**
+> Governance-neutral. Blockchain-agnostic. Modular by design.
+> Built to be adopted, not just read.
+
+---
+
+## Table of Contents
+
+- [What This Is](#what-this-is)
+- [How OMF and dOSPO Relate](#how-omf-and-dospo-relate)
+- [When To Use This](#when-to-use-this)
+- [Repository Structure](#repository-structure)
+- [Architecture Overview](#architecture-overview)
+- [The Five-Layer Stack](#the-five-layer-stack)
+- [Program Portfolio](#program-portfolio)
+- [Funding Instruments](#funding-instruments)
+- [Minimum Viable OMF](#minimum-viable-omf)
+- [The Four Legitimacy Safeguards](#the-four-legitimacy-safeguards)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## What This Is
+
+The **Open Maintenance Framework (OMF)** is a structured operational architecture that translates governance decisions and treasury capital into sustained, accountable maintenance programs for open source infrastructure.
+
+OMF addresses the gap that every existing OSS funding initiative leaves open: **funding mechanisms exist, but operational architectures do not.** Treasuries can authorize payments. Governance bodies can vote. What is missing is the layer that connects those decisions to the ongoing work of infrastructure maintenance — the programs, processes, accountability structures, and portfolio discipline required to sustain critical open source over time.
+
+OMF is:
+- **Portable** — governance-agnostic, blockchain-agnostic, organizationally neutral
+- **Modular** — each program can be implemented independently; no prerequisites
+- **Stewardship-oriented** — built for infrastructure maintenance, not feature development
+- **Portfolio-driven** — allocates funding by dependency risk, not by proposal quality
+
+OMF is not:
+- A governance system or DAO
+- A foundation or legal entity
+- A funding source
+- A replacement for on-chain governance
+- Dependent on a dOSPO or any other framework
+
+> The sustainability crisis in open source is not primarily a funding problem. It is an operational layer problem. Funding exists, or can be created. What is missing is the architecture that translates resources into outcomes.
+
+---
+
+## How OMF and dOSPO Relate
+
+OMF and the [Decentralized Open Source Program Office (dOSPO)](https://github.com/opensourcecowboy/dospo-architecture) together form a complete institutional model for governing and sustaining open source infrastructure in decentralized ecosystems.
+
+```
+┌─────────────────────────────────────────────┐
+│  dOSPO  — Governance Primitive              │
+│  Defines HOW ecosystems coordinate and      │
+│  govern: policy domains, governance bodies, │
+│  execution structure, mandate constraints   │
+└─────────────────────┬───────────────────────┘
+                      │
+                      ▼
+┌─────────────────────────────────────────────┐
+│  OMF  — Operational Framework               │
+│  Defines WHAT coordination bodies execute:  │
+│  programs, funding instruments, portfolio   │
+│  stewardship, maintainer sustainment        │
+└─────────────────────────────────────────────┘
+```
+
+**OMF can operate without a dOSPO.** When no formal coordination layer exists, OMF deploys directly through whatever accountable governance structure the ecosystem already possesses — a foundation committee, a multisig, an elected committee, or an independent operator. The minimum requirement is identical in both cases: governance authority to authorize programs, a funded budget, transparent reporting, and a portfolio review cadence.
+
+---
+
+## When To Use This
+
+**✅ OMF is appropriate when:**
+
+- Your ecosystem has treasury capital but critical infrastructure remains under-maintained
+- Funding decisions are made proposal-by-proposal with no portfolio-level visibility
+- Grants and bounties are your primary maintenance funding mechanisms — and maintainers are burning out
+- You have no structured contributor pipeline to grow the next generation of maintainers
+- Security incidents reveal that no standing coordination mechanism exists
+- You want to move from ad hoc coordination to accountable, evidence-based programs
+
+**❌ OMF is not appropriate when:**
+
+- The ecosystem is too early-stage for formal operational programs
+- Dependency failures are localized and recoverable
+- Coordination overhead would exceed failure cost
+- You haven't conducted a dependency audit — start there first
+
+**The minimum readiness test:** Does your ecosystem have at least one piece of critical infrastructure maintained by a single individual with no formal support, succession plan, or compensation? If yes, OMF applies.
+
+---
+
+## Repository Structure
+
+```
+omf-architecture/
+├── README.md                              ← You are here
+├── MINIMUM-VIABLE-OMF.md                  ← The five requirements for a compliant implementation
+├── LEGITIMACY-SAFEGUARDS.md               ← Four structural safeguards for institutional legitimacy
+│
+├── programs/
+│   ├── overview.md                        ← Full program portfolio and selection guidance
+│   ├── maintainer-retainer.md             ← Ongoing support tied to maintenance responsibility
+│   ├── code-bounties.md                   ← Delivery-oriented funded work
+│   ├── contributor-pathways.md            ← Structured mentorship and contributor pipeline
+│   ├── operational-support.md             ← Admin/coordination services for maintainers
+│   ├── incubation.md                      ← Structured support for early-stage critical projects
+│   └── resilience.md                      ← Succession planning, bus-factor reduction
+│
+├── funding/
+│   ├── principles.md                      ← Four funding principles (all instruments)
+│   ├── delivery-oriented.md               ← Instrument 1: scoped, verifiable work
+│   ├── continuity-oriented.md             ← Instrument 2: availability and operational responsibility
+│   ├── shared-infrastructure.md           ← Instrument 3: public goods tooling
+│   ├── instrument-program-mapping.md      ← Which instrument funds which program
+│   ├── source-categories.md               ← Treasury, Endowment, Corporate Pool
+│   └── cost-of-coordination.md            ← Reference cost ranges by implementation tier
+│
+├── portfolio/
+│   ├── stewardship.md                     ← Portfolio discipline as core operational function
+│   ├── dependency-audit.md                ← How to conduct the foundational dependency audit
+│   ├── centrality-scoring.md              ← Risk-priority scoring formula and worked example
+│   ├── operating-cycle.md                 ← The six-phase continuous governance cycle
+│   └── health-dashboard.md                ← Ecosystem health metrics, targets, decision rules
+│
+├── community/
+│   ├── contributor-pathway-spec.md        ← Full Web3 contributor pathway specification
+│   ├── anti-sybil-design.md               ← Preventing gaming of contributor programs
+│   ├── values-alignment.md                ← Structural (not cultural) values alignment
+│   └── lifecycle-stages.md                ← Emerging → Growing → Mature → Sustaining
+│
+├── docs/
+│   ├── architectural-principles.md        ← Six design principles with comparative validation
+│   ├── ecosystem-architecture.md          ← Five-layer stack and two governance integration models
+│   ├── implementation-models.md           ← Embedded, Independent Operator, Hybrid
+│   ├── why-existing-approaches-fail.md    ← Grants, bounties, donations, ad hoc coordination
+│   ├── ecosystem-evidence.md              ← STA, Protocol Guild, Sentry, CNCF, Cardano POSM
+│   └── risk-landscape.md                  ← Centralization, capture, token volatility, fatigue, creep
+│
+├── templates/
+│   ├── program-charter-template.md        ← Authorization template for any OMF program
+│   ├── retainer-selection-rubric.md       ← Weighted scoring rubric for retainer selection
+│   ├── renewal-decision-tree.md           ← Evidence-based renewal process
+│   ├── quarterly-report-template.md       ← Required transparency reporting format
+│   ├── dependency-audit-template.md       ← 60-day audit walkthrough with tooling
+│   └── governance-proposal-template.md    ← Governance proposal for OMF pilot authorization
+│
+└── appendices/
+    ├── sbom-standards.md                  ← SPDX, CycloneDX, Package URL reference
+    ├── chaoss-metrics.md                  ← CHAOSS dependency metrics standard
+    ├── web3-tooling-stack.md              ← Language-specific dependency scanning tools
+    ├── cross-chain-interoperability.md    ← Federated co-funding model and shared schema
+    └── risk-mitigation-protocols.md       ← Operator replacement, governance fatigue, scope creep
+```
+
+---
+
+## Architecture Overview
+
+```
+┌──────────────────────────────────────────────────────────────────────┐
+│                    On-Chain Governance                               │
+│          Token voting · Treasury authorization · Policy              │
+│                            │ authorize programs + budget             │
+└────────────────────────────┼─────────────────────────────────────────┘
+                             │
+              ┌──────────────┴──────────────┐
+              │  [Optional] Coordination     │
+              │  Layer (dOSPO or equivalent) │
+              └──────────────┬──────────────┘
+                             │ mandate + delegation
+                             ▼
+┌──────────────────────────────────────────────────────────────────────┐
+│              OMF — Infrastructure Stewardship Layer                  │
+│                                                                      │
+│  ┌─────────────────┐  ┌────────────────┐  ┌──────────────────────┐  │
+│  │    Programs      │  │   Funding      │  │  Portfolio           │  │
+│  │                 │  │                │  │  Stewardship         │  │
+│  │ · Retainers     │  │ · Delivery     │  │                      │  │
+│  │ · Bounties      │  │ · Continuity   │  │ · Dependency map     │  │
+│  │ · Pathways      │  │ · Shared Infra │  │ · Centrality scoring │  │
+│  │ · Op Support    │  │                │  │ · Coverage gap audit │  │
+│  │ · Incubation    │  │ Sources:       │  │ · Portfolio review   │  │
+│  │ · Resilience    │  │ · Treasury     │  │ · Operating cycle    │  │
+│  │                 │  │ · Endowment    │  │                      │  │
+│  │                 │  │ · Corporate    │  │                      │  │
+│  └─────────────────┘  └────────────────┘  └──────────────────────┘  │
+│                                                                      │
+│  Governance authorization required · Transparent reporting required  │
+│  Operator replaceable · Programs time-bounded with sunset clauses    │
+└──────────────────────────────────────┬───────────────────────────────┘
+                                       │ support
+                                       ▼
+┌──────────────────────────────────────────────────────────────────────┐
+│                 Maintainers & Contributors                           │
+│           Sustained by OMF programs · Retain project autonomy       │
+└──────────────────────────────────────┬───────────────────────────────┘
+                                       │ maintain
+                                       ▼
+┌──────────────────────────────────────────────────────────────────────┐
+│                  Open Source Infrastructure                          │
+│          The asset all layers above exist to sustain                 │
+└──────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## The Five-Layer Stack
+
+| Layer | Role | OMF's Position |
+|---|---|---|
+| **On-Chain Governance** | Strategic priorities, treasury authorization, binding decisions | Provides mandate and budget |
+| **Policy & Coordination** | Non-binding coordination, community standards, dOSPO | Optional layer above OMF |
+| **Infrastructure Stewardship** | Translates decisions into sustained programs | **This is where OMF operates** |
+| **Maintainer Layer** | Individuals and teams maintaining infrastructure projects | Primary beneficiaries |
+| **Infrastructure Layer** | The software, protocols, libraries, tools | The asset all layers sustain |
+
+OMF is not a middleman — it is a structural interface. It translates governance intent into operational action, and operational outcomes into data governance uses to make better resource allocation decisions.
+
+---
+
+## Program Portfolio
+
+Each program addresses a distinct dimension of infrastructure sustainability and can be implemented independently. Begin with one or two and expand as capacity develops.
+
+| Program | Purpose | Primary Funding Instrument | Reference Model |
+|---|---|---|---|
+| **Maintainer Retainer** | Ongoing support tied to maintenance responsibility, not deliverables | Continuity-oriented | Protocol Guild, Cardano POSM, Sentry |
+| **Code Bounties** | Funded delivery of specific features, fixes, or security work | Delivery-oriented | Gitcoin, GitHub Secure OSS Fund |
+| **Contributor Pathways** | Structured mentorship to grow the future maintainer pipeline | Delivery-oriented + Continuity supplement | CNCF LFX Mentorship (25 maintainers since 2020) |
+| **Operational Support** | Admin services: security audits, legal review, documentation | Delivery-oriented | GitHub Secure Fund cohort model |
+| **Incubation** | Structured support for early-stage critical projects | Delivery-oriented → Continuity transition | STA milestone contracts |
+| **Resilience Programs** | Succession planning, bus-factor reduction, knowledge documentation | All three instruments | Kubernetes NGINX failure case |
+
+> **The full system**: Contributor Pathways grow the maintainer pool that sustains the Retainer program. Operational Support reduces burden, making Retainer support go further. Resilience Programs preserve the institutional knowledge Retainer programs help accumulate.
+
+→ Full program specifications: [`programs/overview.md`](programs/overview.md)
+
+---
+
+## Funding Instruments
+
+OMF coordinates three funding instruments. **Matching instrument to program is as critical as having the funding** — mismatches are the primary cause of well-funded programs that still fail to sustain maintainers.
+
+### Instrument 1: Delivery-Oriented Funding
+Supports scoped, verifiable work with defined completion criteria. Most effective in early and growth stages. **Cannot fund availability** — do not use for ongoing maintenance responsibility.
+
+*Best for: Code Bounties, Contributor Pathways (primary), Incubation (primary), Resilience audits*
+
+### Instrument 2: Continuity-Oriented Funding
+Compensates availability and operational responsibility — not milestone completion. The instrument most Web3 ecosystems currently lack and most urgently need.
+
+*Best for: Maintainer Retainers (primary), Contributor Pathways (supplement), Resilience succession*
+
+> **Reference model**: Ethereum's Protocol Guild — ~200 contributors, time-weighted allocation, 4-year vesting, zero institutional intermediary in the custody chain. Demonstrates that continuity funding can be structured as a decentralized commons resistant to capture.
+
+### Instrument 3: Shared Infrastructure Support
+Funds tooling consumed across multiple projects as a public good. Portfolio-scoped, not project-scoped. The most systematically underfunded category in Web3 ecosystems.
+
+*Best for: Shared Tooling / CI (primary), Resilience tooling*
+
+### The Four Funding Principles
+
+All instruments operate under these constraints:
+
+1. **Lifecycle Alignment** — instruments must match project maturity and dependency risk
+2. **Time-Bounded Support** — all funding has explicit duration; continuity is earned through renewal
+3. **Evidence-Based Renewal** — renewal references outcomes, not advocacy
+4. **Portfolio Discipline** — decisions consider ecosystem-wide dependency coverage and opportunity cost
+
+→ Full funding architecture: [`funding/principles.md`](funding/principles.md)
+
+---
+
+## Minimum Viable OMF
+
+For portability to be meaningful, the minimum viable implementation must be precisely defined. **An ecosystem has implemented OMF if and only if it has all five of the following:**
+
+| Requirement | Definition |
+|---|---|
+| **1. Dependency audit capability** | A systematic audit has been conducted — identifying critical OSS dependencies, scoring centrality, and publishing results. This is the foundational input to all portfolio decisions. |
+| **2. Program governance authority** | A governance body has formally authorized at least one OMF program with a defined budget envelope, selection criteria, and renewal cadence. Programs do not self-authorize. |
+| **3. At least one sustainment program** | At least one active program is sustaining infrastructure maintainers: a Retainer program, a Contributor Pathway cohort, or equivalent. Studying the problem does not qualify. |
+| **4. Transparent reporting mechanism** | Program activities, funding allocations, and basic outcomes are published — on-chain, on a public forum, or through verifiable off-chain records — at minimum quarterly. |
+| **5. Portfolio review cadence** | The funded portfolio is reviewed against the dependency map at least annually. Coverage gaps are identified and funding decisions are updated based on actual dependency risk. |
+
+→ Full specification: [`MINIMUM-VIABLE-OMF.md`](MINIMUM-VIABLE-OMF.md)
+
+---
+
+## The Four Legitimacy Safeguards
+
+OMF achieves legitimacy without centralized authority through four structural safeguards — not cultural norms.
+
+| Safeguard | What It Means |
+|---|---|
+| **Governance Authorization** | All programs operate within parameters authorized by ecosystem governance. Operators execute; they do not set priorities independently. |
+| **Operator Replaceability** | No single operator, organization, or individual becomes an irreplaceable dependency. An operator that cannot be replaced has captured its program. |
+| **Maintainer Autonomy** | Financial or operational support does not grant operators authority over project roadmaps, technical direction, or governance structures. |
+| **Public Transparency** | All program activities, funding allocations, and ecosystem health metrics remain publicly visible. Transparency enables decentralized oversight. |
+
+Together these safeguards allow OMF to function as **neutral infrastructure stewardship** rather than institutional control.
+
+→ Full specification: [`LEGITIMACY-SAFEGUARDS.md`](LEGITIMACY-SAFEGUARDS.md)
+
+---
+
+## Getting Started
+
+### Step 1 — Assess readiness
+Does your ecosystem have at least one of the five structural failures OMF is designed to address? (Dependency risk at scale, incident coordination latency, funding mismatch, governance gap, missing contributor pipeline.) If yes, proceed.
+
+### Step 2 — Conduct a dependency audit
+Before standing up any program, map your ecosystem's dependency graph. Use the 60-day audit walkthrough in [`templates/dependency-audit-template.md`](templates/dependency-audit-template.md). This is the non-negotiable first step — everything else flows from knowing which infrastructure is at risk.
+
+### Step 3 — Start narrow
+You do not need to deploy the full program portfolio. The minimum viable OMF is a dependency audit, governance authorization, and a single sustainment program — typically a small Retainer cohort (2–5 projects) plus one Contributor Pathway cohort. First-year cost estimate for a mid-sized Web3 ecosystem: $280–570K.
+
+### Step 4 — Get governance authorization
+Use [`templates/governance-proposal-template.md`](templates/governance-proposal-template.md) to submit a budget request and program charter to your governance body. Programs must not self-authorize.
+
+### Step 5 — Launch, report, renew
+Run the program. Publish quarterly transparency reports using [`templates/quarterly-report-template.md`](templates/quarterly-report-template.md). Conduct a mid-point governance review. Make renewal decisions based on outcomes, not advocacy.
+
+### First 12 Months Reference Roadmap
+
+| Month | Action | Estimated Cost |
+|---|---|---|
+| 1–2 | Dependency audit: map critical dependencies, score centrality, identify top-20 risks | ~$15–30K |
+| 2–3 | Governance proposal: OMF pilot budget (Retainers + 1 Pathway cohort) | ~$5–10K |
+| 3–6 | Launch Retainer program (3–5 projects, 6-month initial); launch first contributor cohort | ~$200–400K/yr |
+| 6–9 | Mid-point review: publish outcome data; governance review of retainer performance | ~$10K |
+| 9–12 | Renewal cycle: evidence-based renewal; add Resilience programs if capacity allows | ~$50–100K |
+
+---
+
+## Contributing
+
+This architecture is an open source artifact. Contributions, critiques, and ecosystem-specific adaptations are welcome.
+
+- **Issues**: Use GitHub Issues to raise gaps, ambiguities, or real-world friction points
+- **PRs**: Improvements to templates, program specs, and operational documentation
+- **Discussion**: Use GitHub Discussions for ecosystem-specific implementation questions
+- **Evidence**: If you implement OMF (partially or fully), document what worked and what didn't in [`docs/ecosystem-evidence.md`](docs/ecosystem-evidence.md)
+
+Please read [`CONTRIBUTING.md`](CONTRIBUTING.md) before opening a pull request.
+
+---
+
+## Further Reading
+
+- [`docs/architectural-principles.md`](docs/architectural-principles.md) — Six design constraints with comparative landscape validation
+- [`docs/why-existing-approaches-fail.md`](docs/why-existing-approaches-fail.md) — Why grants, bounties, and donations are structurally insufficient for maintenance
+- [`docs/ecosystem-evidence.md`](docs/ecosystem-evidence.md) — STA, Protocol Guild, Sentry, CNCF LFX, Cardano POSM
+- [`portfolio/operating-cycle.md`](portfolio/operating-cycle.md) — The six-phase continuous governance cycle
+- [`appendices/risk-mitigation-protocols.md`](appendices/risk-mitigation-protocols.md) — Operator replacement, governance fatigue, scope creep, token volatility
+- [OMF Whitepaper](https://opensourcecowboy.org) — Original framework by Christian Taylor, Open Source Cowboy Consulting
+- [dOSPO Architecture](https://github.com/opensourcecowboy/dospo-architecture) — The complementary governance primitive
+
+---
+
+## License
+
+Released under [Apache 2.0](LICENSE). Fork it, adapt it, implement it. That is the point.
+
+---
+
+*Open source infrastructure does not sustain itself. It survives because institutions emerge to support it. Web3 ecosystems now possess capabilities previous generations of open source did not: programmable governance, transparent treasuries, and global contributor coordination. The challenge is no longer funding. It is institutional architecture. OMF provides that architecture.*
