@@ -1,0 +1,180 @@
+# Risk Mitigation Protocols
+
+> This appendix defines concrete operational protocols for the five primary OMF risks: centralization, program capture, token volatility, governance fatigue, and scope creep.
+>
+> These are not theoretical considerations — each has a real-world precedent in OSS sustainability efforts. Each protocol below moves from identified risk to implementable safeguard.
+
+---
+
+## Risk 1: Centralization
+
+**The risk**: OMF programs become de facto control points for ecosystem infrastructure. The operator accumulates disproportionate influence through proximity to governance, control of information flow, or dependency on the operator's institutional knowledge.
+
+**Why it happens**: Coordination work naturally creates institutional gravity. Doing things repeatedly creates the expectation that you will always do them. Operators accumulate context that makes replacement seem impractical.
+
+**Warning signals**:
+- Maintainers route governance questions to the operator rather than to the governance body
+- The operator is referenced as the authoritative source on ecosystem direction
+- Replacing the operator would require migrating infrastructure, not just transitioning a function
+- Governance participants say "we can't do this without the current operator"
+
+### Mitigation Protocol
+
+**Replaceability test (run quarterly)**:
+> Could an incoming operator, working from published program documentation alone, resume all functions within 60 days?
+
+If the answer is anything other than "yes," the operator has accumulated irreplaceable institutional dependency. This is a charter violation regardless of operator quality.
+
+**Documentation requirements**:
+- All participant registries maintained in a governance-accessible location, not operator-controlled infrastructure
+- All decision rationales published — no oral-only decisions
+- All operational runbooks documented and current
+- All vendor/service relationships documented with access credentials escrowed with governance
+
+**Structural design**: OMF programs are designed to have the operator's relationship with governance, not with individual maintainers. If a maintainer's primary relationship is with a specific operator staff member rather than with the program itself, that is a centralization risk.
+
+---
+
+## Risk 2: Program Capture
+
+**The risk**: Programs are captured by specific maintainers, funders, or governance participants who gain disproportionate influence over selection decisions — either overtly or through accumulated informal relationships.
+
+**Why it happens**: Selection processes involve judgment. Judgment is influenced by relationships. Over time, operators develop preferences and patterns that serve some stakeholders better than others, even without intent.
+
+**Warning signals**:
+- Selection criteria are modified after the application window opens
+- The same projects are selected cycle after cycle without fresh evaluation against current centrality scores
+- Projects with high centrality scores are consistently passed over in favor of well-connected but lower-priority projects
+- Any stakeholder can predict selection outcomes in advance of published decisions
+
+### Mitigation Protocol
+
+**Pre-selection publication requirement**: Selection rubrics and evaluation criteria must be published at least 14 days before the application window opens. Retroactive criteria changes are prohibited and constitute a charter violation.
+
+**Evaluation committee rotation**: At minimum one-third of evaluation committee seats rotate annually. No individual serves on an evaluation committee for more than three consecutive selection cycles without a one-cycle break.
+
+**Blind review where possible**: For programs where project identity is not necessary for initial scoring (e.g., first-stage dependency centrality scoring), conduct initial ranking without reference to project names or maintainer identities.
+
+**Public decision documentation**: Every selection, renewal, and sunset decision is published with a rationale traceable from published criteria to the specific outcome. Any stakeholder should be able to reconstruct the logic.
+
+**Anomaly review**: If the top-10 centrality-ranked projects are not represented in the top-10 funded projects, a documented rationale is required. If no rationale can be provided, the selection must be reviewed.
+
+---
+
+## Risk 3: Token Volatility
+
+**The risk**: For Web3 implementations where treasury funding is denominated in native tokens, the real-dollar value of committed funding can collapse between governance approval and disbursement. This creates feast-or-famine dynamics that undermine the predictability that maintainer support programs require.
+
+**Why it happens**: On-chain treasury assets are denominated in native tokens. Token price volatility is inherent to Web3 ecosystems. A program that was funded at $500K in token terms may be worth $200K by the time disbursements begin.
+
+**Warning signals**:
+- Token price has declined >30% since program authorization
+- Operators are delaying disbursements hoping for price recovery
+- Maintainers express uncertainty about whether their support will arrive
+- Program budgets are calculated in USD but funded in tokens with no conversion policy
+
+### Mitigation Protocol
+
+**Stable-asset conversion at authorization**: When governance approves a program budget, convert to stablecoins or fiat-equivalent at point of approval, not at point of disbursement. This insulates the program from post-approval price fluctuation.
+
+**Multi-source diversification**: Draw from all three OMF funding categories (treasury, endowment, corporate pool) where possible. Treasury volatility is offset by endowment stability. No single source should represent more than 60% of any program budget.
+
+**Operating reserve requirement**: Maintain a 3–6 month operating reserve in stable assets. This ensures program continuity during token price collapses without requiring emergency governance action.
+
+**Regular disbursement cadence**: Disburse retainer payments monthly or quarterly — not in annual lump sums. This reduces the impact of any single conversion event and provides natural checkpoints for program review.
+
+**Volatility disclosure in reports**: Quarterly transparency reports must disclose the current token-to-USD conversion rate, the rate at authorization, and the resulting budget impact. Governance should be informed of material variances.
+
+---
+
+## Risk 4: Governance Fatigue
+
+**The risk**: On-chain governance participants resist ongoing program oversight requirements because every operational decision requires full community engagement. Participation declines, renewal processes become rubber stamps, and programs persist through inertia.
+
+**Why it happens**: Governance participation requires time and attention. Operational programs generate many small decisions. If every decision requires community voting, governance participants will disengage — producing low-quality oversight rather than no oversight.
+
+**Warning signals**:
+- Renewal proposals pass without substantive discussion
+- Governance vote participation has declined since program launch
+- Operators informally ask governance participants what decisions they want to see rather than reporting what decisions were made
+- Participants describe program oversight as "a formality"
+
+### Mitigation Protocol
+
+**Default-approve for compliant programs**: Programs that meet all KPI thresholds for two consecutive quarters receive an automatic renewal recommendation. Governance confirms with a simple ratification (not a full re-evaluation). This dramatically reduces the number of active decisions governance must process.
+
+**Escalation-only model**: Routine operational decisions (individual retainer evaluations within published criteria, bounty approvals within budget, pathway cohort management) are handled by the operator without governance vote. Governance acts only on: budget overruns, scope expansion requests, operator performance concerns, metric-triggered escalations, and charter renewals.
+
+**Off-chain oversight structure**: Operational detail is managed by dedicated committees (technical review, program oversight) that operate off-chain and report to governance on a defined cadence. This separation reduces governance overhead without reducing accountability.
+
+**Meaningful renewal**: Charter renewals must require scope redefinition — identical renewals are not permitted. This ensures that governance engagement during renewal is substantive, not performative.
+
+**Quarterly summary model**: Governance receives consolidated quarterly reports rather than per-decision approval requests. The report flags any items requiring governance action. Everything else is for information only.
+
+---
+
+## Risk 5: Scope Creep
+
+**The risk**: Operational programs gradually expand beyond their original mandate. New activities are added without explicit governance authorization. Programs become institutionally entrenched and difficult to terminate even when they are no longer serving their original purpose.
+
+**Why it happens**: Operators encounter adjacent problems that seem easy to address. Governance participants make informal requests that operators accommodate. Programs accumulate low-visibility activities that individually seem harmless but collectively represent significant scope expansion.
+
+**Warning signals**:
+- Operator activities reference work not described in the program charter
+- Operator staff describe their role in terms broader than the charter defines
+- Budget requests for renewal are consistently higher than the previous period without documented justification
+- The program has been operating for more than 12 months without a scope review
+
+### Mitigation Protocol
+
+**Explicit charter boundaries**: Every program charter must define authorized activities, authorized budget envelope, target project/participant criteria, and explicit exclusions. The charter is a governance document — activities outside the charter are unauthorized regardless of their perceived value.
+
+**Expansion requires new authorization**: Any activity, funding commitment, or target population outside the current charter requires a separate governance proposal. Operators cannot self-authorize scope expansion under any circumstances.
+
+**Annual scope reconfirmation**: As part of the annual portfolio review, each program's scope is explicitly reconfirmed by governance. The review asks: is the current scope still appropriate? The reconfirmation must be affirmative — silence does not constitute approval.
+
+**Program sunset criteria pre-definition**: Every charter must include explicit conditions under which the program should be terminated: metric thresholds indicating ineffectiveness, ecosystem changes making the program unnecessary, or budget constraints requiring portfolio rebalancing. Sunset criteria are defined at authorization, not discovered during crisis.
+
+**Process budget**: Define a maximum number of steps, forms, and review cycles per program activity. Any process that cannot be justified by the specific risk it reduces should be eliminated. Programs where process management has become the primary output are candidates for sunset.
+
+---
+
+## Operator Replacement Protocol
+
+*The most critical risk mitigation mechanism is the ability to replace the operator without program disruption. This protocol defines how that happens.*
+
+### Trigger Conditions
+
+Operator replacement may be initiated by:
+- Governance vote (supermajority under normal conditions; simple majority if operator has failed documented performance criteria)
+- Either oversight body (Technical Review or Governance/Compliance) passing a formal motion of no confidence
+- Operator voluntary resignation with appropriate notice
+- Charter expiry without operator renewal
+
+### Replacement Process
+
+| Phase | Duration | Required Actions |
+|---|---|---|
+| **1. Decision** | Day 0 | Governance records replacement decision; notifies operator in writing |
+| **2. Transition planning** | Days 1–14 | Governance selects incoming operator; transition timeline agreed |
+| **3. Documentation transfer** | Days 15–60 | Outgoing operator transfers all required artifacts (see below) |
+| **4. Introduction period** | Days 60–90 | Outgoing operator introduces incoming operator to funded maintainers and key relationships |
+| **5. Handoff** | Day 90 | Incoming operator assumes full responsibility; escrow released |
+
+### Required Transfer Artifacts
+
+The outgoing operator must deliver before handoff is considered complete:
+- Complete participant registry with status history for all current and recent participants
+- All evaluation records and decision rationales (3-year minimum)
+- Financial reconciliation of all disbursements
+- Current dependency map and centrality scores
+- Active program communications, contracts, and correspondence
+- All operational runbooks
+- Access to all program management infrastructure (transferred or replicated)
+- Documented vendor and service relationships with access credentials
+
+**Maintainer support continuity**: Retainer payments continue from governance-controlled escrow throughout the transition period. Funded maintainers must not experience any interruption in support during operator changes.
+
+---
+
+*These protocols are not emergency procedures — they are standard operating practice. The replacement protocol in particular should be reviewed and tested before it is needed, not discovered during a crisis.*
