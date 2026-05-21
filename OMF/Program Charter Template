@@ -1,1 +1,183 @@
 
+# OMF Program Charter Template
+
+> **Instructions**: Every OMF program requires a charter before operating. Replace all `[BRACKETED]` fields with your ecosystem's specifics. The structural requirements — governance authorization, sunset clause, dual oversight, transparent reporting — must not be removed. They are legitimacy requirements, not optional features.
+>
+> This template covers all program types. Adapt the sections marked `[PROGRAM-TYPE-SPECIFIC]` to the program you are chartering.
+
+---
+
+## Program Charter: [PROGRAM NAME]
+
+**Program Type**: [Maintainer Retainer / Code Bounties / Contributor Pathways / Operational Support / Incubation / Resilience]  
+**Version**: 1.0  
+**Effective Date**: [DATE]  
+**Charter Expiry**: [DATE — maximum 12 months for first charter; 24 months for renewal]  
+**Issuing Governance Authority**: [BODY NAME — e.g., OS Committee, DAO Vote, Technical Council]  
+**Operator**: [ENTITY OR ROLE]  
+**Oversight Bodies**: [Technical review body] + [Governance/compliance review body]
+
+---
+
+## 1. Purpose and Problem Statement
+
+[2–3 sentences describing the specific infrastructure sustainability problem this program addresses. Reference the dependency audit findings that justify this program. Example: "The dependency audit identified 7 projects in the top-20 centrality ranking with bus factor of 1 and declining contribution activity. This Retainer program addresses the sustainability risk for the 3 highest-priority of these projects."]
+
+---
+
+## 2. Authorized Scope
+
+### In Scope
+
+[Explicit list of authorized activities. Be specific. Ambiguity creates scope creep opportunities.]
+
+- [Authorized activity 1]
+- [Authorized activity 2]
+- [Authorized activity 3]
+
+### Out of Scope
+
+[Explicit list of activities this program is NOT authorized to perform. This list is as important as the in-scope list.]
+
+- The operator may not set project roadmaps or technical direction
+- The operator may not replace or appoint maintainers absent a published governance process
+- The operator may not allocate funds outside the budget envelope below
+- [Program-specific exclusions]
+
+### Eligible Projects / Participants `[PROGRAM-TYPE-SPECIFIC]`
+
+[Define the eligibility criteria that determine which projects or individuals qualify for this program. For retainers: centrality threshold, bus factor threshold, etc. For pathways: contribution history requirements. For bounties: project alignment requirements. These must be published before the first selection cycle.]
+
+---
+
+## 3. Budget
+
+| Category | Annual Amount | Notes |
+|---|---|---|
+| [Retainer payments / Bounty pool / Pathway stipends] | [$] | [Per-participant cap if applicable] |
+| Operational coordination | [$] | Operator coordination costs |
+| Reporting and tooling | [$] | |
+| **Total** | **[$]** | |
+
+**Budget cliff**: Funding does not roll over between charter periods. Unspent funds at charter expiry return to governance control.
+
+**Governance authority**: The operator may not exceed this budget envelope without a new governance authorization. Budget flexibility within the envelope (moving funds between line items) requires written notification to the governance oversight body.
+
+---
+
+## 4. Program Design `[PROGRAM-TYPE-SPECIFIC]`
+
+[Describe the specific program mechanics. For a Retainer program, define: role tiers, evaluation period, quarterly review criteria, renewal decision tree. For a Pathway program, define: cohort structure, mentorship pairing, progression criteria, stipend schedule. Use the program specification documents in `programs/` as the source for what must be defined here.]
+
+### Role/Structure Definition
+
+[...]
+
+### Evaluation Criteria
+
+[...]
+
+### Selection Process
+
+[Published before first cycle. Retroactive changes to accommodate specific applicants are prohibited and constitute a capture violation.]
+
+### Appeals Process
+
+[Define the window (minimum 14 days) and outcome options (probation, reversal, confirmation). Identify who reviews appeals — must not be the same individual who made the original decision.]
+
+---
+
+## 5. Reporting Requirements
+
+| Report | Frequency | Contents | Published To |
+|---|---|---|---|
+| Activity report | Monthly | Intake, decisions, disbursements | [PUBLIC LOCATION] |
+| Outcome report | Quarterly | KPI performance vs. charter criteria | [PUBLIC LOCATION] |
+| Annual review | Annually | Comprehensive effectiveness assessment + renewal recommendation | Governance + Public |
+
+Missed reports are a charter violation. The operator must notify the governance oversight body within 5 business days if a report will be delayed, with explanation and corrected timeline.
+
+---
+
+## 6. Oversight Structure
+
+**Dual oversight requirement**: This program operates under structurally separated oversight:
+
+| Oversight Body | Responsibility | Review Cadence |
+|---|---|---|
+| [Technical Review Body — e.g., TSC] | Technical alignment, quality standards, infrastructure priority | Per quarterly review |
+| [Governance/Compliance Body — e.g., OSC] | Charter compliance, budget adherence, transparency requirements | Per quarterly review |
+
+Both bodies must agree on: participant selections, major renewals, terminations, and any proposed scope changes.
+
+**Escalation path**: If the two oversight bodies disagree, the matter is escalated to the issuing governance authority for resolution. The operator does not resolve oversight disagreements unilaterally.
+
+---
+
+## 7. Renewal and Sunset
+
+### Sunset Clause
+
+This program expires on **[CHARTER EXPIRY DATE]**. It does not continue by default. Continuation requires affirmative renewal by the issuing governance authority.
+
+### Renewal Conditions
+
+At least **60 days** before expiry, the operator must submit a renewal proposal to the issuing governance authority including:
+- Outcomes achieved against charter criteria (quantitative evidence required)
+- Updated dependency audit results justifying continued program relevance
+- Proposed scope for next charter period (may be same, narrower, or broader)
+- Updated budget request
+- Any proposed changes to program design or oversight structure
+
+### Early Termination
+
+This charter may be terminated early if:
+- The operator fails to meet reporting requirements for two consecutive periods
+- The operator allocates funds outside the authorized budget envelope
+- Either oversight body passes a motion of no confidence
+- The issuing governance authority passes a termination vote
+- The program fails to meet critical KPI thresholds for two consecutive quarterly reviews despite a remediation plan
+
+---
+
+## 8. KPIs and Success Criteria `[PROGRAM-TYPE-SPECIFIC]`
+
+| KPI | Baseline | Target | Review Trigger |
+|---|---|---|---|
+| [KPI 1] | [Current value] | [Target value] | [Threshold that triggers review] |
+| [KPI 2] | | | |
+| [KPI 3] | | | |
+
+[For Retainer programs: include maintainer attrition rate, security response time, release frequency, bus factor change. For Pathway programs: include conversion rate, cohort completion rate, mentor engagement. For Bounty programs: include completion rate, quality pass rate, delivery timeline adherence.]
+
+---
+
+## 9. Replaceability Requirements
+
+The operator must maintain the following artifacts at all times, sufficient for an incoming operator to resume all program functions within 60 days:
+
+- Complete participant registry with current status and history
+- All evaluation records and decision rationales
+- Current funding disbursement records
+- Active program communications and correspondence
+- Dependency map and centrality scores (current version)
+- Operational runbooks for all recurring program activities
+
+These artifacts are program property, not operator property. They must be transferred intact upon operator change.
+
+---
+
+## 10. Ratification
+
+This charter is ratified by:
+
+| Role | Name / Entity | Date |
+|---|---|---|
+| Issuing Governance Authority | [NAME] | [DATE] |
+| Technical Review Body | [NAME] | [DATE] |
+| Governance/Compliance Body | [NAME] | [DATE] |
+| Operator | [NAME] | [DATE] |
+
+---
+
+*A program without a sunset clause is a program without accountability. Every charter must expire. Continuation must be earned.*
