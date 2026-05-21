@@ -1,0 +1,156 @@
+# Minimum Viable OMF
+
+> This document defines the **minimum implementation threshold** for OMF compliance. It answers the question: *what actually qualifies as OMF?*
+>
+> Partial implementations have value. But claiming OMF compliance without meeting all five requirements creates false confidence about ecosystem sustainability posture. Use this document to honestly assess where your ecosystem stands.
+
+---
+
+## The Five Requirements
+
+An ecosystem has implemented OMF if and only if it has **all five** of the following in place.
+
+---
+
+### Requirement 1: Dependency Audit Capability
+
+**What it requires:**
+
+A systematic dependency audit has been conducted, covering the ecosystem's critical OSS dependencies. The audit must:
+
+- Identify all direct and transitive dependencies for ecosystem-critical infrastructure
+- Score each dependency for centrality (how many ecosystem projects depend on it)
+- Cross-reference centrality scores with contributor health data
+- Publish the results — dependency map, centrality scores, and coverage gap analysis — in a publicly accessible location
+
+**Why it is non-negotiable:**
+
+Portfolio stewardship lives or dies on the quality of the dependency map. Without it, all funding decisions are made on the basis of who submits proposals rather than what the ecosystem actually depends on. The dependency audit is the foundational input to every other OMF function.
+
+**Minimum acceptable output:** A published dependency map identifying the top-20 highest-risk dependencies (high centrality, low sustainability) and a coverage gap analysis showing which are currently supported and which are not.
+
+**Reference:** [`portfolio/dependency-audit.md`](../portfolio/dependency-audit.md) · [`templates/dependency-audit-template.md`](../templates/dependency-audit-template.md)
+
+---
+
+### Requirement 2: Program Governance Authority
+
+**What it requires:**
+
+A governance body has formally authorized at least one OMF program. Authorization must define:
+
+- Program scope and eligible projects or maintainers
+- Budget envelope (total and per-period)
+- Selection criteria (published before the first selection cycle)
+- Renewal cadence and evidence requirements
+- The operator responsible for execution
+
+**Why it is non-negotiable:**
+
+Programs that self-authorize — that exist because an operator decided to run them rather than because governance authorized them — are accountable to no one. Governance authorization is the structural safeguard that keeps operational programs aligned with ecosystem priorities rather than operator preferences.
+
+**Minimum acceptable output:** A governance decision (on-chain vote, committee resolution, or equivalent documented action) authorizing at least one OMF program with the elements above defined.
+
+**Reference:** [`templates/program-charter-template.md`](../templates/program-charter-template.md) · [`templates/governance-proposal-template.md`](../templates/governance-proposal-template.md)
+
+---
+
+### Requirement 3: At Least One Active Sustainment Program
+
+**What it requires:**
+
+At least one active program is currently sustaining infrastructure maintainers. Studying the problem, publishing a framework, or planning a program does not qualify. The program must be actively running and providing support to real maintainers.
+
+Qualifying programs include: a Retainer program with at least one funded maintainer, a Contributor Pathway cohort currently in progress, or a structurally equivalent mechanism.
+
+**Why it is non-negotiable:**
+
+The entire purpose of OMF is to translate governance decisions and treasury capital into sustained infrastructure maintenance. An ecosystem that has conducted an audit and obtained governance authorization but has not yet run a single program has not implemented OMF — it has prepared to implement OMF. The distinction matters because the sustainability problem requires action, not planning.
+
+**Minimum acceptable output:** At least one maintainer or contributor currently receiving support through a formally authorized OMF program, with active reporting in place.
+
+**Reference:** [`programs/maintainer-retainer.md`](../programs/maintainer-retainer.md) · [`programs/contributor-pathways.md`](../programs/contributor-pathways.md)
+
+---
+
+### Requirement 4: Transparent Reporting Mechanism
+
+**What it requires:**
+
+Program activities, funding allocations, and basic outcomes are published at minimum on a quarterly basis. Publication must be:
+
+- Publicly accessible (on-chain, governance forum, public GitHub, or equivalent)
+- Covering program-level activity (what was funded, what outcomes were produced)
+- Including financial data (amounts disbursed per program per period)
+- Timely (within 30 days of the end of each reporting period)
+
+**Why it is non-negotiable:**
+
+Transparency is the primary accountability mechanism in decentralized governance. Without it, the ecosystem cannot assess whether programs are producing outcomes, whether the operator is functioning within authorized parameters, or whether the portfolio allocation reflects actual dependency risk. Transparency is not optional overhead — it is the mechanism that makes the entire framework auditable without requiring insider access.
+
+**Minimum acceptable output:** A publicly accessible quarterly report covering all four elements above, published on schedule. Missed reporting is a compliance failure.
+
+**Reference:** [`templates/quarterly-report-template.md`](../templates/quarterly-report-template.md)
+
+---
+
+### Requirement 5: Portfolio Review Cadence
+
+**What it requires:**
+
+The funded portfolio is reviewed against the dependency map at least annually. The review must:
+
+- Update the dependency map with current centrality scores
+- Compare current program coverage against updated dependency risk rankings
+- Identify coverage gaps — critical infrastructure currently receiving no program support
+- Produce updated funding recommendations for governance consideration
+- Document continuation, modification, or sunset recommendations for each active program
+
+**Why it is non-negotiable:**
+
+Without periodic portfolio review, funded programs persist through inertia rather than demonstrated need. New critical dependencies emerge; old ones deprecate. A program portfolio that does not evolve with the dependency reality increasingly misallocates resources — funding what was important, not what is important. The portfolio review is the mechanism that closes the loop between evidence and action.
+
+**Minimum acceptable output:** A published annual portfolio review report with updated centrality scores, coverage gap analysis, and governance-ready funding recommendations.
+
+**Reference:** [`portfolio/operating-cycle.md`](../portfolio/operating-cycle.md) · [`portfolio/stewardship.md`](../portfolio/stewardship.md)
+
+---
+
+## Implementation Status Self-Assessment
+
+Use this checklist to honestly assess your ecosystem's current OMF implementation status:
+
+| Requirement | Not Started | In Progress | Complete |
+|---|---|---|---|
+| 1. Dependency audit capability | ☐ | ☐ | ☐ |
+| 2. Program governance authority | ☐ | ☐ | ☐ |
+| 3. At least one active sustainment program | ☐ | ☐ | ☐ |
+| 4. Transparent reporting mechanism | ☐ | ☐ | ☐ |
+| 5. Portfolio review cadence | ☐ | ☐ | ☐ |
+
+**Scoring:**
+- 5/5 Complete: OMF compliant. Focus on program quality and portfolio expansion.
+- 3–4/5 Complete: Partial implementation. Identify the missing requirements and prioritize them.
+- 1–2/5 Complete: Early stage. Start with the dependency audit (Requirement 1) — everything else follows.
+- 0/5 Complete: Not yet started. See [`README.md`](../README.md) Getting Started section.
+
+---
+
+## What Minimum Viable OMF Costs
+
+For a mid-sized Web3 ecosystem (treasury $5–20M), the first-year cost of a minimum viable OMF implementation:
+
+| Component | Estimated Cost |
+|---|---|
+| Dependency audit (60-day contractor engagement) | $15–30K |
+| Governance proposal facilitation | $5–10K |
+| Retainer program (3–5 projects, 6-month initial) + 1 Pathway cohort | $200–400K/yr |
+| Mid-point review and reporting | $10K |
+| Renewal cycle + initial Resilience programs | $50–100K |
+| **Total Year 1** | **$280–570K** |
+
+This is well within 5–10% of a $5M treasury's operational budget — and far less than the cost of a single major security incident in critical infrastructure.
+
+---
+
+*Portability is OMF's central claim. For that claim to be meaningful, the minimum implementation must be precisely defined. These five requirements are the definition.*
