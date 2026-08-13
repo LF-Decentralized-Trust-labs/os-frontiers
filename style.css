@@ -279,6 +279,43 @@ body {
   color: var(--accent-cyan);
 }
 
+/* Pitch & Adoption Kit Grid */
+.pitch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.pitch-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition);
+}
+
+.pitch-card:hover {
+  background: var(--bg-card-hover);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.pitch-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.pitch-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
 /* Loop Diagram */
 .loop-diagram {
   display: flex;
@@ -694,6 +731,8 @@ body {
   cursor: pointer;
   border: none;
   transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary {
@@ -714,6 +753,7 @@ body {
 
 .btn-secondary:hover {
   background: rgba(255, 255, 255, 0.1);
+  color: var(--accent-cyan);
 }
 
 .template-preview-box {
