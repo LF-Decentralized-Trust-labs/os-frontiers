@@ -2,7 +2,7 @@
 """
 Canonical 3-Piece Ecosystem Systems Assessor (dOSPO · OMF · ORF)
 LF Decentralized Trust · Open Source Frontiers Lab
-Full 15-Indicator 75-Point Engine with Partial (0/3/5) Scoring & Level 3 Gate
+Full 15-Indicator 75-Point Engine with Corrected Boolean / Numeric Handling & Level 3 Gate
 """
 
 import sys
@@ -32,12 +32,14 @@ def parse_arguments():
     return parser.parse_args()
 
 def score_indicator(val):
-    if isinstance(val, (int, float)):
+    # MUST check isinstance(val, bool) BEFORE isinstance(val, (int, float))
+    # because bool is a subclass of int in Python!
+    if isinstance(val, bool):
+        return 5 if val else 0
+    elif isinstance(val, (int, float)):
         if val >= 5: return 5
         elif val >= 3: return 3
         else: return 0
-    elif isinstance(val, bool):
-        return 5 if val else 0
     return 0
 
 def analyze_system_data(config):
@@ -47,7 +49,10 @@ def analyze_system_data(config):
     reserves = config.get("treasury_reserve_usd", 0)
 
     net_non_inflationary = fees + earned_rev
-    net_replenishment_ratio = round(net_non_inflationary / budget, 4) if budget > 0 else 0.0
+    
+    # Raw ratio for strict unrounded thresholding
+    raw_ratio = (net_non_inflationary / budget) if budget > 0 else 0.0
+    net_replenishment_ratio = round(raw_ratio, 4)
     runway_years = round((reserves * 0.50) / budget, 1) if budget > 0 else 0.0
 
     # 1. dOSPO Governance Indicators (0–25 Pts)
@@ -70,12 +75,12 @@ def analyze_system_data(config):
 
     # 3. ORF Replenishment Indicators (0–25 Pts)
     ind_11_score = 0
-    if net_replenishment_ratio >= 1.0:
+    if raw_ratio >= 1.0:
         ind_11_score = 5
-    elif net_replenishment_ratio >= 0.5:
+    elif raw_ratio >= 0.20:
         ind_11_score = 3
-    elif net_replenishment_ratio >= 0.2:
-        ind_11_score = 1
+    else:
+        ind_11_score = 0
 
     orf_score = sum([
         ind_11_score,
@@ -88,10 +93,11 @@ def analyze_system_data(config):
     total_score = min(75, dospo_score + omf_score + orf_score)
     overall_pct = round((total_score / 75) * 100, 1)
 
-    level_3_gate_passed = net_replenishment_ratio >= 1.0
+    # Raw unrounded ratio threshold for Level 3 gate
+    level_3_gate_passed = raw_ratio >= 1.0
 
-    # Exact Point-Based Classification Rules per 3-Piece Assessment Rubric
-    if total_score >= 64 and level_3_gate_passed:
+    # Exact Point-Based Classification Rules per 3-Piece Assessment Rubric (65 Pts Threshold)
+    if total_score >= 65 and level_3_gate_passed:
         level = "Level 3: Self-Sustaining Closed Loop"
     elif total_score >= 50:
         level = "Level 2: Fee-Supplemented Maintenance"
@@ -120,8 +126,8 @@ def main():
     args = parse_arguments()
 
     if not args.config_file or not os.path.exists(args.config_file):
-        print(f"❌ Error: Config file not provided or not found: {args.config_file}")
-        print("Usage: python evaluator/cli/assess_ecosystem.py <path_to_config.json>")
+        print(f"❌ Error: Config file not provided or not found: {args.config_file}", file=sys.stderr)
+        print("Usage: python evaluator/cli/assess_ecosystem.py <path_to_config.json>", file=sys.stderr)
         sys.exit(2)
 
     with open(args.config_file, "r", encoding="utf-8") as f:

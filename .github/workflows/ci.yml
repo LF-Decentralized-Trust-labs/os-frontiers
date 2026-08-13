@@ -24,9 +24,9 @@ jobs:
         run: |
           python evaluator/tests/test_evaluator.py
 
-      - name: Run Python Evaluator Assessor
+      - name: Run Python Evaluator Assessor with Sample Config
         run: |
-          python evaluator/cli/assess_ecosystem.py
+          python evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.json
 
       - name: Run QUAID Scanner Adapter
         run: |
@@ -37,6 +37,6 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Test Node Evaluator CLI
+      - name: Test Node Evaluator CLI with Sample Config
         run: |
-          node evaluator/cli/index.js .
+          node evaluator/cli/index.js ./evaluator/examples/sample_input_config.json
