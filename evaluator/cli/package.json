@@ -1,7 +1,7 @@
 {
   "name": "@lfdt-os-frontiers/evaluator",
   "version": "1.0.0",
-  "description": "Automated 3-Piece Ecosystem Need & Maturity Assessor CLI (dOSPO · OMF · ORF)",
+  "description": "Automated 3-Piece Ecosystem Assessor CLI (dOSPO · OMF · ORF)",
   "main": "index.js",
   "bin": {
     "os-frontiers-assess": "./index.js"
