@@ -1,0 +1,22 @@
+{
+  "name": "Hypothetical Fully Architected Ecosystem",
+  "annual_maintenance_budget_usd": 3500000,
+  "treasury_reserve_usd": 650000000,
+  "annual_tx_fee_inflow_usd": 4500000,
+  "annual_reserve_expansion_usd": 85000000,
+  "annual_earned_non_inflation_usd": 450000,
+  "indicator_1_legitimacy_charter": 5,
+  "indicator_2_neutrality_guarantee": 5,
+  "indicator_3_operator_replaceable": 5,
+  "indicator_4_policy_engine": 5,
+  "indicator_5_transparency_reporting": 5,
+  "indicator_6_maintainer_retainers": 5,
+  "indicator_7_contributor_pathways": 5,
+  "indicator_8_tooling_stewardship": 5,
+  "indicator_9_autonomy_safeguard": 5,
+  "indicator_10_impact_metrics": 5,
+  "indicator_12_fork_resistance": 5,
+  "indicator_13_benefit_bundling_slas": 5,
+  "indicator_14_ips_endowments": 5,
+  "indicator_15_independent_audit": 5
+}
