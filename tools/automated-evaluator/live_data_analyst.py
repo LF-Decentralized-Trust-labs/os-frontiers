@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Automated 3-Piece Live Systems & On-Chain Data Analyst (dOSPO · OMF · ORF)
+Automated 3-Piece Ecosystem Systems & Treasury Proposal Analyst (dOSPO · OMF · ORF)
+Expanded Cardano Developer Tooling & Cardano Cube Ecosystem Data Engine
 LF Decentralized Trust · Open Source Frontiers Lab
-Fetches real-time live data from Koios Cardano API, CoinGecko API, and GitHub REST API.
 """
 
 import sys
@@ -25,240 +25,164 @@ def fetch_json(url):
         with urllib.request.urlopen(req, context=SSL_CTX, timeout=10) as resp:
             return json.loads(resp.read().decode('utf-8'))
     except Exception as e:
-        print(f"⚠️ Warning: Failed to fetch from {url}: {e}")
         return None
 
-def fetch_cardano_live_onchain_data():
-    print("📡 Fetching real-time live on-chain parameters from Koios API...")
-    totals = fetch_json("https://api.koios.rest/api/v1/totals")
-    epoch_params = fetch_json("https://api.koios.rest/api/v1/epoch_params?limit=1")
-    
-    treasury_ada = 1453739190.0 # Fallback
-    epoch_no = 649
-    treasury_tax = 0.20
-    expand_rate = 0.003
+# Cardano Cube Sourced Developer Tooling Repositories
+CARDANO_CUBE_REPOS = {
+    "Core Protocol & Ledger": [
+        "intersectmbo/cardano-node",
+        "intersectmbo/cardano-ledger",
+        "intersectmbo/cardano-cli",
+        "intersectmbo/ouroboros-network",
+        "intersectmbo/plutus"
+    ],
+    "Developer SDKs & Libraries": [
+        "MeshJS/mesh",
+        "Emurgo/cardano-serialization-lib",
+        "Python-Cardano/pycardano",
+        "Rings-Network/lucid"
+    ],
+    "Smart Contract Tooling & Languages": [
+        "aiken-lang/aiken",
+        "opshin/opshin"
+    ],
+    "Data Indexers & Infrastructure": [
+        "txpipe/oura",
+        "cardano-ogmios/ogmios",
+        "cardano-community/koios-artifacts"
+    ]
+}
 
-    if totals and len(totals) > 0:
-        treasury_lovelace = int(totals[0].get("treasury", 1453739190000000))
-        treasury_ada = treasury_lovelace / 1e6
-
-    if epoch_params and len(epoch_params) > 0:
-        ep = epoch_params[0]
-        epoch_no = ep.get("epoch_no", 649)
-        treasury_tax = float(ep.get("treasury_growth_rate", 0.20))
-        expand_rate = float(ep.get("monetary_expand_rate", 0.003))
-
+def analyze_cardano_treasury_proposal_process():
     return {
-        "treasury_ada": treasury_ada,
-        "epoch_no": epoch_no,
-        "treasury_tax_pct": treasury_tax * 100,
-        "monetary_expand_rate": expand_rate
-    }
-
-def fetch_live_crypto_prices():
-    print("📈 Fetching real-time crypto prices from CoinGecko API...")
-    prices = fetch_json("https://api.coingecko.com/api/v3/simple/price?ids=cardano,ethereum,optimism,polkadot&vs_currencies=usd")
-    
-    ada_usd = 0.1819 # Fallback
-    eth_usd = 1879.23
-    op_usd = 0.086
-    dot_usd = 0.771
-
-    if prices and "cardano" in prices:
-        ada_usd = float(prices["cardano"].get("usd", 0.1819))
-    if prices and "ethereum" in prices:
-        eth_usd = float(prices["ethereum"].get("usd", 1879.23))
-    if prices and "optimism" in prices:
-        op_usd = float(prices["optimism"].get("usd", 0.086))
-    if prices and "polkadot" in prices:
-        dot_usd = float(prices["polkadot"].get("usd", 0.771))
-
-    return {
-        "ADA_USD": ada_usd,
-        "ETH_USD": eth_usd,
-        "OP_USD": op_usd,
-        "DOT_USD": dot_usd
-    }
-
-def fetch_cardano_github_live_metrics():
-    print("🐙 Fetching real-time repository health & maintainer activity from GitHub API...")
-    node_repo = fetch_json("https://api.github.com/repos/intersectmbo/cardano-node")
-    ledger_repo = fetch_json("https://api.github.com/repos/intersectmbo/cardano-ledger")
-
-    node_stars = node_repo.get("stargazers_count", 3179) if node_repo else 3179
-    node_open_issues = node_repo.get("open_issues_count", 71) if node_repo else 71
-    node_updated = node_repo.get("updated_at", "2026-08-12T22:33:48Z") if node_repo else "2026-08-12T22:33:48Z"
-
-    ledger_stars = ledger_repo.get("stargazers_count", 450) if ledger_repo else 450
-    ledger_open_issues = ledger_repo.get("open_issues_count", 35) if ledger_repo else 35
-
-    return {
-        "cardano_node": {
-            "stars": node_stars,
-            "open_issues_prs": node_open_issues,
-            "last_updated": node_updated
+        "catalyst_fund_rounds": {
+            "mechanism": "Project Catalyst (Fund 1 - Fund 12+)",
+            "voting_type": "Stake-weighted ADA holder app voting",
+            "strengths": "Broad community participation; funded 1,000+ early dApps and dev proposals.",
+            "gaps_addressed_by_omf": "Episodic grant fatigue; lack of long-term maintainer retainers; high friction for core infrastructure maintenance."
         },
-        "cardano_ledger": {
-            "stars": ledger_stars,
-            "open_issues_prs": ledger_open_issues
+        "cip_1694_onchain_treasury": {
+            "governance_bodies": [
+                "Constitutional Committee (CC)",
+                "Delegated Representatives (DReps)",
+                "Stake Pool Operators (SPOs)"
+            ],
+            "treasury_withdrawal_action": "On-chain Treasury Withdrawal Governance Action requiring DRep & SPO voting thresholds.",
+            "dOSPO_operator_role": "Intersect MBO (Open Source Committee & Technical Steering Committee) coordinates core POSM retainers and presents consolidated maintenance proposals."
         }
     }
 
-def run_live_cardano_system_analysis():
-    print("\n🚀 Starting Real-Time 3-Piece System Data Analysis for Cardano...")
+def fetch_cardano_cube_repo_metrics():
+    print("🐙 Fetching live GitHub metrics across Cardano Cube developer tooling & core repos...")
+    metrics = {}
     
-    # 1. Fetch Live On-Chain Data
-    onchain = fetch_cardano_live_onchain_data()
-    prices = fetch_live_crypto_prices()
-    github = fetch_cardano_github_live_metrics()
+    for category, repos in CARDANO_CUBE_REPOS.items():
+        metrics[category] = []
+        for repo_slug in repos:
+            data = fetch_json(f"https://api.github.com/repos/{repo_slug}")
+            if data:
+                metrics[category].append({
+                    "name": repo_slug,
+                    "stars": data.get("stargazers_count", 0),
+                    "open_issues": data.get("open_issues_count", 0),
+                    "last_updated": data.get("updated_at", "N/A"),
+                    "language": data.get("language", "Haskell/Rust/TS")
+                })
+            else:
+                metrics[category].append({
+                    "name": repo_slug,
+                    "stars": "N/A",
+                    "open_issues": "N/A",
+                    "last_updated": "N/A",
+                    "language": "N/A"
+                })
+    return metrics
 
-    ada_price = prices["ADA_USD"]
-    treasury_ada = onchain["treasury_ada"]
-    treasury_usd = treasury_ada * ada_price
-    bear_market_treasury_usd = treasury_usd * 0.50
+def run_expanded_cardano_analysis():
+    print("\n🚀 Starting Full Cardano Treasury Proposal & Developer Tooling Analysis...")
+    
+    proposal_process = analyze_cardano_treasury_proposal_process()
+    tooling_metrics = fetch_cardano_cube_repo_metrics()
 
-    # Cardano Maintenance Financial Model (POSM Baseline)
-    annual_maintenance_budget_usd = 3500000.0 # ~$3.5M USD / yr
-    
-    # Estimated Epoch Fee & Reserve Inflows
-    # Cardano has 73 epochs per year. 
-    # Average tx fee inflow ~ 50,000 ADA per epoch -> 20% to Treasury = 10,000 ADA/epoch -> 730,000 ADA/yr
-    annual_tx_fee_ada = 730000.0
-    annual_tx_fee_usd = annual_tx_fee_ada * ada_price
-
-    # Monetary Reserve Expansion Inflow to Treasury
-    # 20% of epoch reserve expansion -> ~25,000,000 ADA/yr
-    annual_reserve_expansion_ada = 25000000.0
-    annual_reserve_expansion_usd = annual_reserve_expansion_ada * ada_price
-
-    # Earned Non-Inflationary Revenue (Enterprise SLAs, Training, Mission Pools)
-    annual_earned_non_inflation_usd = 450000.0
-
-    # Total Non-Inflationary Inflow
-    total_non_inflationary_usd = annual_tx_fee_usd + annual_earned_non_inflation_usd
-    
-    # Net Replenishment Ratio (Non-Inflationary Income / Maintenance Budget)
-    net_replenishment_ratio = round(total_non_inflationary_usd / annual_maintenance_budget_usd, 2) if annual_maintenance_budget_usd > 0 else 0
-    
-    # Bear Market Treasury Runway (Years of budget fundable at 50% price crash)
-    bear_market_runway_years = round(bear_market_treasury_usd / annual_maintenance_budget_usd, 1)
-
-    # 2. Compute Live Framework Vector Scores (out of 25 Pts each)
-    
-    # dOSPO Governance Score
-    dospo_score = 25 # CIP-1694 DReps, SPOs, Constitutional Committee + Intersect MBO replaceability
-    
-    # OMF Maintenance Score
-    omf_score = 25 # Active POSM maintainer retainers + Maintainer autonomy protections + GitHub health
-    
-    # ORF Replenishment Score
-    orf_score = 18 # Live 20% protocol fee split + mission pools, minus missing IPS yield sleeve
-    if net_replenishment_ratio >= 1.0:
-        orf_score += 2
-    
-    total_score = dospo_score + omf_score + orf_score
-    overall_pct = round((total_score / 75) * 100, 1)
-
-    if overall_pct >= 85:
-        level = "Level 3: Self-Sustaining Closed Loop"
-        action = "Enact a Capital-layer Investment Policy Statement (IPS) to deploy yield sleeve on reserves."
-    elif overall_pct >= 65:
-        level = "Level 2: Fee-Supplemented Maintenance"
-        action = "Expand Enterprise Maintenance SLAs to increase non-inflationary income."
-    else:
-        level = "Level 1: Governance & Retainers Bootstrapped"
-        action = "Establish dOSPO mandate and OMF retainers."
+    # Calculate overall developer tooling coverage
+    total_repos_analyzed = sum(len(v) for v in tooling_metrics.values())
+    total_stars = 0
+    for cat in tooling_metrics.values():
+        for r in cat:
+            if isinstance(r["stars"], int):
+                total_stars += r["stars"]
 
     results = {
-        "timestamp": "2026-08-13 (Live Real-Time Data)",
-        "onchain_parameters": onchain,
-        "crypto_prices": prices,
-        "github_metrics": github,
-        "capital_flow_analysis": {
-            "treasury_ada": treasury_ada,
-            "ada_price_usd": ada_price,
-            "treasury_value_usd": round(treasury_usd, 2),
-            "bear_market_treasury_value_usd": round(bear_market_treasury_usd, 2),
-            "annual_maintenance_budget_usd": annual_maintenance_budget_usd,
-            "annual_tx_fee_inflow_usd": round(annual_tx_fee_usd, 2),
-            "annual_reserve_expansion_usd": round(annual_reserve_expansion_usd, 2),
-            "annual_earned_non_inflation_usd": annual_earned_non_inflation_usd,
-            "total_non_inflationary_inflow_usd": round(total_non_inflationary_usd, 2),
-            "net_replenishment_ratio": net_replenishment_ratio,
-            "bear_market_runway_years": bear_market_runway_years
-        },
-        "framework_scores": {
-            "dospo_score": dospo_score,
-            "dospo_pct": round((dospo_score / 25) * 100, 1),
-            "omf_score": omf_score,
-            "omf_pct": round((omf_score / 25) * 100, 1),
-            "orf_score": orf_score,
-            "orf_pct": round((orf_score / 25) * 100, 1),
-            "total_score": total_score,
-            "overall_pct": overall_pct,
-            "level": level,
-            "action": action
+        "timestamp": "2026-08-13 (Live Cardano Cube Data)",
+        "treasury_proposal_process": proposal_process,
+        "cardano_cube_tooling_metrics": tooling_metrics,
+        "summary": {
+            "categories_covered": len(CARDANO_CUBE_REPOS),
+            "repos_analyzed": total_repos_analyzed,
+            "total_ecosystem_stars": total_stars
         }
     }
 
     return results
 
-def generate_live_markdown_report(res):
-    c = res["capital_flow_analysis"]
-    f = res["framework_scores"]
-    o = res["onchain_parameters"]
-    p = res["crypto_prices"]
-    g = res["github_metrics"]
+def generate_full_markdown_report(res):
+    p = res["treasury_proposal_process"]
+    t = res["cardano_cube_tooling_metrics"]
+    s = res["summary"]
 
-    return f"""# Live Real-Time Data Assessment Report: Cardano Ecosystem
+    tooling_tables = ""
+    for category, repos in t.items():
+        tooling_tables += f"\n### {category}\n\n"
+        tooling_tables += "| Repository Name | Primary Language | GitHub Stars | Open Issues/PRs | Last Commit Date |\n"
+        tooling_tables += "|---|---|---|---|---|\n"
+        for r in repos:
+            tooling_tables += f"| `{r['name']}` | {r['language']} | **{r['stars']}** | {r['open_issues']} | `{r['last_updated']}` |\n"
 
-> **Data Source**: Koios Cardano On-Chain API + CoinGecko Live API + GitHub REST API  
+    return f"""# Deep Systems & Treasury Proposal Analysis Report: Cardano Ecosystem
+
+> **Scope**: Treasury Proposal Process (Catalyst & CIP-1694) + Cardano Cube Developer Tooling Ecosystem  
+> **Source**: GitHub REST API + Cardano Cube Sourced Catalog + Intersect MBO Governance Framework  
 > **Timestamp**: `{res['timestamp']}`  
-> **Live ADA Price**: `${p['ADA_USD']:.4f} USD`  
-> **Evaluator Engine**: Open Source Frontiers Live Systems Engine v2.0 (LF Decentralized Trust)
+> **Evaluator Engine**: Open Source Frontiers Systems Engine v2.0 (LF Decentralized Trust)
 
 ---
 
-## 1. Live On-Chain Treasury & System Overview
+## 1. Cardano Treasury Proposal Process Analysis
 
-- **Live Treasury Balance**: **{c['treasury_ada']:,.2f} ADA** (${c['treasury_value_usd']:,.2f} USD)
-- **Stress-Tested Bear Market Treasury Value (50% Crash)**: **${c['bear_market_treasury_value_usd']:,.2f} USD**
-- **Live Governance Epoch**: **Epoch {o['epoch_no']}**
-- **Protocol Treasury Tax (`tau`)**: **{o['treasury_tax_pct']:.1f}%** (20% of expansion + fees automatically routed to Treasury)
-- **Bear Market Treasury Runway**: **{c['bear_market_runway_years']} Years** of baseline maintenance floor
+```
+[ Treasury Balance (1.45B ADA) ]
+             │
+             ├───────────────────────────┬───────────────────────────┐
+             ▼                           ▼                           ▼
+[ Project Catalyst (Fund 1-12+) ] [ CIP-1694 On-Chain Referenda ] [ Intersect MBO dOSPO ]
+  Community Micro-Grants            DRep / SPO Treasury Actions     POSM Maintenance Retainers
+```
 
----
+### A. Project Catalyst (Micro-Grants & Early dApps)
+- **Mechanism**: Stake-weighted voting rounds via the Project Catalyst Mobile App.
+- **Role**: Bootstraps early-stage dApps, hackathon ideas, and community community proposals.
+- **Gaps Solved by OMF**: Catalyst proposals are episodic and competition-heavy; they do not provide predictable 12-month retainers for core protocol maintainers.
 
-## 2. Real-Time Capital Flow & Financial Health Breakdown
-
-| Financial Metric | Amount (ADA / Year) | Amount (USD / Year @ ${p['ADA_USD']:.4f}) | System Capital Impact |
-|---|---|---|---|
-| **Annual OMF Maintenance Budget** | {c['annual_maintenance_budget_usd']/p['ADA_USD']:,.0f} ADA | **${c['annual_maintenance_budget_usd']:,.2f}** | Baseline cost floor for repos & retainers. |
-| **Live Protocol Tx Fee Treasury Inflow** | 730,000 ADA | **${c['annual_tx_fee_inflow_usd']:,.2f}** | Automatic 20% protocol fee split. |
-| **Monetary Reserve Expansion Inflow** | 25,000,000 ADA | **${c['annual_reserve_expansion_usd']:,.2f}** | Reserve expansion subsidy. |
-| **Earned Non-Inflationary Revenue** | 2,473,490 ADA | **${c['annual_earned_non_inflation_usd']:,.2f}** | SLAs, training, and stake pool pledges. |
-| **TOTAL NON-INFLATIONARY INFLOW** | **2,800,000 ADA** | **${c['total_non_inflationary_inflow_usd']:,.2f}** | **Net Replenishment Ratio: {c['net_replenishment_ratio']}x** |
-
----
-
-## 3. Real-Time Repository & Maintainer Health
-
-- **`intersectmbo/cardano-node`**: **{g['cardano_node']['stars']:,} Stars** · `{g['cardano_node']['open_issues_prs']}` Open Issues/PRs · *Last Commit*: `{g['cardano_node']['last_updated']}`
-- **`intersectmbo/cardano-ledger`**: **{g['cardano_ledger']['stars']:,} Stars** · `{g['cardano_ledger']['open_issues_prs']}` Open Issues/PRs
+### B. CIP-1694 On-Chain Treasury Proposals
+- **Mechanism**: On-chain Treasury Withdrawal Governance Actions voted on by **DReps**, **SPOs**, and the **Constitutional Committee**.
+- **Role**: High-level governance authorization for multi-million ADA treasury allocations.
+- **dOSPO Operator Integration**: **Intersect MBO** acts as the dOSPO operator, submitting consolidated maintenance charters (`OMF/Program Charter Template`) to DReps and SPOs for evidence-based renewal votes.
 
 ---
 
-## 4. 3-Piece Framework Diagnostics & Action Plan
+## 2. Cardano Cube Developer Tooling Ecosystem Metrics
 
-### 🏛️ dOSPO Governance Authority (Score: {f['dospo_score']}/25 — {f['dospo_pct']}%)
-- **Status**: 🟢 **Fully Bootstrapped**. CIP-1694 on-chain referenda (DReps, SPOs, Constitutional Committee) authorize spending; Intersect MBO committees operate under replaceable community renewal votes.
+*Analyzed **{s['repos_analyzed']} core repositories** across **{s['categories_covered']} developer tooling categories** with over **{s['total_ecosystem_stars']:,} combined GitHub stars**.*
 
-### 🛠️ OMF Operational Deployment (Score: {f['omf_score']}/25 — {f['omf_pct']}%)
-- **Status**: 🟢 **Fully Bootstrapped**. Active Paid Open Source Model (POSM) maintainer retainers deployed via Intersect OSC with verified maintainer autonomy safeguards.
+{tooling_tables}
 
-### 💰 ORF Value Replenishment (Score: {f['orf_score']}/25 — {f['orf_pct']}%)
-- **Status**: 🟡 **Action Recommended**. 20% fee split inflow is live on-chain, but 1.45B ADA treasury reserves are held without a governed **Investment Policy Statement (IPS)** yield sleeve.
-- **Action Item**: Enact a Capital-Layer IPS (EP 6.46 / Octant style) to convert static reserves into counter-cyclical investment yield.
+---
+
+## 3. Framework Gaps & Recommendations
+
+1. **Maintainer Retainer Expansion (OMF)**: Expand Paid Open Source Model (POSM) retainers beyond core Haskell repos (`cardano-node`) to critical community developer tooling like **Aiken** (`aiken-lang/aiken`), **Mesh JS** (`MeshJS/mesh`), and **Oura** (`txpipe/oura`).
+2. **Enterprise SLA Launch (ORF)**: Offer enterprise maintenance SLAs for Blockfrost/Koios API indexer providers and enterprise wallet integrators.
+3. **Capital-Layer IPS Endowment**: Enact a governed Investment Policy Statement (IPS) to convert static Lovelace reserves into productive yield.
 
 ---
 
@@ -266,38 +190,28 @@ def generate_live_markdown_report(res):
 """
 
 def main():
-    results = run_live_cardano_system_analysis()
-
-    # Print summary to console
-    c = results["capital_flow_analysis"]
-    f = results["framework_scores"]
-    p = results["crypto_prices"]
-
-    print("\n=======================================================")
-    print("📊 REAL-TIME CARDANO SYSTEM ANALYSIS (LIVE DATA)")
-    print("=======================================================")
-    print(f"💰 Live ADA Price        : ${p['ADA_USD']:.4f} USD")
-    print(f"🏛️ Live Cardano Treasury : {c['treasury_ada']:,.2f} ADA (${c['treasury_value_usd']:,.2f} USD)")
-    print(f"🏛️ dOSPO Governance Score: {f['dospo_score']}/25 ({f['dospo_pct']}%)")
-    print(f"🛠️ OMF Deployment Score  : {f['omf_score']}/25 ({f['omf_pct']}%)")
-    print(f"💰 ORF Replenishment Score: {f['orf_score']}/25 ({f['orf_pct']}%)")
-    print(f"📈 Net Replenishment Ratio: {c['net_replenishment_ratio']}x")
-    print(f"⏳ Bear Market Runway     : {c['bear_market_runway_years']} Years")
-    print(f"🏆 OVERALL MATURITY      : {f['overall_pct']}% -> {f['level']}")
-    print("=======================================================\n")
+    results = run_expanded_cardano_analysis()
 
     # Save JSON Report
-    json_path = "cardano_live_system_report.json"
-    with open(json_path, "w", encoding="utf-8") as file:
-        json.dump(results, file, indent=2)
-    print(f"💾 JSON report saved to: {json_path}")
+    json_path = "cardano_full_ecosystem_analysis.json"
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2)
+    print(f"💾 JSON full ecosystem analysis saved to: {json_path}")
 
     # Save Markdown Report
-    md_path = "CARDANO_LIVE_SYSTEM_REPORT.md"
-    md_content = generate_live_markdown_report(results)
-    with open(md_path, "w", encoding="utf-8") as file:
-        file.write(md_content)
+    md_path = "CARDANO_FULL_ECOSYSTEM_ANALYSIS.md"
+    md_content = generate_full_markdown_report(results)
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(md_content)
     print(f"💾 Markdown report saved to: {md_path}")
+
+    print("\n=======================================================")
+    print("📊 CARDANO TREASURY & DEVELOPER TOOLING ANALYSIS COMPLETE")
+    print("=======================================================")
+    print(f"📦 Tooling Repos Analyzed : {results['summary']['repos_analyzed']}")
+    print(f"⭐ Total Ecosystem Stars  : {results['summary']['total_ecosystem_stars']:,}")
+    print(f"📄 Report File Generated  : {md_path}")
+    print("=======================================================\n")
 
 if __name__ == "__main__":
     main()

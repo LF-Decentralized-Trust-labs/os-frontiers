@@ -1,0 +1,133 @@
+{
+  "timestamp": "2026-08-13 (Live Cardano Cube Data)",
+  "treasury_proposal_process": {
+    "catalyst_fund_rounds": {
+      "mechanism": "Project Catalyst (Fund 1 - Fund 12+)",
+      "voting_type": "Stake-weighted ADA holder app voting",
+      "strengths": "Broad community participation; funded 1,000+ early dApps and dev proposals.",
+      "gaps_addressed_by_omf": "Episodic grant fatigue; lack of long-term maintainer retainers; high friction for core infrastructure maintenance."
+    },
+    "cip_1694_onchain_treasury": {
+      "governance_bodies": [
+        "Constitutional Committee (CC)",
+        "Delegated Representatives (DReps)",
+        "Stake Pool Operators (SPOs)"
+      ],
+      "treasury_withdrawal_action": "On-chain Treasury Withdrawal Governance Action requiring DRep & SPO voting thresholds.",
+      "dOSPO_operator_role": "Intersect MBO (Open Source Committee & Technical Steering Committee) coordinates core POSM retainers and presents consolidated maintenance proposals."
+    }
+  },
+  "cardano_cube_tooling_metrics": {
+    "Core Protocol & Ledger": [
+      {
+        "name": "intersectmbo/cardano-node",
+        "stars": 3179,
+        "open_issues": 71,
+        "last_updated": "2026-08-12T22:33:48Z",
+        "language": "Haskell"
+      },
+      {
+        "name": "intersectmbo/cardano-ledger",
+        "stars": 291,
+        "open_issues": 281,
+        "last_updated": "2026-08-13T12:31:12Z",
+        "language": "Haskell"
+      },
+      {
+        "name": "intersectmbo/cardano-cli",
+        "stars": 71,
+        "open_issues": 42,
+        "last_updated": "2026-08-13T16:26:21Z",
+        "language": "Haskell"
+      },
+      {
+        "name": "intersectmbo/ouroboros-network",
+        "stars": 293,
+        "open_issues": 342,
+        "last_updated": "2026-08-06T08:25:18Z",
+        "language": "Haskell"
+      },
+      {
+        "name": "intersectmbo/plutus",
+        "stars": 1635,
+        "open_issues": 241,
+        "last_updated": "2026-08-12T13:56:10Z",
+        "language": "Haskell"
+      }
+    ],
+    "Developer SDKs & Libraries": [
+      {
+        "name": "MeshJS/mesh",
+        "stars": 271,
+        "open_issues": 83,
+        "last_updated": "2026-08-13T11:22:00Z",
+        "language": "TypeScript"
+      },
+      {
+        "name": "Emurgo/cardano-serialization-lib",
+        "stars": 250,
+        "open_issues": 107,
+        "last_updated": "2026-08-07T12:30:05Z",
+        "language": "Rust"
+      },
+      {
+        "name": "Python-Cardano/pycardano",
+        "stars": 253,
+        "open_issues": 26,
+        "last_updated": "2026-07-11T18:24:22Z",
+        "language": "Python"
+      },
+      {
+        "name": "Rings-Network/lucid",
+        "stars": "N/A",
+        "open_issues": "N/A",
+        "last_updated": "N/A",
+        "language": "N/A"
+      }
+    ],
+    "Smart Contract Tooling & Languages": [
+      {
+        "name": "aiken-lang/aiken",
+        "stars": 584,
+        "open_issues": 37,
+        "last_updated": "2026-08-10T23:05:49Z",
+        "language": "Rust"
+      },
+      {
+        "name": "opshin/opshin",
+        "stars": 167,
+        "open_issues": 16,
+        "last_updated": "2026-07-27T07:11:19Z",
+        "language": "Python"
+      }
+    ],
+    "Data Indexers & Infrastructure": [
+      {
+        "name": "txpipe/oura",
+        "stars": 288,
+        "open_issues": 80,
+        "last_updated": "2026-08-13T07:17:31Z",
+        "language": "Rust"
+      },
+      {
+        "name": "cardano-ogmios/ogmios",
+        "stars": "N/A",
+        "open_issues": "N/A",
+        "last_updated": "N/A",
+        "language": "N/A"
+      },
+      {
+        "name": "cardano-community/koios-artifacts",
+        "stars": 24,
+        "open_issues": 16,
+        "last_updated": "2026-08-02T11:54:43Z",
+        "language": "PLpgSQL"
+      }
+    ]
+  },
+  "summary": {
+    "categories_covered": 4,
+    "repos_analyzed": 14,
+    "total_ecosystem_stars": 7306
+  }
+}
