@@ -1,54 +1,26 @@
-# Open Source Frontiers Evaluator Suite
+# Automated 3-Piece Ecosystem Assessor & Experimental Tooling Suite
 
-> **Capital-Flow & Dynamic Ecosystem Assessor (dOSPO · OMF · ORF)**  
-> *Linux Foundation CHAOSS, QUAID Scanner, and Live On-Chain Data Standards*  
-> *LF Decentralized Trust · Open Source Frontiers Lab*
-
----
-
-## Directory Architecture
-
-```
-evaluator/
-├── README.md
-├── cli/                                     <-- Assessor CLI Engines & Adapters
-│   ├── quaid_adapter.py                     # Official QUAID Scanner 5-pillar adapter
-│   ├── live_data_analyst.py                 # Dynamic GitHub & Cardano Treasury analyst
-│   ├── assess_ecosystem.py                  # Capital-flow & dynamic maturity calculator
-│   ├── index.js                             # Node.js CLI runner
-│   └── package.json                         # Node package config
-├── docs/                                    <-- Assessment Specs & Diagnostic Rubrics
-│   └── 3-Piece Ecosystem Maturity Assessment.md
-└── examples/                                <-- Real-World Example Reports & JSON Datasets
-    ├── CARDANO_FULL_ECOSYSTEM_ANALYSIS.md   # Cardano Treasury & Developer Tooling Report
-    ├── CARDANO_QUAID_SCANNER_REPORT.md      # QUAID 5-Pillar Security & Tech Audit
-    ├── cardano_full_ecosystem_analysis.json # Full ecosystem JSON dataset
-    └── cardano_quaid_scanner_report.json    # QUAID scan JSON dataset
-```
+> **Edition**: July 2026 Research Candidate (v0.8.0-rc.1)  
+> **Status**: Stage 0 Research Candidate Engine
 
 ---
 
-## Quick Start CLI Commands
+## 1. Assessor Engine Overview
 
-### 1. Run Official QUAID Scanner Audit (5 Core Technical Pillars)
+The **Canonical 3-Piece Ecosystem Assessor** computes ecosystem sustainability across 15 indicators (5 dOSPO, 5 OMF, 5 ORF) for a total maximum score of 75 Pts.
+
+- **Python Assessor (`cli/assess_ecosystem.py`)**: Canonical engine implementing 0/3/5 indicator scoring, exact point thresholds, and the Level 3 replenishment hard-gate (`net_replenishment_ratio >= 1.0`).
+- **Node CLI Wrapper (`cli/index.js`)**: Executable wrapper invoking the Python engine under the hood.
+- **Experimental QUAID Heuristic Adapter (`cli/quaid_adapter.py`)**: Stage 0 research candidate adapter inspecting security and health heuristics on target repositories.
+
+---
+
+## 2. Usage Instructions
+
 ```bash
+# Run canonical 15-indicator assessor
+python evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.json
+
+# Run experimental QUAID-inspired scanner heuristic
 python evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
 ```
-
-### 2. Run Dynamic Cardano Treasury Proposal & Developer Tooling Analyst
-```bash
-python evaluator/cli/live_data_analyst.py
-```
-
-### 3. Run Capital-Flow & Dynamic Maturity Calculator
-```bash
-python evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.json
-```
-
----
-
-## Standards Compliance
-
-- **Linux Foundation CHAOSS**: Commit velocity, change request lead time, Bus Factor (Elephant Factor).
-- **QUAID Scanner Specification**: Security posture, governance soundness, community sustainability, AI readiness, technical rigor (Inclusive Language removed).
-- **Dynamic Capital Flow Engine**: Real-time GitHub REST API metrics, treasury fee splits, and bear market runway stress testing.

@@ -1,28 +1,32 @@
 {
   "repo": "intersectmbo/cardano-node",
-  "overallScore": 8.9,
+  "overallScore": 8.1,
   "riskLevel": "LOW",
   "maturity": "graduated",
-  "exitCode": 0,
+  "metrics": {
+    "stars": 3179,
+    "forks": 755,
+    "open_issues": 71
+  },
   "pillars": {
     "security": {
-      "score": 9.0,
+      "score": 9.5,
       "weight": 0.3
     },
     "governance": {
-      "score": 9.5,
+      "score": 7.0,
       "weight": 0.25
     },
     "community": {
-      "score": 8.5,
+      "score": 8.0,
       "weight": 0.2
     },
     "ai_readiness": {
-      "score": 8.5,
+      "score": 7.5,
       "weight": 0.15
     },
     "technical": {
-      "score": 9.0,
+      "score": 8.0,
       "weight": 0.1
     }
   },
@@ -31,50 +35,15 @@
       "severity": "PASS",
       "pillar": "security",
       "category": "security-policy",
-      "message": "SECURITY.md vulnerability disclosure policy verified",
-      "dataSource": "local"
-    },
-    {
-      "severity": "PASS",
-      "pillar": "governance",
-      "category": "governance-soundness",
-      "message": "dOSPO governance charter & CIP-1694 mandate verified",
-      "dataSource": "local"
-    },
-    {
-      "severity": "PASS",
-      "pillar": "community",
-      "category": "burnout-signals",
-      "message": "Maintainer issue backlog healthy",
+      "message": "Target repository contains SECURITY.md vulnerability disclosure policy",
       "dataSource": "api"
     },
     {
-      "severity": "PASS",
-      "pillar": "ai_readiness",
-      "category": "agentic-rules",
-      "message": "Agentic coding rules & structured API docs verified",
-      "dataSource": "local"
-    },
-    {
-      "severity": "PASS",
-      "pillar": "technical",
-      "category": "ci-automation",
-      "message": "Automated build workflows & SemVer release cadence verified",
-      "dataSource": "local"
-    }
-  ],
-  "recommendations": [
-    {
-      "priority": 1,
-      "action": "Deploy OMF Maintainer Retainers for top repositories",
-      "impact": "high",
-      "effort": "medium"
-    },
-    {
-      "priority": 2,
-      "action": "Enact ORF Capital-Layer IPS Endowment Policy",
-      "impact": "high",
-      "effort": "medium"
+      "severity": "INFO",
+      "pillar": "governance",
+      "category": "governance-doc",
+      "message": "GOVERNANCE.md charter file not found",
+      "dataSource": "api"
     }
   ]
 }
