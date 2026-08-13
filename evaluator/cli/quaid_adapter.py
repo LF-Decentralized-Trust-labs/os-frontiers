@@ -34,19 +34,19 @@ def fetch_json(url):
     except Exception as e:
         return None
 
-def analyze_repo_heuristics(repo_slug, local_base="."):
+def analyze_repo_heuristics(repo_slug):
     print(f"🔍 Running Experimental QUAID-Inspired Heuristic Scan on target `{repo_slug}`...")
 
     repo_data = fetch_json(f"https://api.github.com/repos/{repo_slug}")
     if not repo_data:
-        print(f"❌ Error: Unable to fetch live target repository data for `{repo_slug}`. Set GITHUB_TOKEN if rate limited.")
+        print(f"⚠️ Warning: Unable to fetch live target repository data for `{repo_slug}` (rate limit or 404).")
         return None
 
     stars = repo_data.get("stargazers_count", 0)
     forks = repo_data.get("forks_count", 0)
     open_issues = repo_data.get("open_issues_count", 0)
 
-    # Auto-detect Maturity Level according to QUAID spec
+    # Auto-detect Maturity Level according to QUAID heuristic spec
     if stars > 1000 or forks > 200:
         maturity = "graduated"
     elif stars > 50:
@@ -79,7 +79,7 @@ def analyze_repo_heuristics(repo_slug, local_base="."):
         })
 
     # 2. Governance Soundness Pillar (25%)
-    gov_score = 8.0
+    gov_score = 7.0
     gov_doc = fetch_json(f"https://api.github.com/repos/{repo_slug}/contents/GOVERNANCE.md")
     if gov_doc:
         gov_score = 9.5
@@ -88,6 +88,14 @@ def analyze_repo_heuristics(repo_slug, local_base="."):
             "pillar": "governance",
             "category": "governance-doc",
             "message": "Target repository GOVERNANCE.md charter verified",
+            "dataSource": "api"
+        })
+    else:
+        findings.append({
+            "severity": "INFO",
+            "pillar": "governance",
+            "category": "governance-doc",
+            "message": "GOVERNANCE.md charter file not found",
             "dataSource": "api"
         })
 
@@ -125,6 +133,11 @@ def analyze_repo_heuristics(repo_slug, local_base="."):
         "overallScore": overall_score,
         "riskLevel": risk_level,
         "maturity": maturity,
+        "metrics": {
+            "stars": stars,
+            "forks": forks,
+            "open_issues": open_issues
+        },
         "pillars": {
             "security": {"score": sec_score, "weight": 0.30},
             "governance": {"score": gov_score, "weight": 0.25},
@@ -137,7 +150,7 @@ def analyze_repo_heuristics(repo_slug, local_base="."):
 
 def main():
     target_repo = sys.argv[1] if len(sys.argv) > 1 else "intersectmbo/cardano-node"
-    report = analyze_repo_heuristics(target_repo, local_base=".")
+    report = analyze_repo_heuristics(target_repo)
 
     if not report:
         sys.exit(1)
@@ -149,12 +162,44 @@ def main():
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
 
+    md_path = os.path.join(output_dir, "CARDANO_QUAID_SCANNER_REPORT.md")
+    md_content = f"""# Experimental QUAID-Inspired Heuristic Report: `{report['repo']}`
+
+> **Analysis Target**: `{report['repo']}`  
+> **Adapter Engine**: `evaluator/cli/quaid_adapter.py` (Stage 0 Research Candidate)  
+> **Overall Heuristic Score**: `{report['overallScore']} / 10.0` ({report['riskLevel']} Risk)  
+> **Maturity Classification**: `{report['maturity'].title()}`
+
+---
+
+## Pillar Score Breakdown
+
+| Pillar | Score | Weight | Assessment |
+|---|---|---|---|
+| 🛡️ Security Posture | `{report['pillars']['security']['score']} / 10` | 30% | SECURITY.md existence & vulnerability policy |
+| 🏛️ Governance Soundness | `{report['pillars']['governance']['score']} / 10` | 25% | GOVERNANCE.md charter verification |
+| 👥 Community Health | `{report['pillars']['community']['score']} / 10` | 20% | Issue backlog & contributor activity |
+| 🤖 AI Readiness | `{report['pillars']['ai_readiness']['score']} / 10` | 15% | Agentic documentation & API accessibility |
+| ⚙️ Technical Rigor | `{report['pillars']['technical']['score']} / 10` | 10% | Build workflow presence & release cadence |
+
+---
+
+## Heuristic Findings
+
+"""
+    for item in report['findings']:
+        md_content += f"- **[{item['severity']}]** ({item['pillar']}) {item['message']}\n"
+
+    with open(md_path, "w", encoding="utf-8") as f:
+        f.write(md_content)
+
     print("\n=======================================================")
     print(f"🛡️ EXPERIMENTAL QUAID HEURISTIC SCAN COMPLETE: {report['repo']}")
     print(f"🏆 Overall Heuristic Score : {report['overallScore']} / 10.0")
     print(f"⚠️ Risk Level Rating       : {report['riskLevel']}")
     print(f"🌱 Maturity Classification : {report['maturity']}")
     print(f"💾 Report saved to         : {json_path}")
+    print(f"💾 Markdown saved to       : {md_path}")
     print("=======================================================\n")
 
 if __name__ == "__main__":

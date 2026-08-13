@@ -1,38 +1,40 @@
-# Open Source Frontiers Framework Validation Lifecycle (`VALIDATION.md`)
+# OS Frontiers Framework Validation & Evidence Register
 
-> **Formal Validation Framework, Maturity Lifecycle & Peer Review Process**  
-> *LF Decentralized Trust · Open Source Frontiers Lab*
+> **Edition**: July 2026 Research Candidate (v0.8.0-rc.1)  
+> **Status**: Stage 0 Research Candidate — Open for External Peer Review
 
 ---
 
-## 1. Validation Lifecycle Stages
+## 1. The 4-Stage Validation Lifecycle
 
-To ensure transparent, defensible progress from research concepts to operational deployment, all frameworks, collection instruments, and evaluation tools in this repository move through four distinct maturity stages:
+To prevent premature claims of operational completeness, all Open Source Frontiers (OSF) components progress through a strict 4-stage lifecycle:
 
 ```
-[ Stage 0: Research Candidate ] ──> [ Stage 1: Peer Reviewed ] ──> [ Stage 2: Piloted ] ──> [ Stage 3: Validated ]
+[ Stage 0 ] ──► [ Stage 1 ] ──► [ Stage 2 ] ──► [ Stage 3 ]
+Research         Peer Reviewed      Piloted          Validated
+Candidate                           Precursors       Production
 ```
 
-| Stage | Classification | Definition & Acceptance Criteria | Current Status |
+1. **Stage 0: Research Candidate**: Initial architectural specification, pro-forma feasibility models, and illustrative code sketches published for public review.
+2. **Stage 1: Peer Reviewed**: Formal technical review and disposition recorded from at least two independent external domain experts.
+3. **Stage 2: Piloted Precursors**: Operational precedent demonstrated in production ecosystems (e.g. Intersect POSM pilot).
+4. **Stage 3: Validated Production**: Multi-quarter empirical evidence proving a closed, self-sustaining economic loop without net treasury depletion.
+
+---
+
+## 2. Component Maturity Register
+
+| Component / Module | Claimed Lifecycle Stage | Primary Evidence & Precursor Precedent | Next Validation Gate |
 |---|---|---|---|
-| **Stage 0** | **Research Candidate** | Theoretical specification or pro-forma model authored and published in repo. | **Current Baseline (v0.8-RC)** |
-| **Stage 1** | **Peer Reviewed** | Evaluated and critiqued by at least 2 independent external reviewers or OSPO leaders. | Target Stage |
-| **Stage 2** | **Piloted** | Deployed in an active Web3 ecosystem (e.g. Cardano POSM, Optimism Superchain, Polkadot OpenGov) for 6+ months. | Active Pilot (Cardano POSM) |
-| **Stage 3** | **Validated** | Empirical production data confirms net replenishment ratio $\ge 1.0$ and maintainer retainers sustained across market cycles. | Production Goal |
+| **dOSPO Framework** | **Stage 0 (Research Candidate)** | Derived from Intersect Open Source Committee governance precedent. | Independent OSPO practitioner review. |
+| **OMF Retainers** | **Stage 0 (Research Candidate)** | Grounded in Cardano POSM Maintainer Retainer pilot cohort. | Longitudinal maintainer retention outcome measurement. |
+| **ORF Replenishment** | **Stage 0 (Research Candidate)** | Modeled after Optimism sequencer fee-split & Polkadot Treasury inflows. | Pilot implementation of enterprise SLA vault. |
+| **QUAID Heuristic Adapter** | **Stage 0 (Research Candidate)** | Experimental QUAID-inspired heuristic scanner script (`quaid_adapter.py`). | Independent code review & QUAID CLI integration. |
+| **Solidity & Aiken Reference Contracts** | **Stage 0 (Research Candidate)** | Architectural sketches (`ORFSlaVault.sol` & `orf_sla_vault.ak`). | Smart contract security audit. |
 
 ---
 
-## 2. Auditable Framework Pilot Register
+## 3. Evidence Audit Log
 
-| Artifact / Module | Lifecycle Stage | Ecosystem Pilot | Pilot Start | Duration | Reference Link & Evidence | Pilot Outcome & Summary |
-|---|---|---|---|---|---|---|
-| **dOSPO Framework** | Stage 2 (Piloted) | Cardano (Intersect MBO) | Jan 2024 | 18+ Months | [Intersect Open Source Committee Charter](https://intersectmbo.org) | Established community-mandated governance committee & technical steering committee for open-source roadmap. |
-| **OMF Framework** | Stage 2 (Piloted) | Cardano POSM Pilot | Jun 2024 | 12+ Months | [`use-cases/CARDANO_POSM.md`](./use-cases/CARDANO_POSM.md) | Funded 12 core Haskell client maintainers under 12-month retainers. Reduced maintainer turnover. |
-| **ORF Framework** | Stage 0 (Research Candidate) | LF Decentralized Trust Lab | Jul 2026 | Candidate | [`docs/TIER_1_FEASIBILITY_MODEL.md`](./docs/TIER_1_FEASIBILITY_MODEL.md) | Formulated 20+ collection instruments; Tier 1 Feasibility Scenario Model demonstrates 1.14x coverage potential. |
-| **QUAID Assessor Adapter** | Stage 1 (Peer Reviewed) | QUAID Scanner Community | May 2026 | Active | [quaid/quaid-scanner](https://github.com/quaid/quaid-scanner) | Integrated 5-pillar security & governance audit engine; tested on `intersectmbo/cardano-node`. |
-
----
-
-## 3. How to Submit External Validation & Review
-
-We invite independent OSPO managers, economists, smart contract auditors, and DAO governance researchers to submit validation feedback, pilot evidence, or peer reviews via GitHub Pull Requests or Discussions.
+- **Cardano POSM Pilot Precursor**: Intersect MBO launched the Paid Open Source Model (POSM) maintainer retainer intake round. Maintainer retainers were established as 12-month stipends. Longitudinal retention metrics remain subject to multi-quarter observation.
+- **Feasibility Pro-Forma**: The $3.0M baseline maintenance cost floor and Tier 1 instrument revenue projections represent modeled scenarios requiring ecosystem-specific parameter tuning.
