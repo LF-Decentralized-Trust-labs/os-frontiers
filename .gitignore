@@ -4,6 +4,9 @@ __pycache__/
 *$py.class
 .pytest_cache/
 
+# Dynamic Evaluator Outputs
+evaluator/output/
+
 # Node.js
 node_modules/
 npm-debug.log*
