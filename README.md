@@ -5,7 +5,7 @@
 
 [![License: Apache 2.0 / CC-BY-4.0](https://img.shields.io/badge/License-Apache_2.0_%7C_CC--BY--4.0-blue.svg)](LICENSE)
 [![LF Decentralized Trust](https://img.shields.io/badge/LF-Decentralized_Trust_Lab-green.svg)](https://lfdecentralizedtrust.org)
-[![Edition: July 2026 Validated](https://img.shields.io/badge/Edition-July_2026_Validated-orange.svg)](opensourcecowboy.org)
+[![Edition: July 2026 Research Candidate](https://img.shields.io/badge/Edition-July_2026_Research_Candidate-orange.svg)](./VALIDATION.md)
 
 ---
 
@@ -59,7 +59,8 @@ The suite enforces a strict division of labor with **zero functional overlap**:
 | 🏛️ **dOSPO** | Governance & Policy Framework | [dOSPO Specification](./dospo/START_HERE.md) • [dOSPO Charter](./dospo/CHARTER.md) • [Funding Principles](./dospo/FUNDING_PRINCIPLES.md) |
 | 🛠️ **OMF** | Maintenance & Deployment Framework | [OMF Specification](./omf/START_HERE.md) • [Program Charter Template](./omf/PROGRAM_CHARTER_TEMPLATE.md) • [Stewardship](./omf/STEWARDSHIP.md) |
 | 💰 **ORF** | Replenishment & Inflow Framework | [ORF Specification](./orf/START_HERE.md) • [Instrument Catalog](./orf/INSTRUMENT_CATALOG.md) • [Governance Rules](./orf/GOVERNANCE_RULES.md) |
-| 📈 **Pro-Forma Model** | Tier 1 Feasibility Scenario Model ($\ge 1.0$) | [Tier 1 Feasibility Scenario Model](./docs/TIER_1_PRO_FORMA_PROOF.md) |
+| 📈 **Pro-Forma Model** | Tier 1 Feasibility Scenario Model | [Tier 1 Feasibility Scenario Model](./docs/TIER_1_FEASIBILITY_MODEL.md) |
+| 🏆 **Validation Lifecycle** | 4-Stage Validation Framework | [Validation Framework & Register](./VALIDATION.md) |
 | 🌍 **Use Cases** | Multi-Chain Ecosystem Profiles | [Cardano POSM](./use-cases/CARDANO_POSM.md) • [Optimism Superchain](./use-cases/OPTIMISM_SUPERCHAIN.md) • [Polkadot](./use-cases/POLKADOT_OPENGOV.md) • [Ethereum EVM](./use-cases/ETHEREUM_EVM.md) |
 | 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
 | 📊 **Evaluator Suite** | QUAID, CHAOSS & Systems Assessor | [Evaluator Documentation](./evaluator/README.md) • [QUAID Audit Example](./evaluator/examples/CARDANO_QUAID_SCANNER_REPORT.md) |
@@ -71,6 +72,6 @@ The suite enforces a strict division of labor with **zero functional overlap**:
 
 ## Citation & License
 
-**Validated Research Edition · Final Revised & Expanded July 2026**  
+**Research Edition — Candidate for External Validation**  
 *Author*: Christian Taylor (`opensourcecowboy.org`) · Open Source Frontiers Lab · LF Decentralized Trust  
 *License*: Code under [Apache-2.0](LICENSE); Documentation under [CC-BY-4.0](LICENSE).
