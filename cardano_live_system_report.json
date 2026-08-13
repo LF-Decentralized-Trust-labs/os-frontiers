@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-08-13 (Live Real-Time Data)",
+  "onchain_parameters": {
+    "treasury_ada": 1453739190.472892,
+    "epoch_no": 649,
+    "treasury_tax_pct": 20.0,
+    "monetary_expand_rate": 0.003
+  },
+  "crypto_prices": {
+    "ADA_USD": 0.181736,
+    "ETH_USD": 1879.87,
+    "OP_USD": 0.085946,
+    "DOT_USD": 0.770668
+  },
+  "github_metrics": {
+    "cardano_node": {
+      "stars": 3179,
+      "open_issues_prs": 71,
+      "last_updated": "2026-08-12T22:33:48Z"
+    },
+    "cardano_ledger": {
+      "stars": 291,
+      "open_issues_prs": 281
+    }
+  },
+  "capital_flow_analysis": {
+    "treasury_ada": 1453739190.472892,
+    "ada_price_usd": 0.181736,
+    "treasury_value_usd": 264196745.52,
+    "bear_market_treasury_value_usd": 132098372.76,
+    "annual_maintenance_budget_usd": 3500000.0,
+    "annual_tx_fee_inflow_usd": 132667.28,
+    "annual_reserve_expansion_usd": 4543400.0,
+    "annual_earned_non_inflation_usd": 450000.0,
+    "total_non_inflationary_inflow_usd": 582667.28,
+    "net_replenishment_ratio": 0.17,
+    "bear_market_runway_years": 37.7
+  },
+  "framework_scores": {
+    "dospo_score": 25,
+    "dospo_pct": 100.0,
+    "omf_score": 25,
+    "omf_pct": 100.0,
+    "orf_score": 18,
+    "orf_pct": 72.0,
+    "total_score": 68,
+    "overall_pct": 90.7,
+    "level": "Level 3: Self-Sustaining Closed Loop",
+    "action": "Enact a Capital-layer Investment Policy Statement (IPS) to deploy yield sleeve on reserves."
+  }
+}
