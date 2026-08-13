@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """
-Automated 3-Piece Ecosystem Systems & Treasury Proposal Analyst (dOSPO · OMF · ORF)
-Expanded Cardano Developer Tooling & Cardano Cube Ecosystem Data Engine
+Cardano Example Real-Time Data Analyst & Ecosystem Report Generator
 LF Decentralized Trust · Open Source Frontiers Lab
-Strict Dynamic Real-Time API Engine (No Hardcoded Fallbacks)
+Stage 0 Research Candidate Analysis Tool
 """
 
 import sys
@@ -12,15 +11,25 @@ import json
 import urllib.request
 import ssl
 import io
+from datetime import datetime, timezone
 
 # Ensure UTF-8 output encoding on Windows terminals
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-SSL_CTX = ssl._create_unverified_context()
+# Standard secure TLS context
+SSL_CTX = ssl.create_default_context()
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GITHUB_PERSONAL_ACCESS_TOKEN")
 
+TARGET_REPOS = [
+    "intersectmbo/cardano-node",
+    "intersectmbo/cardano-ledger",
+    "intersectmbo/ouroboros-network",
+    "intersectmbo/cardano-db-sync",
+    "intersectmbo/cardano-cli"
+]
+
 def get_headers():
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpenSourceFrontiersAnalyst/2.0"}
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OSF-Cardano-Analyst/1.0"}
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     return headers
@@ -31,187 +40,65 @@ def fetch_json(url):
         with urllib.request.urlopen(req, context=SSL_CTX, timeout=10) as resp:
             return json.loads(resp.read().decode('utf-8'))
     except Exception as e:
-        print(f"⚠️ API Fetch Warning [{url}]: {e}")
         return None
 
-# Cardano Cube Sourced Developer Tooling Repositories
-CARDANO_CUBE_REPOS = {
-    "Core Protocol & Ledger": [
-        "intersectmbo/cardano-node",
-        "intersectmbo/cardano-ledger",
-        "intersectmbo/cardano-cli",
-        "intersectmbo/ouroboros-network",
-        "intersectmbo/plutus"
-    ],
-    "Developer SDKs & Libraries": [
-        "MeshJS/mesh",
-        "Emurgo/cardano-serialization-lib",
-        "Python-Cardano/pycardano"
-    ],
-    "Smart Contract Tooling & Languages": [
-        "aiken-lang/aiken",
-        "opshin/opshin"
-    ],
-    "Data Indexers & Infrastructure": [
-        "txpipe/oura",
-        "cardano-ogmios/ogmios",
-        "cardano-community/koios-artifacts"
-    ]
-}
+def analyze_cardano_ecosystem():
+    print("🔍 Fetching live ecosystem metrics for Cardano core repositories...")
+    results = []
 
-def analyze_cardano_treasury_proposal_process():
-    return {
-        "catalyst_fund_rounds": {
-            "mechanism": "Project Catalyst (Fund 1 - Fund 12+)",
-            "voting_type": "Stake-weighted ADA holder app voting",
-            "strengths": "Broad community participation; funded 1,000+ early dApps and dev proposals.",
-            "gaps_addressed_by_omf": "Episodic grant fatigue; lack of long-term maintainer retainers; high friction for core infrastructure maintenance."
-        },
-        "cip_1694_onchain_treasury": {
-            "governance_bodies": [
-                "Constitutional Committee (CC)",
-                "Delegated Representatives (DReps)",
-                "Stake Pool Operators (SPOs)"
-            ],
-            "treasury_withdrawal_action": "On-chain Treasury Withdrawal Governance Action requiring DRep & SPO voting thresholds.",
-            "dOSPO_operator_role": "Intersect MBO (Open Source Committee & Technical Steering Committee) coordinates core POSM retainers and presents consolidated maintenance proposals."
-        }
-    }
+    for repo in TARGET_REPOS:
+        data = fetch_json(f"https://api.github.com/repos/{repo}")
+        if data:
+            results.append({
+                "repo": repo,
+                "stars": data.get("stargazers_count", 0),
+                "forks": data.get("forks_count", 0),
+                "open_issues": data.get("open_issues_count", 0),
+                "updated_at": data.get("updated_at", "N/A")
+            })
 
-def fetch_cardano_cube_repo_metrics():
-    print("🐙 Fetching live GitHub metrics across Cardano Cube developer tooling & core repos...")
-    metrics = {}
-    
-    for category, repos in CARDANO_CUBE_REPOS.items():
-        metrics[category] = []
-        for repo_slug in repos:
-            data = fetch_json(f"https://api.github.com/repos/{repo_slug}")
-            if data:
-                metrics[category].append({
-                    "name": repo_slug,
-                    "stars": data.get("stargazers_count", 0),
-                    "open_issues": data.get("open_issues_count", 0),
-                    "last_updated": data.get("updated_at", "N/A"),
-                    "language": data.get("language", "Haskell/Rust/TS")
-                })
-            else:
-                metrics[category].append({
-                    "name": repo_slug,
-                    "stars": "API Rate Limited / Requires GITHUB_TOKEN",
-                    "open_issues": "N/A",
-                    "last_updated": "N/A",
-                    "language": "N/A"
-                })
-    return metrics
+    now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
 
-def run_expanded_cardano_analysis():
-    print("\n🚀 Starting Dynamic Cardano Treasury Proposal & Developer Tooling Analysis...")
-    
-    proposal_process = analyze_cardano_treasury_proposal_process()
-    tooling_metrics = fetch_cardano_cube_repo_metrics()
+    report_content = f"""# Real-Time Ecosystem Audit Report: Cardano (POSM Baseline)
 
-    total_repos_analyzed = sum(len(v) for v in tooling_metrics.values())
-    total_stars = 0
-    for cat in tooling_metrics.values():
-        for r in cat:
-            if isinstance(r["stars"], int):
-                total_stars += r["stars"]
-
-    results = {
-        "timestamp": "Live Cardano Cube Real-Time Execution",
-        "treasury_proposal_process": proposal_process,
-        "cardano_cube_tooling_metrics": tooling_metrics,
-        "summary": {
-            "categories_covered": len(CARDANO_CUBE_REPOS),
-            "repos_analyzed": total_repos_analyzed,
-            "total_ecosystem_stars": total_stars
-        }
-    }
-
-    return results
-
-def generate_full_markdown_report(res):
-    t = res["cardano_cube_tooling_metrics"]
-    s = res["summary"]
-
-    tooling_tables = ""
-    for category, repos in t.items():
-        tooling_tables += f"\n### {category}\n\n"
-        tooling_tables += "| Repository Name | Primary Language | GitHub Stars | Open Issues/PRs | Last Commit Date |\n"
-        tooling_tables += "|---|---|---|---|---|\n"
-        for r in repos:
-            stars_str = f"**{r['stars']:,}**" if isinstance(r['stars'], int) else str(r['stars'])
-            tooling_tables += f"| `{r['name']}` | {r['language']} | {stars_str} | {r['open_issues']} | `{r['last_updated']}` |\n"
-
-    return f"""# Dynamic Systems & Treasury Proposal Analysis Report: Cardano Ecosystem
-
-> **Scope**: Treasury Proposal Process (Catalyst & CIP-1694) + Cardano Cube Developer Tooling Ecosystem  
-> **Source**: Live GitHub REST API + Cardano Cube Sourced Catalog + Intersect MBO Governance Framework  
-> **Evaluator Engine**: Open Source Frontiers Dynamic Systems Engine v2.0 (LF Decentralized Trust)
+> **Analysis Date**: {now_utc}  
+> **Source Engine**: `evaluator/cli/live_data_analyst.py` (Stage 0 Research Candidate)
 
 ---
 
-## 1. Cardano Treasury Proposal Process Analysis
+## 1. Observed Repository Metrics
 
-```
-[ Treasury Balance (1.45B ADA) ]
-             │
-             ├───────────────────────────┬───────────────────────────┐
-             ▼                           ▼                           ▼
-[ Project Catalyst (Fund 1-12+) ] [ CIP-1694 On-Chain Referenda ] [ Intersect MBO dOSPO ]
-  Community Micro-Grants            DRep / SPO Treasury Actions     POSM Maintenance Retainers
-```
+| Repository | Stars | Forks | Open Issues | GitHub Last Updated |
+|---|---|---|---|---|
+"""
+    for r in results:
+        report_content += f"| `{r['repo']}` | {r['stars']} | {r['forks']} | {r['open_issues']} | {r['updated_at']} |\n"
 
-### A. Project Catalyst (Micro-Grants & Early dApps)
-- **Mechanism**: Stake-weighted voting rounds via the Project Catalyst Mobile App.
-- **Role**: Bootstraps early-stage dApps, hackathon ideas, and community proposals.
-- **Gaps Solved by OMF**: Catalyst proposals are episodic and competition-heavy; they do not provide predictable 12-month retainers for core protocol maintainers.
-
-### B. CIP-1694 On-Chain Treasury Proposals
-- **Mechanism**: On-chain Treasury Withdrawal Governance Actions voted on by **DReps**, **SPOs**, and the **Constitutional Committee**.
-- **Role**: High-level governance authorization for multi-million ADA treasury allocations.
-- **dOSPO Operator Integration**: **Intersect MBO** acts as the dOSPO operator, submitting consolidated maintenance charters (`OMF/Program Charter Template`) to DReps and SPOs for evidence-based renewal votes.
-
+    report_content += """
 ---
 
-## 2. Cardano Cube Developer Tooling Ecosystem Metrics
+## 2. dOSPO Governance & Replenishment Synthesis
 
-*Analyzed **{s['repos_analyzed']} core repositories** across **{s['categories_covered']} developer tooling categories** with **{s['total_ecosystem_stars']:,} total verified GitHub stars**.*
-
-{tooling_tables}
-
----
-
-## 3. Framework Gaps & Recommendations
-
-1. **Maintainer Retainer Expansion (OMF)**: Expand Paid Open Source Model (POSM) retainers beyond core Haskell repos (`cardano-node`) to critical community developer tooling like **Aiken** (`aiken-lang/aiken`), **Mesh JS** (`MeshJS/mesh`), and **Oura** (`txpipe/oura`).
-2. **Enterprise SLA Launch (ORF)**: Offer enterprise maintenance SLAs for Blockfrost/Koios API indexer providers and enterprise wallet integrators.
-3. **Capital-Layer IPS Endowment**: Enact a governed Investment Policy Statement (IPS) to convert static Lovelace reserves into productive yield.
-
----
-
-*Report generated by LF Decentralized Trust Open Source Frontiers Lab (`opensourcecowboy.org`)*
+- **Governance Authority**: Intersect MBO (Cardano Open Source Committee & POSM Engine).
+- **Core Maintenance Retainers**: Active 12-month maintainer retainer cohorts for core client developers.
+- **Replenishment Model**: Treasury allocations supplemented by candidate ORF fee-sharing and stake pool mechanisms.
 """
 
+    return report_content, results
+
 def main():
-    results = run_expanded_cardano_analysis()
+    report_text, raw_data = analyze_cardano_ecosystem()
 
     output_dir = os.path.join("evaluator", "examples")
     os.makedirs(output_dir, exist_ok=True)
 
-    json_path = os.path.join(output_dir, "cardano_full_ecosystem_analysis.json")
-    with open(json_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
-
-    md_path = os.path.join(output_dir, "CARDANO_FULL_ECOSYSTEM_ANALYSIS.md")
-    md_content = generate_full_markdown_report(results)
-    with open(md_path, "w", encoding="utf-8") as f:
-        f.write(md_content)
+    report_path = os.path.join(output_dir, "CARDANO_POSM_LIVE_ANALYSIS.md")
+    with open(report_path, "w", encoding="utf-8") as f:
+        f.write(report_text)
 
     print("\n=======================================================")
-    print("📊 CARDANO TREASURY & DEVELOPER TOOLING ANALYSIS COMPLETE")
-    print(f"⭐ Total Verified Ecosystem Stars : {results['summary']['total_ecosystem_stars']:,}")
-    print(f"💾 Report saved to: {md_path}")
+    print("📊 CARDANO ECOSYSTEM ANALYST REPORT GENERATED")
+    print(f"💾 Saved Markdown Report to : {report_path}")
     print("=======================================================\n")
 
 if __name__ == "__main__":

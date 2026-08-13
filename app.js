@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 2. Interactive 15-Indicator Evaluator Engine
+  // 2. Interactive 15-Indicator Evaluator Engine (75 Pts Total)
   const evalInputs = document.querySelectorAll(".eval-indicator-input");
   const dospoMeter = document.getElementById("dospo-score");
   const omfMeter = document.getElementById("omf-score");
@@ -41,7 +41,16 @@ document.addEventListener("DOMContentLoaded", () => {
       if (type === "orf") orf += val;
     });
 
-    const replRatio = parseFloat(document.getElementById("eval-repl-ratio")?.value || "0.0");
+    // Derive Indicator 11 dynamically from Net Replenishment Ratio
+    const replRatioInput = parseFloat(document.getElementById("eval-repl-ratio")?.value || "0.0");
+    let ind11Score = 0;
+    if (replRatioInput >= 1.0) {
+      ind11Score = 5;
+    } else if (replRatioInput >= 0.20) {
+      ind11Score = 3;
+    }
+    orf += ind11Score;
+
     const total = dospo + omf + orf;
     const totalPct = Math.round((total / 75) * 100);
 
@@ -51,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (totalMeter) totalMeter.textContent = `${total} / 75 (${totalPct}%)`;
 
     let level = "Level 0: Un-Architected / Fragile";
-    if (total >= 64 && replRatio >= 1.0) {
+    if (total >= 65 && replRatioInput >= 1.0) {
       level = "Level 3: Self-Sustaining Closed Loop";
     } else if (total >= 50) {
       level = "Level 2: Fee-Supplemented Maintenance";
