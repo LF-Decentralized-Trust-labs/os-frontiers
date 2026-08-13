@@ -1,0 +1,22 @@
+{
+  "target": "C:\\Users\\chris\\.gemini\\antigravity\\scratch\\open-source-frontiers",
+  "dospo_score": 17,
+  "dospo_pct": 85.0,
+  "omf_score": 17,
+  "omf_pct": 85.0,
+  "orf_score": 20,
+  "orf_pct": 100.0,
+  "total_score": 54,
+  "max_score": 60,
+  "overall_pct": 90.0,
+  "maturity_level": "Level 3: Self-Sustaining Closed Loop",
+  "recommendation": "Net replenishment ratio >= 1.0. Full 3-piece framework suite active.",
+  "artifacts_detected": {
+    "dOSPO_Charter": true,
+    "OMF_Spec": true,
+    "ORF_Spec": true,
+    "Enterprise_SLA": true,
+    "IPS_Endowment": true,
+    "Audit_Report": true
+  }
+}
