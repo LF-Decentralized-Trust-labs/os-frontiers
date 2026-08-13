@@ -1,0 +1,148 @@
+{
+  "timestamp": "2026-08-13 (CHAOSS / GrimoireLab Engine v2.0)",
+  "repos_analyzed": 7,
+  "average_chaoss_health_index": 77.4,
+  "chaoss_status": "\ud83d\udfe2 Healthy / Robust",
+  "repositories": [
+    {
+      "repo_slug": "intersectmbo/cardano-node",
+      "chaoss_health_index": 99.9,
+      "activity_metrics": {
+        "stars": 3179,
+        "forks": 755,
+        "open_issues_prs": 71,
+        "recent_commit_date": "2026-08-12T11:40:48Z",
+        "recent_commit_velocity_sample": 30
+      },
+      "chaoss_risk_metrics": {
+        "bus_factor_rating": "Healthy / Distributed (Top Maintainer <35%)",
+        "top_contributor_share_pct": 27.7,
+        "total_active_contributors_sample": 10
+      },
+      "openssf_security_proxy": {
+        "has_issues_enabled": true,
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "repo_slug": "intersectmbo/cardano-ledger",
+      "chaoss_health_index": 76.4,
+      "activity_metrics": {
+        "stars": 291,
+        "forks": 178,
+        "open_issues_prs": 281,
+        "recent_commit_date": "2026-08-13T06:05:07Z",
+        "recent_commit_velocity_sample": 30
+      },
+      "chaoss_risk_metrics": {
+        "bus_factor_rating": "Healthy / Distributed (Top Maintainer <35%)",
+        "top_contributor_share_pct": 31.7,
+        "total_active_contributors_sample": 10
+      },
+      "openssf_security_proxy": {
+        "has_issues_enabled": true,
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "repo_slug": "intersectmbo/cardano-cli",
+      "chaoss_health_index": 71.1,
+      "activity_metrics": {
+        "stars": 71,
+        "forks": 24,
+        "open_issues_prs": 41,
+        "recent_commit_date": "2026-08-13T16:26:16Z",
+        "recent_commit_velocity_sample": 30
+      },
+      "chaoss_risk_metrics": {
+        "bus_factor_rating": "Healthy / Distributed (Top Maintainer <35%)",
+        "top_contributor_share_pct": 23.9,
+        "total_active_contributors_sample": 10
+      },
+      "openssf_security_proxy": {
+        "has_issues_enabled": true,
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "repo_slug": "intersectmbo/plutus",
+      "chaoss_health_index": 96.4,
+      "activity_metrics": {
+        "stars": 1635,
+        "forks": 509,
+        "open_issues_prs": 241,
+        "recent_commit_date": "2026-08-12T13:55:08Z",
+        "recent_commit_velocity_sample": 30
+      },
+      "chaoss_risk_metrics": {
+        "bus_factor_rating": "Healthy / Distributed (Top Maintainer <35%)",
+        "top_contributor_share_pct": 32.9,
+        "total_active_contributors_sample": 10
+      },
+      "openssf_security_proxy": {
+        "has_issues_enabled": true,
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "repo_slug": "aiken-lang/aiken",
+      "chaoss_health_index": 68.5,
+      "activity_metrics": {
+        "stars": 584,
+        "forks": 138,
+        "open_issues_prs": 37,
+        "recent_commit_date": "2026-08-10T23:05:37Z",
+        "recent_commit_velocity_sample": 30
+      },
+      "chaoss_risk_metrics": {
+        "bus_factor_rating": "Medium Risk (Top Maintainer ~35-60%)",
+        "top_contributor_share_pct": 36.6,
+        "total_active_contributors_sample": 10
+      },
+      "openssf_security_proxy": {
+        "has_issues_enabled": true,
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "repo_slug": "MeshJS/mesh",
+      "chaoss_health_index": 64.9,
+      "activity_metrics": {
+        "stars": 271,
+        "forks": 112,
+        "open_issues_prs": 83,
+        "recent_commit_date": "2026-08-11T21:04:03Z",
+        "recent_commit_velocity_sample": 30
+      },
+      "chaoss_risk_metrics": {
+        "bus_factor_rating": "Medium Risk (Top Maintainer ~35-60%)",
+        "top_contributor_share_pct": 37.6,
+        "total_active_contributors_sample": 10
+      },
+      "openssf_security_proxy": {
+        "has_issues_enabled": true,
+        "license": "Apache-2.0"
+      }
+    },
+    {
+      "repo_slug": "txpipe/oura",
+      "chaoss_health_index": 64.4,
+      "activity_metrics": {
+        "stars": 288,
+        "forks": 80,
+        "open_issues_prs": 80,
+        "recent_commit_date": "2026-06-15T16:57:41Z",
+        "recent_commit_velocity_sample": 30
+      },
+      "chaoss_risk_metrics": {
+        "bus_factor_rating": "Medium Risk (Top Maintainer ~35-60%)",
+        "top_contributor_share_pct": 59.8,
+        "total_active_contributors_sample": 10
+      },
+      "openssf_security_proxy": {
+        "has_issues_enabled": true,
+        "license": "Apache-2.0"
+      }
+    }
+  ]
+}
