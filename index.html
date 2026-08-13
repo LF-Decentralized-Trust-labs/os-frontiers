@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Source Frontiers Lab · 3-Piece Framework Suite (dOSPO · OMF · ORF)</title>
+  <meta name="description" content="Open Source Frontiers Lab under LF Decentralized Trust: A chain-agnostic 3-piece framework suite combining dOSPO governance, OMF deployment, and ORF value replenishment.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <span class="logo-icon">🌐</span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">OPEN SOURCE FRONTIERS LAB</span>
+          <span class="brand-sub">LF Decentralized Trust · Validated July 2026</span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <button class="nav-btn active" data-tab="overview">Overview</button>
+        <button class="nav-btn" data-tab="dospo">dOSPO</button>
+        <button class="nav-btn" data-tab="omf">OMF</button>
+        <button class="nav-btn highlight" data-tab="orf">ORF Catalog</button>
+        <button class="nav-btn" data-tab="profiles">Profiles & Multi-Chain</button>
+        <button class="nav-btn" data-tab="posture">5-Q Assessment</button>
+        <button class="nav-btn" data-tab="proforma">Pro-Forma Calculator</button>
+        <button class="nav-btn" data-tab="templates">Template Exporter</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-content">
+    
+    <!-- Tab 1: Overview -->
+    <section id="overview" class="tab-pane active">
+      <div class="hero-card">
+        <div class="badge-row">
+          <span class="badge badge-primary">LF Decentralized Trust Lab</span>
+          <span class="badge badge-accent">Chain-Agnostic Suite</span>
+          <span class="badge badge-outline">July 2026 Edition</span>
+        </div>
+        <h1 class="hero-title">Closing the Open Source Sustainability Loop</h1>
+        <p class="hero-subtitle">
+          A self-sustaining, chain-agnostic economic loop combining <strong>dOSPO</strong> governance authority, <strong>OMF</strong> operational deployment, and <strong>ORF</strong> value-aligned replenishment across Web3 and Web2.
+        </p>
+
+        <!-- 3-Piece Visualizer Card -->
+        <div class="recipe-grid">
+          <div class="recipe-card dospo-theme" onclick="switchTab('dospo')">
+            <div class="card-tag">WHO</div>
+            <div class="card-icon">🏛️</div>
+            <h3>dOSPO</h3>
+            <h4>Decentralized OSPO</h4>
+            <p>Governance, mandate authorization, policy engine, and community oversight triangle.</p>
+            <span class="card-link">Explore dOSPO Spec &rarr;</span>
+          </div>
+
+          <div class="recipe-card omf-theme" onclick="switchTab('omf')">
+            <div class="card-tag">HOW SPEND</div>
+            <div class="card-icon">🛠️</div>
+            <h3>OMF</h3>
+            <h4>Open Maintenance Framework</h4>
+            <p>Operational deployment of maintainer retainers, contributor pathways, and tooling stewardship.</p>
+            <span class="card-link">Explore OMF Spec &rarr;</span>
+          </div>
+
+          <div class="recipe-card orf-theme" onclick="switchTab('orf')">
+            <div class="card-tag">HOW COLLECT</div>
+            <div class="card-icon">💰</div>
+            <h3>ORF</h3>
+            <h4>Open Replenishment Framework</h4>
+            <p>Portfolio of 20+ collection instruments across Protocol, App, Enterprise, Capital & Delegation layers.</p>
+            <span class="card-link">Browse 20+ Instrument Catalog &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closed Loop Diagram Section -->
+      <div class="section-card">
+        <h2 class="section-title">The Closed Sustainability Loop</h2>
+        <div class="loop-diagram">
+          <div class="loop-step">
+            <div class="step-num">1</div>
+            <h4>Treasury Deploys</h4>
+            <p>dOSPO authorizes OMF retainers & infrastructure support</p>
+          </div>
+          <div class="loop-arrow">&rarr;</div>
+          <div class="loop-step">
+            <div class="step-num">2</div>
+            <h4>OS Sustained</h4>
+            <p>Risk reduced, reliability guaranteed, adoption grows</p>
+          </div>
+          <div class="loop-arrow">&rarr;</div>
+          <div class="loop-step">
+            <div class="step-num">3</div>
+            <h4>Value Created</h4>
+            <p>Economic activity generates fees, SLAs & yield</p>
+          </div>
+          <div class="loop-arrow">&rarr;</div>
+          <div class="loop-step">
+            <div class="step-num">4</div>
+            <h4>ORF Collects</h4>
+            <p>Value-aligned collection replenishes capital base</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: dOSPO -->
+    <section id="dospo" class="tab-pane">
+      <div class="section-card">
+        <div class="badge-row">
+          <span class="badge badge-primary">Piece 1 of 3</span>
+          <span class="badge">Governance & Authority</span>
+        </div>
+        <h1 class="section-title">dOSPO: Decentralized OSPO Framework</h1>
+        <p class="section-desc">
+          Answers <strong>WHO</strong> holds bounded, community-mandated authority to coordinate sustainability work.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">⚖️</div>
+            <h3>Governance Triangle</h3>
+            <p>Maintains legitimacy (community mandate), neutrality (no vendor lock-in), and execution (accountable ops).</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">📜</div>
+            <h3>Replaceable Operators</h3>
+            <p>Operator authority is time-limited and subject to evidence-based community renewal votes.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🛡️</div>
+            <h3>Policy Engine</h3>
+            <p>Sets funding allocation rules and collection policies for OMF and ORF without taking technical control.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: OMF -->
+    <section id="omf" class="tab-pane">
+      <div class="section-card">
+        <div class="badge-row">
+          <span class="badge badge-accent">Piece 2 of 3</span>
+          <span class="badge">Deployment & Maintenance</span>
+        </div>
+        <h1 class="section-title">OMF: Open Maintenance Framework</h1>
+        <p class="section-desc">
+          Answers <strong>HOW</strong> capital is deployed to sustain open-source infrastructure as a portfolio.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">🤝</div>
+            <h3>Maintainer Retainers</h3>
+            <p>Predictable recurring stipends, security availability commitments, and public performance metrics.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🌱</div>
+            <h3>Contributor Pathways</h3>
+            <p>Mentorship, grant ladders, and contributor onboarding to prevent maintainer burnout.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🔒</div>
+            <h3>Maintainer Autonomy</h3>
+            <p>Funding supports maintenance capacity; it never purchases authority over technical project roadmaps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 4: ORF Catalog -->
+    <section id="orf" class="tab-pane">
+      <div class="section-card">
+        <div class="badge-row">
+          <span class="badge badge-success">Piece 3 of 3</span>
+          <span class="badge badge-outline">July 2026 Specification</span>
+        </div>
+        <h1 class="section-title">ORF Collection Instrument Catalog</h1>
+        <p class="section-desc">
+          Explore 20+ collection instruments organized into 5 layers. Filter by layer or evidence maturity.
+        </p>
+
+        <!-- Controls -->
+        <div class="catalog-controls">
+          <input type="text" id="catalog-search" class="search-input" placeholder="Search instruments, anchors, or precedents...">
+          
+          <div class="filter-group">
+            <span class="filter-label">Layer:</span>
+            <button class="filter-btn active" data-filter-layer="all">All Layers</button>
+            <button class="filter-btn" data-filter-layer="Protocol">Protocol</button>
+            <button class="filter-btn" data-filter-layer="Application">Application</button>
+            <button class="filter-btn" data-filter-layer="Enterprise">Enterprise</button>
+            <button class="filter-btn" data-filter-layer="Capital">Capital</button>
+            <button class="filter-btn" data-filter-layer="Delegation">Delegation</button>
+          </div>
+
+          <div class="filter-group">
+            <span class="filter-label">Maturity:</span>
+            <button class="filter-btn active" data-filter-status="all">All Statuses</button>
+            <button class="filter-btn" data-filter-status="live">🟢 Live Precedent</button>
+            <button class="filter-btn" data-filter-status="partial">🟡 Partial Analog</button>
+            <button class="filter-btn" data-filter-status="research">🔵 Research-Stage</button>
+          </div>
+        </div>
+
+        <!-- Catalog Grid / Table -->
+        <div id="catalog-container" class="catalog-grid">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 5: Ecosystem & Tooling Profiles -->
+    <section id="profiles" class="tab-pane">
+      <div class="section-card">
+        <div class="badge-row">
+          <span class="badge badge-primary">Chain-Agnostic Profiles</span>
+          <span class="badge">Web3 & Web2 Architecture</span>
+        </div>
+        <h1 class="section-title">Ecosystem & Multi-Chain Tooling Profiles</h1>
+        <p class="section-desc">
+          Explore structured profiles across Cardano, Optimism, Polkadot, Ethereum, Cosmos, Solana, Zcash, Filecoin, Web2 Foundations, and core tooling protocols.
+        </p>
+
+        <div id="profiles-grid" class="catalog-grid">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 6: 5-Q Assessment -->
+    <section id="posture" class="tab-pane">
+      <div class="section-card">
+        <div class="badge-row">
+          <span class="badge badge-primary">Interactive Assessment</span>
+          <span class="badge">Ecosystem Readiness</span>
+        </div>
+        <h1 class="section-title">5-Question Replenishment Posture Evaluator</h1>
+        <p class="section-desc">
+          Score your ecosystem across the 5 core replenishment dimensions to determine your phase and next steps.
+        </p>
+
+        <div class="quiz-container">
+          <div class="quiz-questions">
+            <!-- Question 1 -->
+            <div class="quiz-card" data-q="1">
+              <div class="q-header">
+                <span class="q-number">1</span>
+                <h3>Ratio — What is your replenishment ratio today?</h3>
+              </div>
+              <p class="q-desc">Measures the ratio of collected value to deployed maintenance budget and how gaps are subsidized.</p>
+              <div class="options-group">
+                <label class="option-item"><input type="radio" name="q1" value="0" checked> <span>0 Pts — 100% dependent on unmeasured reserve drawdown / token inflation.</span></label>
+                <label class="option-item"><input type="radio" name="q1" value="3"> <span>3 Pts — Ratio measured; partial fee splits cover 10-30% of costs.</span></label>
+                <label class="option-item"><input type="radio" name="q1" value="5"> <span>5 Pts — Ratio ≥ 1.0 or non-inflationary income covers baseline maintenance floor.</span></label>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-card" data-q="2">
+              <div class="q-header">
+                <span class="q-number">2</span>
+                <h3>Anchors — Does collection attach to fork-resistant anchors?</h3>
+              </div>
+              <p class="q-desc">Tests whether avoidance requires giving up valuable services, state, or relationships.</p>
+              <div class="options-group">
+                <label class="option-item"><input type="radio" name="q2" value="0" checked> <span>0 Pts — Charges attach only to copyable code access or license terms.</span></label>
+                <label class="option-item"><input type="radio" name="q2" value="3"> <span>3 Pts — Attaches to native token fees, but lacks liquidity or SLA anchors.</span></label>
+                <label class="option-item"><input type="radio" name="q2" value="5"> <span>5 Pts — Attaches to canonical liquidity, SLAs, registry badges, or brand.</span></label>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-card" data-q="3">
+              <div class="q-header">
+                <span class="q-number">3</span>
+                <h3>Bundles — Is optional payment attached to tangible benefits?</h3>
+              </div>
+              <p class="q-desc">Evaluates whether payments purchase products payers independently value ("Sold, not taxed").</p>
+              <div class="options-group">
+                <label class="option-item"><input type="radio" name="q3" value="0" checked> <span>0 Pts — Mandatory tax or un-bundled donation with no tangible benefit.</span></label>
+                <label class="option-item"><input type="radio" name="q3" value="3"> <span>3 Pts — Basic badge placement offered, but lacks SLAs or patch commitments.</span></label>
+                <label class="option-item"><input type="radio" name="q3" value="5"> <span>5 Pts — Sold, not taxed. Enterprise SLAs, LTS, and registry badges offered.</span></label>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-card" data-q="4">
+              <div class="q-header">
+                <span class="q-number">4</span>
+                <h3>Mandate — Are collection rails chartered and audited?</h3>
+              </div>
+              <p class="q-desc">Ensures collection requires the same authorization and audit discipline as spending.</p>
+              <div class="options-group">
+                <label class="option-item"><input type="radio" name="q4" value="0" checked> <span>0 Pts — Ad-hoc, un-chartered, or managed in opaque accounts without mandate.</span></label>
+                <label class="option-item"><input type="radio" name="q4" value="3"> <span>3 Pts — Authorized by governance, but lacks time-limited charters or audits.</span></label>
+                <label class="option-item"><input type="radio" name="q4" value="5"> <span>5 Pts — Every collection rail carries a dOSPO mandate & independent audit.</span></label>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-card" data-q="5">
+              <div class="q-header">
+                <span class="q-number">5</span>
+                <h3>Runway — Can baseline maintenance survive a full bear market?</h3>
+              </div>
+              <p class="q-desc">Tests whether non-inflationary income and liquid buffers cover baseline costs during market downturns.</p>
+              <div class="options-group">
+                <label class="option-item"><input type="radio" name="q5" value="0" checked> <span>0 Pts — Maintenance budget collapses if native token drops 50%+.</span></label>
+                <label class="option-item"><input type="radio" name="q5" value="3"> <span>3 Pts — 12-18m runway in stables, but high price correlation and no IPS yield.</span></label>
+                <label class="option-item"><input type="radio" name="q5" value="5"> <span>5 Pts — Diversified SLA income + IPS endowment yield cover baseline floor.</span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Score Card Sidebar -->
+          <div class="quiz-scorecard">
+            <div class="score-box">
+              <span class="score-label">OVERALL SCORE</span>
+              <div id="total-score" class="score-number">0 / 25</div>
+              <div id="score-meter" class="meter-bar"><div id="meter-fill" class="meter-fill"></div></div>
+            </div>
+
+            <div class="phase-recommendation">
+              <h4>Current Replenishment Phase:</h4>
+              <div id="phase-badge" class="badge badge-primary">Phase 1: Reserve-Funded</div>
+              <p id="phase-desc">Focus on launching dOSPO governance charters and testing Enterprise SLA offerings.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 7: Pro-Forma Calculator -->
+    <section id="proforma" class="tab-pane">
+      <div class="section-card">
+        <div class="badge-row">
+          <span class="badge badge-accent">Financial Modeling</span>
+          <span class="badge">Cardano / POSM Baseline</span>
+        </div>
+        <h1 class="section-title">Tier 1 Pro-Forma Replenishment Calculator</h1>
+        <p class="section-desc">
+          Model gross collection inflow, servicing costs, and net treasury replenishment across Tier 1 instruments.
+        </p>
+
+        <div class="calculator-layout">
+          <div class="calc-inputs">
+            <h3>Tier 1 Instrument Volume Assumptions</h3>
+
+            <div class="input-field">
+              <label>Maintenance SLAs ($25k–$150k contracts):</label>
+              <input type="number" id="calc-sla-count" value="10" min="0" max="100">
+              <span class="input-unit">contracts / yr</span>
+            </div>
+
+            <div class="input-field">
+              <label>Average SLA Value ($):</label>
+              <input type="number" id="calc-sla-val" value="75000" step="5000">
+              <span class="input-unit">USD</span>
+            </div>
+
+            <div class="input-field">
+              <label>SLA Cost to Collect (%):</label>
+              <input type="number" id="calc-sla-cost" value="50" min="0" max="100">
+              <span class="input-unit">%</span>
+            </div>
+
+            <hr class="divider">
+
+            <div class="input-field">
+              <label>Paid Certifications & Training:</label>
+              <input type="number" id="calc-cert-count" value="400" min="0">
+              <span class="input-unit">certifications / yr</span>
+            </div>
+
+            <div class="input-field">
+              <label>Average Cert Fee ($):</label>
+              <input type="number" id="calc-cert-val" value="750" step="50">
+              <span class="input-unit">USD</span>
+            </div>
+
+            <hr class="divider">
+
+            <div class="input-field">
+              <label>Application Voluntary Badges ($5k–$25k):</label>
+              <input type="number" id="calc-app-count" value="20" min="0">
+              <span class="input-unit">dApps</span>
+            </div>
+
+            <div class="input-field">
+              <label>Public-Goods Stake Pools (25–50% margin):</label>
+              <input type="number" id="calc-pool-count" value="20" min="0">
+              <span class="input-unit">pools</span>
+            </div>
+
+            <hr class="divider">
+
+            <div class="input-field">
+              <label>Baseline OMF Annual Cost ($):</label>
+              <input type="number" id="calc-omf-cost" value="3000000" step="100000">
+              <span class="input-unit">USD / yr</span>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="result-card">
+              <h4>GROSS ANNUAL REVENUE</h4>
+              <div id="res-gross" class="stat-value">$1,150,000</div>
+            </div>
+
+            <div class="result-card">
+              <h4>TOTAL COST TO COLLECT</h4>
+              <div id="res-cost" class="stat-value text-warning">$485,000</div>
+            </div>
+
+            <div class="result-card highlight">
+              <h4>NET TREASURY REPLENISHMENT</h4>
+              <div id="res-net" class="stat-value text-success">$665,000</div>
+            </div>
+
+            <div class="result-card">
+              <h4>BASELINE OMF COVERAGE</h4>
+              <div id="res-coverage" class="stat-value text-accent">22.2%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 8: Template Exporter -->
+    <section id="templates" class="tab-pane">
+      <div class="section-card">
+        <div class="badge-row">
+          <span class="badge badge-primary">GitHub Template Generator</span>
+          <span class="badge">Markdown Export</span>
+        </div>
+        <h1 class="section-title">Framework Template Exporter</h1>
+        <p class="section-desc">
+          Select and customize actionable markdown templates for dOSPO, OMF, or ORF governance.
+        </p>
+
+        <div class="template-exporter-layout">
+          <div class="template-selector">
+            <label for="template-select">Choose Framework Template:</label>
+            <select id="template-select" class="select-input">
+              <option value="orf_charter">ORF Collection Instrument Charter</option>
+              <option value="5_q_assessment">ORF 5-Question Posture Evaluation</option>
+              <option value="ips">Capital Layer Investment Policy Statement (IPS)</option>
+              <option value="sla">Enterprise Maintenance SLA & Reciprocal Terms</option>
+              <option value="audit">Independent Collection Audit Report</option>
+              <option value="dospo_charter">dOSPO Governance Authority Charter</option>
+              <option value="omf_retainer">OMF Maintainer Retainer Agreement</option>
+            </select>
+
+            <button id="btn-copy-template" class="btn btn-primary">📋 Copy Markdown</button>
+            <button id="btn-download-template" class="btn btn-secondary">💾 Download .md File</button>
+          </div>
+
+          <div class="template-preview-box">
+            <pre><code id="template-preview-code">Loading template preview...</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>
+        <strong>Open Source Frontiers Lab</strong> · Hosted at <strong>LF Decentralized Trust</strong>  
+        · Companion to dOSPO, OMF & ORF · Validated July 2026 Edition (`opensourcecowboy.org`)
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
