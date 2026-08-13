@@ -239,14 +239,17 @@ def main():
     target_repo = sys.argv[1] if len(sys.argv) > 1 else "intersectmbo/cardano-node"
     report = analyze_repo_with_quaid_spec(target_repo, local_base=".")
 
+    output_dir = os.path.join(os.path.dirname(__file__), "..", "examples")
+    os.makedirs(output_dir, exist_ok=True)
+
     # Save JSON Output
-    json_path = "cardano_quaid_scanner_report.json"
+    json_path = os.path.join(output_dir, "cardano_quaid_scanner_report.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
     print(f"💾 QUAID JSON report saved to: {json_path}")
 
     # Save Markdown Output
-    md_path = "CARDANO_QUAID_SCANNER_REPORT.md"
+    md_path = os.path.join(output_dir, "CARDANO_QUAID_SCANNER_REPORT.md")
     md_content = generate_quaid_markdown_report(report)
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(md_content)

@@ -1,0 +1,70 @@
+# Unified 3-Piece Ecosystem Maturity Assessment (dOSPO · OMF · ORF)
+
+> **Diagnostic Tool for Rating Governance Authority, Maintenance Deployment, and Value Replenishment Maturity**  
+> *LF Decentralized Trust · Open Source Frontiers Lab*
+
+---
+
+## Executive Overview
+
+The **Unified 3-Piece Ecosystem Maturity Evaluator** diagnoses an ecosystem's health across the complete sustainability loop:
+1. **dOSPO (Governance Authority — *WHO*)**: Rate governance legitimacy, community mandates, neutrality, and operator replaceability.
+2. **OMF (Maintenance Deployment — *HOW SPEND*)**: Rate maintainer retainers, contributor pathways, tooling stewardship, and maintainer autonomy safeguards.
+3. **ORF (Value Replenishment — *HOW COLLECT*)**: Rate collection inflow, fork-resistant anchors, benefit bundling, IPS endowments, and independent cost-to-collect auditing.
+
+---
+
+## Assessment Matrix (15 Diagnostic Indicators)
+
+### Section 1: dOSPO Governance Maturity (0–25 Points)
+
+| Indicator | Low Maturity (0 Pts) | Partial Maturity (3 Pts) | High Maturity (5 Pts) | Score |
+|---|---|---|---|---|
+| **1. Legitimacy** | Spending & grants decided ad-hoc without community mandate. | Token-holder votes occur, but lack bounded governance charters. | Bounded, time-limited dOSPO charter approved via community vote. | `[ /5 ]` |
+| **2. Neutrality** | Commercial sponsors or single entities control roadmap decisions. | Basic conflict disclosures required, but vendor lock-in risk remains. | Strict neutrality rules; corporate funding never buys roadmap control. | `[ /5 ]` |
+| **3. Replaceability** | Grants team or program operator cannot be replaced by community. | Operator replaced only during major governance crises. | Operator authority subject to annual evidence-based renewal vote. | `[ /5 ]` |
+| **4. Policy Engine** | Spending & collection rules are un-documented or opaque. | Governance sets budget caps, but lacks formal policy engines. | Clear policy engine governing allocation limits & collection rails. | `[ /5 ]` |
+| **5. Transparency** | No public reporting on spending or operational performance. | Annual summary published, but lacks itemized audit breakdowns. | Public transparency artifacts & quarterly independent reports. | `[ /5 ]` |
+
+*dOSPO Subtotal*: `[   ] / 25` (`[   ]%`)
+
+---
+
+### Section 2: OMF Operational Deployment Maturity (0–25 Points)
+
+| Indicator | Low Maturity (0 Pts) | Partial Maturity (3 Pts) | High Maturity (5 Pts) | Score |
+|---|---|---|---|---|
+| **6. Retainers** | Maintainers rely on friction-heavy, one-off grant proposals. | Partial stipend grants available, but lack recurring retainers. | Predictable 12-month maintainer retainers streamed on-chain. | `[ /5 ]` |
+| **7. Pathways** | Maintainer burnout high; no structured contributor onboarding. | Informal mentorship exists, but lacks grant ladders or guides. | Structured contributor pathways, mentorship, and grant ladders. | `[ /5 ]` |
+| **8. Stewardship** | Core shared tooling & dependencies systematically under-funded. | Ad-hoc bounties for tooling, but no continuous stewardship. | Managed tooling stewardship portfolio for critical dependencies. | `[ /5 ]` |
+| **9. Autonomy** | Funders demand roadmap veto rights or custom feature mandates. | Maintainers negotiate scope, but autonomy clause is informal. | Signed Maintainer Autonomy Safeguard guaranteeing independence. | `[ /5 ]` |
+| **10. Metrics** | No data on repository health, latency, or developer retention. | Basic GitHub star/fork metrics tracked. | Open Source Observer (OSO) impact analytics & OpenSSF scorecards. | `[ /5 ]` |
+
+*OMF Subtotal*: `[   ] / 25` (`[   ]%`)
+
+---
+
+### Section 3: ORF Value Replenishment Maturity (0–25 Points)
+
+| Indicator | Low Maturity (0 Pts) | Partial Maturity (3 Pts) | High Maturity (5 Pts) | Score |
+|---|---|---|---|---|
+| **11. Replenishment Ratio** | 100% dependent on unmeasured reserve drawdown / token inflation. | Ratio measured; partial fee splits cover 10–30% of baseline OMF. | Net replenishment ratio ≥ 1.0; non-inflationary income covers floor. | `[ /5 ]` |
+| **12. Fork Resistance** | Collection relies on copyable code access or license fees. | Collection attaches to native token fees, but lacks SLA anchors. | Attaches to canonical state, liquidity, registry badges, or SLAs. | `[ /5 ]` |
+| **13. Benefit Bundling** | Compulsory tax or un-bundled donation with no tangible benefit. | Basic badge placement offered, but lacks SLAs or patch windows. | Sold, not taxed. Enterprise SLAs & LTS offered; security free. | `[ /5 ]` |
+| **14. Endowments (IPS)** | Static reserves held in native token with zero yield sleeve. | Liquid stables held in treasury, but no governed IPS endowment. | Governed IPS endowment (ENS/Octant style) generating counter-yield. | `[ /5 ]` |
+| **15. Independent Audit** | Revenue reporting un-audited or managed by operator internally. | Internal accounting published, but lacks independent review. | Independent audit function reporting directly to community governance. | `[ /5 ]` |
+
+*ORF Subtotal*: `[   ] / 25` (`[   ]%`)
+
+---
+
+## Total Score & Ecosystem Maturity Level
+
+$$\text{Total Score} = \text{dOSPO} + \text{OMF} + \text{ORF} \quad (\text{Out of } 75 \text{ Points / } 100\%)$$
+
+| Total Score | Percentage | Maturity Level | Ecosystem Status & Action Plan |
+|---|---|---|---|
+| **0 – 24 Pts** | **0 – 32%** | **Level 0: Fragile / Un-Architected** | High risk of treasury depletion. Focus on establishing a dOSPO mandate. |
+| **25 – 49 Pts** | **33 – 65%** | **Level 1: Governance & Retainers** | dOSPO active; OMF retainers launching. Focus on piloting Tier 1 ORF SLAs. |
+| **50 – 64 Pts** | **66 – 85%** | **Level 2: Fee-Supplemented** | OMF operational; 40–60% of budget replenished. Deploy IPS endowment sleeve. |
+| **65 – 75 Pts** | **86 – 100%** | **Level 3: Self-Sustaining Loop** | Closed loop achieved. Net replenishment ratio ≥ 1.0 across market cycles. |
