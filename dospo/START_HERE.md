@@ -12,28 +12,28 @@ The **Decentralized Open Source Program Office (dOSPO)** resolves the core gover
 
 Traditional corporate OSPOs operate as internal cost centers within single technology companies. A dOSPO, by contrast, operates as a neutral, on-chain or community-governed coordination layer. It bridges token-holders, DReps, SPOs, and governance councils with operational maintainers and enterprise consumers.
 
-```
-       +-------------------------------------------------------+
-       |                        dOSPO                          |
-       |       (Decentralized Open Source Program Office)       |
-       |   WHO: Mandate, Governance, Policy & Neutrality       |
-       +---------------------------+---------------------------+
-                                   |
-         +-------------------------+-------------------------+
-         |                                                   |
-         v                                                   v
-+---------------------------------+         +---------------------------------+
-|               OMF               |         |               ORF               |
-|   (Open Maintenance Framework)  |         |  (Open Replenishment Framework) |
-| HOW DEPLOY: Program Retainers,  |========>| HOW COLLECT: Value Alignment,   |
-| Maintenance, Contributor Paths  | Treasury| Collection Instruments, Yield,  |
-|                                 | Buffer  | Enterprise SLAs & Endowments    |
-+---------------------------------+         +---------------------------------+
-```
+---
+
+## 2. Canonical 3-Piece RACI Responsibility Matrix
+
+To enforce strict separation of policy and execution with **zero functional overlap**, the 3-Piece Framework Suite establishes a single canonical RACI matrix across all components:
+
+| Governance Function | Community Governance (DReps/DAOs) | dOSPO (Policy Body) | OMF Operator (Program Mgr) | ORF Operator (Inflow Rails) | Independent Auditor |
+|---|---|---|---|---|---|
+| **Set Policy & Rules** | **A** (Approves Charter) | **R** (Formulates Policy) | C | C | I |
+| **Authorize Budgets** | **A** (Votes on Proposal) | **R** (Submits Budget) | C | I | I |
+| **Custody Treasury Assets** | **A** (On-Chain Treasury) | I | I | I | I |
+| **Administer Retainers** | I | A (Enforces Policy) | **R** (Streams Stipends) | I | I |
+| **Sell Enterprise SLAs** | I | A (Sets Pricing Rules) | I | **R** (Executes SLAs) | I |
+| **Collect Inflow Revenues** | I | I | I | **R** (Routes to Vault) | I |
+| **Replace Operator** | **A** (Revokes Mandate) | R (Appeals/Escalation) | I | I | I |
+| **Audit Performance** | I (Receives Report) | I | I | I | **A / R** (Publishes Audit) |
+
+*Legend: **A** = Accountable (Final Decision), **R** = Responsible (Executes), **C** = Consulted, **I** = Informed.*
 
 ---
 
-## 2. The Governance Triangle
+## 3. The Governance Triangle
 
 Every dOSPO instance is structured around three non-negotiable governance vertices:
 
@@ -51,15 +51,6 @@ Every dOSPO instance is structured around three non-negotiable governance vertic
 1. **Legitimacy (Community Mandate)**: Bounded authority derived from time-limited, evidence-based community referenda (e.g. Cardano CIP-1694 DRep/SPO votes or DAO governance actions).
 2. **Neutrality (Vendor Independence)**: Complete independence from single commercial sponsors. No single corporate entity or foundation can purchase technical authority over core project roadmaps.
 3. **Execution (Accountable & Replaceable)**: Program operators administer spending under **OMF** and collection under **ORF**. If an operator fails to deliver net ecosystem benefit, governance can revoke the mandate and replace the operator without halting infrastructure.
-
----
-
-## 3. Core Functions of a dOSPO
-
-- **Mandate Authorization**: Formulates and submits 12-month program charters (`OMF/PROGRAM_CHARTER_TEMPLATE.md`) to community governance.
-- **Policy Engine**: Enforces spending allocation boundaries, maintainer autonomy safeguards, and collection rules.
-- **Appeals & Conflict Resolution**: Neutral escalation channel for maintainers, contributors, and enterprise sponsors.
-- **Independent Reporting**: Publishes quarterly operational disclosures and audited performance metrics.
 
 ---
 

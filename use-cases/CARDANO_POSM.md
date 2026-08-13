@@ -6,9 +6,9 @@
 # Overview
 
 ## Summary
-The Paid Open Source Model (POSM) is a decentralized open source sustainability framework developed within the Cardano ecosystem through Intersect’s Open Source Committee (OSC) and Open Source Office (OSO). The model introduces structured treasury-funded programs that compensate maintainers, support ecosystem tooling, incubate contributors, and align open source development with decentralized governance priorities. :contentReference[oaicite:0]{index=0}
+The Paid Open Source Model (POSM) is a decentralized open source sustainability framework developed within the Cardano ecosystem through Intersect’s Open Source Committee (OSC) and Open Source Office (OSO). The model introduces structured treasury-funded programs that compensate maintainers, support ecosystem tooling, incubate contributors, and align open source development with decentralized governance priorities. 
 
-POSM represents one of the first large-scale attempts to operationalize open source sustainability directly through blockchain governance and treasury systems. :contentReference[oaicite:1]{index=1}
+POSM represents one of the first large-scale attempts to operationalize open source sustainability directly through blockchain governance and treasury systems. 
 
 ## Problem Statement
 Modern open source ecosystems depend heavily on underfunded maintainers, volunteer labor, fragmented grant systems, and inconsistent operational support. Critical infrastructure often suffers from:
@@ -20,10 +20,10 @@ Modern open source ecosystems depend heavily on underfunded maintainers, volunte
 - Poor lifecycle management
 - Misalignment between ecosystem priorities and funding
 
-These structural weaknesses have historically created systemic risks across both traditional and Web3 open source ecosystems. :contentReference[oaicite:2]{index=2}
+These structural weaknesses have historically created systemic risks across both traditional and Web3 open source ecosystems. 
 
 ## Why This Matters
-Blockchain ecosystems increasingly rely on open source software as critical infrastructure, yet many ecosystems still lack sustainable operational models to maintain that infrastructure over time. POSM attempts to solve this by treating open source development as a governed public good supported through treasury mechanisms, contributor programs, and lifecycle management frameworks. :contentReference[oaicite:3]{index=3}
+Blockchain ecosystems increasingly rely on open source software as critical infrastructure, yet many ecosystems still lack sustainable operational models to maintain that infrastructure over time. POSM attempts to solve this by treating open source development as a governed public good supported through treasury mechanisms, contributor programs, and lifecycle management frameworks. 
 
 The model also serves as an experimental governance case study for how decentralized ecosystems can:
 - Coordinate public goods funding
@@ -76,7 +76,7 @@ POSM introduces a structured operational framework that combines:
 - Lifecycle evaluation systems
 - Open source operational services
 
-The model aligns treasury funding with ecosystem priorities through decentralized governance processes involving DReps and committees. :contentReference[oaicite:4]{index=4}
+The model aligns treasury funding with ecosystem priorities through decentralized governance processes involving DReps and committees. 
 
 Key programs include:
 - Maintainer Retainers
@@ -95,7 +95,7 @@ The model operates through several interacting layers:
 5. Lifecycle evaluations and metrics guide prioritization
 6. Governance processes provide accountability and transparency
 
-The system attempts to create a reinforcing loop where ecosystem growth and treasury funding sustain long-term infrastructure maintenance. :contentReference[oaicite:5]{index=5}
+The system attempts to create a reinforcing loop where ecosystem growth and treasury funding sustain long-term infrastructure maintenance. 
 
 ## Governance Considerations
 Governance is central to the POSM structure:
@@ -105,7 +105,7 @@ Governance is central to the POSM structure:
 - Public reporting and transparency are embedded into the model
 - Program prioritization is governed through committee structures
 
-This introduces a hybrid governance model combining decentralized treasury voting with delegated operational stewardship. :contentReference[oaicite:6]{index=6}
+This introduces a hybrid governance model combining decentralized treasury voting with delegated operational stewardship. 
 
 ## Funding / Sustainability Model
 Funding is sourced from the Cardano treasury through governance-approved budget allocations. The model includes:
@@ -115,7 +115,7 @@ Funding is sourced from the Cardano treasury through governance-approved budget 
 - Ecosystem service funding
 - Contributor incubation support
 
-Unlike donation-based models, POSM attempts to institutionalize open source sustainability directly into ecosystem governance and treasury operations. :contentReference[oaicite:7]{index=7}
+Unlike donation-based models, POSM attempts to institutionalize open source sustainability directly into ecosystem governance and treasury operations. 
 
 ---
 
@@ -197,7 +197,7 @@ Unlike donation-based models, POSM attempts to institutionalize open source sust
 - [ ] Scaling
 
 ## Estimated Timeline
-POSM transitioned from concept and whitepaper stages into active pilot and governance implementation during 2025 and 2026. Multiple operational programs are now active under the Open Source Committee structure. :contentReference[oaicite:8]{index=8}
+POSM transitioned from concept and whitepaper stages into active pilot and governance implementation during 2025 and 2026. Multiple operational programs are now active under the Open Source Committee structure. 
 
 ## Resource Requirements
 - Treasury funding
@@ -262,7 +262,7 @@ POSM has gained attention within broader open source sustainability discussions 
 - Public accountability
 - Ecosystem-level stewardship
 
-The framework may serve as a transferable operational model for other decentralized ecosystems seeking sustainable open source governance structures. :contentReference[oaicite:9]{index=9}
+The framework may serve as a transferable operational model for other decentralized ecosystems seeking sustainable open source governance structures. 
 
 ---
 

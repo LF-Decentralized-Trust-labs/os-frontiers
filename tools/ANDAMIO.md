@@ -5,7 +5,7 @@
 ## Overview
 
 ### Summary
-Andamio is an open protocol built on the :contentReference[oaicite:0]{index=0} blockchain that enables interoperable credentials, contributor coordination, treasury governance, and credential-gated collaboration systems. It provides APIs, smart contracts, and infrastructure that allow organizations to issue verifiable credentials, manage contributor workflows, and build decentralized governance and learning systems without requiring deep blockchain expertise. :contentReference[oaicite:1]{index=1}
+Andamio is an open protocol built on the  blockchain that enables interoperable credentials, contributor coordination, treasury governance, and credential-gated collaboration systems. It provides APIs, smart contracts, and infrastructure that allow organizations to issue verifiable credentials, manage contributor workflows, and build decentralized governance and learning systems without requiring deep blockchain expertise. 
 
 ### Purpose
 Andamio addresses the coordination and trust problems present in decentralized ecosystems by enabling:
@@ -48,17 +48,17 @@ Andamio strongly aligns with the Open Source Frontiers mission by providing oper
 - [x] Mixed / Hybrid
 
 ### Notes
-The Andamio protocol, smart contracts, and several repositories are open source, while portions of the API infrastructure and hosted services may remain proprietary or partially closed-source. :contentReference[oaicite:2]{index=2}
+The Andamio protocol, smart contracts, and several repositories are open source, while portions of the API infrastructure and hosted services may remain proprietary or partially closed-source. 
 
 ## License
-- GNU-3.0 (for selected repositories) :contentReference[oaicite:3]{index=3}
+- GNU-3.0 (for selected repositories) 
 
 ---
 
 # Ecosystem Context
 
 ## Target Ecosystems
-- :contentReference[oaicite:4]{index=4}
+- 
 - Decentralized Autonomous Organizations (DAOs)
 - Open Source Foundations
 - Linux Foundation ecosystem initiatives
@@ -102,7 +102,7 @@ The Andamio protocol, smart contracts, and several repositories are open source,
 - REST API specifications
 - Credential architecture documentation
 
-:contentReference[oaicite:5]{index=5}
+
 
 ## Core Technologies
 - Cardano blockchain
@@ -132,7 +132,7 @@ The protocol supports:
 - Learning systems
 - Distributed work management
 
-:contentReference[oaicite:6]{index=6}
+
 
 ## Dependencies
 - Cardano blockchain infrastructure
@@ -146,7 +146,7 @@ The protocol supports:
 # Operational Model
 
 ## Governance Model
-Andamio enables organizations to build localized governance systems while maintaining interoperability through shared credential standards and on-chain verification. The platform supports credential-gated governance participation and treasury coordination. :contentReference[oaicite:7]{index=7}
+Andamio enables organizations to build localized governance systems while maintaining interoperability through shared credential standards and on-chain verification. The platform supports credential-gated governance participation and treasury coordination. 
 
 ## Maintenance Model
 The platform appears to be maintained through a hybrid model consisting of:
@@ -185,7 +185,7 @@ Contributors can:
 - Sustainable contributor recognition systems
 
 ## Ecosystem Value
-Andamio provides foundational coordination infrastructure for decentralized ecosystems attempting to move beyond informal contributor management toward verifiable and interoperable operational systems. It reduces the operational friction involved in governance participation, contributor verification, and distributed work coordination. :contentReference[oaicite:8]{index=8}
+Andamio provides foundational coordination infrastructure for decentralized ecosystems attempting to move beyond informal contributor management toward verifiable and interoperable operational systems. It reduces the operational friction involved in governance participation, contributor verification, and distributed work coordination. 
 
 ## Risks & Limitations
 - Dependency on Cardano ecosystem adoption
@@ -215,7 +215,7 @@ Known ecosystem usage includes:
 - Learning and onboarding systems
 - Treasury and contributor workflows
 
-:contentReference[oaicite:9]{index=9}
+
 
 ## Roadmap
 Known roadmap items include:
@@ -226,7 +226,7 @@ Known roadmap items include:
 - Stripe integrations
 - Expanded protocol functionality
 
-:contentReference[oaicite:10]{index=10}
+
 
 ---
 
