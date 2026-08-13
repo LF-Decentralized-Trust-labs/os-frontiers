@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Comprehensive Unit Test Suite for 3-Piece Ecosystem Assessor (evaluator/cli/assess_ecosystem.py)
-Tests 15-indicator scoring, 0/3/5 partial scores, Level 0 reachability, and Level 3 Hard-Gate
+Tests 15-indicator scoring, boolean compatibility, 0/3/5 partial scores, Level 0 reachability, and Level 3 Hard-Gate
 """
 
 import sys
@@ -27,6 +27,20 @@ class TestEcosystemAssessor(unittest.TestCase):
         self.assertEqual(res["total_score"], 0)
         self.assertEqual(res["overall_pct"], 0.0)
         self.assertEqual(res["level"], "Level 0: Un-Architected / Fragile")
+
+    def test_boolean_compatibility(self):
+        """Boolean True indicators must score 5 Pts correctly (Python bool is subclass of int regression test)."""
+        bool_config = {
+            "name": "Boolean Test System",
+            "annual_maintenance_budget_usd": 1000000,
+            "annual_tx_fee_inflow_usd": 100000,
+            "indicator_1_legitimacy_charter": True,
+            "indicator_6_maintainer_retainers": True
+        }
+        res = analyze_system_data(bool_config)
+        self.assertEqual(res["dospo_score"], 5)
+        self.assertEqual(res["omf_score"], 5)
+        self.assertEqual(res["total_score"], 10)
 
     def test_partial_scoring_support(self):
         """Indicators with partial score (3 Pts) must accumulate correctly."""
@@ -70,7 +84,7 @@ class TestEcosystemAssessor(unittest.TestCase):
         self.assertEqual(res["level"], "Level 2: Fee-Supplemented Maintenance")
 
     def test_level_3_success_when_gate_passed(self):
-        """Ecosystem with high governance + Replenishment Ratio >= 1.0 MUST reach Level 3."""
+        """Ecosystem with high governance (>= 65 Pts) + Replenishment Ratio >= 1.0 MUST reach Level 3."""
         config = {
             "name": "Full Sustainable Loop System",
             "annual_maintenance_budget_usd": 3000000,

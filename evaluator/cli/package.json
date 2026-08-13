@@ -1,13 +1,13 @@
 {
   "name": "@lfdt-os-frontiers/evaluator",
-  "version": "1.0.0",
+  "version": "0.8.0-rc.1",
   "description": "Automated 3-Piece Ecosystem Assessor CLI (dOSPO · OMF · ORF)",
   "main": "index.js",
   "bin": {
     "os-frontiers-assess": "./index.js"
   },
   "scripts": {
-    "assess": "node index.js ."
+    "assess": "node index.js ./evaluator/examples/sample_input_config.json"
   },
   "author": "Christian Taylor <opensourcecowboy.org>",
   "license": "Apache-2.0"
