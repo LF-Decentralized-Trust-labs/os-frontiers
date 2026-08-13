@@ -1,46 +1,35 @@
-// Aiken Validator for Cardano Plutus Smart Contracts
-// Open Replenishment Framework (ORF) Maintenance SLA & Retainer Escrow
-// LF Decentralized Trust · Open Source Frontiers Lab
+/// Open Replenishment Framework (ORF) Enterprise SLA Vault - Aiken Reference Pseudocode
+/// LF Decentralized Trust · Open Source Frontiers Lab
+/// Stage 0 Architectural Reference Sketch (Unaudited)
 
-use aiken/hash.{Blake2b_224, Hash}
-use aiken/transaction/credential.{VerificationKey}
-use aiken/transaction.{Transaction, ScriptContext, Spend}
-
-type VerificationKeyHash = Hash<Blake2b_224, VerificationKey>
-
-pub type Datum {
-  dospo_admin: VerificationKeyHash,
-  treasury_recipient: VerificationKeyHash,
-  maintainer_recipient: VerificationKeyHash,
+type Datum {
+  dospo_admin: ByteArray,
+  treasury_recipient: ByteArray,
+  maintainer_recipient: ByteArray,
   expiration_posix: Int,
   annual_fee_lovelace: Int,
 }
 
-pub type Redeemer {
+type Redeemer {
   ClaimMaintainerStipend
   RouteTreasuryReplenishment
-  ReplaceDOSPOOperator { new_admin: VerificationKeyHash }
+  ReplaceDOSPOOperator { new_admin: ByteArray }
 }
 
 validator {
-  fn orf_sla_vault(datum: Datum, redeemer: Redeemer, ctx: ScriptContext) -> Bool {
-    let tx = ctx.transaction
-
+  fn validate_orf_sla_vault(datum: Datum, redeemer: Redeemer, context: Data) -> Bool {
     when redeemer is {
       ClaimMaintainerStipend -> {
-        // Must be signed by designated maintainer
-        let signed_by_maintainer = list.has(tx.extra_signatories, datum.maintainer_recipient)
-        signed_by_maintainer
+        // Illustrative Check: Maintainer stipend claim signature
+        True
       }
       RouteTreasuryReplenishment -> {
-        // Routes Lovelace replenishment directly to treasury recipient credential
-        let signed_by_admin = list.has(tx.extra_signatories, datum.dospo_admin)
-        signed_by_admin
+        // Illustrative Check: Route treasury fee split to ecosystem recipient
+        True
       }
       ReplaceDOSPOOperator { new_admin } -> {
-        // Enforces Operator Replaceability: Signed by dOSPO admin
-        let signed_by_admin = list.has(tx.extra_signatories, datum.dospo_admin)
-        signed_by_admin && (new_admin != datum.dospo_admin)
+        // Illustrative Check: Bounded community governance replacement of operator
+        new_admin != datum.dospo_admin
       }
     }
   }

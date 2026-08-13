@@ -31,7 +31,7 @@ def fetch_json(url):
         req = urllib.request.Request(url, headers=get_headers())
         with urllib.request.urlopen(req, context=SSL_CTX, timeout=10) as resp:
             return json.loads(resp.read().decode('utf-8'))
-    except Exception as e:
+    except Exception:
         return None
 
 def analyze_repo_heuristics(repo_slug):
@@ -155,7 +155,7 @@ def main():
     if not report:
         sys.exit(1)
 
-    output_dir = os.path.join("evaluator", "examples")
+    output_dir = os.path.join("evaluator", "output")
     os.makedirs(output_dir, exist_ok=True)
 
     json_path = os.path.join(output_dir, "cardano_quaid_scanner_report.json")
