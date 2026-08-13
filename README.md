@@ -3,7 +3,7 @@
 > **Guidance Frameworks on Open-Source Sustainability in Web3**  
 > *A 3-Piece Architecture: Governance (dOSPO), Deployment (OMF), and Collection (ORF)*
 
-[![License: Apache 2.0 / CC-BY-4.0](https://img.shields.io/badge/License-Apache_2.0_%7C_CC--BY--4.0-blue.svg)](LICENSE)
+[![License: Apache 2.0 / CC-BY-4.0](https://img.shields.io/badge/License-Apache_2.0_%7C_CC--BY--4.0-blue.svg)](./LICENSE-CODE)
 [![LF Decentralized Trust](https://img.shields.io/badge/LF-Decentralized_Trust_Lab-green.svg)](https://lfdecentralizedtrust.org)
 [![Edition: July 2026 Research Candidate](https://img.shields.io/badge/Edition-July_2026_Research_Candidate-orange.svg)](./VALIDATION.md)
 
@@ -74,4 +74,4 @@ The suite enforces a strict division of labor with **zero functional overlap**:
 
 **Research Edition — Candidate for External Validation**  
 *Author*: Christian Taylor (`opensourcecowboy.org`) · Open Source Frontiers Lab · LF Decentralized Trust  
-*License*: Code under [Apache-2.0](LICENSE); Documentation under [CC-BY-4.0](LICENSE).
+*License*: Code & CLI Tools under [Apache-2.0](./LICENSE-CODE); Documentation & Frameworks under [CC-BY-4.0](./LICENSE-DOCS).
