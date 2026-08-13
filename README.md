@@ -38,15 +38,15 @@ Open-source software powers critical global infrastructure, yet digital commons 
 
 The suite enforces a strict division of labor with **zero functional overlap**:
 
-### 1. [dOSPO — Decentralized Open Source Program Office](./dOSPO/START_HERE.md)
+### 1. [dOSPO — Decentralized Open Source Program Office](./dospo/START_HERE.md)
 * **Question Answered**: *WHO* holds authority and sets policy?
 * **Role**: Bounded, community-mandated coordination body holding the governance triangle (**legitimacy, neutrality, execution**). Sets spending priorities and collection rules while remaining fully replaceable by the community.
 
-### 2. [OMF — Open Maintenance Framework](./OMF/START_HERE.md)
+### 2. [OMF — Open Maintenance Framework](./omf/START_HERE.md)
 * **Question Answered**: *HOW* is capital deployed to sustain infrastructure?
 * **Role**: Portfolio of operational programs translating mandates and treasury capital into long-term infrastructure health (Maintainer Retainers, Contributor Pathways, Tooling Stewardship, Lifecycle-Aligned Funding).
 
-### 3. [ORF — Open Replenishment Framework](./ORF/START_HERE.md)
+### 3. [ORF — Open Replenishment Framework](./orf/START_HERE.md)
 * **Question Answered**: *HOW* does value flow back to replenish the treasury?
 * **Role**: Governed portfolio of 20+ collection instruments matched to where value is realized across 5 layers (**Protocol, Application, Enterprise & Services, Capital, Delegation**). Reframes initial reserve usage as a measured "Bootstrap Loan."
 
@@ -56,14 +56,14 @@ The suite enforces a strict division of labor with **zero functional overlap**:
 
 | Framework / Module | Description | Core Artifacts & Templates |
 |---|---|---|
-| 🏛️ **dOSPO** | Governance & Policy Framework | [dOSPO Specification](./dOSPO/START_HERE.md) • [dOSPO Charter](./dOSPO/CHARTER.md) • [Funding Principles](./dOSPO/FUNDING_PRINCIPLES.md) |
-| 🛠️ **OMF** | Maintenance & Deployment Framework | [OMF Specification](./OMF/START_HERE.md) • [Program Charter Template](./OMF/PROGRAM_CHARTER_TEMPLATE.md) • [Stewardship](./OMF/STEWARDSHIP.md) |
-| 💰 **ORF** | Replenishment & Inflow Framework | [ORF Specification](./ORF/START_HERE.md) • [Instrument Catalog](./ORF/INSTRUMENT_CATALOG.md) • [Governance Rules](./ORF/GOVERNANCE_RULES.md) |
-| 📈 **Pro-Forma Proof** | Sourced Mathematical Proof ($\ge 1.0$) | [Tier 1 Sourced Pro-Forma Proof](./docs/TIER_1_PRO_FORMA_PROOF.md) |
+| 🏛️ **dOSPO** | Governance & Policy Framework | [dOSPO Specification](./dospo/START_HERE.md) • [dOSPO Charter](./dospo/CHARTER.md) • [Funding Principles](./dospo/FUNDING_PRINCIPLES.md) |
+| 🛠️ **OMF** | Maintenance & Deployment Framework | [OMF Specification](./omf/START_HERE.md) • [Program Charter Template](./omf/PROGRAM_CHARTER_TEMPLATE.md) • [Stewardship](./omf/STEWARDSHIP.md) |
+| 💰 **ORF** | Replenishment & Inflow Framework | [ORF Specification](./orf/START_HERE.md) • [Instrument Catalog](./orf/INSTRUMENT_CATALOG.md) • [Governance Rules](./orf/GOVERNANCE_RULES.md) |
+| 📈 **Pro-Forma Model** | Tier 1 Feasibility Scenario Model ($\ge 1.0$) | [Tier 1 Feasibility Scenario Model](./docs/TIER_1_PRO_FORMA_PROOF.md) |
 | 🌍 **Use Cases** | Multi-Chain Ecosystem Profiles | [Cardano POSM](./use-cases/CARDANO_POSM.md) • [Optimism Superchain](./use-cases/OPTIMISM_SUPERCHAIN.md) • [Polkadot](./use-cases/POLKADOT_OPENGOV.md) • [Ethereum EVM](./use-cases/ETHEREUM_EVM.md) |
 | 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
 | 📊 **Evaluator Suite** | QUAID, CHAOSS & Systems Assessor | [Evaluator Documentation](./evaluator/README.md) • [QUAID Audit Example](./evaluator/examples/CARDANO_QUAID_SCANNER_REPORT.md) |
-| 📜 **Smart Contracts** | Deployable Solidity & Aiken Vaults | [Native Contracts Guide](./contracts/README.md) • [EVM Solidity Contract](./contracts/solidity/ORFSlaVault.sol) • [Cardano Aiken Validator](./contracts/aiken/validators/orf_sla_vault.ak) |
+| 📜 **Smart Contracts** | Reference Solidity & Aiken Vaults | [Native Contracts Guide](./contracts/README.md) • [EVM Solidity Contract](./contracts/solidity/ORFSlaVault.sol) • [Cardano Aiken Validator](./contracts/aiken/validators/orf_sla_vault.ak) |
 | 📊 **Pitch & Adoption Kit** | Executive Decks & Proposal Templates | [Pitch Deck](./pitch/EXECUTIVE_PITCH_DECK.md) • [One-Pager](./pitch/ONE_PAGER.md) • [Forum Proposal](./pitch/GOVERNANCE_PROPOSAL_TEMPLATE.md) • [Enterprise Sales Kit](./pitch/ENTERPRISE_SPONSOR_KIT.md) |
 | 🌐 **Web Suite App** | Interactive 3-Piece Dashboard | Launch [`index.html`](./index.html) in your browser for the Interactive Catalog, 3-Piece Evaluator, Pro-Forma Calculator, and Exporter. |
 

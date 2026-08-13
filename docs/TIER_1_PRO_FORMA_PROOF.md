@@ -1,18 +1,20 @@
-# Sourced Tier 1 Pro-Forma Proof: Achieving Net Replenishment Ratio ≥ 1.0
+# Tier 1 Feasibility Scenario Model & Sensitivity Analysis
 
-> **Empirical Financial Model Demonstrating Self-Sustaining Open Source Maintenance Without Reserve Drawdown**  
+> **Scenario Model Demonstrating Ecosystem Self-Sustainability Without Monetary Reserve Drawdown**  
 > *Author: Christian Taylor · Open Source Frontiers Lab · LF Decentralized Trust*  
 > *Companion to the Open Replenishment Framework (ORF) July 2026 Edition*
 
 ---
 
-## 1. Executive Summary & Proof Claim
+## 1. Executive Summary & Model Purpose
 
-The central problem statement of the Open Source Frontiers suite is transforming open-source funding from **episodic charity into a self-sustaining economic loop**. 
+The central thesis of the Open Source Frontiers suite is transforming open-source funding from **episodic charity into a self-sustaining economic loop**.
 
-This document presents a **sourced, empirical Tier 1 Pro-Forma Model** based on Cardano's Paid Open Source Model (POSM) baseline operating budget. It proves mathematically that an ecosystem can cover **100% of its baseline open-source maintenance cost floor (Net Replenishment Ratio $\ge 1.0$)** relying exclusively on non-inflationary **Tier 1 (0–18 month) ORF collection instruments**, with zero dependence on reserve drawdown or monetary expansion.
+This document presents a **Tier 1 Feasibility Scenario Model** built on Cardano's Paid Open Source Model (POSM) baseline operating cost floor. It models how a Web3 ecosystem can cover its baseline maintenance cost floor using non-inflationary **Tier 1 (0–18 month) ORF collection instruments**, reducing and ultimately eliminating dependence on monetary expansion or reserve drawdown.
 
-$$\text{Net Replenishment Ratio} = \frac{\text{Net Non-Inflationary Collection Inflow}}{\text{Annual Baseline OMF Maintenance Cost}} \ge 1.0$$
+> ⚠️ **Methodological & Framing Disclosure**:
+> - **Sourced Data**: The **$3.0M annual maintenance cost floor** is sourced directly from Intersect MBO Open Source Committee (OSC) POSM retainer pilot allocations.
+> - **Scenario Demand Assumptions**: Inflow volumes (15 SLAs, 600 certifications, 30 dApp badges, 40 mission pools) are **feasibility scenario assumptions** grounded in precedent analogies (Red Hat Extended Lifecycle, LFX Certifications, ENS Registrar), not historical sales ledgers.
 
 ---
 
@@ -30,48 +32,40 @@ Sourced from the Intersect MBO Open Source Committee (OSC) Paid Open Source Mode
 
 ---
 
-## 3. Tier 1 Collection Instrument Inflow Breakdown (0–18 Months)
+## 3. Tier 1 Collection Instrument Inflow Breakdown
 
-The model evaluates four non-inflationary **Tier 1 (0–18 month) ORF collection instruments**:
+### A. Genuinely New Earned-Revenue Instruments
 
-```
-+-----------------------------------------------------------------------------------+
-|                   TIER 1 NON-INFLATIONARY COLLECTION INFLOW MODEL                 |
-|                                                                                   |
-|  1. Enterprise Maintenance SLAs        : 15 Contracts @ $75,000/yr = $1,125,000    |
-|  2. Paid Developer Training & Certs   : 600 Certifications @ $750 = $450,000      |
-|  3. "Sustains the Commons" App Badges  : 30 Tier-1 dApps @ $25,000  = $750,000      |
-|  4. Public-Goods Stake Pool Margins    : 40 Mission Pools @ $7,500  = $300,000      |
-+-----------------------------------------------------------------------------------+
-```
-
-### Detailed Revenue & Servicing Cost Matrix
-
-| Instrument Name | Volume & Pricing Unit | Gross Revenue (USD) | Cost to Collect % | Net Inflow (USD) | Precedent & Proof Source |
+| Instrument Name | Scenario Volume & Pricing Unit | Gross Revenue (USD) | Cost to Collect % | Net Inflow (USD) | Precedent & Proof Source |
 |---|---|---|---|---|---|
 | **Enterprise Maintenance SLAs** | 15 Enterprise Contracts @ \$75,000/yr | \$1,125,000 | 35% (Sales/Legal/Ops) | **\$731,250** | Red Hat Extended Lifecycle / Tidelift Enterprise |
 | **Paid Developer Certifications** | 600 Certified Engineers @ \$750/cert | \$450,000 | 30% (Exam/Admin) | **\$315,000** | Linux Foundation LFX Certified Developer (CKA/LFCS) |
 | **"Sustains the Commons" Badges** | 30 Top-Tier dApps @ \$25,000/yr | \$750,000 | 20% (Registry/Badging) | **\$600,000** | ENS Registration revenue / Protocol Guild 1% pledge |
 | **Public-Goods Stake Pools** | 40 Mission Pools @ \$7,500/yr margin | \$300,000 | 10% (Registry/Audit) | **\$270,000** | Cardano Mission-Driven Pools (POSM delegation) |
-| **Protocol Tx Fee Treasury Split** | 20% split of baseline L1 tx fees | \$1,500,000 | 0% (Protocol Automated) | **\$1,500,000** | Cardano CIP-1694 / Monetary Policy (`tau` = 0.20) |
-| **TOTAL TIER 1 INFLOWS** | **Tier 1 Portfolio** | **\$4,125,000** | **\$708,750 (17.2%)** | **\$3,416,250** | **Net Non-Inflationary Collection** |
+| **NEW EARNED REVENUE SUBTOTAL** | **4 New Tier 1 Instruments** | **\$2,625,000** | **\$708,750 (27.0%)** | **\$1,916,250** | **Covers 63.9% of Cost Floor Alone** |
+
+### B. Pre-Existing Protocol Transaction Fee Split
+
+| Protocol Fee Inflow | Mechanism & Split | Net Inflow (USD) | Role in Sustainability Loop |
+|---|---|---|---|
+| **L1 Transaction Fee Split** | 20% split of baseline L1 tx fees (`tau` = 0.20) | **\$1,500,000** | Pre-existing protocol-layer fee split |
+| **COMBINED TIER 1 NET INFLOW** | **Earned Revenue + Protocol Tx Fee Split** | **\$3,416,250** | **Achieves 1.14x Coverage Ratio** |
 
 ---
 
-## 4. Mathematical Proof of Replenishment
+## 4. Financial Coverage Ratios
 
-$$\text{Net Non-Inflationary Inflow} = \$3,416,250 \text{ USD}$$
-$$\text{Annual Baseline OMF Maintenance Cost} = \$3,000,000 \text{ USD}$$
+1. **Genuinely New Earned Revenue Coverage**:
+   $$\text{Earned Revenue Coverage Ratio} = \frac{\$1,916,250}{\$3,000,000} = \mathbf{0.6388x} \quad (63.9\% \text{ of Cost Floor})$$
+   *Interpretation*: The four new earned-revenue instruments cover nearly **two-thirds of the baseline maintenance floor** on their own.
 
-$$\text{Net Replenishment Ratio} = \frac{\$3,416,250}{\$3,000,000} = \mathbf{1.1388x} \quad (\ge 1.0)$$
-
-$$\text{Annual Treasury Surplus} = \$3,416,250 - \$3,000,000 = \mathbf{+\$416,250 \text{ USD / year}}$$
+2. **Combined Net Replenishment Ratio (Earned Revenue + Tx Fee Split)**:
+   $$\text{Combined Net Replenishment Ratio} = \frac{\$3,416,250}{\$3,000,000} = \mathbf{1.1388x} \quad (\ge 1.0)$$
+   $$\text{Annual Net Treasury Surplus} = \$3,416,250 - \$3,000,000 = \mathbf{+\$416,250 \text{ USD / year}}$$
 
 ---
 
-## 5. Sensitivity Analysis & Stress Testing
-
-To verify robustness during severe crypto bear markets, the model is stress-tested under two adverse scenarios:
+## 5. Bear Market Sensitivity Analysis
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -88,4 +82,4 @@ To verify robustness during severe crypto bear markets, the model is stress-test
 ```
 
 ### Conclusion
-By combining **commercial Enterprise SLAs**, **developer training certifications**, **app badging**, **public-goods stake pool margin pledges**, and **automatic protocol fee splits**, a Web3 ecosystem achieves a **Net Replenishment Ratio of 1.14x** using **Tier 1 non-inflationary instruments alone**. This empirically proves the problem statement: open-source sustainability can be closed as a self-sustaining economic loop without reserve drawdown.
+This scenario model demonstrates that when new earned-revenue collection mechanisms (SLAs, certifications, app badges) are layered alongside pre-existing protocol transaction fee splits, a Web3 ecosystem can achieve a **Net Replenishment Ratio of 1.14x**, proving the economic feasibility of closing the loop without drawing down monetary reserves.
