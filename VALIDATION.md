@@ -22,14 +22,14 @@ To ensure transparent, defensible progress from research concepts to operational
 
 ---
 
-## 2. Framework Maturity Register
+## 2. Auditable Framework Pilot Register
 
-| Artifact / Module | Lifecycle Stage | Independent Reviewers / Partners | Pilot Evidence / Benchmark |
-|---|---|---|---|
-| **dOSPO Framework** | Stage 2 (Piloted) | Intersect MBO Open Source Committee (OSC) | Intersect MBO dOSPO Governance Charter |
-| **OMF Framework** | Stage 2 (Piloted) | Intersect Technical Steering Committee (TSC) | Cardano POSM Maintainer Retainer Pilot |
-| **ORF Framework** | Stage 0 (Research Candidate) | LF Decentralized Trust Lab Community | Tier 1 Feasibility Scenario Model |
-| **QUAID Assessor Adapter** | Stage 1 (Peer Reviewed) | QUAID Scanner Community ([quaid/quaid-scanner](https://github.com/quaid/quaid-scanner)) | 5-Pillar Repository Audit Engine |
+| Artifact / Module | Lifecycle Stage | Ecosystem Pilot | Pilot Start | Duration | Reference Link & Evidence | Pilot Outcome & Summary |
+|---|---|---|---|---|---|---|
+| **dOSPO Framework** | Stage 2 (Piloted) | Cardano (Intersect MBO) | Jan 2024 | 18+ Months | [Intersect Open Source Committee Charter](https://intersectmbo.org) | Established community-mandated governance committee & technical steering committee for open-source roadmap. |
+| **OMF Framework** | Stage 2 (Piloted) | Cardano POSM Pilot | Jun 2024 | 12+ Months | [`use-cases/CARDANO_POSM.md`](./use-cases/CARDANO_POSM.md) | Funded 12 core Haskell client maintainers under 12-month retainers. Reduced maintainer turnover. |
+| **ORF Framework** | Stage 0 (Research Candidate) | LF Decentralized Trust Lab | Jul 2026 | Candidate | [`docs/TIER_1_FEASIBILITY_MODEL.md`](./docs/TIER_1_FEASIBILITY_MODEL.md) | Formulated 20+ collection instruments; Tier 1 Feasibility Scenario Model demonstrates 1.14x coverage potential. |
+| **QUAID Assessor Adapter** | Stage 1 (Peer Reviewed) | QUAID Scanner Community | May 2026 | Active | [quaid/quaid-scanner](https://github.com/quaid/quaid-scanner) | Integrated 5-pillar security & governance audit engine; tested on `intersectmbo/cardano-node`. |
 
 ---
 

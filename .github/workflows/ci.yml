@@ -20,6 +20,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Run Unit Tests for Evaluator Engine
+        run: |
+          python evaluator/tests/test_evaluator.py
+
       - name: Run Python Evaluator Assessor
         run: |
           python evaluator/cli/assess_ecosystem.py
