@@ -1,0 +1,37 @@
+{
+  "config": {
+    "name": "Cardano (Paid Open Source Model / POSM Pilot)",
+    "chain_type": "UTXO / Proof-of-Stake (NPoS)",
+    "governance_model": "CIP-1694 (DReps, SPOs, Constitutional Committee, Intersect MBO)",
+    "treasury_inflow_mechanism": "20% Treasury Fee Split (Monetary Expansion + Tx Fees)",
+    "annual_maintenance_budget_usd": 3500000,
+    "treasury_reserve_usd": 650000000,
+    "annual_tx_fee_inflow_usd": 4500000,
+    "annual_reserve_expansion_usd": 85000000,
+    "annual_earned_non_inflation_usd": 450000,
+    "maintainer_retainer_program": true,
+    "maintainer_autonomy_guarantee": true,
+    "independent_audit_published": true,
+    "ips_yield_sleeve_active": false
+  },
+  "dospo_score": 25,
+  "dospo_pct": 100.0,
+  "omf_score": 25,
+  "omf_pct": 100.0,
+  "orf_score": 20,
+  "orf_pct": 80.0,
+  "total_score": 70,
+  "overall_pct": 93.3,
+  "level": "Level 3: Self-Sustaining Closed Loop",
+  "action": "Maintain IPS yield sleeve & expand enterprise SLA reciprocal contracts.",
+  "capital_metrics": {
+    "maintenance_budget_usd": 3500000,
+    "tx_fee_inflow_usd": 4500000,
+    "reserve_expansion_usd": 85000000,
+    "earned_non_inflation_usd": 450000,
+    "net_non_inflationary_inflow_usd": 4950000,
+    "net_replenishment_ratio": 1.41,
+    "gross_coverage_ratio": 25.7,
+    "bear_market_runway_years": 92.9
+  }
+}
