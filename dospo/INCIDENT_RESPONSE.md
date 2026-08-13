@@ -1,91 +1,36 @@
-# Security Incident Response Playbook
+# dOSPO Incident Response Playbook
 
-> **Purpose**: Ensure that when a vulnerability spans multiple ecosystem components, response is coordinated, fast, and does not create permanent authority expansion.
->
-> **Key principle**: Emergency authority expands only under defined conditions and contracts immediately afterward. Security incidents must not justify standing powers.
-
----
-
-## Roles
-
-| Role | Responsibility | Filled By |
-|---|---|---|
-| **Incident Coordinator** | Single point of coordination during active incident | dOSPO Operator (pre-authorized) |
-| **Severity Assessor** | Initial triage using shared taxonomy | Security Council member (rotating) |
-| **Project Leads** | Patch development, deployment coordination | Affected project maintainers |
-| **Communications Lead** | Operator/downstream user notification | dOSPO Operator |
-| **Post-Incident Reviewer** | Retrospective and documentation | Security Council |
+> **Operational Guidelines for Security Vulnerability Intake, Triage & Incident Resolution**  
+> *Author: Christian Taylor · Open Source Frontiers Lab · LF Decentralized Trust*
 
 ---
 
-## Phase 1: Intake (0–4 hours)
+## 1. Objective & Scope
 
-- [ ] Report received via designated disclosure channel (see [`disclosure-policy.md`](disclosure-policy.md))
-- [ ] Severity Assessor assigned within **2 hours** of receipt
-- [ ] Initial severity classification applied using shared taxonomy (see [`severity-taxonomy.md`](severity-taxonomy.md))
-- [ ] Incident Coordinator notified and activated
-- [ ] Embargo period begins — no public disclosure until Phase 3
-
-**Intake channels must be monitored continuously. No report should go unacknowledged for more than 4 hours.**
+The **dOSPO Incident Response Playbook** provides a standardized operational protocol for handling security vulnerabilities, critical zero-day exposures, and infrastructure exploits across open-source repositories managed under a dOSPO community mandate.
 
 ---
 
-## Phase 2: Coordinated Response (4–72 hours, severity-dependent)
+## 2. Severity Classification Matrix
 
-- [ ] Affected projects identified and leads contacted via private channel
-- [ ] Cross-project impact scope assessed
-- [ ] Patch development coordinated across teams
-- [ ] Deployment timeline agreed and documented
-- [ ] Downstream operator and user notification sequence drafted (not yet sent)
-- [ ] Security Council briefed on status at defined intervals
-
-**The Incident Coordinator facilitates. Project leads retain authority over their own codebases. The coordinator cannot mandate patch timelines — only facilitate agreement.**
+| Severity Level | Response SLA | Action Required | Escalation Path |
+|---|---|---|---|
+| **Critical (P0)** | < 2 Hours | Immediate emergency hotfix branch; notify dOSPO Security Lead & Core Maintainers | Constitutional Committee & Security Council |
+| **High (P1)** | < 24 Hours | Patch formulation; coordinated vulnerability disclosure window | OMF Maintainer Lead |
+| **Medium (P2)** | < 7 Days | Standard release cycle patch | Standard GitHub Issue Triage |
+| **Low (P3)** | < 30 Days | Maintenance backlog triage | Standard Contributor PR |
 
 ---
 
-## Phase 3: Coordinated Disclosure
+## 3. Incident Timeline & Post-Mortem Standard
 
-- [ ] Patches deployed (or deployment confirmed imminent) by all affected projects
-- [ ] Operator and downstream user notification sent per agreed sequence
-- [ ] Public advisory published via [DESIGNATED CHANNEL]
-- [ ] Embargo lifted
-
-**Disclosure timing is set by the Security Council's embargo policy, not by the operator. The operator executes the agreed timeline.**
+Every Critical (P0) or High (P1) incident requires a published **dOSPO Post-Mortem Report** within 14 days of resolution detailing:
+1. Root cause analysis & vulnerability vector.
+2. Timeline of disclosure, triage, patch release, and network deployment.
+3. Preventive maintenance measures added to the repository's [Dependency Audit](./omf/DEPENDENCY_AUDIT_TEMPLATE.md).
 
 ---
 
-## Phase 4: Post-Incident (within 30 days)
+## 4. Security Contact
 
-- [ ] Incident timeline documented using [`../templates/incident-timeline-template.md`](../templates/incident-timeline-template.md)
-- [ ] Post-mortem completed with affected project leads
-- [ ] Root cause analysis documented
-- [ ] Process gaps identified and remediation proposed to Security Council
-- [ ] Expanded emergency authority formally closed — no lingering permissions
-- [ ] Post-mortem published publicly
-
-**Authority contraction is mandatory, not optional. Any emergency authority granted during the incident must be explicitly closed at this stage.**
-
----
-
-## Escalation Paths
-
-| Condition | Escalation |
-|---|---|
-| Project lead unresponsive after 24 hours | Security Council notified; Security Council may escalate to governance |
-| Exploit active in the wild | Security Council may authorize accelerated disclosure timeline |
-| Incident spans ecosystem-external dependencies | Security Council coordinates with external project security contacts |
-| Operator conflict of interest identified | Security Council appoints independent coordinator |
-
----
-
-## What the dOSPO Cannot Do in a Security Incident
-
-- Cannot compel a maintainer to patch or merge code
-- Cannot compel an operator to upgrade infrastructure
-- Cannot retain expanded authority after the incident is closed
-- Cannot make public disclosures outside Security Council-approved timelines
-- Cannot use the incident to justify any standing power not already defined in the Security Domain charter
-
----
-
-*The dOSPO reduces chaos, not malice. Enforcement occurs through incentives — eligibility for continuity funding, lifecycle designation, participation in coordinated response — not through command authority.*
+For security disclosure intake, follow guidelines in `SECURITY.md` or contact the dOSPO Security Committee directly.
