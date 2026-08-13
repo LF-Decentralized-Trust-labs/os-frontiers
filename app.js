@@ -220,7 +220,7 @@ const catalogData = [
   }
 ];
 
-// Ecosystem & Tooling Profiles Data (Reconciled Repository Directory Paths)
+// Ecosystem & Tooling Profiles Data
 const profilesData = [
   {
     title: "Cardano Profile",
@@ -470,7 +470,7 @@ function renderProfiles() {
   `).join("");
 }
 
-// 5-Question Quiz Setup
+// 3-Piece Evaluator Setup
 function setupQuiz() {
   const radios = document.querySelectorAll('.options-group input[type="radio"]');
   radios.forEach(radio => {
@@ -481,40 +481,66 @@ function setupQuiz() {
 }
 
 function updateQuizScore() {
-  let totalScore = 0;
-  for (let i = 1; i <= 5; i++) {
-    const checked = document.querySelector(`input[name="q${i}"]:checked`);
-    if (checked) {
-      totalScore += parseInt(checked.value, 10);
-    }
+  let dospoScore = 0;
+  let omfScore = 0;
+  let orfScore = 0;
+
+  for (let i = 1; i <= 3; i++) {
+    const checked = document.querySelector(`input[name="mq${i}"]:checked`);
+    if (checked) dospoScore += parseInt(checked.value, 10);
   }
+  for (let i = 4; i <= 5; i++) {
+    const checked = document.querySelector(`input[name="mq${i}"]:checked`);
+    if (checked) omfScore += parseInt(checked.value, 10);
+  }
+  for (let i = 6; i <= 7; i++) {
+    const checked = document.querySelector(`input[name="mq${i}"]:checked`);
+    if (checked) orfScore += parseInt(checked.value, 10);
+  }
+
+  const totalScore = dospoScore + omfScore + orfScore;
+  const dospoPct = Math.round((dospoScore / 15) * 100);
+  const omfPct = Math.round((omfScore / 10) * 100);
+  const orfPct = Math.round((orfScore / 10) * 100);
 
   const scoreDisplay = document.getElementById("total-score");
   const meterFill = document.getElementById("meter-fill");
+  const dospoDisplay = document.getElementById("dospo-pct");
+  const omfDisplay = document.getElementById("omf-pct");
+  const orfDisplay = document.getElementById("orf-pct");
   const phaseBadge = document.getElementById("phase-badge");
   const phaseDesc = document.getElementById("phase-desc");
 
-  if (scoreDisplay) scoreDisplay.textContent = `${totalScore} / 25`;
-  if (meterFill) meterFill.style.width = `${(totalScore / 25) * 100}%`;
+  if (scoreDisplay) scoreDisplay.textContent = `${totalScore} / 35`;
+  if (meterFill) meterFill.style.width = `${(totalScore / 35) * 100}%`;
+  if (dospoDisplay) dospoDisplay.textContent = `${dospoPct}%`;
+  if (omfDisplay) omfDisplay.textContent = `${omfPct}%`;
+  if (orfDisplay) orfDisplay.textContent = `${orfPct}%`;
 
-  if (totalScore <= 9) {
+  if (totalScore <= 10) {
     if (phaseBadge) {
-      phaseBadge.textContent = "Phase 1: Reserve-Funded (Bootstrap)";
+      phaseBadge.textContent = "Level 0: Un-Architected / Fragile";
       phaseBadge.className = "badge badge-primary";
     }
-    if (phaseDesc) phaseDesc.textContent = "Reserves carry the budget. Focus on dOSPO charters, voluntary app bundles, and Enterprise SLA pilots.";
-  } else if (totalScore <= 18) {
+    if (phaseDesc) phaseDesc.textContent = "High risk of treasury depletion. Focus on establishing a dOSPO mandate and OMF retainers.";
+  } else if (totalScore <= 22) {
     if (phaseBadge) {
-      phaseBadge.textContent = "Phase 2: Fee-Supplemented";
+      phaseBadge.textContent = "Level 1: Governance & Retainers Bootstrapped";
       phaseBadge.className = "badge badge-accent";
     }
-    if (phaseDesc) phaseDesc.textContent = "Earned and captured revenue covers 40-60% of baseline maintenance. Expand SLA sales and attestation pools.";
-  } else {
+    if (phaseDesc) phaseDesc.textContent = "dOSPO governance active and maintainer retainers deployed. Focus on testing Tier 1 ORF SLAs.";
+  } else if (totalScore <= 30) {
     if (phaseBadge) {
-      phaseBadge.textContent = "Phase 3: Self-Sustaining";
+      phaseBadge.textContent = "Level 2: Fee-Supplemented Maintenance";
       phaseBadge.className = "badge badge-success";
     }
-    if (phaseDesc) phaseDesc.textContent = "Net replenishment ratio ≥ 1.0. Governed IPS endowment yield + earned revenue cover baseline maintenance floor.";
+    if (phaseDesc) phaseDesc.textContent = "OMF operational; 40-60% of maintenance budget covered by earned revenue & fee splits. Deploy IPS endowment.";
+  } else {
+    if (phaseBadge) {
+      phaseBadge.textContent = "Level 3: Self-Sustaining Loop";
+      phaseBadge.className = "badge badge-success";
+    }
+    if (phaseDesc) phaseDesc.textContent = "Net replenishment ratio ≥ 1.0 across full market cycle. IPS endowment yield + SLA revenue cover floor.";
   }
 }
 

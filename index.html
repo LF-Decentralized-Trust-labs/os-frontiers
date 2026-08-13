@@ -31,7 +31,7 @@
         <button class="nav-btn highlight" data-tab="orf">ORF Catalog</button>
         <button class="nav-btn" data-tab="profiles">Use Cases & Tools</button>
         <button class="nav-btn" data-tab="pitch">Pitch & Adoption Kit</button>
-        <button class="nav-btn" data-tab="posture">5-Q Assessment</button>
+        <button class="nav-btn" data-tab="posture">3-Piece Maturity Evaluator</button>
         <button class="nav-btn" data-tab="proforma">Pro-Forma Calculator</button>
         <button class="nav-btn" data-tab="templates">Template Exporter</button>
       </nav>
@@ -286,103 +286,140 @@
       </div>
     </section>
 
-    <!-- Tab 7: 5-Q Assessment -->
+    <!-- Tab 7: 3-Piece Maturity Evaluator -->
     <section id="posture" class="tab-pane">
       <div class="section-card">
         <div class="badge-row">
-          <span class="badge badge-primary">Interactive Assessment</span>
-          <span class="badge">Ecosystem Readiness</span>
+          <span class="badge badge-primary">Unified 3-Pillar Assessment</span>
+          <span class="badge">dOSPO · OMF · ORF Maturity Evaluator</span>
         </div>
-        <h1 class="section-title">5-Question Replenishment Posture Evaluator</h1>
+        <h1 class="section-title">3-Piece Ecosystem Need & Maturity Evaluator</h1>
         <p class="section-desc">
-          Score your ecosystem across the 5 core replenishment dimensions to determine your phase and next steps.
+          Rate your ecosystem across all 3 framework pillars to compute your overall Frontiers Maturity Level and get a tailored action plan.
         </p>
 
         <div class="quiz-container">
           <div class="quiz-questions">
-            <!-- Question 1 -->
-            <div class="quiz-card" data-q="1">
-              <div class="q-header">
-                <span class="q-number">1</span>
-                <h3>Ratio — What is your replenishment ratio today?</h3>
+            
+            <!-- Pillar 1: dOSPO -->
+            <div class="pillar-block">
+              <h2 class="pillar-title text-accent">🏛️ Pillar 1: dOSPO Governance Authority (WHO)</h2>
+              
+              <div class="quiz-card" data-q="1">
+                <div class="q-header">
+                  <span class="q-number">1</span>
+                  <h3>Legitimacy & Mandate — Are governance spending decisions community-chartered?</h3>
+                </div>
+                <div class="options-group">
+                  <label class="option-item"><input type="radio" name="mq1" value="0" checked> <span>0 Pts — Ad-hoc spending without community charter or governance mandate.</span></label>
+                  <label class="option-item"><input type="radio" name="mq1" value="3"> <span>3 Pts — Votes occur, but lack bounded governance charters.</span></label>
+                  <label class="option-item"><input type="radio" name="mq1" value="5"> <span>5 Pts — Bounded, time-limited dOSPO charter approved via community vote.</span></label>
+                </div>
               </div>
-              <p class="q-desc">Measures the ratio of collected value to deployed maintenance budget and how gaps are subsidized.</p>
-              <div class="options-group">
-                <label class="option-item"><input type="radio" name="q1" value="0" checked> <span>0 Pts — 100% dependent on unmeasured reserve drawdown / token inflation.</span></label>
-                <label class="option-item"><input type="radio" name="q1" value="3"> <span>3 Pts — Ratio measured; partial fee splits cover 10-30% of costs.</span></label>
-                <label class="option-item"><input type="radio" name="q1" value="5"> <span>5 Pts — Ratio ≥ 1.0 or non-inflationary income covers baseline maintenance floor.</span></label>
+
+              <div class="quiz-card" data-q="2">
+                <div class="q-header">
+                  <span class="q-number">2</span>
+                  <h3>Neutrality — Is governance independent of commercial vendor lock-in?</h3>
+                </div>
+                <div class="options-group">
+                  <label class="option-item"><input type="radio" name="mq2" value="0" checked> <span>0 Pts — Single corporate entity or sponsor controls technical decisions.</span></label>
+                  <label class="option-item"><input type="radio" name="mq2" value="3"> <span>3 Pts — Basic conflict disclosures, but vendor lock-in risk remains.</span></label>
+                  <label class="option-item"><input type="radio" name="mq2" value="5"> <span>5 Pts — Strict neutrality; funding never purchases technical roadmap control.</span></label>
+                </div>
+              </div>
+
+              <div class="quiz-card" data-q="3">
+                <div class="q-header">
+                  <span class="q-number">3</span>
+                  <h3>Operator Replaceability — Can the community replace program operators?</h3>
+                </div>
+                <div class="options-group">
+                  <label class="option-item"><input type="radio" name="mq3" value="0" checked> <span>0 Pts — Grants team or operator cannot be replaced by governance.</span></label>
+                  <label class="option-item"><input type="radio" name="mq3" value="3"> <span>3 Pts — Replaced only during governance crises.</span></label>
+                  <label class="option-item"><input type="radio" name="mq3" value="5"> <span>5 Pts — Operator authority subject to annual evidence-based renewal votes.</span></label>
+                </div>
               </div>
             </div>
 
-            <!-- Question 2 -->
-            <div class="quiz-card" data-q="2">
-              <div class="q-header">
-                <span class="q-number">2</span>
-                <h3>Anchors — Does collection attach to fork-resistant anchors?</h3>
+            <!-- Pillar 2: OMF -->
+            <div class="pillar-block">
+              <h2 class="pillar-title text-success">🛠️ Pillar 2: OMF Operational Deployment (HOW SPEND)</h2>
+
+              <div class="quiz-card" data-q="4">
+                <div class="q-header">
+                  <span class="q-number">4</span>
+                  <h3>Maintainer Retainers — Are maintainers funded predictably?</h3>
+                </div>
+                <div class="options-group">
+                  <label class="option-item"><input type="radio" name="mq4" value="0" checked> <span>0 Pts — Maintainers rely on friction-heavy one-off grant proposals.</span></label>
+                  <label class="option-item"><input type="radio" name="mq4" value="3"> <span>3 Pts — Partial grants available, but lack recurring retainers.</span></label>
+                  <label class="option-item"><input type="radio" name="mq4" value="5"> <span>5 Pts — Predictable 12-month retainers streamed continuously.</span></label>
+                </div>
               </div>
-              <p class="q-desc">Tests whether avoidance requires giving up valuable services, state, or relationships.</p>
-              <div class="options-group">
-                <label class="option-item"><input type="radio" name="q2" value="0" checked> <span>0 Pts — Charges attach only to copyable code access or license terms.</span></label>
-                <label class="option-item"><input type="radio" name="q2" value="3"> <span>3 Pts — Attaches to native token fees, but lacks liquidity or SLA anchors.</span></label>
-                <label class="option-item"><input type="radio" name="q2" value="5"> <span>5 Pts — Attaches to canonical liquidity, SLAs, registry badges, or brand.</span></label>
+
+              <div class="quiz-card" data-q="5">
+                <div class="q-header">
+                  <span class="q-number">5</span>
+                  <h3>Metrics & Impact — Is repository health & impact data-driven?</h3>
+                </div>
+                <div class="options-group">
+                  <label class="option-item"><input type="radio" name="mq5" value="0" checked> <span>0 Pts — No data on repository health, response latency, or retention.</span></label>
+                  <label class="option-item"><input type="radio" name="mq5" value="3"> <span>3 Pts — Basic GitHub star/fork metrics tracked.</span></label>
+                  <label class="option-item"><input type="radio" name="mq5" value="5"> <span>5 Pts — Open Source Observer (OSO) analytics & OpenSSF security scorecards.</span></label>
+                </div>
               </div>
             </div>
 
-            <!-- Question 3 -->
-            <div class="quiz-card" data-q="3">
-              <div class="q-header">
-                <span class="q-number">3</span>
-                <h3>Bundles — Is optional payment attached to tangible benefits?</h3>
+            <!-- Pillar 3: ORF -->
+            <div class="pillar-block">
+              <h2 class="pillar-title text-warning">💰 Pillar 3: ORF Value Replenishment (HOW COLLECT)</h2>
+
+              <div class="quiz-card" data-q="6">
+                <div class="q-header">
+                  <span class="q-number">6</span>
+                  <h3>Replenishment Ratio — How is baseline maintenance subsidized?</h3>
+                </div>
+                <div class="options-group">
+                  <label class="option-item"><input type="radio" name="mq6" value="0" checked> <span>0 Pts — 100% dependent on unmeasured reserve drawdown / token inflation.</span></label>
+                  <label class="option-item"><input type="radio" name="mq6" value="3"> <span>3 Pts — Ratio measured; fee splits cover 10-30% of costs.</span></label>
+                  <label class="option-item"><input type="radio" name="mq6" value="5"> <span>5 Pts — Net replenishment ratio ≥ 1.0; non-inflationary income covers floor.</span></label>
+                </div>
               </div>
-              <p class="q-desc">Evaluates whether payments purchase products payers independently value ("Sold, not taxed").</p>
-              <div class="options-group">
-                <label class="option-item"><input type="radio" name="q3" value="0" checked> <span>0 Pts — Mandatory tax or un-bundled donation with no tangible benefit.</span></label>
-                <label class="option-item"><input type="radio" name="q3" value="3"> <span>3 Pts — Basic badge placement offered, but lacks SLAs or patch commitments.</span></label>
-                <label class="option-item"><input type="radio" name="q3" value="5"> <span>5 Pts — Sold, not taxed. Enterprise SLAs, LTS, and registry badges offered.</span></label>
+
+              <div class="quiz-card" data-q="7">
+                <div class="q-header">
+                  <span class="q-number">7</span>
+                  <h3>Benefit Bundling & Endowments — Are SLAs sold & yield active?</h3>
+                </div>
+                <div class="options-group">
+                  <label class="option-item"><input type="radio" name="mq7" value="0" checked> <span>0 Pts — Un-bundled donations; static reserves with zero yield IPS.</span></label>
+                  <label class="option-item"><input type="radio" name="mq7" value="3"> <span>3 Pts — Basic badges offered, but no enterprise SLAs or IPS yield.</span></label>
+                  <label class="option-item"><input type="radio" name="mq7" value="5"> <span>5 Pts — Enterprise SLAs sold & governed IPS endowment yield active.</span></label>
+                </div>
               </div>
             </div>
 
-            <!-- Question 4 -->
-            <div class="quiz-card" data-q="4">
-              <div class="q-header">
-                <span class="q-number">4</span>
-                <h3>Mandate — Are collection rails chartered and audited?</h3>
-              </div>
-              <p class="q-desc">Ensures collection requires the same authorization and audit discipline as spending.</p>
-              <div class="options-group">
-                <label class="option-item"><input type="radio" name="q4" value="0" checked> <span>0 Pts — Ad-hoc, un-chartered, or managed in opaque accounts without mandate.</span></label>
-                <label class="option-item"><input type="radio" name="q4" value="3"> <span>3 Pts — Authorized by governance, but lacks time-limited charters or audits.</span></label>
-                <label class="option-item"><input type="radio" name="q4" value="5"> <span>5 Pts — Every collection rail carries a dOSPO mandate & independent audit.</span></label>
-              </div>
-            </div>
-
-            <!-- Question 5 -->
-            <div class="quiz-card" data-q="5">
-              <div class="q-header">
-                <span class="q-number">5</span>
-                <h3>Runway — Can baseline maintenance survive a full bear market?</h3>
-              </div>
-              <p class="q-desc">Tests whether non-inflationary income and liquid buffers cover baseline costs during market downturns.</p>
-              <div class="options-group">
-                <label class="option-item"><input type="radio" name="q5" value="0" checked> <span>0 Pts — Maintenance budget collapses if native token drops 50%+.</span></label>
-                <label class="option-item"><input type="radio" name="q5" value="3"> <span>3 Pts — 12-18m runway in stables, but high price correlation and no IPS yield.</span></label>
-                <label class="option-item"><input type="radio" name="q5" value="5"> <span>5 Pts — Diversified SLA income + IPS endowment yield cover baseline floor.</span></label>
-              </div>
-            </div>
           </div>
 
           <!-- Score Card Sidebar -->
           <div class="quiz-scorecard">
             <div class="score-box">
-              <span class="score-label">OVERALL SCORE</span>
-              <div id="total-score" class="score-number">0 / 25</div>
+              <span class="score-label">OVERALL MATURITY SCORE</span>
+              <div id="total-score" class="score-number">0 / 35</div>
               <div id="score-meter" class="meter-bar"><div id="meter-fill" class="meter-fill"></div></div>
             </div>
 
+            <div class="pillar-breakdown" style="margin-bottom: 1.5rem;">
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.3rem;">dOSPO Governance: <strong id="dospo-pct" class="text-accent">0%</strong></div>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.3rem;">OMF Deployment: <strong id="omf-pct" class="text-success">0%</strong></div>
+              <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.3rem;">ORF Replenishment: <strong id="orf-pct" class="text-warning">0%</strong></div>
+            </div>
+
             <div class="phase-recommendation">
-              <h4>Current Replenishment Phase:</h4>
-              <div id="phase-badge" class="badge badge-primary">Phase 1: Reserve-Funded</div>
-              <p id="phase-desc">Focus on launching dOSPO governance charters and testing Enterprise SLA offerings.</p>
+              <h4>Ecosystem Frontiers Level:</h4>
+              <div id="phase-badge" class="badge badge-primary">Level 0: Un-Architected / Fragile</div>
+              <p id="phase-desc">High risk of treasury depletion. Focus on establishing a dOSPO mandate and OMF retainers.</p>
             </div>
           </div>
         </div>
