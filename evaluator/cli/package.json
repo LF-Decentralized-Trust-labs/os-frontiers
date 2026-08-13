@@ -7,7 +7,7 @@
     "os-frontiers-assess": "./index.js"
   },
   "scripts": {
-    "assess": "node index.js ./evaluator/examples/sample_input_config.json"
+    "assess": "node index.js ../examples/sample_input_config.json"
   },
   "author": "Christian Taylor <opensourcecowboy.org>",
   "license": "Apache-2.0"
