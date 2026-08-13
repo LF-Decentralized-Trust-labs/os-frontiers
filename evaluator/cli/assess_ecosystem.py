@@ -2,32 +2,21 @@
 """
 Automated 3-Piece Ecosystem Systems & Capital Flow Assessor (dOSPO · OMF · ORF)
 LF Decentralized Trust · Open Source Frontiers Lab
-No Hardcoded Mock Overrides Engine
+Strict Dynamic Scoring Engine (0 Base Score, Level 0 Reachable)
 """
 
 import sys
 import os
 import json
 import argparse
-import urllib.request
-import ssl
 import io
 
 # Ensure UTF-8 output encoding on Windows terminals
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-SSL_CTX = ssl._create_unverified_context()
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GITHUB_PERSONAL_ACCESS_TOKEN")
-
-def get_headers():
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpenSourceFrontiersAssessor/2.0"}
-    if GITHUB_TOKEN:
-        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
-    return headers
-
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description="Dynamic 3-Piece Systems Assessor (No Mock Overrides)"
+        description="Dynamic 3-Piece Systems Assessor (Strict 0 Base Scoring)"
     )
     parser.add_argument(
         "config_file",
@@ -49,39 +38,39 @@ def analyze_system_data(config):
     earned_rev = config.get("annual_earned_non_inflation_usd", 0)
     reserves = config.get("treasury_reserve_usd", 0)
 
-    if budget == 0:
-        raise ValueError("Error: 'annual_maintenance_budget_usd' must be > 0 in configuration file.")
-
-    total_inflow = fees + reserve_exp + earned_rev
     net_non_inflationary = fees + earned_rev
-    net_replenishment_ratio = round(net_non_inflationary / budget, 2)
-    runway_years = round((reserves * 0.50) / budget, 1)
+    net_replenishment_ratio = round(net_non_inflationary / budget, 2) if budget > 0 else 0.0
+    runway_years = round((reserves * 0.50) / budget, 1) if budget > 0 else 0.0
 
-    # Dynamic Scoring Vectors
-    dospo_score = 15
+    # Dynamic Scoring Vectors starting strictly at 0 Base Score
+    dospo_score = 0
     if config.get("has_community_charter", False):
-        dospo_score += 5
+        dospo_score += 10
     if config.get("operator_replaceable", False):
+        dospo_score += 10
+    if config.get("independent_audit_published", False):
         dospo_score += 5
 
-    omf_score = 10
+    omf_score = 0
     if config.get("maintainer_retainer_program", False):
-        omf_score += 10
+        omf_score += 12
     if config.get("maintainer_autonomy_guarantee", False):
+        omf_score += 8
+    if config.get("has_dependency_audit", False):
         omf_score += 5
 
-    orf_score = 5
+    orf_score = 0
     if net_replenishment_ratio >= 1.0:
-        orf_score += 12
+        orf_score += 15
     elif net_replenishment_ratio >= 0.5:
-        orf_score += 8
+        orf_score += 10
     elif net_replenishment_ratio >= 0.2:
         orf_score += 5
 
     if config.get("ips_yield_sleeve_active", False):
         orf_score += 5
     if earned_rev > 0:
-        orf_score += 3
+        orf_score += 5
 
     total_score = min(75, dospo_score + omf_score + orf_score)
     overall_pct = round((total_score / 75) * 100, 1)
@@ -114,9 +103,8 @@ def main():
     args = parse_arguments()
 
     if not args.config_file or not os.path.exists(args.config_file):
-        print("⚠️ No valid JSON configuration file provided. Creating template input file...")
         sample_config = {
-            "name": "Ecosystem Dynamic Input",
+            "name": "Ecosystem Input Example",
             "annual_maintenance_budget_usd": 3500000,
             "treasury_reserve_usd": 650000000,
             "annual_tx_fee_inflow_usd": 4500000,
@@ -124,15 +112,12 @@ def main():
             "annual_earned_non_inflation_usd": 450000,
             "has_community_charter": True,
             "operator_replaceable": True,
+            "independent_audit_published": True,
             "maintainer_retainer_program": True,
             "maintainer_autonomy_guarantee": True,
+            "has_dependency_audit": True,
             "ips_yield_sleeve_active": False
         }
-        config_path = os.path.join("evaluator", "examples", "sample_input_config.json")
-        os.makedirs(os.path.dirname(config_path), exist_ok=True)
-        with open(config_path, "w", encoding="utf-8") as f:
-            json.dump(sample_config, f, indent=2)
-        print(f"📄 Sample configuration created at: {config_path}")
         config = sample_config
     else:
         with open(args.config_file, "r", encoding="utf-8") as f:
@@ -146,8 +131,12 @@ def main():
 
     print("\n=======================================================")
     print(f"📊 DYNAMIC SYSTEMS ASSESSMENT: {results['config_source']}")
-    print(f"🏆 OVERALL MATURITY SCORE: {results['total_score']}/75 ({results['overall_pct']}%) -> {results['level']}")
-    print(f"💾 Results saved to: {args.output_json}")
+    print(f"🏛️ dOSPO Governance Score  : {results['dospo_score']} / 25")
+    print(f"🛠️ OMF Maintenance Score   : {results['omf_score']} / 25")
+    print(f"💰 ORF Replenishment Score : {results['orf_score']} / 25")
+    print(f"🏆 OVERALL SCORE           : {results['total_score']}/75 ({results['overall_pct']}%)")
+    print(f"🌱 MATURITY CLASSIFICATION : {results['level']}")
+    print(f"💾 Results saved to        : {args.output_json}")
     print("=======================================================\n")
 
 if __name__ == "__main__":

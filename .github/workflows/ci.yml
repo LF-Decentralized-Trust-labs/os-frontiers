@@ -1,0 +1,38 @@
+name: CI Workflow
+
+on:
+  push:
+    branches: [ main, feature/* ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-evaluator:
+    name: Run Evaluator & CLI Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Python Evaluator Assessor
+        run: |
+          python evaluator/cli/assess_ecosystem.py
+
+      - name: Run QUAID Scanner Adapter
+        run: |
+          python evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Test Node Evaluator CLI
+        run: |
+          node evaluator/cli/index.js .
