@@ -65,11 +65,11 @@ Sourced from the Intersect MBO Open Source Committee (OSC) Paid Open Source Mode
 
 ---
 
-## 5. Bear Market Scenario A Derivation & Stress Testing
+## 5. Bear Market Scenario A Sensitivity Analysis
 
 To verify robustness during market contractions, **Scenario A** models a **50% crypto token price drop** combined with a **30% reduction in on-chain transaction activity**.
 
-### A. Line-by-Line Scenario A Derivation Table
+### A. Line-by-Line Scenario A Inflow Derivation Table
 
 | Instrument | Baseline Net (USD) | Asset Denomination & Bear Market Haircut | Scenario A Net Inflow (USD) | Derivation Rationale |
 |---|---|---|---|---|
@@ -82,21 +82,21 @@ To verify robustness during market contractions, **Scenario A** models a **50% c
 
 ### B. Scenario A Austerity Budget Derivation
 
-During severe market contractions, governance enforces an **Austerity OMF Maintenance Budget** by deferring non-essential ecosystem grant expansion while preserving 100% of core maintainer retainers:
+During severe market contractions, governance enforces an **Austerity OMF Maintenance Budget** by deferring non-essential tooling grants while preserving 100% of core maintainer retainers:
 
 | OMF Austerity Budget Line Item | Baseline Budget | Austerity Budget (USD) | Austerity Action |
 |---|---|---|---|
 | **Core Client Maintenance** | \$1,600,000 | \$1,600,000 | 100% Retained (8 Core Maintainers) |
 | **Developer SDKs & Tooling** | \$600,000 | \$200,000 | Non-essential tooling grants paused |
 | **Security Auditing & Triage** | \$400,000 | \$200,000 | Audit frequency adjusted |
-| **Operational Administration** | \$400,000 | \$0 | Admin overhead absorbed by dOSPO reserves |
-| **AUSTERITY OMF COST FLOOR** | **\$3,000,000** | **\$2,000,000** | **33.3% Temporary Budget Reduction** |
+| **Operational Administration** | \$400,000 | \$100,000 | Operating overhead reduced (lean legal/audit) |
+| **AUSTERITY OMF COST FLOOR** | **\$3,000,000** | **\$2,100,000** | **30.0% Temporary Budget Reduction** |
 
-### C. Scenario A Net Replenishment Ratio
+### C. Scenario A Stress Coverage Ratio & Reserve Bridge
 
-$$\text{Scenario A Net Replenishment Ratio} = \frac{\$2,001,250}{\$2,000,000} = \mathbf{1.000625x} \quad (\ge 1.0)$$
+$$\text{Scenario A Replenishment Ratio} = \frac{\$2,001,250}{\$2,100,000} = \mathbf{0.9530x} \quad (95.3\% \text{ Covered})$$
 
-$$\text{Scenario A Surplus} = \$2,001,250 - \$2,000,000 = \mathbf{+\$1,250 \text{ USD / year}}$$
+$$\text{Scenario A Annual Gap} = \$2,100,000 - \$2,001,250 = \mathbf{-\$98,750 \text{ USD / year}}$$
 
-### Conclusion
-This line-by-line derivation proves that even under a **50% crypto price crash and 30% transaction volume drop**, combining USD-denominated Enterprise SLAs, badging revenue, and native fee splits against an Austerity OMF Budget maintains a **Net Replenishment Ratio $\ge 1.0$ (1.0006x)** without requiring emergency reserve drawdowns.
+### Conclusion & Methodological Framing
+Even under an extreme bear market scenario (50% token price crash + 30% transaction volume drop), Tier 1 non-inflationary collection instruments still cover **95.3% of the entire austerity maintenance cost floor (0.953x ratio)**. The minor annual gap of \$98,750 USD represents less than 0.04% of treasury reserves, demonstrating that Tier 1 replenishment instruments insulate the ecosystem from major treasury depletion across market cycles.

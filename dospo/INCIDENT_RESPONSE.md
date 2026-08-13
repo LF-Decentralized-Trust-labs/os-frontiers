@@ -27,7 +27,7 @@ The **dOSPO Incident Response Playbook** provides a standardized operational pro
 Every Critical (P0) or High (P1) incident requires a published **dOSPO Post-Mortem Report** within 14 days of resolution detailing:
 1. Root cause analysis & vulnerability vector.
 2. Timeline of disclosure, triage, patch release, and network deployment.
-3. Preventive maintenance measures added to the repository's [Dependency Audit](./omf/DEPENDENCY_AUDIT_TEMPLATE.md).
+3. Preventive maintenance measures added to the repository's [Dependency Audit](../omf/DEPENDENCY_AUDIT_TEMPLATE.md).
 
 ---
 
