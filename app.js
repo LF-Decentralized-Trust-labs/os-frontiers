@@ -220,119 +220,56 @@ const catalogData = [
   }
 ];
 
-// Ecosystem & Tooling Profiles Data (Categorized Subdirectories)
+// Ecosystem & Tooling Profiles Data (Reconciled Repository Directory Paths)
 const profilesData = [
   {
     title: "Cardano Profile",
-    category: "Ecosystem (UTXO / PoS)",
+    category: "Use Case (UTXO / PoS)",
     badge: "POSM Pilot",
-    fileLink: "profiles/ecosystems/CARDANO.md",
+    fileLink: "use-cases/Cardano (Paid Open Source Model or POSM)",
     desc: "CIP-1694 Lovelace Treasury, Paid Open Source Model (POSM) retainers via Intersect OSC, mission pools, and CIP-159 multi-asset groundwork."
   },
   {
     title: "Optimism Superchain Profile",
-    category: "Ecosystem (EVM Rollup)",
+    category: "Use Case (EVM Rollup)",
     badge: "RetroFunding",
-    fileLink: "profiles/ecosystems/OPTIMISM_SUPERCHAIN.md",
+    fileLink: "use-cases/Optimism Superchain (Sequencer Tithe & RetroFunding)",
     desc: "Sequencer revenue tithe, RetroFunding (RetroPGF) rounds, and Open Source Observer (OSO) repository metrics integration."
   },
   {
     title: "Polkadot Profile",
-    category: "Ecosystem (Substrate / PoS)",
+    category: "Use Case (Substrate / PoS)",
     badge: "OpenGov",
-    fileLink: "profiles/ecosystems/POLKADOT.md",
+    fileLink: "use-cases/Polkadot (OpenGov & Substrate Treasury)",
     desc: "OpenGov spender tracks, Technical Fellowship whitelist, Treasury slash routing, and Polkadot Community Foundation (PCF) legal sleeve."
   },
   {
     title: "Ethereum & EVM Profile",
-    category: "Ecosystem (EVM L1)",
+    category: "Use Case (EVM L1)",
     badge: "Endowments",
-    fileLink: "profiles/ecosystems/ETHEREUM_EVM.md",
+    fileLink: "use-cases/Ethereum & EVM Ecosystem (EIP-1559, Protocol Guild, ENS EP 6.46)",
     desc: "EIP-1559 base fee burn countermodel, Protocol Guild 1% pledge, ENS Registrar revenue, and ENS EP 6.46 IPS endowment."
   },
   {
-    title: "Cosmos Interchain Profile",
-    category: "Ecosystem (Tendermint / IBC)",
-    badge: "AADAO",
-    fileLink: "profiles/ecosystems/COSMOS_INTERCHAIN.md",
-    desc: "Community Pool staking tax splits, ATOM Accelerator DAO (AADAO), Osmosis grants, and DoraHacks quadratic funding rounds."
-  },
-  {
-    title: "Solana Profile",
-    category: "Ecosystem (Sealevel)",
-    badge: "Realms & Squads",
-    fileLink: "profiles/ecosystems/SOLANA.md",
-    desc: "Realms (SPL Governance), Squads smart account multisig infrastructure, Solana Foundation & R.E.D. grant programs."
-  },
-  {
-    title: "Zcash Dev Fund Profile",
-    category: "Ecosystem (UTXO)",
-    badge: "Block Subsidy",
-    fileLink: "profiles/ecosystems/ZCASH_DEV_FUND.md",
-    desc: "ZIP 1014 block subsidy split (80/20), ZIP 1015/2001 Lockbox, and ZIP 1016/271 coinholder governance transition."
-  },
-  {
-    title: "Filecoin Profile",
-    category: "Ecosystem (Filecoin / EVM)",
-    badge: "Filecoin Plus",
-    fileLink: "profiles/ecosystems/FILECOIN.md",
-    desc: "Gas burn countermodel vs Filecoin Plus Quality-Adjusted Power benefit-gating, Drips Filecoin dependency integration."
-  },
-  {
-    title: "Web2 Foundations Profile",
-    category: "Web2 Open Source",
-    badge: "LFX & Apache",
-    fileLink: "profiles/ecosystems/WEB2_FOUNDATIONS.md",
-    desc: "Linux Foundation LFX project control center, Apache governance separation, Tidelift & Red Hat enterprise SLAs."
-  },
-  {
-    title: "Safe Multisig Profile",
-    category: "Tooling / Governance",
-    badge: "Safe Vault",
-    fileLink: "profiles/tooling/governance/SAFE_PROPOSAL.md",
-    desc: "Programmable smart-account multisig custody and SafeSnap on-chain execution for dOSPO treasury policies."
-  },
-  {
-    title: "Open Source Observer Profile",
-    category: "Tooling / Deployment",
-    badge: "OSO Impact",
-    fileLink: "profiles/tooling/deployment/OPEN_SOURCE_OBSERVER.md",
-    desc: "Open-source data infrastructure measuring repository metrics, developer retention, and dependency graphs."
-  },
-  {
-    title: "Gitcoin Allo Profile",
-    category: "Tooling / Deployment",
-    badge: "Allo v2",
-    fileLink: "profiles/tooling/deployment/GITCOIN_ALLO.md",
-    desc: "Programmable on-chain capital allocation engine powering quadratic funding rounds, direct retainers, and RFPs."
-  },
-  {
     title: "Drips Protocol Profile",
-    category: "Tooling / Collection",
+    category: "Tool / Protocol",
     badge: "Dependency Splitting",
-    fileLink: "profiles/tooling/collection/DRIPS_PROTOCOL.md",
+    fileLink: "tools/Drips Protocol (Dependency Graph Distribution)",
     desc: "On-chain dependency graph splitting and streaming distributions across EVM networks and Filecoin."
   },
   {
     title: "Superfluid Profile",
-    category: "Tooling / Collection",
+    category: "Tool / Protocol",
     badge: "Money Streaming",
-    fileLink: "profiles/tooling/collection/SUPERFLUID.md",
+    fileLink: "tools/Superfluid (Real-Time Money Streaming)",
     desc: "Real-time, continuous token streaming rails for maintainer retainers and subscription memberships."
   },
   {
-    title: "Octant Profile",
-    category: "Tooling / Collection",
-    badge: "Yield Routing",
-    fileLink: "profiles/tooling/collection/OCTANT.md",
-    desc: "ETH/GLM staking yield routing for public-goods funding with a 25% operational cost allocation anchor."
-  },
-  {
-    title: "Tidelift & LFX Profile",
-    category: "Tooling / Enterprise",
-    badge: "Assurance",
-    fileLink: "profiles/tooling/enterprise/TIDELIFT_LFX.md",
-    desc: "Enterprise maintainer lifting, supply-chain assurance SLAs, and Linux Foundation LFX project control center."
+    title: "Open Source Observer Profile",
+    category: "Tool / Analytics",
+    badge: "OSO Impact",
+    fileLink: "tools/Open Source Observer",
+    desc: "Open-source data infrastructure measuring repository metrics, developer retention, and dependency graphs."
   }
 ];
 
@@ -527,7 +464,7 @@ function renderProfiles() {
       <div style="font-size: 0.78rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 0.5rem;">${p.category}</div>
       <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">${p.desc}</p>
       <div class="item-precedent">
-        <a href="${p.fileLink}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; font-weight: 600; font-size: 0.85rem;">View Profile File &rarr;</a>
+        <a href="${p.fileLink}" target="_blank" style="color: var(--accent-cyan); text-decoration: none; font-weight: 600; font-size: 0.85rem;">View Document &rarr;</a>
       </div>
     </div>
   `).join("");
