@@ -11,7 +11,7 @@
 
 ## Executive Overview
 
-Open source software powers critical global infrastructure, yet digital commons remain systematically under-funded and under-maintained. The **Open Source Frontiers Lab** (hosted at **LF Decentralized Trust**) provides a complete, 3-piece framework suite to transform open-source funding from episodic charity into a self-sustaining economic loop.
+Open-source software powers critical global infrastructure, yet digital commons remain systematically under-funded and under-maintained. The **Open Source Frontiers Lab** (hosted at **LF Decentralized Trust**) provides a complete, 3-piece framework suite to transform open-source funding from episodic charity into a self-sustaining economic loop.
 
 ```
        +-------------------------------------------------------+
@@ -38,31 +38,34 @@ Open source software powers critical global infrastructure, yet digital commons 
 
 The suite enforces a strict division of labor with **zero functional overlap**:
 
-### 1. [dOSPO — Decentralized Open Source Program Office](./dOSPO/Start%20Here:%20Decentralized%20Open%20Source%20Program%20Office%20(dOSPO))
+### 1. [dOSPO — Decentralized Open Source Program Office](./dOSPO/START_HERE.md)
 * **Question Answered**: *WHO* holds authority and sets policy?
 * **Role**: Bounded, community-mandated coordination body holding the governance triangle (**legitimacy, neutrality, execution**). Sets spending priorities and collection rules while remaining fully replaceable by the community.
 
-### 2. [OMF — Open Maintenance Framework](./OMF/Start%20Here:%20Open%20Maintenance%20Framework%20(OMF))
+### 2. [OMF — Open Maintenance Framework](./OMF/START_HERE.md)
 * **Question Answered**: *HOW* is capital deployed to sustain infrastructure?
 * **Role**: Portfolio of operational programs translating mandates and treasury capital into long-term infrastructure health (Maintainer Retainers, Contributor Pathways, Tooling Stewardship, Lifecycle-Aligned Funding).
 
-### 3. [ORF — Open Replenishment Framework](./ORF/Start%20Here:%20Open%20Replenishment%20Framework%20(ORF))
+### 3. [ORF — Open Replenishment Framework](./ORF/START_HERE.md)
 * **Question Answered**: *HOW* does value flow back to replenish the treasury?
 * **Role**: Governed portfolio of 20+ collection instruments matched to where value is realized across 5 layers (**Protocol, Application, Enterprise & Services, Capital, Delegation**). Reframes initial reserve usage as a measured "Bootstrap Loan."
 
 ---
 
-## Quick Navigation
+## Quick Navigation & Master Document Index
 
 | Framework / Module | Description | Core Artifacts & Templates |
 |---|---|---|
-| 🏛️ **dOSPO** | Governance & Policy Framework | [dOSPO Specification](./dOSPO/Start%20Here:%20Decentralized%20Open%20Source%20Program%20Office%20(dOSPO)) • [dOSPO Charter](./dOSPO/dOSPO%20Charter) • [Funding Principles](./dOSPO/Funding%20Principles) |
-| 🛠️ **OMF** | Maintenance & Deployment Framework | [OMF Specification](./OMF/Start%20Here:%20Open%20Maintenance%20Framework%20(OMF)) • [Program Charter Template](./OMF/Program%20Charter%20Template) • [Stewardship](./OMF/Stewardship) |
-| 💰 **ORF** | Replenishment & Inflow Framework | [ORF Specification](./ORF/Start%20Here:%20Open%20Replenishment%20Framework%20(ORF)) • [Instrument Catalog](./ORF/Instrument%20Catalog) • [Governance Rules](./ORF/Governance%20Rules) |
-| 🌍 **Use Cases** | Multi-Chain Ecosystem Profiles | [Cardano POSM](./use-cases/Cardano%20(Paid%20Open%20Source%20Model%20or%20POSM)) • [Optimism Superchain](./use-cases/Optimism%20Superchain%20(Sequencer%20Tithe%20&%20RetroFunding)) • [Polkadot](./use-cases/Polkadot%20(OpenGov%20&%20Substrate%20Treasury)) • [Ethereum EVM](./use-cases/Ethereum%20&%20EVM%20Ecosystem%20(EIP-1559,%20Protocol%20Guild,%20ENS%20EP%206.46)) |
-| 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Open Source Observer](./tools/Open%20Source%20Observer) • [Drips Protocol](./tools/Drips%20Protocol%20(Dependency%20Graph%20Distribution)) • [Superfluid](./tools/Superfluid%20(Real-Time%20Money%20Streaming)) |
-| 📋 **ORF Templates** | Actionable Collection Specs | [Instrument Charter](./ORF/Instrument%20Charter%20Template) • [5-Q Assessment](./ORF/5-Question%20Posture%20Evaluation) • [IPS Template](./ORF/Investment%20Policy%20Statement%20Template) • [Enterprise SLA](./ORF/Enterprise%20SLA%20&%20Reciprocal%20Funding%20Agreement) |
-| 🌐 **Web Suite App** | Interactive 3-Piece Dashboard | Launch [`index.html`](./index.html) in your browser for the Interactive Catalog, 5-Q Posture Quiz, Pro-Forma Calculator, and Charter Exporter. |
+| 🏛️ **dOSPO** | Governance & Policy Framework | [dOSPO Specification](./dOSPO/START_HERE.md) • [dOSPO Charter](./dOSPO/CHARTER.md) • [Funding Principles](./dOSPO/FUNDING_PRINCIPLES.md) |
+| 🛠️ **OMF** | Maintenance & Deployment Framework | [OMF Specification](./OMF/START_HERE.md) • [Program Charter Template](./OMF/PROGRAM_CHARTER_TEMPLATE.md) • [Stewardship](./OMF/STEWARDSHIP.md) |
+| 💰 **ORF** | Replenishment & Inflow Framework | [ORF Specification](./ORF/START_HERE.md) • [Instrument Catalog](./ORF/INSTRUMENT_CATALOG.md) • [Governance Rules](./ORF/GOVERNANCE_RULES.md) |
+| 📈 **Pro-Forma Proof** | Sourced Mathematical Proof ($\ge 1.0$) | [Tier 1 Sourced Pro-Forma Proof](./docs/TIER_1_PRO_FORMA_PROOF.md) |
+| 🌍 **Use Cases** | Multi-Chain Ecosystem Profiles | [Cardano POSM](./use-cases/CARDANO_POSM.md) • [Optimism Superchain](./use-cases/OPTIMISM_SUPERCHAIN.md) • [Polkadot](./use-cases/POLKADOT_OPENGOV.md) • [Ethereum EVM](./use-cases/ETHEREUM_EVM.md) |
+| 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
+| 📊 **Evaluator Suite** | QUAID, CHAOSS & Systems Assessor | [Evaluator Documentation](./evaluator/README.md) • [QUAID Audit Example](./evaluator/examples/CARDANO_QUAID_SCANNER_REPORT.md) |
+| 📜 **Smart Contracts** | Deployable Solidity & Aiken Vaults | [Native Contracts Guide](./contracts/README.md) • [EVM Solidity Contract](./contracts/solidity/ORFSlaVault.sol) • [Cardano Aiken Validator](./contracts/aiken/validators/orf_sla_vault.ak) |
+| 📊 **Pitch & Adoption Kit** | Executive Decks & Proposal Templates | [Pitch Deck](./pitch/EXECUTIVE_PITCH_DECK.md) • [One-Pager](./pitch/ONE_PAGER.md) • [Forum Proposal](./pitch/GOVERNANCE_PROPOSAL_TEMPLATE.md) • [Enterprise Sales Kit](./pitch/ENTERPRISE_SPONSOR_KIT.md) |
+| 🌐 **Web Suite App** | Interactive 3-Piece Dashboard | Launch [`index.html`](./index.html) in your browser for the Interactive Catalog, 3-Piece Evaluator, Pro-Forma Calculator, and Exporter. |
 
 ---
 

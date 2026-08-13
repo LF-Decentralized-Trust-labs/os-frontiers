@@ -3,6 +3,7 @@
 Automated 3-Piece Ecosystem Systems & Treasury Proposal Analyst (dOSPO · OMF · ORF)
 Expanded Cardano Developer Tooling & Cardano Cube Ecosystem Data Engine
 LF Decentralized Trust · Open Source Frontiers Lab
+Strict Dynamic Real-Time API Engine (No Hardcoded Fallbacks)
 """
 
 import sys
@@ -15,16 +16,22 @@ import io
 # Ensure UTF-8 output encoding on Windows terminals
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-# SSL context for HTTPS requests
 SSL_CTX = ssl._create_unverified_context()
-HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpenSourceFrontiersAnalyst/2.0"}
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GITHUB_PERSONAL_ACCESS_TOKEN")
+
+def get_headers():
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpenSourceFrontiersAnalyst/2.0"}
+    if GITHUB_TOKEN:
+        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+    return headers
 
 def fetch_json(url):
     try:
-        req = urllib.request.Request(url, headers=HEADERS)
+        req = urllib.request.Request(url, headers=get_headers())
         with urllib.request.urlopen(req, context=SSL_CTX, timeout=10) as resp:
             return json.loads(resp.read().decode('utf-8'))
     except Exception as e:
+        print(f"⚠️ API Fetch Warning [{url}]: {e}")
         return None
 
 # Cardano Cube Sourced Developer Tooling Repositories
@@ -90,7 +97,7 @@ def fetch_cardano_cube_repo_metrics():
             else:
                 metrics[category].append({
                     "name": repo_slug,
-                    "stars": "N/A",
+                    "stars": "API Rate Limited / Requires GITHUB_TOKEN",
                     "open_issues": "N/A",
                     "last_updated": "N/A",
                     "language": "N/A"
@@ -98,7 +105,7 @@ def fetch_cardano_cube_repo_metrics():
     return metrics
 
 def run_expanded_cardano_analysis():
-    print("\n🚀 Starting Full Cardano Treasury Proposal & Developer Tooling Analysis...")
+    print("\n🚀 Starting Dynamic Cardano Treasury Proposal & Developer Tooling Analysis...")
     
     proposal_process = analyze_cardano_treasury_proposal_process()
     tooling_metrics = fetch_cardano_cube_repo_metrics()
@@ -111,7 +118,7 @@ def run_expanded_cardano_analysis():
                 total_stars += r["stars"]
 
     results = {
-        "timestamp": "2026-08-13 (Live Cardano Cube Data)",
+        "timestamp": "Live Cardano Cube Real-Time Execution",
         "treasury_proposal_process": proposal_process,
         "cardano_cube_tooling_metrics": tooling_metrics,
         "summary": {
@@ -124,7 +131,6 @@ def run_expanded_cardano_analysis():
     return results
 
 def generate_full_markdown_report(res):
-    p = res["treasury_proposal_process"]
     t = res["cardano_cube_tooling_metrics"]
     s = res["summary"]
 
@@ -134,14 +140,14 @@ def generate_full_markdown_report(res):
         tooling_tables += "| Repository Name | Primary Language | GitHub Stars | Open Issues/PRs | Last Commit Date |\n"
         tooling_tables += "|---|---|---|---|---|\n"
         for r in repos:
-            tooling_tables += f"| `{r['name']}` | {r['language']} | **{r['stars']}** | {r['open_issues']} | `{r['last_updated']}` |\n"
+            stars_str = f"**{r['stars']:,}**" if isinstance(r['stars'], int) else str(r['stars'])
+            tooling_tables += f"| `{r['name']}` | {r['language']} | {stars_str} | {r['open_issues']} | `{r['last_updated']}` |\n"
 
-    return f"""# Deep Systems & Treasury Proposal Analysis Report: Cardano Ecosystem
+    return f"""# Dynamic Systems & Treasury Proposal Analysis Report: Cardano Ecosystem
 
 > **Scope**: Treasury Proposal Process (Catalyst & CIP-1694) + Cardano Cube Developer Tooling Ecosystem  
-> **Source**: GitHub REST API + Cardano Cube Sourced Catalog + Intersect MBO Governance Framework  
-> **Timestamp**: `{res['timestamp']}`  
-> **Evaluator Engine**: Open Source Frontiers Systems Engine v2.0 (LF Decentralized Trust)
+> **Source**: Live GitHub REST API + Cardano Cube Sourced Catalog + Intersect MBO Governance Framework  
+> **Evaluator Engine**: Open Source Frontiers Dynamic Systems Engine v2.0 (LF Decentralized Trust)
 
 ---
 
@@ -170,7 +176,7 @@ def generate_full_markdown_report(res):
 
 ## 2. Cardano Cube Developer Tooling Ecosystem Metrics
 
-*Analyzed **{s['repos_analyzed']} core repositories** across **{s['categories_covered']} developer tooling categories** with over **{s['total_ecosystem_stars']:,} combined GitHub stars**.*
+*Analyzed **{s['repos_analyzed']} core repositories** across **{s['categories_covered']} developer tooling categories** with **{s['total_ecosystem_stars']:,} total verified GitHub stars**.*
 
 {tooling_tables}
 
@@ -190,26 +196,22 @@ def generate_full_markdown_report(res):
 def main():
     results = run_expanded_cardano_analysis()
 
-    output_dir = os.path.join(os.path.dirname(__file__), "..", "examples")
+    output_dir = os.path.join("evaluator", "examples")
     os.makedirs(output_dir, exist_ok=True)
 
     json_path = os.path.join(output_dir, "cardano_full_ecosystem_analysis.json")
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
-    print(f"💾 JSON full ecosystem analysis saved to: {json_path}")
 
     md_path = os.path.join(output_dir, "CARDANO_FULL_ECOSYSTEM_ANALYSIS.md")
     md_content = generate_full_markdown_report(results)
     with open(md_path, "w", encoding="utf-8") as f:
         f.write(md_content)
-    print(f"💾 Markdown report saved to: {md_path}")
 
     print("\n=======================================================")
     print("📊 CARDANO TREASURY & DEVELOPER TOOLING ANALYSIS COMPLETE")
-    print("=======================================================")
-    print(f"📦 Tooling Repos Analyzed : {results['summary']['repos_analyzed']}")
-    print(f"⭐ Total Ecosystem Stars  : {results['summary']['total_ecosystem_stars']:,}")
-    print(f"📄 Report File Generated  : {md_path}")
+    print(f"⭐ Total Verified Ecosystem Stars : {results['summary']['total_ecosystem_stars']:,}")
+    print(f"💾 Report saved to: {md_path}")
     print("=======================================================\n")
 
 if __name__ == "__main__":
