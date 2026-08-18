@@ -1,66 +1,84 @@
-# Decentralized Open Source Program Office (dOSPO)
+# dOSPO Architecture & Governance Specification
 
-> **WHO: Governance, Mandate Authorization, Policy Engine & Institutional Authority**  
-> *Author: Christian Taylor · Open Source Frontiers Lab · LF Decentralized Trust*  
-> *Companion to the Open Maintenance Framework (OMF) and the Open Replenishment Framework (ORF)*
-
----
-
-## 1. Executive Summary
-
-The **Decentralized Open Source Program Office (dOSPO)** resolves the core governance question in decentralized, token-funded, and treasury-backed ecosystems: **Who holds bounded, replaceable, community-mandated authority to coordinate open-source sustainability work?**
-
-Traditional corporate OSPOs operate as internal cost centers within single technology companies. A dOSPO, by contrast, operates as a neutral, on-chain or community-governed coordination layer. It bridges token-holders, DReps, SPOs, and governance councils with operational maintainers and enterprise consumers.
+> **LF Decentralized Trust · Open Source Frontiers Lab Framework**  
+> *Stage 0 Research Candidate · Release Edition: `v0.8.0-rc.1`*
 
 ---
 
-## 2. Canonical 3-Piece RACI Responsibility Matrix
+## 1. Executive Summary & Core Definition
 
-To enforce **distinct functional mandates with explicit interfaces and shared safeguards**, the 3-Piece Framework Suite establishes a single canonical RACI matrix across all components:
+The **Decentralized Open Source Program Office (dOSPO)** defines *who decides* in an open-source ecosystem. A dOSPO is a non-custodial governance-coordination and portfolio-oversight layer that establishes ecosystem maintenance charters, sets budget caps, audits maintainer performance, and enforces operator replaceability.
 
-| Governance Function | Community Governance (DReps/DAOs) | dOSPO (Policy & Coordination Body) | OMF Operator (Program Mgr) | ORF Operator (Inflow Rails) | Independent Auditor |
+### CRITICAL STRUCTURAL SAFEGUARD: ZERO TREASURY CUSTODY
+The dOSPO **NEVER holds direct discretionary custody of treasury funds**. Treasury assets remain locked in non-custodial smart contracts or governed vault accounts authorized directly by Community Governance.
+
+```text
+               ┌──────────────────────────────────────────┐
+               │    COMMUNITY GOVERNANCE (Token / DAO)    │
+               │   • Authorizes Charters & Policy Rules   │
+               │   • Approves Treasury Budget Caps        │
+               │   • Appoints & Replaces Operators        │
+               └────────────────────┬─────────────────────┘
+                                    │ (Policy Mandates)
+                                    ▼
+               ┌──────────────────────────────────────────┐
+               │        dOSPO COORDINATION LAYER          │
+               │   • Holds Zero Direct Treasury Custody   │
+               │   • Audits Maintainer Performance        │
+               │   • Recommends Budget Allocations        │
+               └────────────────────┬─────────────────────┘
+                                    │
+               ┌────────────────────┴─────────────────────┐
+               ▼                                          ▼
+┌──────────────────────────────┐          ┌──────────────────────────────┐
+│        OMF OPERATOR          │          │        ORF OPERATOR          │
+│ (Executes Maintainer Retainers│          │ (Manages Commercial Products │
+│  & Security Resilience)      │          │  & Revenue Collection)       │
+└──────────────┬───────────────┘          └──────────────┬───────────────┘
+               │                                         │
+               └────────────────────┬────────────────────┘
+                                    ▼
+               ┌──────────────────────────────────────────┐
+               │   NEUTRAL LEGAL ENTITY (PCF Wrapper)     │
+               │   • Signs Commercial Customer Contracts  │
+               │   • Invoices Customers & Pays Fiat       │
+               │   • Holds Liability & Enforces IP        │
+               └──────────────────────────────────────────┘
+```
+
+---
+
+## 2. Institutional Web3 Precedents for dOSPO Architecture
+
+Primary evidence across major Web3 ecosystems demonstrates three distinct reference implementations for separating governance authorization from legal execution:
+
+1. **Polkadot Community Foundation (PCF — Cayman Islands Foundation Company)**:
+   - *Best dOSPO Organizational Precedent*. PCF is explicitly structured as an "unopinionated" off-chain executor of OpenGov referenda instructions. PCF signs commercial contracts, makes fiat payments, holds assets, and engages service providers, while DOT holders retain 100% governance authority (with power to withhold funding, replace directors, or dissolve the entity).
+2. **Cardano Intersect Open Source Committee (OSC) & Open Source Office (OSO)**:
+   - *Division of Operational Labor*. OSC provides governance oversight and policy direction, while OSO executes operational program management, bug bounty administration, and maintainer contracting.
+3. **ENS DAO & ENS Foundation / KPK Endowment Manager**:
+   - *Bounded Operational Discretion*. ENS DAO enacts social policy and Investment Policy Statements (EP6.46 IPS). Professional managers (KPK) execute asset allocation within strict governed boundaries, while the ENS Foundation (Cayman Foundation Company) provides the legal-world interface.
+
+---
+
+## 3. RACI Responsibility Assignment Matrix
+
+To ensure absolute operational clarity, dOSPO functions are mapped across Community Governance, dOSPO Policy Team, OMF Operator, ORF Operator, and Neutral Legal Entity (PCF Wrapper):
+
+| Function / Task | Community Governance | dOSPO Policy Team | OMF Operator | ORF Operator | Neutral Legal Entity |
 |---|---|---|---|---|---|
-| **Set Policy & Rules** | **A** (Approves Charter) | **R** (Formulates Policy) | C | C | I |
-| **Authorize Budgets** | **A** (Votes on Proposal) | **R** (Submits Budget) | C | I | I |
-| **Custody Treasury Assets** | **A** (On-Chain Treasury) | I | I | I | I |
-| **Administer Retainers** | I | A (Enforces Policy) | **R** (Streams Stipends) | I | I |
-| **Sell Enterprise SLAs** | I | A (Sets Pricing Rules) | I | **R** (Executes SLAs) | I |
-| **Collect Inflow Revenues** | I | I | I | **R** (Routes to Vault) | I |
-| **Replace Operator** | **A** (Revokes Mandate) | R (Appeals/Escalation) | I | I | I |
-| **Audit Performance** | I (Receives Report) | I | I | I | **A / R** (Publishes Audit) |
-
-*Legend: **A** = Accountable (Final Decision), **R** = Responsible (Executes), **C** = Consulted, **I** = Informed.*
-
-> 💡 **Core Principle**: *Community Governance authorizes. dOSPO coordinates and translates the mandate into policy (holding zero direct discretionary treasury custody). OMF Operator deploys maintenance capital. ORF Operator replenishes economic inflows. Independent Auditor verifies.*
+| **Approve Maintenance Charters** | **Accountable (A)** | Responsible (R) | Consulted (C) | Consulted (C) | Informed (I) |
+| **Approve Annual Budget Caps** | **Accountable (A)** | Responsible (R) | Consulted (C) | Consulted (C) | Informed (I) |
+| **Maintainer Retainer Selection** | Informed (I) | **Accountable (A)** | Responsible (R) | Consulted (C) | Informed (I) |
+| **Commercial SLA Sales & Contracting** | Informed (I) | Consulted (C) | Consulted (C) | **Accountable (A)** | Responsible (R) |
+| **Fiat Payroll & Tax Filing** | Informed (I) | Informed (I) | Consulted (C) | Consulted (C) | **Accountable / Responsible (A/R)** |
+| **Replace Non-Performing Operator** | **Accountable (A)** | Responsible (R) | Informed (I) | Informed (I) | Informed (I) |
+| **Quarterly Performance Audit** | Informed (I) | **Accountable / Responsible (A/R)** | Consulted (C) | Consulted (C) | Informed (I) |
 
 ---
 
-## 3. The Governance Triangle
+## 4. Operational Safeguards & Operator Replaceability
 
-Every dOSPO instance is structured around three non-negotiable governance vertices:
-
-```
-                  LEGITIMACY
-               (Community Mandate)
-                     /   \
-                    /     \
-                   /       \
-                  /         \
-          NEUTRALITY <-------> EXECUTION
-       (Conflict-Free)       (Accountable Ops)
-```
-
-1. **Legitimacy (Community Mandate)**: Bounded authority derived from time-limited, evidence-based community referenda (e.g. Cardano CIP-1694 DRep/SPO votes or DAO governance actions).
-2. **Neutrality (Vendor Independence)**: Complete independence from single commercial sponsors. No single corporate entity or foundation can purchase technical authority over core project roadmaps.
-3. **Execution (Accountable & Replaceable)**: Program operators administer spending under **OMF** and collection under **ORF**. If an operator fails to deliver net ecosystem benefit, governance can revoke the mandate and replace the operator without halting infrastructure.
-
----
-
-## 4. Key dOSPO Documents & Templates
-
-- 📜 [dOSPO Governance Authority Charter](./CHARTER.md)
-- ⚖️ [Funding Principles](./FUNDING_PRINCIPLES.md)
-- 🛡️ [Incident Response Playbook](./INCIDENT_RESPONSE.md)
-- 🚫 [Anti Patterns](./ANTI_PATTERNS.md)
-- 🛑 [Non-Powers](./NON_POWERS.md)
-- 📊 [Transparency Report Template](./TRANSPARENCY_REPORT_TEMPLATE.md)
+1. **Safeguard 1 — No Treasury Custody**: dOSPO members and operators NEVER hold direct multi-sig or private-key custody over treasury principal.
+2. **Safeguard 2 — Operator Replaceability**: Community Governance retains absolute authority to vote out non-performing OMF/ORF operators or dissolve the legal foundation entity under pre-defined referendum thresholds.
+3. **Safeguard 3 — Non-Granular Budget Allocation**: Governance approves high-level program charters and budget caps, leaving day-to-day maintainer triage and milestone verification to OMF operators under transparent rubrics.
