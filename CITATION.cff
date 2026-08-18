@@ -3,10 +3,9 @@ message: "If you reference or use this research framework, please cite it as bel
 authors:
   - family-names: "Taylor"
     given-names: "Christian"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
 title: "Open Source Frontiers Lab: A 3-Piece Framework Suite for Open-Source Sustainability in Web3 (dOSPO · OMF · ORF)"
 version: 0.8.0-rc.1
 date-released: 2026-08-13
 url: "https://github.com/LF-Decentralized-Trust-labs/os-frontiers"
 repository-code: "https://github.com/LF-Decentralized-Trust-labs/os-frontiers"
-license: Apache-2.0
+license: Apache-2.0 AND CC-BY-4.0

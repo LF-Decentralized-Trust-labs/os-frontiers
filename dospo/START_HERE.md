@@ -16,9 +16,9 @@ Traditional corporate OSPOs operate as internal cost centers within single techn
 
 ## 2. Canonical 3-Piece RACI Responsibility Matrix
 
-To enforce strict separation of policy and execution with **zero functional overlap**, the 3-Piece Framework Suite establishes a single canonical RACI matrix across all components:
+To enforce **distinct functional mandates with explicit interfaces and shared safeguards**, the 3-Piece Framework Suite establishes a single canonical RACI matrix across all components:
 
-| Governance Function | Community Governance (DReps/DAOs) | dOSPO (Policy Body) | OMF Operator (Program Mgr) | ORF Operator (Inflow Rails) | Independent Auditor |
+| Governance Function | Community Governance (DReps/DAOs) | dOSPO (Policy & Coordination Body) | OMF Operator (Program Mgr) | ORF Operator (Inflow Rails) | Independent Auditor |
 |---|---|---|---|---|---|
 | **Set Policy & Rules** | **A** (Approves Charter) | **R** (Formulates Policy) | C | C | I |
 | **Authorize Budgets** | **A** (Votes on Proposal) | **R** (Submits Budget) | C | I | I |
@@ -30,6 +30,8 @@ To enforce strict separation of policy and execution with **zero functional over
 | **Audit Performance** | I (Receives Report) | I | I | I | **A / R** (Publishes Audit) |
 
 *Legend: **A** = Accountable (Final Decision), **R** = Responsible (Executes), **C** = Consulted, **I** = Informed.*
+
+> 💡 **Core Principle**: *Community Governance authorizes. dOSPO coordinates and translates the mandate into policy (holding zero direct discretionary treasury custody). OMF Operator deploys maintenance capital. ORF Operator replenishes economic inflows. Independent Auditor verifies.*
 
 ---
 

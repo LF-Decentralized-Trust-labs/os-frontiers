@@ -1,7 +1,7 @@
 # ORF Replenishment Posture Evaluation Sheet
 
 > **The 5-Question Framework for Assessing Ecosystem Replenishment Readiness**  
-> *Excerpted from the Open Replenishment Framework (ORF) July 2026 Validated Edition*
+> *Excerpted from the Open Replenishment Framework (ORF) Research Candidate v0.8.0-rc.1*
 
 ---
 
@@ -16,12 +16,12 @@ Score your ecosystem honestly across the 5 core questions below (0–5 points ea
 *What is your replenishment ratio today, and what subsidizes the gap?*
 - **0 Points**: No replenishment; 100% dependent on unmeasured reserve drawdown or continuous token dilution with no path to sustainability.
 - **3 Points**: Replenishment ratio measured; partial fee splits or voluntary contributions cover 10-30% of maintenance costs, gap is named.
-- **5 Points**: Healthy. Replenishment ratio ≥ 1.0 or non-inflationary income covers baseline maintenance, and reserve usage is scheduled as a repayable bootstrap loan.
+- **5 Points**: Healthy. Replenishment ratio ≥ 1.0 or non-inflationary income covers baseline maintenance, and initial reserve usage is scheduled as a Bootstrap Reserve Allocation.
 
 ---
 
 ### Question 2: Anchors
-*Does each collection instrument attach to a fork-resistant source of value rather than permission to use code?*
+*Does each collection instrument attach to a fork-resilient economic anchor rather than permission to use code?*
 - **0 Points**: Collection relies on charging for open-source code access or easily copyable license restrictions.
 - **3 Points**: Collection attaches to native token fees or basic brand placement, but lacks canonical liquidity or SLA anchors.
 - **5 Points**: Healthy. Avoidance requires giving up a separately valuable service, canonical state/liquidity, registry certification, or support relationship.

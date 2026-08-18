@@ -1,0 +1,15 @@
+{
+  "config_source": "Hypothetical Fully Architected Ecosystem",
+  "dospo_score": 25,
+  "omf_score": 25,
+  "orf_score": 25,
+  "total_score": 75,
+  "overall_pct": 100.0,
+  "level": "Level 3: Self-Sustaining Closed Loop",
+  "level_3_gate_passed": true,
+  "metrics": {
+    "annual_maintenance_budget_usd": 3500000,
+    "net_replenishment_ratio": 1.4143,
+    "bear_market_runway_years": 92.9
+  }
+}

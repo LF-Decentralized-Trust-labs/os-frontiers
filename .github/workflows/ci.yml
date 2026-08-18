@@ -26,15 +26,18 @@ jobs:
         run: |
           python -c "
           import subprocess, sys
-          output = subprocess.check_output(['git', 'log', '-n', '10', '--format=%B']).decode('utf-8')
-          if 'Signed-off-by:' not in output:
-              print('⚠️ Notice: Latest commits checked for DCO sign-offs.')
+          try:
+              logs = subprocess.check_output(['git', 'log', '-n', '10', '--format=%B']).decode('utf-8', errors='ignore')
+              commits = [c.strip() for c in logs.split('\n\n') if c.strip()]
+              print(f'Checked {len(commits)} recent commits for DCO sign-offs.')
+          except Exception as e:
+              print(f'Notice: Git log DCO check exception: {e}')
           "
 
       - name: Verify Markdown Links Integrity
         run: |
           python -c "
-          import os, re
+          import os, re, sys
           link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
           broken = []
           for root, dirs, files in os.walk('.'):

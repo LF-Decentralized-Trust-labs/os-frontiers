@@ -20,11 +20,11 @@ Open-source infrastructure in Web3 faces unique operational risks: token price v
 
 ### Protocol 2: Bear Market Austerity Buffer
 - **Risk**: Token price drops of 50–80% eroding native treasury purchasing power.
-- **Mitigation**: The dOSPO maintains a 12-month fiat/stablecoin **OMF Maintenance Reserve Buffer**. During severe bear markets, spending transitions to an Austerity Maintenance Budget that preserves 100% of core client maintainer retainers while pausing non-essential growth grants.
+- **Mitigation**: Community Governance maintains a 12-month fiat/stablecoin **OMF Maintenance Reserve Buffer** administered by the OMF Operator under dOSPO policy oversight. During severe bear markets, spending transitions to an Austerity Maintenance Budget that preserves 100% of core client maintainer retainers while pausing non-essential growth grants.
 
 ### Protocol 3: Dependency Graph Failure Protocol
 - **Risk**: Critical upstream library abandonment or zero-day security exploit.
-- **Mitigation**: Continuous automated dependency auditing via Open Source Observer. Upstream dependencies reaching critical vulnerability status trigger an emergency dOSPO bounty allocation to fork or patch the upstream library.
+- **Mitigation**: Continuous automated dependency auditing via Open Source Observer. Upstream dependencies reaching critical vulnerability status trigger an emergency OMF bounty allocation authorized under dOSPO security policy to fork or patch the upstream library.
 
 ### Protocol 4: Vendor & Sponsor Capture Containment
 - **Risk**: A commercial sponsor or VC attempts to leverage grant funding to control roadmap priorities.

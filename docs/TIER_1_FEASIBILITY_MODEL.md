@@ -13,23 +13,23 @@ The central thesis of the Open Source Frontiers suite is transforming open-sourc
 This document presents a **Tier 1 Feasibility Scenario Model** built on Cardano's Paid Open Source Model (POSM) baseline operating cost floor. It models how a Web3 ecosystem can cover its baseline maintenance cost floor using non-inflationary **Tier 1 (0–18 month) ORF collection instruments**, significantly reducing reliance on monetary expansion or reserve drawdown.
 
 > ⚠️ **Methodological, Conflict of Interest & Framing Disclosure**:
-> - **Operational Precursor Disclosure**: The author previously served in operational leadership roles at Intersect MBO, contributing to the initial design of the Paid Open Source Model (POSM) pilot. POSM serves as a primary practical precursor for the dOSPO and OMF specifications.
-> - **Sourced Baseline Cost Data**: The **$3.0M annual baseline maintenance cost floor** is derived from Intersect MBO Open Source Committee (OSC) POSM retainer allocations ($1.6M core maintainers, $600k tooling, $400k security, $400k ops admin).
-> - **Scenario Demand Assumptions**: Inflow volumes (15 SLAs, 600 certifications, 30 dApp badges, 40 mission pools) are **modeled scenario assumptions** grounded in industry comparators (Red Hat Extended Lifecycle, LFX Certifications, ENS Registrar), not historical sales ledgers.
+> - **Operational Precursor Disclosure**: The author previously served in operational leadership roles at Intersect MBO, contributing to the initial design of the Paid Open Source Model (POSM) pilot. POSM serves as an operational pilot / live precursor for the dOSPO and OMF specifications.
+> - **Illustrative Baseline Cost Scenario**: The **$3.0M annual baseline maintenance cost floor** is an **illustrative model assumption** grounded in maintainer cost floor estimates ($1.6M core maintainers, $600k tooling, $400k security, $400k ops admin), rather than a historical ledger export.
+> - **Scenario Demand Assumptions**: Inflow volumes (15 SLAs, 600 certifications, 30 dApp badges, 40 mission pools) are **modeled scenario assumptions** grounded in industry comparators (Red Hat Extended Lifecycle, Linux Foundation Education Certifications, ENS Registrar), not historical sales ledgers.
 
 ---
 
-## 2. Sourced Baseline Cost Floor (Cardano POSM Operating Budget)
+## 2. Illustrative Baseline Cost Floor (Ecosystem Operating Model Scenario)
 
-Derived from the Intersect MBO Open Source Committee (OSC) Paid Open Source Model (POSM) baseline program portfolio:
+Grounded in maintenance retainer cost estimates informed by the Intersect MBO Paid Open Source Model (POSM) pilot framework:
 
-| Maintenance Program (OMF) | Description & Scope | Annual Cost (USD) | Source & Precedent |
+| Maintenance Program (OMF) | Description & Scope | Annual Cost (USD) | Source & Model Basis |
 |---|---|---|---|
-| **Core Client Maintenance** | Retainers for 8 core maintainers (`cardano-node`, `ledger`, `cli`) | \$1,600,000 | Intersect POSM Retainer Pilot (\$200k/yr per senior maintainer) |
-| **Developer SDKs & Tooling** | Retainers for 4 tooling maintainers (`Aiken`, `Mesh JS`, `Oura`) | \$600,000 | Intersect Technical Steering Committee (TSC) Retainer allocation |
-| **Security Auditing & Triage** | Independent vulnerability intake, triage & 24/7 incident response | \$400,000 | OpenSSF Security Scorecard / Tidelift Security Assurance standard |
-| **Operational Administration** | dOSPO legal, program management, and independent audit review | \$400,000 | Linux Foundation LFX / Intersect MBO operational budget |
-| **TOTAL BASELINE OMF COST** | **Annual Cost Floor to Preserve Infrastructure** | **\$3,000,000** | **Sourced Baseline Cost Floor** |
+| **Core Client Maintenance** | Retainers for 8 core maintainers (`cardano-node`, `ledger`, `cli`) | \$1,600,000 | Model Assumption (\$200k/yr per senior maintainer retainer) |
+| **Developer SDKs & Tooling** | Retainers for 4 tooling maintainers (`Aiken`, `Mesh JS`, `Oura`) | \$600,000 | Model Assumption (Tooling Sustainability Retainer allocation) |
+| **Security Auditing & Triage** | Independent vulnerability intake, triage & 24/7 incident response | \$400,000 | OpenSSF / Tidelift Security Assurance standard benchmark |
+| **Operational Administration** | dOSPO legal, program management, and independent audit review | \$400,000 | Linux Foundation LFX / Intersect MBO ops budget benchmark |
+| **TOTAL BASELINE OMF COST** | **Annual Cost Floor to Preserve Infrastructure** | **\$3,000,000** | **Illustrative Maintenance Budget Floor** |
 
 ---
 

@@ -14,41 +14,43 @@
 Open-source software powers critical global infrastructure, yet digital commons remain systematically under-funded and under-maintained. The **Open Source Frontiers Lab** (hosted at **LF Decentralized Trust**) provides a complete, 3-piece framework suite to transform open-source funding from episodic charity into a self-sustaining economic loop.
 
 ```
-       +-------------------------------------------------------+
-       |                        dOSPO                          |
-       |       (Decentralized Open Source Program Office)       |
-       |   WHO: Mandate, Governance, Policy & Neutrality       |
-       +---------------------------+---------------------------+
-                                   |
-         +-------------------------+-------------------------+
-         |                                                   |
-         v                                                   v
-+---------------------------------+         +---------------------------------+
-|               OMF               |         |               ORF               |
-|   (Open Maintenance Framework)  |         |  (Open Replenishment Framework) |
-| HOW DEPLOY: Program Retainers,  |========>| HOW COLLECT: Value Alignment,   |
-| Maintenance, Contributor Paths  | Treasury| Collection Instruments, Yield,  |
-|                                 | Buffer  | Enterprise SLAs & Endowments    |
-+---------------------------------+         +---------------------------------+
+                     COMMUNITY GOVERNANCE
+                  Mandate · Budget · Rules
+                            |
+                            v
+                         dOSPO
+                Coordinate · Draft · Report
+                      /             \
+                     v               v
+                  OMF                 ORF
+               DEPLOY              REPLENISH
+           maintenance capital   economic inflows
+                     \               /
+                      \             /
+                       v           v
+                  GOVERNED TREASURY
+                            |
+                            v
+                   INDEPENDENT AUDIT
 ```
 
 ---
 
 ## The 3-Piece Framework Recipe
 
-The suite enforces a strict division of labor with **zero functional overlap**:
+The suite enforces **distinct functional mandates with explicit interfaces and shared safeguards**:
 
 ### 1. [dOSPO — Decentralized Open Source Program Office](./dospo/START_HERE.md)
-* **Question Answered**: *WHO* holds authority and sets policy?
-* **Role**: Bounded, community-mandated coordination body holding the governance triangle (**legitimacy, neutrality, execution**). Sets spending priorities and collection rules while remaining fully replaceable by the community.
+* **Question Answered**: *WHO* coordinates policy and portfolio oversight?
+* **Role**: Time-bounded, community-mandated coordination body holding the governance triangle (**legitimacy, neutrality, execution**). Translates mandates into policy without holding direct discretionary treasury custody.
 
 ### 2. [OMF — Open Maintenance Framework](./omf/START_HERE.md)
 * **Question Answered**: *HOW* is capital deployed to sustain infrastructure?
-* **Role**: Portfolio of operational programs translating mandates and treasury capital into long-term infrastructure health (Maintainer Retainers, Contributor Pathways, Tooling Stewardship, Lifecycle-Aligned Funding).
+* **Role**: Governed portfolio of operational programs translating approved budgets into long-term infrastructure health (Maintainer Retainers, Contributor Pathways, Tooling Stewardship).
 
 ### 3. [ORF — Open Replenishment Framework](./orf/START_HERE.md)
 * **Question Answered**: *HOW* does value flow back to replenish the treasury?
-* **Role**: Governed portfolio of 20+ collection instruments matched to where value is realized across 5 layers (**Protocol, Application, Enterprise & Services, Capital, Delegation**). Reframes initial reserve usage as a measured "Bootstrap Loan."
+* **Role**: Governed portfolio of collection instruments matching value generation across ecosystem layers (Enterprise SLAs, badging, IPS endowments, stake pool margins).
 
 ---
 
@@ -62,7 +64,7 @@ The suite enforces a strict division of labor with **zero functional overlap**:
 | 📈 **Pro-Forma Model** | Tier 1 Feasibility Scenario Model | [Tier 1 Feasibility Scenario Model](./docs/TIER_1_FEASIBILITY_MODEL.md) |
 | 🏆 **Validation Lifecycle** | 4-Stage Validation Framework | [Validation Framework & Register](./VALIDATION.md) |
 | 🌍 **Use Cases** | Multi-Chain Ecosystem Profiles | [Cardano POSM](./use-cases/CARDANO_POSM.md) • [Optimism Superchain](./use-cases/OPTIMISM_SUPERCHAIN.md) • [Polkadot](./use-cases/POLKADOT_OPENGOV.md) • [Ethereum EVM](./use-cases/ETHEREUM_EVM.md) |
-| 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
+| 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Project Odin](./tools/PROJECT_ODIN.md) • [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
 | 📊 **Evaluator Suite** | QUAID, CHAOSS & Systems Assessor | [Evaluator Documentation](./evaluator/README.md) • [QUAID Audit Example](./evaluator/examples/CARDANO_QUAID_SCANNER_REPORT.md) |
 | 📜 **Smart Contracts** | Reference Solidity & Aiken Vaults | [Native Contracts Guide](./contracts/README.md) • [EVM Solidity Contract](./contracts/solidity/ORFSlaVault.sol) • [Cardano Aiken Validator](./contracts/aiken/validators/orf_sla_vault.ak) |
 | 📊 **Pitch & Adoption Kit** | Executive Decks & Proposal Templates | [Pitch Deck](./pitch/EXECUTIVE_PITCH_DECK.md) • [One-Pager](./pitch/ONE_PAGER.md) • [Forum Proposal](./pitch/GOVERNANCE_PROPOSAL_TEMPLATE.md) • [Enterprise Sales Kit](./pitch/ENTERPRISE_SPONSOR_KIT.md) |

@@ -77,11 +77,14 @@ def analyze_cardano_ecosystem():
     report_content += """
 ---
 
-## 2. dOSPO Governance & Replenishment Synthesis
+## 2. Research Assertions & Mapping (OSF Framework Model)
 
-- **Governance Authority**: Intersect MBO (Cardano Open Source Committee & POSM Engine).
-- **Core Maintenance Retainers**: Active 12-month maintainer retainer cohorts for core client developers.
-- **Replenishment Model**: Treasury allocations supplemented by candidate ORF fee-sharing and stake pool mechanisms.
+> ℹ️ **Evidence Classification Note**: Section 1 contains **Observed API Data** directly retrieved during this run. The items below represent **Research Assertions & OSF Recommended Framework Mapping** sourced from project governance documentation.
+
+- **Observed API Data**: Public repository stats fetched dynamically from GitHub REST API.
+- **dOSPO Policy Framework**: Intersect MBO acts as the dOSPO policy & coordination body under CIP-1694 governance mandates.
+- **OMF Maintenance Retainers**: Paid Open Source Model (POSM) provides 12-month retainers for core maintainers.
+- **ORF Replenishment Mapping**: L1 transaction fee split (`tau` = 0.20) supplemented by candidate Tier 1 SLAs and mission stake pools.
 """
 
     return report_content, results

@@ -13,30 +13,32 @@ Relying indefinitely on token inflation or finite reserves creates a ticking clo
 
 ---
 
-## The Solution: A 3-Piece Recipe (Zero Overlap)
+## The Solution: A 3-Piece Recipe (Distinct Functional Mandates)
 
 ```
-       +-------------------------------------------------------+
-       |                        dOSPO                          |
-       |       (Decentralized Open Source Program Office)       |
-       |   WHO: Mandate, Governance, Policy & Neutrality       |
-       +---------------------------+---------------------------+
-                                   |
-         +-------------------------+-------------------------+
-         |                                                   |
-         v                                                   v
-+---------------------------------+         +---------------------------------+
-|               OMF               |         |               ORF               |
-|   (Open Maintenance Framework)  |         |  (Open Replenishment Framework) |
-| HOW DEPLOY: Program Retainers,  |========>| HOW COLLECT: Value Alignment,   |
-| Maintenance, Contributor Paths  | Treasury| Collection Instruments, Yield,  |
-|                                 | Buffer  | Enterprise SLAs & Endowments    |
-+---------------------------------+         +---------------------------------+
+                     COMMUNITY GOVERNANCE
+                  Mandate · Budget · Rules
+                            |
+                            v
+                         dOSPO
+                Coordinate · Draft · Report
+                      /             \
+                     v               v
+                  OMF                 ORF
+               DEPLOY              REPLENISH
+           maintenance capital   economic inflows
+                     \               /
+                      \             /
+                       v           v
+                  GOVERNED TREASURY
+                            |
+                            v
+                   INDEPENDENT AUDIT
 ```
 
-1. **dOSPO (Governance Authority — *WHO*)**: Bounded, community-mandated coordination body holding the governance triangle (**legitimacy, neutrality, execution**). Replaceable by community vote.
+1. **dOSPO (Governance Policy — *WHO*)**: Bounded, community-mandated policy & coordination body holding the governance triangle (**legitimacy, neutrality, execution**). Holds zero direct discretionary treasury custody and is fully replaceable by community vote.
 2. **OMF (Maintenance Deployment — *HOW SPEND*)**: Portfolio of operational programs (Maintainer Retainers, Contributor Pathways, Tooling Stewardship) protecting maintainer autonomy.
-3. **ORF (Value Replenishment — *HOW COLLECT*)**: Portfolio of 20+ collection instruments matched to where value is realized across Protocol, Application, Enterprise, Capital, and Delegation layers.
+3. **ORF (Value Replenishment — *HOW COLLECT*)**: Portfolio of collection instruments matched to where value is realized across Protocol, Application, Enterprise, Capital, and Delegation layers.
 
 ---
 
