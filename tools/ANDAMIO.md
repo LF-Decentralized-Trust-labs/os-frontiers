@@ -1,14 +1,14 @@
-# Tool Profile: Andamio Protocol
+# Open Source Frontiers Lab — Tool Submission Template
 
-> **LF Decentralized Trust · Open Source Frontiers Lab Profile**  
-> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Production Protocol`*
+## Tool Name
+Andamio Protocol (andamio.io)
 
 ---
 
 # Overview
 
 ## Summary
-**Andamio Protocol** ([https://andamio.io](https://andamio.io)) is an open-source decentralized protocol built on the Cardano blockchain designed to bridge developer onboarding, verifiable skill accreditation, and automated smart-contract treasury escrow. Built for open-source organizations, DAOs, and dOSPOs, Andamio enables projects to create structured onboarding ladders where contributors complete maintenance modules and task milestones to earn verifiable on-chain credentials that unlock project tasks and treasury payouts.
+Andamio Protocol ([https://andamio.io](https://andamio.io)) is an open-source decentralized protocol built on the Cardano blockchain designed to bridge developer onboarding, verifiable skill accreditation, and automated smart-contract treasury escrow. Built for open-source organizations, DAOs, and dOSPOs, Andamio enables projects to create structured onboarding ladders where contributors complete maintenance modules and task milestones to earn verifiable on-chain credentials that unlock project tasks and treasury payouts.
 
 ## Purpose
 Andamio addresses the maintainer onboarding bottleneck. Open-source projects frequently suffer from contributor churn: new developers join communication channels but lack structured learning pathways, while maintainers spend excessive hours evaluating unverified developer claims. Andamio replaces informal onboarding with verifiable on-chain skill credentials, tokenized task ladders, and automated smart contract escrow.
@@ -22,23 +22,23 @@ Andamio aligns with the Open Source Frontiers mission by providing open, verifia
 
 ## Category
 - [ ] Governance Tooling
-- [x] **Open Source Sustainability**
-- [x] **Contributor Coordination**
-- [x] **Treasury & Funding Infrastructure**
-- [x] **Credentialing & Reputation**
+- [x] Open Source Sustainability
+- [x] Contributor Coordination
+- [x] Treasury & Funding Infrastructure
+- [x] Credentialing & Reputation
 - [ ] Analytics & Observability
 - [ ] Security & Incident Response
 - [ ] Developer Tooling
 - [ ] Interoperability Infrastructure
 - [ ] Community Operations
 - [ ] Documentation & Knowledge Systems
-- [x] **Lifecycle Management**
-- [x] **Public Goods Infrastructure**
+- [x] Lifecycle Management
+- [x] Public Goods Infrastructure
 - [ ] Compliance & Policy
 - [ ] Other: ___________
 
 ## Open Source Status
-- [x] **Fully Open Source**
+- [x] Fully Open Source
 - [ ] Source Available
 - [ ] Mixed / Hybrid
 - [ ] Proprietary Components
@@ -82,9 +82,9 @@ Eliminates informal maintainer onboarding bottlenecks, replaces unverified resum
 
 ## Architecture Overview
 Andamio operates through a network of smart contract validators on Cardano:
-- **Course & Module Validator**: Manages course content hashes, module prerequisites, and student enrollment records.
-- **Credential Validator**: Issues tokenized credentials (native tokens/NFTs) to students who complete module assignments verified by maintainers.
-- **Project Escrow Validator**: Holds milestone funding in smart contract escrow, automatically releasing stipends to credentialed developers upon deliverable verification.
+- Course & Module Validator: Manages course content hashes, module prerequisites, and student enrollment records.
+- Credential Validator: Issues tokenized credentials (native tokens/NFTs) to students who complete module assignments verified by maintainers.
+- Project Escrow Validator: Holds milestone funding in smart contract escrow, automatically releasing stipends to credentialed developers upon deliverable verification.
 
 ## Dependencies
 - Cardano node & UTXO ledger
@@ -133,7 +133,7 @@ Andamio institutionalizes developer onboarding, converting volunteer friction in
 - [ ] Prototype
 - [ ] Alpha
 - [ ] Beta
-- [x] **Production**
+- [x] Production
 - [ ] Mature
 
 ## Current Adoption
@@ -163,16 +163,16 @@ On-chain credentials and escrow payouts are queryable on Cardano block explorers
 # Alignment With Open Source Frontiers
 
 ## Relevant Focus Areas
-- [x] **Open Source Sustainability**
+- [x] Open Source Sustainability
 - [ ] Decentralized Governance
-- [x] **Contributor Incentives**
-- [x] **Treasury Coordination**
+- [x] Contributor Incentives
+- [x] Treasury Coordination
 - [ ] Security & Resilience
 - [ ] Ecosystem Analytics
-- [x] **Lifecycle Stewardship**
-- [x] **Public Goods Funding**
-- [x] **Cross Ecosystem Collaboration**
-- [x] **Infrastructure Neutrality**
+- [x] Lifecycle Stewardship
+- [x] Public Goods Funding
+- [x] Cross Ecosystem Collaboration
+- [x] Infrastructure Neutrality
 - [ ] Other: ___________
 
 ## Why This Tool Fits the Lab

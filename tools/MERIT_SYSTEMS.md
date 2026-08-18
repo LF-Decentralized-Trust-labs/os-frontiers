@@ -1,14 +1,14 @@
-# Tool Profile: Merit Systems
+# Open Source Frontiers Lab — Tool Submission Template
 
-> **LF Decentralized Trust · Open Source Frontiers Lab Profile**  
-> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Beta Tooling & Agentic Protocol`*
+## Tool Name
+Merit Systems (merit.systems)
 
 ---
 
 # Overview
 
 ## Summary
-**Merit Systems** ([https://merit.systems](https://merit.systems)) is building a new economic layer for open-source software. Merit enriches version control systems like GitHub with direct attribution data, allowing capital sources to route funds to codebases and builders based on verifiable contributions. Founded by Sam Ragsdale, Ryan Sproule, and Mason Hall, Merit's product suite spans two primary layers: the **Terminal**, a contributor payments interface for open-source maintainers, and **AgentCash**, an agentic commerce layer enabling AI agents (Claude, Codex, Cursor) to autonomously discover and pay for APIs using open payment protocols (x402 / MPP).
+Merit Systems ([https://merit.systems](https://merit.systems)) is building a new economic layer for open-source software. Merit enriches version control systems like GitHub with direct attribution data, allowing capital sources to route funds to codebases and builders based on verifiable contributions. Founded by Sam Ragsdale, Ryan Sproule, and Mason Hall, Merit's product suite spans two primary layers: the **Terminal**, a contributor payments interface for open-source maintainers, and **AgentCash**, an agentic commerce layer enabling AI agents (Claude, Codex, Cursor) to autonomously discover and pay for APIs using open payment protocols (x402 / MPP).
 
 ## Purpose
 Merit Systems addresses the root economic crisis in open-source funding. Although open-source software underpins 95% of commercial software, funding its development has historically relied on episodic grants, venture capital (which demands inappropriate equity returns), or big-tech corporate subsidies. Merit enables market forces to guide innovation by routing direct stablecoin capital to maintainers based on merged PRs, code reviews, and commit history.
@@ -22,25 +22,25 @@ Merit Systems aligns with the Open Source Frontiers mission by creating friction
 
 ## Category
 - [ ] Governance Tooling
-- [x] **Open Source Sustainability**
-- [x] **Contributor Coordination**
-- [x] **Treasury & Funding Infrastructure**
+- [x] Open Source Sustainability
+- [x] Contributor Coordination
+- [x] Treasury & Funding Infrastructure
 - [ ] Credentialing & Reputation
 - [ ] Analytics & Observability
 - [ ] Security & Incident Response
 - [ ] Developer Tooling
-- [x] **Interoperability Infrastructure**
+- [x] Interoperability Infrastructure
 - [ ] Community Operations
 - [ ] Documentation & Knowledge Systems
 - [ ] Lifecycle Management
-- [x] **Public Goods Infrastructure**
+- [x] Public Goods Infrastructure
 - [ ] Compliance & Policy
 - [ ] Other: ___________
 
 ## Open Source Status
 - [ ] Fully Open Source
 - [ ] Source Available
-- [x] **Mixed / Hybrid**
+- [x] Mixed / Hybrid
 - [ ] Proprietary Components
 
 > *Note: Built on open payment protocol standards (x402, MPP). Terminal and AgentCash UIs are proprietary commercial products.*
@@ -86,8 +86,8 @@ Eliminates administrative friction in maintainer payroll (managing global taxes,
 
 ## Architecture Overview
 Merit Systems operates across two technical product layers:
-1. **Terminal**: An interface for open-source maintainers that maps pull requests, code reviews, and commit contributions to developer wallets, executing instant USDC payouts on Base while managing end-to-end tax compliance.
-2. **AgentCash**: A single-balance wallet providing AI agents with instant access to paywalled APIs. When an agent hits an HTTP 402 paywall, AgentCash spends micro-pennies via x402/MPP protocols, letting agents execute tools seamlessly. Merchants register servers on `x402scan.com` or `mppscan.com`.
+1. Terminal: An interface for open-source maintainers that maps pull requests, code reviews, and commit contributions to developer wallets, executing instant USDC payouts on Base while managing end-to-end tax compliance.
+2. AgentCash: A single-balance wallet providing AI agents with instant access to paywalled APIs. When an agent hits an HTTP 402 paywall, AgentCash spends micro-pennies via x402/MPP protocols, letting agents execute tools seamlessly. Merchants register servers on `x402scan.com` or `mppscan.com`.
 
 ## Dependencies
 - GitHub (source of contribution data and developer identity)
@@ -137,7 +137,7 @@ Merit connects open-source contribution metrics directly to financial compensati
 - [ ] Concept
 - [ ] Prototype
 - [ ] Alpha
-- [x] **Beta**
+- [x] Beta
 - [ ] Production
 - [ ] Mature
 
@@ -168,16 +168,16 @@ Live dataset registries on `x402scan.com` and `mppscan.com`, with real-time agen
 # Alignment With Open Source Frontiers
 
 ## Relevant Focus Areas
-- [x] **Open Source Sustainability**
+- [x] Open Source Sustainability
 - [ ] Decentralized Governance
-- [x] **Contributor Incentives**
-- [x] **Treasury Coordination**
+- [x] Contributor Incentives
+- [x] Treasury Coordination
 - [ ] Security & Resilience
 - [ ] Ecosystem Analytics
 - [ ] Lifecycle Stewardship
-- [x] **Public Goods Funding**
-- [x] **Cross Ecosystem Collaboration**
-- [x] **Infrastructure Neutrality**
+- [x] Public Goods Funding
+- [x] Cross Ecosystem Collaboration
+- [x] Infrastructure Neutrality
 - [ ] Other: ___________
 
 ## Why This Tool Fits the Lab
