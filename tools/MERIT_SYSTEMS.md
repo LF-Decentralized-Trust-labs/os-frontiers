@@ -181,21 +181,19 @@ Agents have made 770,000+ paid tool calls on AgentCash. API partners include Min
 
 # Alignment With Open Source Frontiers
 
-## Relevant Focus Areas
-- [x] **Open Source Sustainability**
-- [ ] Decentralized Governance
-- [x] **Contributor Incentives**
-- [x] **Treasury Coordination**
-- [ ] Security & Resilience
-- [ ] Ecosystem Analytics
-- [ ] Lifecycle Stewardship
-- [x] **Public Goods Funding**
-- [x] **Cross Ecosystem Collaboration**
-- [x] **Infrastructure Neutrality**
-- [ ] Other: ___________
+## Program Relevance & Direct OSF Alignment
 
-## Why This Tool Fits the Lab
-Merit Systems is one of the most direct attempts to solve the root economic problem of open source: the disconnect between value created and value captured by builders. Where most tools in this space measure health or coordinate governance, Merit goes a layer deeper — routing actual capital to contributors based on verifiable attribution. Its dual focus on the Terminal (human contributor payments) and AgentCash (AI agent payments) positions it at the intersection of two critical transitions: the shift from volunteer-driven to market-compensated open source, and the emergence of agentic commerce as a new monetization layer for the open internet. Both are central to the long-term resilience of open source ecosystems.
+### 1. OMF Automated Contributor Payouts (Terminal Integration)
+- **OSF Mapping**: **OMF Program 2 (Code Bounties)** & **Program 1 (Maintainer Retainers)**.
+- **Mechanism Validated**: Validates direct GitHub commit-attribution payouts using automated stablecoin rails (USDC on Base), eliminating manual payroll overhead for un-incorporated open-source maintainer teams.
+- **Operator Takeaway**: An OMF Operator integrates Merit Terminal rails to execute instant milestone payouts to secondary contributors based on merged pull requests.
+
+### 2. ORF Autonomous Agentic Revenue Inflows (AgentCash / HTTP 402)
+- **OSF Mapping**: **ORF Layer 2 (Application & Service Layer)** & **[`INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
+- **Mechanism Validated**: Proves that autonomous AI agents can query, negotiate, and pay micro-fees for API services using open payment standards (x402 / MPP).
+- **Operator Takeaway**: An ORF Operator configures x402/MPP payment gateways on ecosystem developer APIs (e.g. RPC nodes, indexers, vulnerability scanners), capturing agentic micro-transaction fees to replenish the ecosystem treasury.
+
+---
 
 ---
 

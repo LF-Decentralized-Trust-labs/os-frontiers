@@ -1,28 +1,44 @@
 # Tool Profile: Andamio Protocol
 
-> **Category**: Contributor Onboarding, Credentials & Treasury Distribution  
-> **Target Ecosystems**: Cardano, Substrate / Polkadot  
-> **OSF Alignment**: Open Maintenance Framework (OMF Contributor Pathways)  
-> **Maturity**: Production / Live Protocol
+> **On-Chain Contributor Progression, Verifiable Credentials, & Treasury Escrow**  
+> *LF Decentralized Trust · Open Source Frontiers Lab Profile*
+
+```yaml
+tool_name: "Andamio Protocol"
+category: "OMF Contributor Pathways / Treasury Escrow"
+target_ecosystems: "Cardano, Substrate / Polkadot"
+primary_function: "Verifiable skill credentials, task ladders, & treasury escrow payouts"
+website: "https://andamio.io"
+observed_at: "2026-08-13"
+evidence_status: "Live Production Protocol"
+```
 
 ---
 
-## 1. Executive Summary
+## 1. Executive Summary & Capabilities
 
-**Andamio** is an open-source decentralized protocol built on the Cardano blockchain designed to bridge learning pathways, verifiable project credentials, and automated treasury disbursement. It enables open-source projects, dOSPOs, and DAO initiatives to create structured onboarding ladders where contributors gain verifiable on-chain credentials by completing maintenance tasks and course modules.
+**Andamio** ([https://andamio.io](https://andamio.io)) is an open-source decentralized protocol built on Cardano that bridges developer onboarding, verifiable skill credentials, and automated smart-contract treasury escrow.
 
----
-
-## 2. Key Capabilities & Features
-
-1. **Course & Pathway Management**: Project maintainers define modular learning courses and task ladders for incoming contributors.
-2. **On-Chain Credentials**: Successful completion issues verifiable tokenized credentials (NFTs/native tokens) proving technical competence.
-3. **Treasury Escrow & Milestone Payouts**: Smart contracts release project stipends and bounties automatically upon milestone verification.
-4. **dOSPO Integration**: Provides dOSPO operators with transparent analytics on contributor conversion rates and skill distribution.
+Andamio enables ecosystem projects and dOSPOs to build structured contributor pathways: developers complete maintenance modules and task milestones, receiving verifiable on-chain credentials (NFTs/tokens) that unlock task assignments and milestone payouts.
 
 ---
 
-## 3. Alignment with 3-Piece Framework Suite
+## 2. Technical Architecture & Mechanics
 
-- **OMF Contributor Pathways**: Provides the operational software primitives required to move new developers from novice to core retainers.
-- **dOSPO Neutrality**: Operates on-chain without central vendor locks, allowing community governance to verify contributor credentials independently.
+- **Task & Course Smart Contracts**: Maintainers define modular technical tasks with explicit acceptance criteria.
+- **On-Chain Credentialing**: Successful task completion issues tokenized credentials proving verified codebase skills.
+- **Escrow Disbursement**: Escrow smart contracts hold milestone funds, automatically releasing stipends to contributors upon maintainer approval.
+
+---
+
+## 3. Program Relevance & Direct OSF Alignment
+
+### 1. OMF Contributor Pathways & Progression Ladders
+- **OSF Mapping**: **OMF Program 3 (Contributor Pathways)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **Mechanism Validated**: Validates that structured contributor ladders (Entry -> Regular -> Trusted -> Core) paired with verifiable on-chain credentials convert novel developers into long-term maintainers.
+- **Operator Takeaway**: OMF Contributor Pathway managers use Andamio smart contracts to manage task assignments, credential issuing, and stipend escrow for mentee developers.
+
+### 2. dOSPO Contributor Verification
+- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../dospo/START_HERE.md))** & **Transparency Requirements**.
+- **Mechanism Validated**: Proves that contributor skill claims and completed deliverables can be verified on-chain without relying on self-reported developer resumes.
+- **Operator Takeaway**: A dOSPO utilizes Andamio credentials to verify that maintainer retainer candidates possess documented codebase contributions before approving retainer contracts.

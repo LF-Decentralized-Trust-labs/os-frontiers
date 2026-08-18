@@ -171,21 +171,19 @@ Access to data is available in three levels: a user interface for exploring and 
 
 # Alignment With Open Source Frontiers
 
-## Relevant Focus Areas
-- [x] **Open Source Sustainability**
-- [ ] Decentralized Governance
-- [x] **Contributor Incentives**
-- [ ] Treasury Coordination
-- [ ] Security & Resilience
-- [x] **Ecosystem Analytics**
-- [x] **Lifecycle Stewardship**
-- [ ] Public Goods Funding
-- [x] **Cross Ecosystem Collaboration**
-- [ ] Infrastructure Neutrality
-- [ ] Other: ___________
+## Program Relevance & Direct OSF Alignment
 
-## Why This Tool Fits the Lab
-GrimoireLab is one of the most battle-tested open source community health platforms in existence, with over a decade of production use across some of the world's largest open source foundations. Its modular, GPL-licensed architecture — aggregating 30+ data sources into standardized metrics — makes it a foundational reference for any organization seeking to understand contributor health, project sustainability, and community dynamics. Its role as the data engine behind LFX Insights, OSS Compass, and Cauldron demonstrates compounding ecosystem value: a single open infrastructure enabling an entire generation of downstream public goods tooling.
+### 1. dOSPO Contributor Health & Bus-Factor Auditing
+- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../dospo/START_HERE.md))** & **Transparency Requirements**.
+- **Mechanism Validated**: Validates that 30+ off-chain and on-chain developer signals (PRs, issues, mailing lists, commit identity consolidation) can be aggregated to track maintainer retention and organizational affiliation.
+- **Operator Takeaway**: A dOSPO utilizes SortingHat identity resolution to audit multi-organizational contribution ratios and verify project independence before awarding retainer contracts.
+
+### 2. OMF Program Evaluation & Contributor Progression
+- **OSF Mapping**: **OMF Program 3 (Contributor Pathways)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **Mechanism Validated**: Provides objective metrics (time to first response, review velocity, commit frequency) to track mentee advancement across maintainer ranks (Entry -> Trusted -> Core).
+- **Operator Takeaway**: OMF Incubation and Contributor Pathway managers use CHAOSS metrics to evaluate contributor progression and verify retainer eligibility benchmarks.
+
+---
 
 ---
 

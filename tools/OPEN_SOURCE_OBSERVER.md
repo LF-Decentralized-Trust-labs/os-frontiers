@@ -165,21 +165,22 @@ OSO orchestrates all data infrastructure using a public Dagster instance, where 
 
 # Alignment With Open Source Frontiers
 
-## Relevant Focus Areas
-- [x] **Open Source Sustainability**
-- [ ] Decentralized Governance
-- [ ] Contributor Incentives
-- [ ] Treasury Coordination
-- [ ] Security & Resilience
-- [x] **Ecosystem Analytics**
-- [ ] Lifecycle Stewardship
-- [x] **Public Goods Funding**
-- [x] **Cross Ecosystem Collaboration**
-- [ ] Infrastructure Neutrality
-- [ ] Other: ___________
+## Program Relevance & Direct OSF Alignment
 
-## Why This Tool Fits the Lab
-OSO directly addresses one of the most persistent failures in open source funding: the inability to measure real impact. By providing a neutral, open, multi-ecosystem analytics layer, OSO enables foundations, DAOs, and grant programs to fund based on verifiable contribution data rather than narrative. Its commitment to open data, open infrastructure, and open source code — combined with active deployments across Optimism, Filecoin, and Arbitrum — makes it a foundational piece of public goods infrastructure aligned with Open Source Frontiers' mission.
+### 1. dOSPO Data-Driven Transparency Reports
+- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../dospo/START_HERE.md))** & **Transparency Requirements**.
+- **Mechanism Validated**: Validates that ecosystem governance bodies can replace subjective grant proposals with verifiable, multi-source analytics (commits, dependencies, active maintainers, gas usage) when authorizing ecosystem maintenance budgets.
+- **Operator Takeaway**: A dOSPO incorporates OSO data into its quarterly transparency reports to justify maintainer retainer budgets to Community Governance.
+
+### 2. OMF Centrality & Bus-Factor Prioritization
+- **OSF Mapping**: **OMF Program 6 (Resilience Programs)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **Mechanism Validated**: Demonstrates automated dependency graph scoring to identify high-centrality, single-maintainer dependencies before critical project failure occurs.
+- **Operator Takeaway**: OMF Operators use OSO metrics (prevalence, dependency depth, contributor churn) to trigger automated Resilience Program interventions for bus-factor-1 infrastructure.
+
+### 3. Evaluator Impact Data Feed
+- **OSF Mapping**: **Canonical Systems Evaluator ([`evaluator/README.md`](../evaluator/README.md))**.
+- **Mechanism Validated**: Serves as the primary external data provider for evaluating ecosystem health scores without relying on self-reported developer surveys.
+- **Operator Takeaway**: The Evaluator engine consumes OSO metrics to calculate objective OMF maintenance score points.
 
 ---
 

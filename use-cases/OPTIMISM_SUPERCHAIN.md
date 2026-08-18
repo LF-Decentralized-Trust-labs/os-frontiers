@@ -1,36 +1,48 @@
-# Ecosystem Profile: Optimism Superchain & RetroFunding
+# Ecosystem Profile: Optimism Superchain & Sequencer Revenue Allocation
 
-> **EVM L2 Rollup & Sequencer Revenue Allocation Architecture**  
+> **EVM L2 Superchain Sequencer Revenue Tithe & RetroFunding Architecture**  
 > *LF Decentralized Trust · Open Source Frontiers Lab Profile*
 
 ```yaml
 ecosystem: "Optimism Superchain"
-architecture_type: "EVM L2 Optimistic Rollup"
+architecture_type: "EVM L2 Optimistic Rollup / Superchain"
 primary_governance: "Optimism Collective (Token House & Citizens' House)"
-deployment_framework: "Retroactive Public Goods Funding (RetroFunding / RetroPGF)"
-replenishment_layer: "Protocol Layer (Sequencer Revenue Tithe), Application Layer (OSO Analytics)"
+replenishment_layer: "Protocol Layer (Superchain Sequencer Fee Contribution), Application Layer (Open Source Observer / Drips)"
 native_assets: "OP, ETH"
-metrics_engine: "Open Source Observer (OSO)"
+observed_at: "2026-08-13"
+evidence_status: "Live Production Precedent"
 ```
 
 ---
 
-## 1. Overview & Architecture
+## 1. Executive Summary & Ecosystem Overview
 
-Optimism's **Superchain** architecture demonstrates an operational link between protocol sequencing revenue and public-goods maintenance. The Optimism Collective splits governance between token-holders (Token House) and identity-verified badgeholders (Citizens' House).
+The **Optimism Superchain** (comprising OP Mainnet, Base, Zora, Mode, Ink, Fraxtal) provides the primary Web3 production precedent for **Protocol-Layer Revenue Routing ($\tau$)**. Member chains in the Superchain contribute a standardized fee-take (**the greater of 15% of net transaction-fee profit or 2.5% of gross fees**) directly to a shared Optimism Collective Treasury.
+
+While Optimism pioneered protocol fee-take collection, its historical distribution relied heavily on retroactive voting rounds (RetroPGF / RetroFunding). The Open Source Frontiers framework decouples Optimism's revenue collection rail from its grant allocation workflow — establishing that sequencer revenue must fund baseline maintainer retainers before remaining capital is distributed to speculative grants.
 
 ---
 
-## 2. Framework Mapping
+## 2. Core Precedents & Empirical Mechanics
 
-### dOSPO (Governance & Mandate)
-- **Collective Mandate**: Citizens' House votes on RetroFunding rounds to allocate capital to open-source builders and maintainers based on demonstrated impact.
-- **Data Integration**: Uses **Open Source Observer (OSO)** data infrastructure to quantify repository activity, dependencies, and developer retention.
+### 2.1 Superchain Sequencer Contribution (Protocol Fee Split $\tau$)
+- **Mechanics**: Sequencers running OP Stack chains capture transaction fees and priority tips. Protocol contracts enforce an automatic fee split: 15% of net profit (or 2.5% gross fees) flows automatically to the shared Collective Treasury.
+- **Empirical Impact**: Generated tens of millions in non-inflationary revenue for public goods, demonstrating that L2 sequencing scales non-inflationary treasury replenishment.
 
-### OMF (Maintenance Deployment)
-- **RetroFunding Rounds**: Allocates funding retroactively to infrastructure maintainers, developer tooling, and core dependencies.
-- **Lesson**: Historical reliance on finite OP token allocations underscores that revenue routing rules alone do not equal a fully self-sustaining maintenance base until sequencer revenue covers baseline costs.
+### 2.2 Open Source Observer (OSO) Impact Metrics
+- **Mechanics**: Optimism integrates **Open Source Observer (OSO)** to track developer retention, dependency graphs, commit frequencies, and gas utilization across Superchain repositories.
+- **Empirical Impact**: Provides auditable, empirical data for RetroFunding rounds, eliminating unverified self-reported claims.
 
-### ORF (Collection & Replenishment)
-- **Protocol Layer (Sequencer Tithe)**: Sequencer revenue from OP Mainnet and participating Superchain L2s (Base, Zora, Mode, Fraxtal) tithes a share of surplus transaction fees back to the Collective treasury.
-- **Application Layer**: Cross-chain dependency distribution powered by Drips and OSO impact scoring.
+---
+
+## 3. Program Relevance & Direct OSF Alignment
+
+### 1. ORF Protocol Fee Split ($\tau$)
+- **OSF Mapping**: **ORF Layer 1 (Protocol Fee Routing — $\tau$ Split)** & **[`INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
+- **Mechanism Validated**: Proves that protocol-level transaction fee splits generate massive recurring treasury replenishment without relying on token minting or inflationary expansion.
+- **Operator Takeaway**: An ORF Operator adopts Optimism's 15% net profit split as the primary protocol-layer inflow rail ($\tau = 0.15$) to fund baseline ecosystem maintenance.
+
+### 2. dOSPO Separation of Collection vs Allocation
+- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../dospo/START_HERE.md))** & **Safeguard 3 (No Granular Budget Approval)**.
+- **Mechanism Validated**: Demonstrates that while automated revenue collection works seamlessly, using subjective retroactive voter rounds for routine maintenance creates voter fatigue and unpredictable maintainer stipends.
+- **Operator Takeaway**: dOSPO routes protocol fee revenue directly into predictable OMF maintainer retainers rather than subjecting routine maintenance to periodic popularity contests.

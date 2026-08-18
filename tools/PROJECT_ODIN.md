@@ -10,11 +10,11 @@
 ### Summary
 **Project Odin** ([https://projectodin.org/](https://projectodin.org/)) is an initiative by the **Ethereum Foundation's Funding Coordination team** in partnership with **Renaissance Philanthropy** (powered by ARIA UK / FRC Launchpad). It operates as a support program and practical laboratory designed to help strategic Ethereum Digital Public Goods (DPGs) transition from single-source grant dependency into sustainable "Frontier Research Contractors" (FRCs) with credible, diversified, long-term earned revenue pathways.
 
-### Purpose
-Project Odin addresses the fundamental question:  
+### Core Problem Solved
+Ethereum DPGs frequently suffer from grant dependency fragility — relying indefinitely on single-source foundation grants that fluctuate over market cycles. Project Odin addresses the fundamental question:  
 > *"Can we translate research into deliverables clients can pay for?"*
 
-The program assists selected EF grantee teams in building commercial capabilities, architecting compliant legal/financial containers, and converting technical expertise into contracted deliverables, thereby reducing ecosystem fragility over a 12-month horizon.
+The program assists selected EF grantee teams in building commercial capabilities, architecting compliant legal/financial containers, and converting technical expertise into contracted deliverables over a 12-month horizon.
 
 ---
 
@@ -43,11 +43,17 @@ Co-designed with **Renaissance Philanthropy** (the team behind the FRC Launchpad
 
 ---
 
-## Alignment With Open Source Frontiers
+## Program Relevance & Direct OSF Alignment
 
-- **OMF Incubation Program**: Direct real-world Web3 implementation of OMF's Incubation Program (Emerging -> Growing transition).
-- **ORF Enterprise Services**: Validates the translation of open research into contracted commercial maintenance and service deliverables.
-- **Maintainer Autonomy**: Preserves project mission and technical integrity while building commercial revenue bridges.
+### 1. OMF Incubation Program Alignment
+- **OSF Mapping**: **OMF Program 5 (Incubation Program)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **Mechanism Validated**: Direct Web3 implementation of OMF's Incubation Program (Emerging -> Growing transition). Proves that structured 3-stage incubation equips DPG maintainers to transition from passive grant recipients to commercial contractors.
+- **Operator Takeaway**: An OMF Operator adopts Project Odin's 3-stage milestone structure to onboard emerging critical dependencies, guiding them from Stage 1 domain mapping to Stage 3 contract execution.
+
+### 2. ORF Enterprise Services Layer Alignment
+- **OSF Mapping**: **ORF Layer 3 (Enterprise & Services Layer)** & **[`orf/INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
+- **Mechanism Validated**: Demonstrates how open-source research and engineering can be packaged into contracted deliverables (Enterprise SLAs, custom extensions, compliance reviews) that enterprise clients purchase.
+- **Operator Takeaway**: An ORF Operator utilizes Odin's BD collateral templates (one-pagers, statements of work) to build enterprise sales pipelines that route commercial service revenue back into ecosystem treasuries.
 
 ---
 
