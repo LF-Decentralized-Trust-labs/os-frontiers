@@ -2,7 +2,7 @@
 
 > **Scope**: Treasury Proposal Process (Catalyst & CIP-1694) + Cardano Cube Developer Tooling Ecosystem  
 > **Source**: Live GitHub REST API + Cardano Cube Sourced Catalog + Intersect MBO Governance Framework  
-> **Evaluator Engine**: Open Source Frontiers Dynamic Systems Engine v2.0 (LF Decentralized Trust)
+> **Evaluator Engine**: Open Source Frontiers Systems Assessor (LF Decentralized Trust)
 
 ---
 

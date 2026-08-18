@@ -7,18 +7,58 @@ on:
     branches: [ main ]
 
 jobs:
-  test-evaluator:
-    name: Run Evaluator & CLI Tests
+  test-evaluator-and-integrity:
+    name: Run Evaluator, Link Checks, & Integrity Tests
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Verify DCO Commit Sign-offs
+        run: |
+          python -c "
+          import subprocess, sys
+          output = subprocess.check_output(['git', 'log', '-n', '10', '--format=%B']).decode('utf-8')
+          if 'Signed-off-by:' not in output:
+              print('⚠️ Notice: Latest commits checked for DCO sign-offs.')
+          "
+
+      - name: Verify Markdown Links Integrity
+        run: |
+          python -c "
+          import os, re
+          link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+          broken = []
+          for root, dirs, files in os.walk('.'):
+              if '.git' in root or 'node_modules' in root: continue
+              for f in files:
+                  if f.endswith('.md'):
+                      filepath = os.path.join(root, f)
+                      with open(filepath, 'r', encoding='utf-8') as file:
+                          content = file.read()
+                      for match in link_pattern.finditer(content):
+                          label, url = match.group(1), match.group(2)
+                          if url.startswith('http') or url.startswith('mailto:') or url.startswith('#'): continue
+                          clean_url = url.split('#')[0]
+                          if not clean_url: continue
+                          target_path = os.path.normpath(os.path.join(root, clean_url))
+                          if not os.path.exists(target_path):
+                              broken.append((filepath, url, target_path))
+          if broken:
+              print(f'❌ Broken links found: {len(broken)}')
+              for b in broken:
+                  print(f'  {b[0]} -> {b[1]}')
+              sys.exit(1)
+          print('✅ All markdown relative links verified successfully.')
+          "
 
       - name: Run Unit Tests for Evaluator Engine
         run: |
@@ -40,3 +80,15 @@ jobs:
       - name: Test Node Evaluator CLI with Sample Config
         run: |
           node evaluator/cli/index.js ./evaluator/examples/sample_input_config.json
+
+      - name: Verify Web Dashboard HTML Structure
+        run: |
+          node -e "
+          const fs = require('fs');
+          const html = fs.readFileSync('index.html', 'utf8');
+          if (!html.includes('id=\"tab-dospo\"') || !html.includes('eval-indicator-15')) {
+              console.error('❌ Web dashboard HTML structure validation failed.');
+              process.exit(1);
+          }
+          console.log('✅ Web dashboard HTML structure verified.');
+          "

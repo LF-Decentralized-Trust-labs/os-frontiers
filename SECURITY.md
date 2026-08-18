@@ -1,12 +1,13 @@
 # Security Policy
 
-> **Edition**: July 2026 Research Candidate (v0.8.0-rc.1)
+> **Edition**: July 2026 Research Candidate (v0.8.0-rc.1)  
+> *LF Decentralized Trust · Open Source Frontiers Lab*
 
 ## Reporting a Vulnerability
 
 Open Source Frontiers Lab takes software and framework security seriously. If you discover a security vulnerability in the repository code, CLI evaluators, web dashboard, or reference smart contracts, please report it immediately:
 
-- **Security Email**: **security@opensourcecowboy.org** or **chris@opensourcecowboy.org**
+- **Security Email**: **security@opensourcefrontiers.org** (or **chris@opensourcecowboy.org**)
 
 Please do **NOT** create a public GitHub issue for security vulnerabilities.
 
