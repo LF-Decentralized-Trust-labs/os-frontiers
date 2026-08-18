@@ -1,6 +1,8 @@
-# Open Source Frontiers Lab — Use Case Submission
+# Open Source Frontiers Lab — Use Case Submission Template
 
-# Polkadot OpenGov: Technical Fellowship Ranks 0–9 & PCF Legal Execution Architecture
+## Use Case Title
+Polkadot OpenGov: Technical Fellowship Ranks 0–9 & PCF Legal Execution Architecture
+
 ---
 
 # Overview
@@ -52,9 +54,9 @@ Polkadot's dual implementation of the Technical Fellowship (rank-based technical
 
 ## Description
 Polkadot addresses open-source stewardship through a three-part structural architecture:
-1. **Polkadot Technical Fellowship**: An on-chain, self-governing body of core protocol developers structured across 10 distinct ranks (Rank 0 Candidate to Rank 9 Grand Master). Fellowship members receive automated monthly stipends scaled to their rank, evaluated exclusively by peer code reviews.
-2. **Polkadot Community Foundation (PCF)**: A neutral Cayman Foundation Company mandated by OpenGov referenda to act as the DAO's legal execution arm — signing commercial contracts, maintaining legal compliance, and paying fiat maintainer salaries.
-3. **Protocol-Native Treasury Inflows**: Polkadot enforces protocol rules where unspent token issuance, transaction fees, and a designated percentage of **validator slashing penalties** flow directly into the OpenGov Treasury.
+1. Polkadot Technical Fellowship: An on-chain, self-governing body of core protocol developers structured across 10 distinct ranks (Rank 0 Candidate to Rank 9 Grand Master). Fellowship members receive automated monthly stipends scaled to their rank, evaluated exclusively by peer code reviews.
+2. Polkadot Community Foundation (PCF): A neutral Cayman Foundation Company mandated by OpenGov referenda to act as the DAO's legal execution arm — signing commercial contracts, maintaining legal compliance, and paying fiat maintainer salaries.
+3. Protocol-Native Treasury Inflows: Polkadot enforces protocol rules where unspent token issuance, transaction fees, and a designated percentage of validator slashing penalties flow directly into the OpenGov Treasury.
 
 ## Operational Model
 The operational model functions across six interacting stages:
@@ -107,10 +109,10 @@ Funding combines protocol issuance, fee splits, and validator slashing penalties
 - Protocol-native treasury replenishment from validator slashing penalties
 - High retention of senior protocol architects and security researchers
 
-## Risks & Mitigation
-- **Fellowship Cartelization Risk**: Mitigated by explicit, public code contribution rubrics and open Rank 0 candidate entry.
-- **Legal Jurisdiction Risk**: Mitigated by PCF's neutral offshore foundation structure.
-- **Treasury Depletion Risk**: Mitigated by OpenGov conviction voting and automatic treasury burn mechanics on unspent allocations.
+## Risks
+- Fellowship cartelization risk if peer evaluations lack external transparency
+- Offshore legal foundation jurisdiction risk under PCF
+- Treasury depletion risks during extended crypto market drawdowns
 
 ## Metrics for Success
 
@@ -130,7 +132,7 @@ Funding combines protocol issuance, fee splits, and validator slashing penalties
 - [ ] Concept
 - [ ] Research
 - [ ] Prototype
-- [ ] Operational Pilot
+- [ ] Pilot
 - [x] Production (Live production OpenGov referenda, Technical Fellowship, & PCF legal wrapper)
 - [ ] Scaling
 
@@ -146,6 +148,22 @@ Polkadot mainnet launched in 2020. OpenGov and Technical Fellowship deployed in 
 ---
 
 # Alignment With Open Source Frontiers
+
+## Relevant Focus Areas
+- [x] Open Source Sustainability
+- [x] Decentralized Governance
+- [x] Funding Mechanisms
+- [x] Contributor Incentives
+- [x] Ecosystem Coordination
+- [x] Infrastructure Stewardship
+- [x] Security & Resilience
+- [x] Public Goods Funding
+- [x] Interoperability
+- [ ] Compliance & Policy
+- [ ] Other: ___________
+
+## Why This Fits the Lab
+Polkadot provides battle-tested Web3 reference models for maintainer rank progression (Technical Fellowship), legal foundation execution (PCF), and protocol slashing penalty routing.
 
 ## Program Relevance & Direct OSF Alignment
 
@@ -178,6 +196,9 @@ Polkadot mainnet launched in 2020. OpenGov and Technical Fellowship deployed in 
 - Polkadot Technical Fellowship Manifest: https://github.com/polkadot-fellows/manifesto
 - Polkadot OpenGov Pallets: https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/referenda
 - PCF Legal Framework Docs: https://github.com/polkadot-community-foundation
+
+## Additional Notes
+Provides primary reference models for rank progression ladders and legal foundation execution wrappers.
 
 ---
 

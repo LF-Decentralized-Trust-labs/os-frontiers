@@ -1,6 +1,8 @@
-# Open Source Frontiers Lab — Use Case Submission
+# Open Source Frontiers Lab — Use Case Submission Template
 
-# Cardano Paid Open Source Model (POSM)
+## Use Case Title
+Cardano Paid Open Source Model (POSM)
+
 ---
 
 # Overview
@@ -25,12 +27,7 @@ These structural weaknesses have historically created systemic risks across both
 ## Why This Matters
 Blockchain ecosystems increasingly rely on open source software as critical infrastructure, yet many ecosystems still lack sustainable operational models to maintain that infrastructure over time. POSM attempts to solve this by treating open source development as a governed public good supported through treasury mechanisms, contributor programs, and lifecycle management frameworks. 
 
-The model also serves as an experimental governance case study for how decentralized ecosystems can:
-- Coordinate public goods funding
-- Sustain critical infrastructure
-- Incentivize contributors
-- Manage ecosystem risk
-- Align governance with operational execution
+The model also serves as an experimental governance case study for how decentralized ecosystems can coordinate public goods funding, sustain critical infrastructure, incentivize contributors, manage ecosystem risk, and align governance with operational execution.
 
 ---
 
@@ -78,13 +75,7 @@ POSM introduces a structured operational framework that combines:
 
 The model aligns treasury funding with ecosystem priorities through decentralized governance processes involving DReps and committees. 
 
-Key programs include:
-- Maintainer Retainers
-- Code for Us
-- Contributor Incubation
-- Contribution Ladder Framework
-- Open Source Office Services
-- Lifecycle and maturity evaluations
+Key programs include Maintainer Retainers, Code for Us, Contributor Incubation, Contribution Ladder Framework, Open Source Office Services, and Lifecycle/maturity evaluations.
 
 ## Operational Model
 The model operates through several interacting layers:
@@ -213,6 +204,22 @@ POSM transitioned from concept and whitepaper stages into active pilot and gover
 
 # Alignment With Open Source Frontiers
 
+## Relevant Focus Areas
+- [x] Open Source Sustainability
+- [x] Decentralized Governance
+- [x] Funding Mechanisms
+- [x] Contributor Incentives
+- [x] Ecosystem Coordination
+- [x] Infrastructure Stewardship
+- [x] Security & Resilience
+- [x] Public Goods Funding
+- [x] Interoperability
+- [ ] Compliance & Policy
+- [ ] Other: ___________
+
+## Why This Fits the Lab
+POSM represents a major real-world experiment in decentralized open source sustainability. It directly intersects with core Open Source Frontiers research areas including governance-driven infrastructure funding, treasury coordination, contributor sustainability, and open source operational frameworks.
+
 ## Program Relevance & Direct OSF Alignment
 
 ### 1. dOSPO Governance & CIP-1694 Alignment
@@ -241,21 +248,13 @@ POSM transitioned from concept and whitepaper stages into active pilot and gover
 - CHAOSS Podcast Discussion: https://podcast.chaoss.community/114
 
 ## Related Repositories
-- Intersect Documentation Repository
-- Open Source Committee Documentation
-- Bitergia Reporting Infrastructure
-- Cardano Governance Infrastructure
+- Intersect Documentation Repository: https://github.com/intersectmbo
+- Open Source Committee Documentation: https://opensourcecommittee.docs.intersectmbo.org/
+- Bitergia Reporting Infrastructure: https://bitergia.com
+- Cardano Governance Infrastructure: https://docs.cardano.org/governance
 
 ## Additional Notes
-POSM has gained attention within broader open source sustainability discussions due to its attempt to combine:
-- Treasury governance
-- Open source operations
-- Contributor compensation
-- Lifecycle management
-- Public accountability
-- Ecosystem-level stewardship
-
-The framework may serve as a transferable operational model for other decentralized ecosystems seeking sustainable open source governance structures. 
+POSM has gained attention within broader open source sustainability discussions due to its attempt to combine treasury governance, open source operations, contributor compensation, lifecycle management, public accountability, and ecosystem-level stewardship.
 
 ---
 
@@ -274,5 +273,3 @@ The framework may serve as a transferable operational model for other decentrali
 
 ## Submission Date
 2026-05-06
-
----
