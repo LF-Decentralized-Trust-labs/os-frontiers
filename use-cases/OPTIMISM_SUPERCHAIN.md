@@ -1,6 +1,8 @@
-# Open Source Frontiers Lab — Use Case Submission
+# Open Source Frontiers Lab — Use Case Submission Template
 
-# Optimism Superchain: Sequencer Revenue Tithe & RetroFunding Architecture
+## Use Case Title
+Optimism Superchain: Sequencer Revenue Tithe & RetroFunding Architecture
+
 ---
 
 # Overview
@@ -49,8 +51,8 @@ The Superchain fee split demonstrates that protocol-level sequencing rules can g
 
 ## Description
 Optimism addresses ecosystem sustainability through a two-part operational model:
-1. **Protocol Fee Split ($\tau$)**: All OP Stack chains joining the Superchain execute a standardized contribution contract: sequencers automatically transfer 15% of net profit (or 2.5% of gross fees) to the shared Optimism Collective Treasury.
-2. **Bi-Cameral Governance & Data Tracing**: Governance is split between token holders (Token House) and identity-verified badgeholders (Citizens' House). Citizens' House evaluates public-goods allocations using empirical metrics provided by **Open Source Observer (OSO)**.
+1. Protocol Fee Split ($\tau$): All OP Stack chains joining the Superchain execute a standardized contribution contract: sequencers automatically transfer 15% of net profit (or 2.5% of gross fees) to the shared Optimism Collective Treasury.
+2. Bi-Cameral Governance & Data Tracing: Governance is split between token holders (Token House) and identity-verified badgeholders (Citizens' House). Citizens' House evaluates public-goods allocations using empirical metrics provided by **Open Source Observer (OSO)**.
 
 ## Operational Model
 The Superchain operational model runs across six interacting stages:
@@ -102,10 +104,10 @@ Funding is driven primarily by protocol-layer commercial sequencing revenue rath
 - Alignment between commercial rollup growth and open-source infrastructure funding
 - Reduced reliance on state budget grants or private venture capital
 
-## Risks & Mitigation
-- **Voter Fatigue Risk**: Mitigated by shifting routine maintenance from retroactive voting to predictable OMF maintainer retainers.
-- **Token Volatility Risk**: Mitigated by converting a portion of sequencer fee inflows into stablecoin reserves.
-- **Enforcement Risk**: Mitigated by standardized OP Stack chain governance agreements.
+## Risks
+- Badgeholder voter fatigue during subjective retroactive grant rounds
+- Token price volatility impacting native OP treasury balances
+- Sequencer enforcement compliance across newly onboarded member chains
 
 ## Metrics for Success
 
@@ -125,7 +127,7 @@ Funding is driven primarily by protocol-layer commercial sequencing revenue rath
 - [ ] Concept
 - [ ] Research
 - [ ] Prototype
-- [ ] Operational Pilot
+- [ ] Pilot
 - [x] Production (Live production Superchain revenue split & governance infrastructure)
 - [ ] Scaling
 
@@ -141,6 +143,22 @@ OP Mainnet launched in 2021. RetroPGF Round 1 executed in 2021. Superchain fee s
 ---
 
 # Alignment With Open Source Frontiers
+
+## Relevant Focus Areas
+- [x] Open Source Sustainability
+- [x] Decentralized Governance
+- [x] Funding Mechanisms
+- [x] Contributor Incentives
+- [x] Ecosystem Coordination
+- [x] Infrastructure Stewardship
+- [x] Security & Resilience
+- [x] Public Goods Funding
+- [x] Interoperability
+- [ ] Compliance & Policy
+- [ ] Other: ___________
+
+## Why This Fits the Lab
+The Optimism Superchain represents the leading Web3 production model for protocol-layer transaction fee splits ($\tau$), demonstrating how commercial L2 activity can continuously replenish ecosystem treasuries.
 
 ## Program Relevance & Direct OSF Alignment
 
@@ -168,6 +186,9 @@ OP Mainnet launched in 2021. RetroPGF Round 1 executed in 2021. Superchain fee s
 - OP Stack Monorepo: https://github.com/ethereum-optimism/optimism
 - Open Source Observer Pipeline: https://github.com/opensource-observer/oso
 - Superchain Governance Contracts: https://github.com/ethereum-optimism/governance
+
+## Additional Notes
+Provides the primary Web3 reference model for protocol-layer fee split contracts.
 
 ---
 

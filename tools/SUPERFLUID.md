@@ -1,14 +1,14 @@
-# Tool Profile: Superfluid (`superfluid.org`)
+# Open Source Frontiers Lab — Tool Submission Template
 
-> **LF Decentralized Trust · Open Source Frontiers Lab Profile**  
-> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Production Infrastructure Primitive`*
+## Tool Name
+Superfluid (superfluid.org)
 
 ---
 
 # Overview
 
 ## Summary
-**Superfluid** ([https://superfluid.org](https://superfluid.org)) is an EVM smart contract framework that enables continuous per-second money streaming for subscriptions, payroll, and maintainer stipends without incurring gas costs per block or per payment transaction. Built by Superfluid Finance, the protocol allows capital to flow continuously between accounts based on a target flow rate (e.g. 100 USDC per day).
+Superfluid ([https://superfluid.org](https://superfluid.org)) is an EVM smart contract framework that enables continuous per-second money streaming for subscriptions, payroll, and maintainer stipends without incurring gas costs per block or per payment transaction. Built by Superfluid Finance, the protocol allows capital to flow continuously between accounts based on a target flow rate (e.g. 100 USDC per day).
 
 ## Purpose
 Superfluid addresses payment friction, gas overhead, and administrative delays in recurring Web3 disbursements. Traditional Web2 and Web3 payroll models disburse capital in discrete monthly or bi-weekly blocks, creating manual invoice processing overhead and payment friction. Superfluid enables automated, zero-gas streaming subscriptions, retainers, and distributions where money flows continuously like electricity.
@@ -22,23 +22,23 @@ Superfluid aligns with the Open Source Frontiers mission by providing automated,
 
 ## Category
 - [ ] Governance Tooling
-- [x] **Open Source Sustainability**
-- [x] **Contributor Coordination**
-- [x] **Treasury & Funding Infrastructure**
+- [x] Open Source Sustainability
+- [x] Contributor Coordination
+- [x] Treasury & Funding Infrastructure
 - [ ] Credentialing & Reputation
 - [ ] Analytics & Observability
 - [ ] Security & Incident Response
 - [ ] Developer Tooling
-- [x] **Interoperability Infrastructure**
+- [x] Interoperability Infrastructure
 - [ ] Community Operations
 - [ ] Documentation & Knowledge Systems
 - [ ] Lifecycle Management
-- [x] **Public Goods Infrastructure**
+- [x] Public Goods Infrastructure
 - [ ] Compliance & Policy
 - [ ] Other: ___________
 
 ## Open Source Status
-- [x] **Fully Open Source**
+- [x] Fully Open Source
 - [ ] Source Available
 - [ ] Mixed / Hybrid
 - [ ] Proprietary Components
@@ -82,9 +82,9 @@ Eliminates gas costs per payment block, replaces discrete bi-weekly payroll with
 - SDK Core / Hardhat / Foundry (developer tooling)
 
 ## Architecture Overview
-Superfluid operates by wrapping standard ERC-20 tokens into **Super Tokens** (`ERC20x`). Stream logic is managed by two primary agreement contracts:
-- **Constant Flow Agreement (CFA)**: Manages per-second streaming balances between accounts using a single state update. Money flows continuously per second based on a target flow rate (e.g. 100 USDC per day) without requiring block-by-block transactions. Streams run indefinitely until cancelled by either party or until the sender's balance is exhausted.
-- **Instant Distribution Agreement (IDA)**: Enables 1-to-N token distributions in a single transaction, distributing funds to thousands of token holders proportionally based on index units.
+Superfluid operates by wrapping standard ERC-20 tokens into Super Tokens (`ERC20x`). Stream logic is managed by two primary agreement contracts:
+- Constant Flow Agreement (CFA): Manages per-second streaming balances between accounts using a single state update. Money flows continuously per second based on a target flow rate (e.g. 100 USDC per day) without requiring block-by-block transactions. Streams run indefinitely until cancelled by either party or until the sender's balance is exhausted.
+- Instant Distribution Agreement (IDA): Enables 1-to-N token distributions in a single transaction, distributing funds to thousands of token holders proportionally based on index units.
 Solvency is maintained by a network of off-chain liquidators who automatically close streams if a sender's deposit buffer is breached.
 
 ## Dependencies
@@ -135,7 +135,7 @@ Superfluid establishes the financial plumbing for real-time streaming economies,
 - [ ] Prototype
 - [ ] Alpha
 - [ ] Beta
-- [x] **Production**
+- [x] Production
 - [ ] Mature
 
 ## Current Adoption
@@ -165,16 +165,16 @@ Public stream explorer (`console.superfluid.finance`), subgraph indexers, and re
 # Alignment With Open Source Frontiers
 
 ## Relevant Focus Areas
-- [x] **Open Source Sustainability**
+- [x] Open Source Sustainability
 - [ ] Decentralized Governance
-- [x] **Contributor Incentives**
-- [x] **Treasury Coordination**
+- [x] Contributor Incentives
+- [x] Treasury Coordination
 - [ ] Security & Resilience
 - [ ] Ecosystem Analytics
-- [x] **Lifecycle Stewardship**
-- [x] **Public Goods Funding**
-- [x] **Cross Ecosystem Collaboration**
-- [x] **Infrastructure Neutrality**
+- [x] Lifecycle Stewardship
+- [x] Public Goods Funding
+- [x] Cross Ecosystem Collaboration
+- [x] Infrastructure Neutrality
 - [ ] Other: ___________
 
 ## Why This Tool Fits the Lab

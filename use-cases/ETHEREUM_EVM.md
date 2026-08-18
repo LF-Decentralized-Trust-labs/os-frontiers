@@ -1,6 +1,8 @@
-# Open Source Frontiers Lab — Use Case Submission
+# Open Source Frontiers Lab — Use Case Submission Template
 
-# Ethereum & EVM Ecosystem: Protocol Guild, Project Odin & Endowment Architecture
+## Use Case Title
+Ethereum & EVM Ecosystem: Protocol Guild, Project Odin & Endowment Architecture
+
 ---
 
 # Overview
@@ -51,17 +53,17 @@ Ethereum is the critical settlement layer for thousands of decentralized applica
 
 ## Description
 The Ethereum ecosystem addresses open-source sustainability through a multi-layered, de-coupled approach:
-1. **Protocol Guild**: An on-chain split contract where ecosystem projects pledge 1% of token supply or protocol yield. Vested funds stream automatically to ~180 core Ethereum client maintainers based on a transparent time-weighted tenure formula.
-2. **Project Odin**: A 12-month incubation program launched by the EF Funding Coordination team and Renaissance Philanthropy. Odin guides strategic DPGs through a 3-stage framework (*Stage 1 Discovery/Mapping*, *Stage 2 Validation/Planning*, *Stage 3 Execution/De-risking*) to transition from grant dependency into self-sustaining Frontier Research Contractors with client-contracted earned revenue.
-3. **ENS EP 6.46 Investment Policy Statement**: A governed DAO endowment policy managing $100M+ in reserves across liquid USDC/treasury sleeves and ETH yield strategies to preserve a 3+ year maintainer operating runway.
-4. **Octant Staking Yield**: Locks 100,000 ETH in native staking, routing validator yield directly into a public-goods allocation pool with a 25% operational stewardship anchor.
+1. Protocol Guild: An on-chain split contract where ecosystem projects pledge 1% of token supply or protocol yield. Vested funds stream automatically to ~180 core Ethereum client maintainers based on a transparent time-weighted tenure formula.
+2. Project Odin: A 12-month incubation program launched by the EF Funding Coordination team and Renaissance Philanthropy. Odin guides strategic DPGs through a 3-stage framework (*Stage 1 Discovery/Mapping*, *Stage 2 Validation/Planning*, *Stage 3 Execution/De-risking*) to transition from grant dependency into self-sustaining Frontier Research Contractors with client-contracted earned revenue.
+3. ENS EP 6.46 Investment Policy Statement: A governed DAO endowment policy managing $100M+ in reserves across liquid USDC/treasury sleeves and ETH yield strategies to preserve a 3+ year maintainer operating runway.
+4. Octant Staking Yield: Locks 100,000 ETH in native staking, routing validator yield directly into a public-goods allocation pool with a 25% operational stewardship anchor.
 
 ## Operational Model
 The operational model functions across four distinct stages:
-1. **Pledge & Inflow Collection**: Projects pledge tokens to Protocol Guild; `.eth` domain fees flow to ENS DAO; sequencers and dApps generate service revenue.
-2. **Endowment & Yield Management**: ENS EP 6.46 IPS and Octant lock reserves in low-risk yield strategies, generating non-inflationary stablecoin and ETH yield.
-3. **DPG Commercial Incubation**: Project Odin audits grantee DPGs, architects legal/financial containers, builds credibility assets, and converts BD pipelines into commercial contracts.
-4. **Automated Maintainer Disbursement**: Protocol Guild contracts stream vested assets continuously to core maintainers without manual grant approval.
+1. Pledge & Inflow Collection: Projects pledge tokens to Protocol Guild; `.eth` domain fees flow to ENS DAO; sequencers and dApps generate service revenue.
+2. Endowment & Yield Management: ENS EP 6.46 IPS and Octant lock reserves in low-risk yield strategies, generating non-inflationary stablecoin and ETH yield.
+3. DPG Commercial Incubation: Project Odin audits grantee DPGs, architects legal/financial containers, builds credibility assets, and converts BD pipelines into commercial contracts.
+4. Automated Maintainer Disbursement: Protocol Guild contracts stream vested assets continuously to core maintainers without manual grant approval.
 
 ## Governance Considerations
 Governance is decentralized across specialized entities:
@@ -110,10 +112,10 @@ Funding is completely decoupled from protocol minting inflation:
 - 3+ year operating runway protection against crypto bear markets
 - High maintainer retention across competing client teams
 
-## Risks & Mitigation
-- **Grant Dependency Risk**: Mitigated by Project Odin's 3-stage commercial incubation pipeline.
-- **Treasury Volatility Risk**: Mitigated by ENS EP 6.46 Investment Policy Statement liquid sleeves.
-- **Maintainer Capture Risk**: Mitigated by Protocol Guild's multi-project pledge aggregation and custody-free split contract.
+## Risks
+- Grant dependency risks if DPG teams fail to execute commercial BD pipelines
+- Native token volatility impacting treasury reserves during market downturns
+- Maintainer capture risks if single sponsors dominate protocol pledges
 
 ## Metrics for Success
 
@@ -133,7 +135,7 @@ Funding is completely decoupled from protocol minting inflation:
 - [ ] Concept
 - [ ] Research
 - [ ] Prototype
-- [ ] Operational Pilot
+- [ ] Pilot
 - [x] Production (Live ecosystem infrastructure with active incubation lab)
 - [ ] Scaling
 
@@ -149,6 +151,22 @@ Protocol Guild launched in 2022 and reached mature production scale by 2024. ENS
 ---
 
 # Alignment With Open Source Frontiers
+
+## Relevant Focus Areas
+- [x] Open Source Sustainability
+- [x] Decentralized Governance
+- [x] Funding Mechanisms
+- [x] Contributor Incentives
+- [x] Ecosystem Coordination
+- [x] Infrastructure Stewardship
+- [x] Security & Resilience
+- [x] Public Goods Funding
+- [x] Interoperability
+- [ ] Compliance & Policy
+- [ ] Other: ___________
+
+## Why This Fits the Lab
+The Ethereum ecosystem demonstrates premier Web3 implementations of custody-free maintainer retainers, DPG incubation labs, and governed capital endowments, providing core reference architectures for Open Source Frontiers.
 
 ## Program Relevance & Direct OSF Alignment
 
@@ -182,6 +200,9 @@ Protocol Guild launched in 2022 and reached mature production scale by 2024. ENS
 - Protocol Guild Smart Contracts: https://github.com/protocolguild/protocol-guild
 - ENS Contracts: https://github.com/ensdomains/ens-contracts
 - Open Source Observer Engine: https://github.com/opensource-observer/oso
+
+## Additional Notes
+Provides primary reference models for maintainer retainers, DPG incubation, and endowment yield management.
 
 ---
 

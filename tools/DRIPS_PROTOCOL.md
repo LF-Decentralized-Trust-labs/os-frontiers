@@ -1,14 +1,14 @@
-# Tool Profile: Drips Protocol (`drips.network`)
+# Open Source Frontiers Lab — Tool Submission Template
 
-> **LF Decentralized Trust · Open Source Frontiers Lab Profile**  
-> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Production Protocol`*
+## Tool Name
+Drips Protocol (drips.network)
 
 ---
 
 # Overview
 
 ## Summary
-**Drips Protocol** ([https://drips.network](https://drips.network)) is an EVM and Filecoin smart contract protocol that enables open-source projects to receive continuous streaming funds and automatically cascade incoming revenue down their dependency graph in real time. Built by the Radicle / Monadic US software ecosystem, Drips provides continuous token streaming, recurring project subscriptions, and automated recursive dependency splitting.
+Drips Protocol ([https://drips.network](https://drips.network)) is an EVM and Filecoin smart contract protocol that enables open-source projects to receive continuous streaming funds and automatically cascade incoming revenue down their dependency graph in real time. Built by the Radicle / Monadic US software ecosystem, Drips provides continuous token streaming, recurring project subscriptions, and automated recursive dependency splitting.
 
 ## Purpose
 Drips addresses the nested open-source dependency distribution crisis. When an open-source framework or dApp receives a grant or enterprise payment, that capital historically stops at the top-level repository maintainer. The hundreds of underlying library dependencies (e.g. `ethers.js`, `wagmi`, `tokio`) that make the top-level software possible receive zero financial benefit. Drips enables top-level projects to register on-chain dependency split rules, automatically routing pre-set percentages of incoming revenue to upstream maintainers.
@@ -22,23 +22,23 @@ Drips aligns with the Open Source Frontiers mission by creating open, custody-fr
 
 ## Category
 - [ ] Governance Tooling
-- [x] **Open Source Sustainability**
-- [x] **Contributor Coordination**
-- [x] **Treasury & Funding Infrastructure**
+- [x] Open Source Sustainability
+- [x] Contributor Coordination
+- [x] Treasury & Funding Infrastructure
 - [ ] Credentialing & Reputation
 - [ ] Analytics & Observability
 - [ ] Security & Incident Response
 - [ ] Developer Tooling
-- [x] **Interoperability Infrastructure**
+- [x] Interoperability Infrastructure
 - [ ] Community Operations
 - [ ] Documentation & Knowledge Systems
 - [ ] Lifecycle Management
-- [x] **Public Goods Infrastructure**
+- [x] Public Goods Infrastructure
 - [ ] Compliance & Policy
 - [ ] Other: ___________
 
 ## Open Source Status
-- [x] **Fully Open Source**
+- [x] Fully Open Source
 - [ ] Source Available
 - [ ] Mixed / Hybrid
 - [ ] Proprietary Components
@@ -131,7 +131,7 @@ Drips allows multi-million dollar grants or commercial SLA payments to cascade a
 - [ ] Prototype
 - [ ] Alpha
 - [ ] Beta
-- [x] **Production**
+- [x] Production
 - [ ] Mature
 
 ## Current Adoption
@@ -161,16 +161,16 @@ On-chain stream balances and split configurations are queryable via public Graph
 # Alignment With Open Source Frontiers
 
 ## Relevant Focus Areas
-- [x] **Open Source Sustainability**
+- [x] Open Source Sustainability
 - [ ] Decentralized Governance
-- [x] **Contributor Incentives**
-- [x] **Treasury Coordination**
+- [x] Contributor Incentives
+- [x] Treasury Coordination
 - [ ] Security & Resilience
 - [ ] Ecosystem Analytics
-- [x] **Lifecycle Stewardship**
-- [x] **Public Goods Funding**
-- [x] **Cross Ecosystem Collaboration**
-- [x] **Infrastructure Neutrality**
+- [x] Lifecycle Stewardship
+- [x] Public Goods Funding
+- [x] Cross Ecosystem Collaboration
+- [x] Infrastructure Neutrality
 - [ ] Other: ___________
 
 ## Why This Tool Fits the Lab
