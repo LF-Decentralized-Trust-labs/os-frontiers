@@ -44,7 +44,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2�
 
 **Warning**: The most common failure mode is using this program for projects that have not yet established ecosystem-critical status. Use centrality scoring to enforce selection discipline. Governance priority alignment should carry the lowest weight (10%) in selection rubrics — the highest weights belong to centrality (30%) and bus factor (25%).
 
-→ Full specification: [`maintainer-retainer.md`](maintainer-retainer.md)
+→ Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 
 ---
 
@@ -66,7 +66,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2�
 
 **Warning**: Do not use code bounties to fund ongoing maintenance responsibilities. "Bounty hunter" is not "steward." If a project needs ongoing availability funded, use a Retainer.
 
-→ Full specification: [`code-bounties.md`](code-bounties.md)
+→ Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 
 ---
 
@@ -92,7 +92,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2�
 
 **Warning**: Web3-specific contributor pathways must address unique challenges: higher technical barriers, cryptographic correctness requirements, and economic incentives that attract contributors motivated by token appreciation rather than long-term stewardship. Program structure must filter for stewardship orientation.
 
-→ Full specification: [`contributor-pathways.md`](contributor-pathways.md)
+→ Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 
 ---
 
@@ -116,7 +116,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2�
 
 **Reference implementation**: GitHub Secure OSS Fund cohort model (security training + tooling + mentorship combined)
 
-→ Full specification: [`operational-support.md`](operational-support.md)
+→ Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 
 ---
 
@@ -138,7 +138,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2�
 
 **Reference implementation**: Germany's Sovereign Tech Agency milestone-based contracts for emerging projects
 
-→ Full specification: [`incubation.md`](incubation.md)
+→ Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 
 ---
 
@@ -161,7 +161,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2�
 
 **Reference**: The Kubernetes NGINX case is the canonical failure-of-absence example. The Apache Software Foundation's project lifecycle and emeritus process are positive reference implementations.
 
-→ Full specification: [`resilience.md`](resilience.md)
+→ Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 
 ---
 

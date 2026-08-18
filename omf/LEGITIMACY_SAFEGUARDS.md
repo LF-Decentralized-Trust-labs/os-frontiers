@@ -44,7 +44,7 @@ The four safeguards below encode this structural logic for OMF implementations.
 
 **What this means in practice:**
 - All institutional knowledge is documented in published artifacts — not held by individuals
-- Operator replacement can be initiated through a defined governance process (see [`appendices/risk-mitigation-protocols.md`](appendices/risk-mitigation-protocols.md))
+- Operator replacement can be initiated through a defined governance process (see [`RISK_MITIGATION_PROTOCOLS.md`](RISK_MITIGATION_PROTOCOLS.md))
 - A minimum 90-day structured transition period is required when operators change
 - In-flight funds are held in escrow (multisig or smart contract) during transitions
 - Maintainer support continues uninterrupted during operator transitions — the relationship is with the program, not the operator
