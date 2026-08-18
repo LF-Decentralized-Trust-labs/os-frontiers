@@ -136,7 +136,9 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2�
 
 **Primary funding instrument**: Delivery-oriented (primary) → Continuity transition at graduation
 
-**Reference implementation**: Germany's Sovereign Tech Agency milestone-based contracts for emerging projects
+**Reference implementations**:
+- Germany's Sovereign Tech Agency milestone-based contracts for emerging projects
+- Ethereum Foundation **Project Odin** (3-stage DPG transition into sustainable Frontier Research Contractors with Renaissance Philanthropy / FRC Launchpad)
 
 → Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 

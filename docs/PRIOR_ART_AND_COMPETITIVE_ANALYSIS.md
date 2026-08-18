@@ -24,6 +24,7 @@ This document surveys seven primary prior-art mechanisms, analyzing their operat
 | **Protocol Guild** | Web3 Core Protocol | On-chain registry yield / grants | Autonomous, custody-free, time-weighted maintainer retainers. | Protocol-specific (Ethereum L1); limited to core consensus layer. | Primary reference model for **OMF Maintainer Retainers**. |
 | **NLnet Foundation** | Non-Profit Grantmaking | Public benefit research grants | Rigorous technical evaluation and privacy/openness focus. | Grant-based (project-oriented rather than retainer-oriented). | Precursor model for **OMF Incubation Programs**. |
 | **Optimism Superchain Revenue** | Web3 L2 Ecosystem | Protocol fee-take allocation (15% net / 2.5% gross fees) | Earmarks sequencer revenue to shared treasury for ecosystem allocation. | Allocation process requires disciplined maintenance governance. | Key precursor model for **ORF Protocol Fee Splits ($\tau$)**. |
+| **Project Odin (EF & Renaissance)** | Web3 DPG Incubation | 3-Stage DPG-to-FRC commercial transition | Helps strategic EF grantees build commercial earned-revenue contracts. | Requires careful selection & legal/financial container setup. | Primary Web3 precursor model for **OMF Incubation Programs**. |
 
 ---
 
@@ -43,3 +44,12 @@ This document surveys seven primary prior-art mechanisms, analyzing their operat
 - **Model**: Collects enterprise subscription fees in exchange for maintainer-backed security assurances, licensing verifications, and patch guarantees.
 - **Key Insight**: Commercial enterprises will pay for maintenance when packaged as compliance, liability mitigation, and SLA guarantees.
 - **OSF Synthesis**: ORF Enterprise SLAs formalize commercial maintenance agreements into governed, value-aligned ecosystem inflows.
+
+### 3.4 Project Odin (Ethereum Foundation & Renaissance Philanthropy)
+- **Model**: An initiative by the Ethereum Foundation's Funding Coordination team in partnership with Renaissance Philanthropy (FRC Launchpad / ARIA UK). It incubates strategic Ethereum Digital Public Goods (DPGs) over a 12-month, 3-stage program into "Frontier Research Contractors" (FRCs).
+- **3-Stage Framework**:
+  - *Stage 1: Discovery, Research & Mapping (Months 1–3)*: Frontier domain definition, revenue auditing, underfunding verification.
+  - *Stage 2: Validation & Planning (Months 4–6)*: Legal/financial container architecting (bylaws, runway), credibility asset building, Ideal Customer Profiles (ICPs) and BD pipeline definition.
+  - *Stage 3: Execution & De-risking (Months 7–12)*: Commercial contract conversion, pilot execution, deliverable shipping, operational hardening.
+- **Key Insight**: Open-source DPGs can decrease single-source grant fragility by translating open research into contractable deliverables clients pay for.
+- **OSF Synthesis**: Project Odin serves as a primary Web3 precedent for **OMF Incubation Programs** and **ORF Enterprise Services**.

@@ -64,7 +64,7 @@ The suite enforces **distinct functional mandates with explicit interfaces and s
 | 📈 **Pro-Forma Model** | Tier 1 Feasibility Scenario Model | [Tier 1 Feasibility Scenario Model](./docs/TIER_1_FEASIBILITY_MODEL.md) |
 | 🏆 **Validation Lifecycle** | 4-Stage Validation Framework | [Validation Framework & Register](./VALIDATION.md) |
 | 🌍 **Use Cases** | Multi-Chain Ecosystem Profiles | [Cardano POSM](./use-cases/CARDANO_POSM.md) • [Optimism Superchain](./use-cases/OPTIMISM_SUPERCHAIN.md) • [Polkadot](./use-cases/POLKADOT_OPENGOV.md) • [Ethereum EVM](./use-cases/ETHEREUM_EVM.md) |
-| 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
+| 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Project Odin](./tools/PROJECT_ODIN.md) • [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
 | 📊 **Evaluator Suite** | QUAID, CHAOSS & Systems Assessor | [Evaluator Documentation](./evaluator/README.md) • [QUAID Audit Example](./evaluator/examples/CARDANO_QUAID_SCANNER_REPORT.md) |
 | 📜 **Smart Contracts** | Reference Solidity & Aiken Vaults | [Native Contracts Guide](./contracts/README.md) • [EVM Solidity Contract](./contracts/solidity/ORFSlaVault.sol) • [Cardano Aiken Validator](./contracts/aiken/validators/orf_sla_vault.ak) |
 | 📊 **Pitch & Adoption Kit** | Executive Decks & Proposal Templates | [Pitch Deck](./pitch/EXECUTIVE_PITCH_DECK.md) • [One-Pager](./pitch/ONE_PAGER.md) • [Forum Proposal](./pitch/GOVERNANCE_PROPOSAL_TEMPLATE.md) • [Enterprise Sales Kit](./pitch/ENTERPRISE_SPONSOR_KIT.md) |

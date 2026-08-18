@@ -25,7 +25,7 @@ Ethereum presents both the primary **burn countermodel** (EIP-1559 base fee dest
 - **EIP-1559**: Burns ETH base fees rather than routing them to a maintenance treasury. Eliminates recipient governance overhead, but leaves core protocol client maintenance to external grants.
 - **Uniswap UNIfication**: Activated fee-and-burn mechanisms across v3 pools and Unichain, destroying $100M UNI from treasury while funding ongoing development through a separate service budget.
 
-### 2. Application & Capital Layer ORF Precedents
+- **Project Odin (EF Funding Coordination Team)**: A 3-stage incubation lab co-designed with Renaissance Philanthropy (FRC Launchpad) that helps strategic Ethereum Digital Public Goods (DPGs) build commercial earned-revenue contracts as Frontier Research Contractors.
 - **Protocol Guild**: Voluntary 1% token pledge by ecosystem projects to fund core Ethereum L1 client maintainers.
 - **ENS Registrar Revenue**: ENS registration fees flow directly to the ENS DAO Treasury.
 - **ENS Investment Policy Statement (EP 6.46)**: Governed treasury endowment defining liquidity buffers, asset limits, and manager replaceability.
