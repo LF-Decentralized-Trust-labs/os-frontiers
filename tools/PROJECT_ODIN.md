@@ -5,30 +5,224 @@
 
 ---
 
-## 1. Intent & Philosophical Problem Statement
-Project Odin ([https://projectodin.org/](https://projectodin.org/)) was created by the **Ethereum Foundation's Funding Coordination team** in partnership with **Renaissance Philanthropy** (powered by ARIA UK / FRC Launchpad) to solve the single-source grant dependency crisis among Ethereum Digital Public Goods (DPGs). Open-source research and engineering teams frequently build foundational Ethereum infrastructure but remain trapped in passive grant dependency. When market cycles turn or foundation priorities shift, these critical teams face sudden funding cliffs. Project Odin was conceived as a practical laboratory and support program to test the fundamental question: *"Can we translate open research into contractable deliverables that commercial clients will pay for?"* The core mission is to help strategic EF grantees build credible, market-tested pathways to long-term financial self-sustainability over a one-year horizon.
+# Overview
 
-## 2. Detailed Operational & Technical Mechanics
-Project Odin operates across a structured 12-month, 3-stage incubation framework:
-- **Stage 1: Discovery, Research & Mapping (Months 1–3)**: Defines the participant's "frontier domain," confirms it is underfunded and underserved by incumbents, audits existing revenue streams, and verifies that the research can be translated into contractable deliverables.
-- **Stage 2: Validation & Planning (Months 4–6)**: Architecting compliant legal and financial containers (evaluating bylaws for earned-revenue authorization, managing runway during negative-margin ramp-up), building 3 to 5 "credibility assets" (publications, workshops, releases), defining Ideal Customer Profiles (ICPs), and assembling BD sales collateral (one-pagers, statements of work, decks).
-- **Stage 3: Execution & De-risking (Months 7–12)**: BD pipeline conversion, pilot execution, deliverable shipping, operational hardening, and proposal negotiation.  
-Co-designed workshops delivered by Renaissance Philanthropy (*Theory of Impact*, *Customer Prospecting FRC Style*, and *Crafting Outreach Messaging*) guide participant teams through sales pipeline assembly.
+## Summary
+**Project Odin** ([https://projectodin.org/](https://projectodin.org/)) is an initiative launched by the **Ethereum Foundation's Funding Coordination team** in partnership with **Renaissance Philanthropy** (powered by ARIA UK / FRC Launchpad). It operates as a 12-month incubation program and practical laboratory designed to help strategic Ethereum Digital Public Goods (DPGs) transition from single-source grant dependency into self-sustaining "Frontier Research Contractors" (FRCs) with market-tested, client-contracted earned revenue streams.
 
-## 3. Empirical Achievements & Demonstrated Traction
-Project Odin launched as an official active initiative of the Ethereum Foundation Funding Coordination team in February 2026 (`blog.ethereum.org/2026/02/27/project-odin`). It has successfully established the first systematic Web3 incubation framework designed to convert grant-dependent DPG engineering teams into market-tested **Frontier Research Contractors (FRCs)** with repeatable BD pipelines, client-contracted deliverables, and diversified earned-revenue streams.
+## Purpose
+Project Odin addresses the single-source grant dependency crisis facing strategic open-source research and engineering teams. DPG teams frequently build foundational Ethereum infrastructure but remain trapped in grant dependency, creating sudden runway cliffs during market downturns. Odin answers the fundamental question:  
+> *"Can we translate open research into contractable deliverables that commercial clients will pay for?"*
 
-## 4. Structural Limitations, Trade-offs & Failure Modes
-Odin requires intensive operational coaching, legal container setup, and hands-on business development mentoring during its 12-month lifecycle. It is selectively restricted to high-potential DPG teams capable of offering commercial deliverables, making it unsuited for purely speculative, non-applied research projects. Furthermore, teams must carefully manage legal container compliance (ensuring nonprofit status or commercial entity bylaws permit earned-revenue contracting without violating foundation tax rules).
-
-## 5. Program Relevance & Direct dOSPO / OMF / ORF Evaluation
-- **dOSPO Evaluation**: Demonstrates how dOSPO policy oversight can guide grant-funded research teams toward financial independence without sacrificing open-source licensing or research integrity.
-- **OMF Evaluation**: Project Odin serves as the direct Web3 reference implementation for **OMF Program 5 (Incubation Program)** in [`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md). An OMF Operator adopts Odin's 3-stage milestone progression (Discovery -> Validation -> Execution) to onboard emerging critical dependencies.
-- **ORF Evaluation**: Validates the core **ORF Enterprise & Services Layer** in [`orf/INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md) by demonstrating that open-source DPGs can establish commercial service contracts, custom integration engineering, and maintenance SLAs that generate non-grant revenue replenishment.
+## Mission Alignment
+Project Odin aligns with the Open Source Frontiers mission by establishing systematic Web3 incubation frameworks that transform open-source research into sustainable, client-funded enterprise services and commercial maintenance contracts.
 
 ---
 
-## Primary References & Links
-- **Website**: [https://projectodin.org/](https://projectodin.org/)
-- **EF Announcement**: [Project Odin: Building Sustainable Frontier Research Contractors](https://blog.ethereum.org/2026/02/27/project-odin)
-- **Partnership**: [Renaissance Philanthropy / FRC Launchpad](https://www.renaissancephilanthropy.org/)
+# Tool Classification
+
+## Category
+- [ ] Governance Tooling
+- [x] **Open Source Sustainability**
+- [x] **Contributor Coordination**
+- [x] **Treasury & Funding Infrastructure**
+- [ ] Credentialing & Reputation
+- [ ] Analytics & Observability
+- [ ] Security & Incident Response
+- [ ] Developer Tooling
+- [ ] Interoperability Infrastructure
+- [ ] Community Operations
+- [ ] Documentation & Knowledge Systems
+- [x] **Lifecycle Management**
+- [x] **Public Goods Infrastructure**
+- [x] **Compliance & Policy**
+- [ ] Other: ___________
+
+## Open Source Status
+- [x] **Fully Open Source** (Framework & Curriculum specifications open)
+- [ ] Source Available
+- [ ] Mixed / Hybrid
+- [ ] Proprietary Components
+
+## License
+Creative Commons Attribution 4.0 International (CC-BY-4.0) / Open Framework
+
+---
+
+# Ecosystem Context
+
+## Target Ecosystems
+- Ethereum Mainnet & EVM Ecosystem
+- Strategic Digital Public Goods (DPGs) funded by the Ethereum Foundation
+- Web3 open-source research collectives and Frontier Research Contractors
+
+## Intended Users
+- Open-source DPG maintainers and research teams seeking financial self-sustainability
+- Foundation grant managers transitioning projects from grants to earned revenue
+- Enterprise clients and commercial protocols seeking specialized research and maintenance SLAs
+- Ecosystem business development advisors and startup incubators
+
+## Current Pain Points Addressed
+Eliminates single-source grant dependency cliffs, provides legal/financial container architecture for earned revenue, builds commercial BD sales collateral, and establishes repeatable pipeline management.
+
+---
+
+# Technical Information
+
+## Repository / Source Code
+[https://github.com/ethereum/project-odin](https://github.com/ethereum/project-odin)
+
+## Documentation
+[https://projectodin.org](https://projectodin.org) / [https://blog.ethereum.org/2026/02/27/project-odin](https://blog.ethereum.org/2026/02/27/project-odin)
+
+## Core Framework Components
+- **Stage 1 Discovery Engine**: Frontier domain mapping, revenue auditing, underfunding verification.
+- **Stage 2 Container Architecture**: Bylaw evaluation for earned revenue, negative-margin runway management, 3–5 credibility assets, ICP definitions.
+- **Stage 3 Execution Engine**: BD pipeline conversion, pilot execution, deliverable shipping, proposal negotiation.
+- **Renaissance Philanthropy Workshops**: *Theory of Impact*, *Customer Prospecting FRC Style*, *Crafting Outreach Messaging*.
+
+## Architecture Overview
+Project Odin operates a structured 3-stage lifecycle over 12 months:
+```
+[ Stage 1: Discovery & Mapping ] ──> [ Stage 2: Validation & Planning ] ──> [ Stage 3: Execution & De-risking ]
+        (Months 1 – 3)                        (Months 4 – 6)                          (Months 7 – 12)
+  • Define Frontier Domain              • Architect Legal Container             • Convert BD Pipeline to Commitments
+  • Verify Underfunding                 • Build 3–5 Credibility Assets          • Run External Client Pilots
+  • Audit & Consolidate Revenue         • Define ICPs & Sales Collateral        • Harden Operational Rhythms
+```
+
+## Dependencies
+- Ethereum Foundation Funding Coordination program ops
+- Renaissance Philanthropy FRC Launchpad workshop curriculum
+- Legal counsel for DPG container incorporation & tax compliance
+
+---
+
+# Operational Model
+
+## Governance Model
+Governed by the Ethereum Foundation Funding Coordination team in partnership with Renaissance Philanthropy (powered by ARIA UK).
+
+## Maintenance Model
+Maintained by EF Funding Coordination program stewards and Renaissance Philanthropy workshop facilitators.
+
+## Funding Model
+Initial lab operations funded by the Ethereum Foundation; participant teams transition onto commercial client contracts and earned-revenue SLAs.
+
+## Contributor Model
+Cohort-based application and onboarding model for strategic EF DPG grantee teams.
+
+---
+
+# Open Source Impact
+
+## Expected Benefits
+- Systematic conversion of grant-dependent DPGs into sustainable Frontier Research Contractors
+- Diversified earned-revenue pathways reducing ecosystem fragility over a 12-month horizon
+- Market-tested commercial BD pipelines for open-source engineering teams
+- Preserved maintainer autonomy and open-source licensing integrity
+
+## Ecosystem Value
+Odin proves that open research can generate market-tested client revenue without sacrificing public-goods mission alignment, providing a transferable incubation framework for Web3 foundations.
+
+## Risks & Limitations
+- Requires intensive hands-on operational coaching and legal container setup.
+- Selective entry: restricted to high-potential DPG teams capable of delivering commercial services.
+- Participant teams must navigate legal bylaws and tax compliance when receiving earned revenue.
+
+---
+
+# Adoption & Maturity
+
+## Current Lifecycle Stage
+- [ ] Concept
+- [ ] Prototype
+- [ ] Alpha
+- [x] **Beta / Active Lab**
+- [ ] Production
+- [ ] Mature
+
+## Current Adoption
+Launched as an active Ethereum Foundation lab in February 2026 (`blog.ethereum.org/2026/02/27/project-odin`). Cohort participants are currently completing Stage 1 domain mapping and Stage 2 validation workshops with Renaissance Philanthropy.
+
+## Roadmap
+Graduating first cohort of DPG teams, expanding workshop curriculum, and publishing open-source BD playbook for ecosystem foundations.
+
+---
+
+# Metrics & Evaluation
+
+## Success Metrics
+
+| Metric | Description |
+|---|---|
+| DPG Cohort Teams | Number of strategic EF grantee teams onboarded to Project Odin |
+| Credibility Assets Built | Number of publications, workshops, and releases shipped per team (3–5 target) |
+| BD Pipeline Conversion | Commercial SOWs, pilot commitments, and contracts signed per team |
+| Dependency Risk Reduction | Proportion of operating budget covered by earned revenue vs EF grants |
+
+## Observability / Reporting
+Public program blog updates (`blog.ethereum.org`), cohort case studies, and Odin web dashboards at `projectodin.org`.
+
+---
+
+# Alignment With Open Source Frontiers
+
+## Relevant Focus Areas
+- [x] **Open Source Sustainability**
+- [ ] Decentralized Governance
+- [x] **Contributor Incentives**
+- [x] **Treasury Coordination**
+- [ ] Security & Resilience
+- [ ] Ecosystem Analytics
+- [x] **Lifecycle Stewardship**
+- [x] **Public Goods Funding**
+- [x] **Cross Ecosystem Collaboration**
+- [x] **Infrastructure Neutrality**
+- [ ] Other: ___________
+
+## Why This Tool Fits the Lab
+Project Odin represents the leading Web3 implementation of structured DPG incubation, proving that open research can be converted into client-funded commercial maintenance.
+
+## Program Relevance & Direct OSF Alignment
+
+### 1. OMF Incubation Program Alignment
+- **OSF Mapping**: **OMF Program 5 (Incubation Program)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **Mechanism Validated**: Direct Web3 implementation of OMF's Incubation Program (Emerging -> Growing transition). Proves that structured 3-stage incubation equips DPG maintainers to transition from passive grant recipients to commercial contractors.
+- **Operator Takeaway**: An OMF Operator adopts Project Odin's 3-stage milestone structure to onboard emerging critical dependencies, guiding them from Stage 1 domain mapping to Stage 3 contract execution.
+
+### 2. ORF Enterprise Services Layer Alignment
+- **OSF Mapping**: **ORF Layer 3 (Enterprise & Services Layer)** & **[`orf/INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
+- **Mechanism Validated**: Demonstrates how open-source research and engineering can be packaged into contracted deliverables (Enterprise SLAs, custom extensions, compliance reviews) that enterprise clients purchase.
+- **Operator Takeaway**: An ORF Operator utilizes Odin's BD collateral templates (one-pagers, statements of work) to build enterprise sales pipelines that route commercial service revenue back into ecosystem treasuries.
+
+---
+
+# Supporting Materials
+
+## References
+- Project Odin Website: https://projectodin.org
+- EF Announcement Blogpost: https://blog.ethereum.org/2026/02/27/project-odin
+- Renaissance Philanthropy / FRC Launchpad: https://www.renaissancephilanthropy.org
+
+## Demonstrations / Screenshots
+- Project Odin Site: https://projectodin.org
+
+## Related Projects
+- Sovereign Tech Fund (government incubation contracts)
+- Tidelift Enterprise (commercial SLAs)
+- Open Source Frontiers Lab
+
+---
+
+# Contributor Information
+
+## Primary Contact
+- Ethereum Foundation Funding Coordination Team — Website: [https://projectodin.org](https://projectodin.org)
+
+## Contributors
+- EF Funding Coordination program stewards
+- Renaissance Philanthropy FRC Launchpad facilitators
+
+## Submission Date
+2026-08-18
