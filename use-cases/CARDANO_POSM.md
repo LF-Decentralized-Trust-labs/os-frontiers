@@ -192,8 +192,8 @@ Unlike donation-based models, POSM attempts to institutionalize open source sust
 - [ ] Concept
 - [ ] Research
 - [ ] Prototype
-- [x] Pilot
-- [x] Production
+- [x] Operational Pilot (Live precursor implementation under Intersect MBO governance)
+- [ ] Production
 - [ ] Scaling
 
 ## Estimated Timeline

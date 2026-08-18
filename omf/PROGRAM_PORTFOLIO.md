@@ -39,10 +39,10 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2â€
 
 **Reference implementations**:
 - Ethereum Protocol Guild (on-chain registry, time-weighted allocation, custody-free disbursement)
-- Sentry maintainer fund ($500K to 500+ maintainers; "even modest stipends bring great motivation")
-- Cardano POSM (two-tier roles, 30-day evaluation, dual-committee oversight)
+- Sentry maintainer fund ($500K in 2023; $750K in 2024 and 2025; "even modest stipends bring great motivation")
+- Cardano POSM (two-tier roles, 30-day evaluation, dual-committee oversight operational pilot)
 
-**Warning**: The most common failure mode is using this program for projects that have not yet established ecosystem-critical status. Use centrality scoring to enforce selection discipline. Governance priority alignment should carry the lowest weight (10%) in selection rubrics â€” the highest weights belong to centrality (30%) and bus factor (25%).
+**Warning**: The most common failure mode is using this program for projects that have not yet established ecosystem-critical status. Use dependency scoring (prevalence, relevance, vulnerability) to enforce selection discipline. Governance priority alignment should carry the lowest weight (10%) in selection rubrics â€” the highest weights belong to centrality (30%) and bus factor (25%).
 
 â†’ Implementation Specification Template: [`PROGRAM_CHARTER_TEMPLATE.md`](PROGRAM_CHARTER_TEMPLATE.md)
 
@@ -62,7 +62,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2â€
 
 **Primary funding instrument**: Delivery-oriented
 
-**Reference implementations**: Gitcoin Grants ecosystem, GitHub Secure OSS Fund ($10K per project against defined security milestones)
+**Reference implementations**: GitHub Secure OSS Fund ($10K per project against defined security milestones), OpenSSF Security Bounties
 
 **Warning**: Do not use code bounties to fund ongoing maintenance responsibilities. "Bounty hunter" is not "steward." If a project needs ongoing availability funded, use a Retainer.
 
@@ -146,7 +146,7 @@ The typical starting point for most ecosystems is: **Maintainer Retainers** (2â€
 
 **Purpose**: Succession planning, bus-factor reduction, and knowledge documentation for high-centrality infrastructure.
 
-**The problem it solves**: A project with 1,000 dependents and one maintainer who reports burnout is a portfolio emergency. Bus-factor-of-1 failures have taken down critical infrastructure in recent Web3 history (Kubernetes Ingress NGINX: no further security patches after March 2026 because its maintainers burned out). Resilience Programs address this before the crisis.
+**The problem it solves**: A project with 1,000 dependents and one maintainer is a portfolio emergency. Bus-factor-of-1 failures have taken down critical infrastructure in recent Web3 history (Kubernetes Ingress NGINX: retired in March 2026 after prolonged maintainer scarcity left the project dependent on only one or two maintainers). Resilience Programs address this before the crisis.
 
 **Program components**:
 - **Succession planning**: document succession paths; identify and train designated successors for top-centrality projects

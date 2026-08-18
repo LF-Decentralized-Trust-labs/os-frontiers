@@ -23,7 +23,7 @@ This document surveys seven primary prior-art mechanisms, analyzing their operat
 | **GitHub Sponsors** | Individual & Corporate | Direct micro-donations | Frictionless platform integration for individual maintainers. | Highly skewed to celebrity maintainers; episodic. | Supplementary input to **OMF Retainer Intake**. |
 | **Protocol Guild** | Web3 Core Protocol | On-chain registry yield / grants | Autonomous, custody-free, time-weighted maintainer retainers. | Protocol-specific (Ethereum L1); limited to core consensus layer. | Primary reference model for **OMF Maintainer Retainers**. |
 | **NLnet Foundation** | Non-Profit Grantmaking | Public benefit research grants | Rigorous technical evaluation and privacy/openness focus. | Grant-based (project-oriented rather than retainer-oriented). | Precursor model for **OMF Incubation Programs**. |
-| **Optimism RetroPGF / RetroFunding** | Web3 L2 Ecosystem | Protocol fee-take allocation | Earmarks sequencer revenue for retroactive public goods. | High voter fatigue; difficulty measuring maintenance impact. | Key precursor model for **ORF Protocol Fee Splits ($\tau$)**. |
+| **Optimism Superchain Revenue** | Web3 L2 Ecosystem | Protocol fee-take allocation (15% net / 2.5% gross fees) | Earmarks sequencer revenue to shared treasury for ecosystem allocation. | Allocation process requires disciplined maintenance governance. | Key precursor model for **ORF Protocol Fee Splits ($\tau$)**. |
 
 ---
 
@@ -32,7 +32,7 @@ This document surveys seven primary prior-art mechanisms, analyzing their operat
 ### 3.1 Sovereign Tech Agency / Fund (Germany)
 - **Model**: Government-funded public benefit agency awarding targeted contracts to maintainers of critical digital infrastructure.
 - **Key Insight**: Maintenance must be funded as a public utility, independent of feature roadmaps.
-- **OSF Synthesis**: OMF adopts STF's centrality scoring to identify critical dependencies before maintainer burnout occurs.
+- **OSF Synthesis**: OMF's dependency prioritization is informed by Sovereign Tech's focus on prevalence, relevance, vulnerability, and critical infrastructure dependencies.
 
 ### 3.2 Protocol Guild (Ethereum)
 - **Model**: An on-chain split contract distributing token grants and yield to ~180 core Ethereum protocol contributors based on time-weighted tenure.

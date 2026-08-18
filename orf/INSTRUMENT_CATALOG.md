@@ -22,16 +22,16 @@
 | **Slashing & Penalty Routing** | Protocol | Canonical ledger rules | 🟢 Polkadot directs portion of slashes to Treasury | Tier 3 (36m+) |
 | **Certification-Gated Contribution** | Application | Brand, registry, support bundle | 🟡 Protocol Guild + Tidelift partial analog | Tier 1 (0-18m) |
 | **Dependency-Directed Revenue Share** | Application | Verified dependency graph & state | 🟡 Drips live graph; tea proof of contribution | Tier 2 (18-36m) |
-| **Verifiable Attestation Pools** | Application | Attested graph & reproducible builds | 🟡 Drips / ZK attestation research | Tier 2 (18-36m) |
+| **Verifiable Attestation Pools** | Application | Attested graph & reproducible builds | 🔵 Drips / ZK attestation research (Downgraded to Research-Stage) | Tier 2 (18-36m) |
 | **AI-Assisted Dependency Allocation** | Application | Verified graph, model competition | 🟡 Deep Funding pilot model | Tier 2 (18-36m) |
 | **Streaming Revenue Distribution** | Application | On-chain stream contracts & consent | 🟢 Superfluid infrastructure live | Tier 2 (18-36m) |
 | **Ecosystem-Owned Services** | Application | Canonical service & network effects | 🟢 ENS registration revenue to DAO treasury | Tier 2 (18-36m) |
-| **Maintenance SLAs & LTS Services** | Enterprise | Relationships, assurance, release commitments | 🟢 Red Hat Extended Lifecycle & Tidelift | Tier 1 (0-18m) |
+| **Maintenance SLAs & LTS Services** | Enterprise | Relationships, assurance, release commitments | 🟢 Red Hat Extended Lifecycle (ELC) & Tidelift | Tier 1 (0-18m) |
 | **Supply-Chain SLA + Reciprocal Clause** | Enterprise | Assurance relationship & contract right | 🟡 Tidelift / Red Hat + recoverable funding | Tier 1 (0-18m) |
-| **Training & Certification** | Enterprise | Brand & credential verification value | 🟢 Linux Foundation LFX training | Tier 1 (0-18m) |
-| **Foundation-Hosted Consortium** | Enterprise | Neutral brand, membership, SLA commitments | 🟢 Apache Foundation & Linux Foundation | Tier 1 (0-18m) |
-| **Recoverable / Reciprocal Funding** | Enterprise | Contract & treasury repayment rights | 🟢 Program-Related Investments (PRIs) / Recoverable Grants | Tier 1 (0-18m) |
-| **Governed Endowment Policy** | Capital | Treasury & IPS authority | 🟢 ENS Investment Policy Statement (EP 6.46) & Octant | Tier 1 (IPS) / Tier 3 |
+| **Training & Certification** | Enterprise | Brand & credential verification value | 🟢 Linux Foundation Education / Training & Certification | Tier 1 (0-18m) |
+| **Foundation-Hosted Consortium** | Enterprise | Neutral brand, membership, hosting | 🟢 Linux Foundation neutral hosting (Apache explicitly non-SLA) | Tier 1 (0-18m) |
+| **Recoverable / Reciprocal Funding** | Enterprise | Contract & treasury repayment rights | 🟡 Program-Related Investments (U.S. private foundation structure) | Tier 1 (0-18m) |
+| **Governed Endowment Policy** | Capital | Treasury & IPS authority | 🟢 ENS Investment Policy Statement (EP 6.46); Octant yield routing | Tier 1 (IPS) / Tier 3 |
 | **Perpetual Auction Treasury Funding** | Capital | Auction contract, brand, collector demand | 🟢 Nouns daily 24h auction | Tier 2 (18-36m) |
 | **Autonomous Revenue Networks** | Capital | Immutable treasury & redemption rules | 🔵 Revnet emerging architecture | Tier 3 (36m+) |
 | **Yield-Donating Settlement Assets** | Capital | Reserve yield & payment asset adoption | 🟢 Glo Dollar stablecoin model | Tier 2 (18-36m) |
@@ -39,8 +39,8 @@
 | **Infrastructure Bonds** | Capital | Future governed fee revenue | 🔵 Revenue-bond analog (Research Stage) | Tier 3 (36m+) |
 | **Security Mutual Premiums** | Capital | Risk pool & underwriting capacity | 🟢 Nexus Mutual capital pool | Tier 2 (18-36m) |
 | **Hybrid Yield + Risk Pool** | Capital | Governed IPS, reserves, underwriting | 🟡 ENS Endowment + Nexus Mutual hybrid | Tier 2 (18-36m) |
-| **Public-Goods Stake Pools** | Delegation | Stake, certification, wallet discovery | 🟢 Cardano mission-driven pools | Tier 1 (0-18m) |
-| **Cross-Chain Delegation Registry** | Delegation | Verifiable commitments, discovery | 🟡 Cross-chain stake discovery proposal | Tier 2 (18-36m) |
+| **Public-Goods Stake Pools** | Delegation | Stake, certification, wallet discovery | 🟡 Cardano mission-driven pools (Voluntary operator reward donations) | Tier 1 (0-18m) |
+| **Cross-Chain Delegation Registry** | Delegation | Verifiable commitments, discovery | 🔵 Cross-chain stake discovery proposal (Research Stage) | Tier 2 (18-36m) |
 
 ---
 
