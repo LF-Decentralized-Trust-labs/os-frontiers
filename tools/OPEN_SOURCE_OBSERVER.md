@@ -1,218 +1,30 @@
-# Open Source Frontiers Lab — Tool Submission Template
+# Tool Profile: Open Source Observer (OSO)
 
-## Tool Name
-Open Source Observer (OSO)
-
----
-
-# Overview
-
-## Summary
-Open Source Observer is an open analytics platform that measures the impact of open source projects through onchain and offchain data. Built by Kariba Labs and co-founded by Carl Cervone and Raymond Cheng, OSO aggregates data from GitHub repositories, npm packages, onchain deployments, and other sources into a unified analytics layer.
-
-## Purpose
-OSO's mission is to help internet economies measure the impact of open source software contributions to the growth and adoption of their platform. Current approaches to tracking and bootstrapping economic activity aren't very effective — projects are rewarded for marketing and grant writing ability over impact, and foundations and ecosystem funds don't have the data they need to make smarter funding allocations.
-
-## Mission Alignment
-Kariba Labs is committed to being the most open and reliable source of impact metrics by embracing open source software, open data, and open infrastructure — building collaboratively rather than hoarding data in centralized infrastructure, to power the next generation of data-driven applications.
+> **LF Decentralized Trust · Open Source Frontiers Lab Profile**  
+> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Production Infrastructure`*
 
 ---
 
-# Tool Classification
+## 1. Intent & Philosophical Problem Statement
+Open Source Observer (OSO) was created by Kariba Labs (co-founded by Carl Cervone and Raymond Cheng) to solve the core data deficit in public-goods funding. Historically, ecosystem foundations, DAOs, and grant committees allocated capital based on self-reported narratives, grant-writing charisma, or social media follower counts rather than verifiable technical impact. OSO was designed to provide a completely open, multi-ecosystem analytics infrastructure that measures real open-source impact across on-chain deployments and off-chain code repositories.
 
-## Category
-- [ ] Governance Tooling
-- [ ] Open Source Sustainability
-- [ ] Contributor Coordination
-- [ ] Treasury & Funding Infrastructure
-- [ ] Credentialing & Reputation
-- [x] **Analytics & Observability**
-- [ ] Security & Incident Response
-- [ ] Developer Tooling
-- [ ] Interoperability Infrastructure
-- [ ] Community Operations
-- [ ] Documentation & Knowledge Systems
-- [ ] Lifecycle Management
-- [x] **Public Goods Infrastructure**
-- [ ] Compliance & Policy
-- [ ] Other: ___________
+## 2. Detailed Operational & Technical Mechanics
+OSO operates an open data architecture built on top of Google BigQuery, Trino, and Apache Iceberg. Its data pipeline uses `sqlmesh` and Dagster to aggregate raw event data from GitHub repositories, npm/PyPI registries, contract deployment logs across EVM chains (Optimism, Base, Arbitrum, Filecoin), and governance platforms. OSO cleans and normalizes these disparate data streams into universal event tables and mart models, exposing them via a public GraphQL API (Hasura / Apollo Router) and direct SQL queries via the OSO Data Exchange on BigQuery.
 
-## Open Source Status
-- [x] **Fully Open Source**
-- [ ] Source Available
-- [ ] Mixed / Hybrid
-- [ ] Proprietary Components
+## 3. Empirical Achievements & Demonstrated Traction
+OSO serves as the primary analytics engine for major Web3 funding programs, including Optimism's RetroFunding (Rounds 3 and 4), Filecoin's RetroPGF, and Arbitrum Foundation rounds. OSO has mapped and indexed over 1,000+ open-source projects, tracking developer retention, commit frequencies, active maintainers, dependency graphs, and multi-chain gas generation across the Superchain.
 
-## License
-Apache 2.0
+## 4. Structural Limitations, Trade-offs & Failure Modes
+OSO's reliance on Google BigQuery for data warehousing introduces underlying infrastructure centralization risks. Furthermore, its GraphQL API currently exposes read-only access to mart models, requiring direct BigQuery integration for full raw dataset querying. Additionally, mapping off-chain GitHub identities to on-chain smart contract deployments requires ongoing manual registry verification to prevent misattribution or gaming by sybil applicants.
+
+## 5. Program Relevance & Direct dOSPO / OMF / ORF Evaluation
+- **dOSPO Evaluation**: Serves as the primary data feed for dOSPO transparency reporting — allowing governance bodies to verify maintainer activity, dependency depth, and organizational independence before approving maintainer retainer budgets.
+- **OMF Evaluation**: Directly powers **OMF Program 6 (Resilience Programs)** in [`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md). OMF Operators use OSO metrics (prevalence, bus factor, commit churn) to identify critical single-maintainer dependencies and trigger automated succession interventions.
+- **ORF Evaluation**: Feeds the **Canonical Systems Evaluator** ([`evaluator/README.md`](../evaluator/README.md)), providing objective, multi-chain impact data to verify ecosystem health scores and calculate level-3 hard gate compliance.
 
 ---
 
-# Ecosystem Context
-
-## Target Ecosystems
-OSO supports evaluation for Optimism's Retro Funding program, Filecoin's first RetroPGF round, and has received grants from Protocol Labs and Arbitrum.
-- Optimism / Superchain (Base, Frax, Metal, Mode, PGN, Zora)
-- Filecoin
-- Arbitrum
-- Ethereum and broader EVM ecosystems
-
-## Intended Users
-OSO serves retroactive funding programs evaluating applicants using verifiable impact metrics, badgeholders and voters making data-informed allocation decisions, project maintainers understanding their project's reach and onchain footprint, researchers and analysts querying comprehensive public datasets, and grant programs tracking portfolio performance over time.
-- Grant program administrators and foundations
-- DAO voters and badgeholders
-- Open source project maintainers
-- Impact data scientists and researchers
-
-## Current Pain Points Addressed
-OSO addresses the problem that projects are rewarded for marketing and grant writing ability over real impact, and that foundations and ecosystem funds lack the data needed to make smarter funding allocations. OSO puts all the metrics funders need in one place — including impact tracing, activity graphing, and financing estimation.
-
----
-
-# Technical Information
-
-## Repository / Source Code
-[https://github.com/opensource-observer/oso](https://github.com/opensource-observer/oso)
-
-## Documentation
-[https://docs.oso.xyz](https://docs.oso.xyz) / [https://docs.opensource.observer](https://docs.opensource.observer)
-
-## Core Technologies
-OSO uses a sqlmesh pipeline to clean and normalize data into a universal event table and metrics, maintains separate Trino clusters operating over Iceberg tables, and uses Hasura to automatically generate a GraphQL API served via an Apollo Router.
-- Python / sqlmesh / dbt (data pipeline)
-- Google BigQuery (data warehouse)
-- Dagster (orchestration)
-- GraphQL / Hasura / Apollo Router (API layer)
-
-## Architecture Overview
-OSO stores all raw source data in a BigQuery data warehouse, defines sequences of transformations in its data pipeline, and builds on Google BigQuery's public datasets (including GitHub and Optimism blockchain data). The pipeline uses Dagster embedded-elt with dlt for data movement. OSO also publishes live datasets on Google BigQuery through the OSO Data Exchange, available free of charge, covering the full pipeline output, Superchain source data, Gitcoin data, and OpenRank reputation scores.
-
-## Dependencies
-- Google BigQuery (data warehouse and public data exchange)
-- GitHub API (repository and contributor data)
-- Onchain RPC / indexers (Superchain, Ethereum, etc.)
-- Dagster (pipeline orchestration)
-- Trino / Apache Iceberg
-
----
-
-# Operational Model
-
-## Governance Model
-OSO operates without formal governance or a native token. Decisions are made by the Kariba Labs core team, with community input through GitHub and Discord.
-
-## Maintenance Model
-Open Source Observer is an open source public good maintained by Kariba Labs. Community contributors participate through the Kariba Data Collective.
-
-## Funding Model
-Kariba Labs is supported by generous grants from Protocol Labs, Optimism, and the Arbitrum Foundation. The project has also received a Builders Grant from Optimism and recognition at an Optimism hackathon.
-
-## Contributor Model
-OSO welcomes contributions to its repositories and runs the Kariba Data Collective for analysts and data scientists interested in becoming regular contributors. Contributors can query large amounts of OSO data via public datasets on BigQuery.
-
----
-
-# Open Source Impact
-
-## Expected Benefits
-OSO enables retroactive funding programs to evaluate applicants using verifiable impact metrics rather than self-reported narratives, allows badgeholders and voters to make data-informed allocation decisions using standardized metrics, and helps grant programs track portfolio performance over time to assess the effectiveness of past funding decisions.
-
-## Ecosystem Value
-OSO's multi-chain data coverage allows grant programs across different ecosystems to use a common analytical framework, enabling comparisons and knowledge sharing across previously siloed communities.
-
-## Risks & Limitations
-- Dependency on Google BigQuery infrastructure introduces centralization risk
-- The OSO API currently only allows read-only GraphQL queries against a subset of OSO data (mart models only); full dataset access requires direct BigQuery integration.
-- Datasets may include material subject to third-party rights.
-- Rate limits or subscription pricing may apply to API usage at scale
-
----
-
-# Adoption & Maturity
-
-## Current Lifecycle Stage
-- [ ] Concept
-- [ ] Prototype
-- [ ] Alpha
-- [ ] Beta
-- [x] **Production**
-- [ ] Mature
-
-## Current Adoption
-Optimism's Retro Funding program uses OSO to evaluate hundreds of applicant projects. For RetroPGF Round 4, OSO developed onchain impact metrics that measured each project's contribution to the Superchain ecosystem, including contract activity, user growth, and gas fees generated, with badgeholders using these metrics to allocate millions of dollars in OP tokens. OSO has also supported Filecoin and Arbitrum funding rounds.
-
-## Roadmap
-OSO is working toward advanced metrics to measure how specific interventions impact the public goods ecosystem, including comparing performance of projects or users who received token incentives against those who did not, using advanced statistical methods to estimate causal effects while controlling for market conditions and competing incentives.
-
----
-
-# Metrics & Evaluation
-
-## Success Metrics
-
-| Metric | Description |
-|---|---|
-| Projects indexed | Number of open source projects with mapped artifacts in the OSO registry |
-| Grant programs served | Number of ecosystem funding rounds using OSO data for allocation decisions |
-| Active contributors tracked | GitHub developer activity aggregated across indexed projects |
-| Onchain deployments mapped | Smart contracts and onchain activity linked to OSO project profiles |
-| API / BigQuery queries | Volume of external data access indicating ecosystem adoption |
-
-## Observability / Reporting
-OSO orchestrates all data infrastructure using a public Dagster instance, where users can monitor all jobs and data freshness in the Dagster dashboard. Live, up-to-date datasets are published on Google BigQuery through the OSO Data Exchange, available free of charge, allowing anyone to query them directly using SQL.
-
----
-
-# Alignment With Open Source Frontiers
-
-## Program Relevance & Direct OSF Alignment
-
-### 1. dOSPO Data-Driven Transparency Reports
-- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../dospo/START_HERE.md))** & **Transparency Requirements**.
-- **Mechanism Validated**: Validates that ecosystem governance bodies can replace subjective grant proposals with verifiable, multi-source analytics (commits, dependencies, active maintainers, gas usage) when authorizing ecosystem maintenance budgets.
-- **Operator Takeaway**: A dOSPO incorporates OSO data into its quarterly transparency reports to justify maintainer retainer budgets to Community Governance.
-
-### 2. OMF Centrality & Bus-Factor Prioritization
-- **OSF Mapping**: **OMF Program 6 (Resilience Programs)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
-- **Mechanism Validated**: Demonstrates automated dependency graph scoring to identify high-centrality, single-maintainer dependencies before critical project failure occurs.
-- **Operator Takeaway**: OMF Operators use OSO metrics (prevalence, dependency depth, contributor churn) to trigger automated Resilience Program interventions for bus-factor-1 infrastructure.
-
-### 3. Evaluator Impact Data Feed
-- **OSF Mapping**: **Canonical Systems Evaluator ([`evaluator/README.md`](../evaluator/README.md))**.
-- **Mechanism Validated**: Serves as the primary external data provider for evaluating ecosystem health scores without relying on self-reported developer surveys.
-- **Operator Takeaway**: The Evaluator engine consumes OSO metrics to calculate objective OMF maintenance score points.
-
----
-
-# Supporting Materials
-
-## References
-- [OSO Mission](https://docs.oso.xyz/docs/references/mission/)
-- [Open Source, Open Data, Open Infra](https://docs.opensource.observer/blog/open-source-open-data-open-infra/)
-- [OSO Architecture Evolution](https://docs.oso.xyz/blog/oso-architecture-evolution/)
-- [Gitcoin App Profile](https://gitcoin.co/apps/opensource-observer)
-
-## Demonstrations / Screenshots
-- Live platform: [www.opensource.observer](https://www.opensource.observer)
-- Public GraphQL explorer: [https://www.opensource.observer/graphql](https://www.opensource.observer/graphql)
-
-## Related Projects
-- Gitcoin / Gitcoin Passport (contributor credentialing)
-- Optimism RetroPGF (primary use case)
-- OSS Directory: [https://github.com/opensource-observer/oss-directory](https://github.com/opensource-observer/oss-directory)
-
----
-
-# Contributor Information
-
-## Primary Contact
-- Carl Cervone — Co-founder, Kariba Labs / GitHub: [@ccerv1](https://github.com/ccerv1)
-- Raymond Cheng — Co-founder, Kariba Labs / GitHub: [@ryscheng](https://github.com/ryscheng)
-
-## Contributors
-- Kariba Labs core team
-- Kariba Data Collective (community analysts and data scientists)
-- Open source contributors via [github.com/opensource-observer](https://github.com/opensource-observer)
-
-## Submission Date
-2026-05-21
+## Primary References & Links
+- **Website**: [https://www.opensource.observer/](https://www.opensource.observer/)
+- **Documentation**: [https://docs.oso.xyz](https://docs.oso.xyz)
+- **Source Code**: [https://github.com/opensource-observer/oso](https://github.com/opensource-observer/oso)

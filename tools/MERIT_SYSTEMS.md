@@ -1,235 +1,32 @@
 # Tool Profile: Merit Systems
 
-> **LF Decentralized Trust · Open Source Frontiers Lab**  
-> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Beta Tooling`*
+> **LF Decentralized Trust · Open Source Frontiers Lab Profile**  
+> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Beta Tooling & Agentic Protocol`*
 
 ---
 
-## Tool Name
-Merit Systems
+## 1. Intent & Philosophical Problem Statement
+Merit Systems was created to solve the fundamental economic disconnect in open-source software: the gap between value created by software builders and value captured by those builders. Although open-source software underpins 95% of commercial software, funding has historically relied on episodic grants, venture capital (which demands inappropriate equity returns), or big-tech corporate subsidies. Merit Systems was founded to build an open economic layer for open-source software — enabling market forces to route direct capital to codebases and builders based on verifiable commit attribution and autonomous agentic payment protocols.
+
+## 2. Detailed Operational & Technical Mechanics
+Merit Systems operates across two distinct product layers:
+- **Terminal**: A maintainer payout interface that parses GitHub version control data, mapping pull requests, code reviews, and commit contributions to developer wallet addresses. The Terminal executes instant global payouts using USDC on Base, with Merit managing end-to-end tax compliance and W-8/W-9 reporting.
+- **AgentCash (Agentic Commerce Layer)**: An open payment gateway built on the **x402** (HTTP 402 Payment Required) and **MPP** (Machine Payments Protocol) open standards. AgentCash enables autonomous AI agents (Claude, Codex, Cursor) to discover APIs via `x402scan.com` / `mppscan.com`, negotiate pricing, and pay micro-fees per tool call using single-balance stablecoin rails.
+
+## 3. Empirical Achievements & Demonstrated Traction
+Merit Systems raised $10,000,000 in seed funding led by a16z crypto and Blockchain Capital. Its AgentCash platform launched in March 2026, processing over 770,000 paid agentic API tool calls across 2,000+ autonomous AI agents within days of launch. API partners include Minerva, Parallel, Nansen, and Zapper, demonstrating massive early adoption for machine-to-machine commerce.
+
+## 4. Structural Limitations, Trade-offs & Failure Modes
+Merit's Terminal and AgentCash product user interfaces operate as proprietary commercial offerings built atop open payment standards (x402, MPP). Furthermore, payout mechanics depend on stablecoin settlement (USDC on Base), which exposes the platform to regional crypto regulatory policies. Finally, Terminal payouts require an incoming source of capital (grant budgets, enterprise sponsorships); Merit routes capital efficiently but cannot create project funding out of thin air if a repository lacks external sponsors.
+
+## 5. Program Relevance & Direct dOSPO / OMF / ORF Evaluation
+- **dOSPO Evaluation**: Demonstrates how dOSPO policy guidelines can mandate automated tax compliance and W-8/W-9 management when contracting maintainers globally.
+- **OMF Evaluation**: Serves as an execution rail for **OMF Program 2 (Code Bounties)** in [`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md). OMF Operators use Merit Terminal to execute instant commit-attribution payouts to secondary maintainers.
+- **ORF Evaluation**: Direct reference model for **ORF Layer 2 (Autonomous Agentic Revenue Inflows)** in [`orf/INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md). An ORF Operator configures x402/MPP payment gateways on ecosystem developer APIs, capturing micro-transaction fees from autonomous AI agents to replenish the ecosystem treasury.
 
 ---
 
-# Overview
-
-## Summary
-Merit Systems is building a new economy for open source. Merit adds rich attribution information to software version control systems like GitHub, allowing capital sources to route funds to codebases and incentivize builders directly. Tying this capital to impact creates a dynamic market where innovation thrives and builders flourish. The company's product suite spans two layers: the **Terminal**, a contributor payments interface for open source maintainers, and **AgentCash**, an agentic commerce layer enabling AI agents to autonomously discover and pay for APIs using open payment protocols.
-
-## Purpose
-Merit Systems addresses the crisis in open source funding. Although open source software underpins 95% of commercial software, funding its development has been a perennial challenge. The venture ecosystem demands exponential returns that don't match most open source projects, while Big Tech subsidizes "free" software as a strategy to commoditize their complements — distorting market signals and stripping pricing power from sustainable alternatives. Developers face a stark choice: burn out or find a benefactor.
-
-## Mission Alignment
-Merit Systems envisions a new commons where market forces, not subsidies, guide innovation; value creators capture a sustainable share through direct monetization; ideas and expertise flow freely across organizational boundaries; and long-term work captures its future value.
-
----
-
-# Tool Classification
-
-## Category
-- [ ] Governance Tooling
-- [x] **Open Source Sustainability**
-- [x] **Contributor Coordination**
-- [x] **Treasury & Funding Infrastructure**
-- [ ] Credentialing & Reputation
-- [ ] Analytics & Observability
-- [ ] Security & Incident Response
-- [ ] Developer Tooling
-- [x] **Interoperability Infrastructure**
-- [ ] Community Operations
-- [ ] Documentation & Knowledge Systems
-- [ ] Lifecycle Management
-- [x] **Public Goods Infrastructure**
-- [ ] Compliance & Policy
-- [ ] Other: ___________
-
-## Open Source Status
-- [ ] Fully Open Source
-- [ ] Source Available
-- [x] **Mixed / Hybrid**
-- [ ] Proprietary Components
-
-> *Note: Merit builds on and contributes to open payment standards (x402, MPP). The Terminal and AgentCash products are proprietary; the underlying payment protocol infrastructure is open.*
-
-## License
-Not publicly specified; proprietary commercial products built atop open standards (x402 / MPP)
-
----
-
-# Ecosystem Context
-
-## Target Ecosystems
-- GitHub-native open source projects across all languages and domains
-- The x402 and MPP (Machine Payments Protocol) agentic commerce ecosystems
-- Base / Ethereum (stablecoin settlement layer)
-- AI agent runtimes: Claude, Codex, Cursor, Gemini CLI
-
-## Intended Users
-- Open source project maintainers seeking to pay contributors
-- Foundations and sponsors routing capital to repos
-- Developers building AI agents that need to consume paid APIs
-- API providers wanting to monetize services to autonomous agents
-
-## Current Pain Points Addressed
-Friction still exists in the open source ecosystem: it's hard for projects to understand the impact of their contributors, challenging to find payment models that work for the industry, and if you do want to monetize, the administrative burdens are numerous — taxes, payroll, and incorporation. On the agentic side, AI tools like Claude, Cursor, and Codex previously could not buy data and services on behalf of users — agents needed account creation, API keys, and subscriptions before they could pay for a service.
-
----
-
-# Technical Information
-
-## Repository / Source Code
-[https://github.com/merit-systems](https://github.com/merit-systems)
-
-## Documentation
-- Terminal: [https://terminal.merit.systems](https://terminal.merit.systems)
-- AgentCash: [https://agentcash.dev/docs](https://agentcash.dev/docs)
-
-## Core Technologies
-- Stablecoins for instant global payouts, with end-to-end tax management
-- x402 (HTTP 402-based open payment protocol, co-developed with Coinbase / x402 Foundation)
-- MPP — Machine Payments Protocol (co-developed with Tempo + Stripe)
-- GitHub API (contribution attribution and repo analytics)
-- Base blockchain (primary stablecoin settlement layer — USDC)
-
-## Architecture Overview
-Merit Systems operates two distinct product layers:
-
-**Terminal** — A new interface for anyone building software in the open to surface and pay high-impact contributors. Projects have a simple way to pay open source developers directly based on their contributions to a repo, using stablecoins for instant global payouts, with Merit managing all taxes end-to-end.
-
-**AgentCash** — A single balance providing access to every API on the internet. When an agent gets blocked by a paywall, it can reach for thousands of APIs, spend pennies, and proceed. AgentCash bundles payment and merchant discovery — merchants register their servers on x402scan.com or mppscan.com and are instantly exposed to all AgentCash agents.
-
-## Dependencies
-- GitHub (source of contribution data and identity)
-- Base / Ethereum (onchain stablecoin settlement)
-- x402 and MPP protocol standards
-- USDC (Circle) for payment denomination
-- MCP (Model Context Protocol) for agent tool integration
-
----
-
-# Operational Model
-
-## Governance Model
-Merit Systems was founded by Sam Ragsdale, Ryan Sproule, and Mason Hall, built in Brooklyn, NY. Privately held; governance is internal to the company. Payment protocol work (x402) is governed externally by the x402 Foundation (Coinbase, Cloudflare, and partners).
-
-## Maintenance Model
-Core products (Terminal, AgentCash) are maintained by the Merit Systems team. Protocol-level contributions flow back into the open x402 and MPP standards. Merit is actively hiring developers.
-
-## Funding Model
-Merit Systems raised $10M from a16z crypto, Blockchain Capital, and industry-leading angels to build a new economy for open source. Revenue model is expected to include payment processing fees and API gateway margins through AgentCash.
-
-## Contributor Model
-Open source attribution via GitHub PRs drives payment allocation in the Terminal. Maintainers can choose to focus on longtime contributors with months or years of PR history, or use Merit to pay a longer tail of developers who have recently merged PRs. External developer contributions to the open protocol layer (x402, MPP) are community-governed.
-
----
-
-# Open Source Impact
-
-## Expected Benefits
-Projects now have a simple way to pay open source developers directly based on their contributions to a repo — flexible for all kinds of open-source projects, from enduring infrastructure to teams that haven't yet incorporated. On the agentic side, open payment protocols eliminate gatekeeping from agent-to-API commerce: an agent that can only buy from pre-approved merchants is an employee with a corporate card restricted to three vendors; an agent with open protocols is an entrepreneur with a bank account.
-
-## Ecosystem Value
-Open Agentic Commerce — powered by open standards like x402 and MPP — means no BD process, no whitelist, just simple permissionless standards. Agents can discover an API, read its schema, and use it correctly without any prior training, composing capabilities at unprecedented scale. For open source specifically, Merit enables market-rate compensation to flow directly to contributors without corporate intermediaries.
-
-## Risks & Limitations
-- Proprietary product layer atop open protocols creates dependency on a single commercial entity for key UX and distribution
-- Stablecoin/crypto payment rails may face regulatory headwinds in key jurisdictions
-- Contributor payment model requires project-level revenue or sponsorship to function — projects with no funding still cannot pay contributors
-- Early-stage: adoption, tooling maturity, and long-term sustainability are unproven at scale
-- Tax and compliance management is handled by Merit — creates a single point of failure for payout infrastructure
-
----
-
-# Adoption & Maturity
-
-## Current Lifecycle Stage
-- [ ] Concept
-- [ ] Prototype
-- [ ] Alpha
-- [x] **Beta**
-- [ ] Production
-- [ ] Mature
-
-## Current Adoption
-Agents have made 770,000+ paid tool calls on AgentCash. API partners include Minerva, Parallel, Nansen, and Zapper. AgentCash launched in March 2026 and had 2,000+ agents accessing its ecosystem within days of launch. The Terminal is available to all GitHub users with a limited payments beta cohort.
-
-## Roadmap
-- Expand AgentCash API catalog (280+ tier-1 APIs including LinkedIn, Instagram, Reddit, image/video generation, travel)
-- Poncho — a consumer product described as making the one-person team unstoppable, currently in development
-- Continued expansion of x402 / MPP protocol support across new blockchains and settlement layers
-- Growth of merchant discovery infrastructure (x402scan, MPPscan)
-
----
-
-# Metrics & Evaluation
-
-## Success Metrics
-
-| Metric | Description |
-|---|---|
-| Paid tool calls | Total agent-initiated API transactions through AgentCash (770k+ as of launch) |
-| APIs available | Number of API routes accessible through the AgentCash marketplace |
-| Contributors paid | Open source developers who have received payments via the Terminal |
-| Repos integrated | GitHub repositories with Merit Terminal installed |
-| Merchant registrations | API providers registered on x402scan / mppscan for agent discovery |
-
-## Observability / Reporting
-- [x402scan.com](https://x402scan.com) — live registry and explorer for x402-enabled services
-- [mppscan.com](https://mppscan.com) — live registry and explorer for MPP-enabled services
-- AgentCash dashboard with balance, spend history, and API usage per agent
-
----
-
-# Alignment With Open Source Frontiers
-
-## Program Relevance & Direct OSF Alignment
-
-### 1. OMF Automated Contributor Payouts (Terminal Integration)
-- **OSF Mapping**: **OMF Program 2 (Code Bounties)** & **Program 1 (Maintainer Retainers)**.
-- **Mechanism Validated**: Validates direct GitHub commit-attribution payouts using automated stablecoin rails (USDC on Base), eliminating manual payroll overhead for un-incorporated open-source maintainer teams.
-- **Operator Takeaway**: An OMF Operator integrates Merit Terminal rails to execute instant milestone payouts to secondary contributors based on merged pull requests.
-
-### 2. ORF Autonomous Agentic Revenue Inflows (AgentCash / HTTP 402)
-- **OSF Mapping**: **ORF Layer 2 (Application & Service Layer)** & **[`INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
-- **Mechanism Validated**: Proves that autonomous AI agents can query, negotiate, and pay micro-fees for API services using open payment standards (x402 / MPP).
-- **Operator Takeaway**: An ORF Operator configures x402/MPP payment gateways on ecosystem developer APIs (e.g. RPC nodes, indexers, vulnerability scanners), capturing agentic micro-transaction fees to replenish the ecosystem treasury.
-
----
-
----
-
-# Supporting Materials
-
-## References
-- [Announcing Merit Systems — $10M Seed Round](https://merit.systems/blog/fundraise)
-- [Open Source Capitalism — Company Manifesto](https://merit.systems/blog/manifesto)
-- [Launching the Terminal](https://merit.systems/blog/launch)
-- [The Age of Open Agentic Commerce](https://merit.systems/blog/open-agentic-commerce)
-
-## Demonstrations / Screenshots
-- Terminal: [https://terminal.merit.systems](https://terminal.merit.systems)
-- AgentCash: [https://agentcash.dev](https://agentcash.dev)
-- x402 ecosystem explorer: [https://x402scan.com](https://x402scan.com)
-- MPP ecosystem explorer: [https://mppscan.com](https://mppscan.com)
-
-## Related Projects
-- [x402 Foundation](https://x402.org) — open payment protocol (Coinbase, Cloudflare)
-- [MPP / Machine Payments Protocol](https://mpp.dev) — open payment protocol (Tempo, Stripe)
-- [Poncho](https://tryponcho.com) — Merit's consumer agent product
-
----
-
-# Contributor Information
-
-## Primary Contact
-- Sam Ragsdale — Founder & CEO / [@samrags\_](https://x.com/samrags_)
-- Ryan Sproule — Co-founder
-- Mason Hall — Co-founder
-- Twitter/X: [@merit\_systems](https://x.com/merit_systems)
-
-## Contributors
-- Merit Systems core team (Brooklyn, NY)
-- x402 Foundation ecosystem contributors
-- AgentCash API partner network
-
-## Submission Date
-2026-05-21
+## Primary References & Links
+- **Website**: [https://merit.systems](https://merit.systems)
+- **Terminal**: [https://terminal.merit.systems](https://terminal.merit.systems)
+- **AgentCash**: [https://agentcash.dev](https://agentcash.dev)
