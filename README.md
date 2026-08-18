@@ -43,9 +43,9 @@ OSF synthesizes Web2 and Web3 precedents into a unified, three-piece closed-loop
 
 ### Master Architectural Whitepapers Series ([`whitepapers/`](./whitepapers))
 - **[`whitepapers/README.md`](./whitepapers/README.md)**: Master Whitepaper Series Index & Executive Architecture Overview.
-- **[`whitepapers/DOSPO_WHITEPAPER.md`](./whitepapers/DOSPO_WHITEPAPER.md)**: **dOSPO Whitepaper v1.0** — Non-custodial governance, RACI matrix, and PCF legal execution wrapper.
-- **[`whitepapers/OMF_WHITEPAPER.md`](./whitepapers/OMF_WHITEPAPER.md)**: **OMF Whitepaper v1.0** — Maintenance deployment engine, 5 core programs, and DPG incubation.
-- **[`whitepapers/ORF_WHITEPAPER.md`](./whitepapers/ORF_WHITEPAPER.md)**: **ORF Whitepaper v1.0** — Closed-loop replenishment, 5 Revenue Families, 8 Hard Gates, and D0–D5 scale.
+- **dOSPO Whitepaper**: [`whitepapers/DOSPO_WHITEPAPER.md`](./whitepapers/DOSPO_WHITEPAPER.md) | PDF: [`dospo-whitepaper-v1.0.pdf`](./whitepapers/dospo-whitepaper-v1.0.pdf)
+- **OMF Whitepaper**: [`whitepapers/OMF_WHITEPAPER.md`](./whitepapers/OMF_WHITEPAPER.md) | PDF: [`open-maintenance-framework-omf-v1.0.pdf`](./whitepapers/open-maintenance-framework-omf-v1.0.pdf)
+- **ORF Whitepaper**: [`whitepapers/ORF_WHITEPAPER.md`](./whitepapers/ORF_WHITEPAPER.md)
 
 ### Core Architectural Specifications
 - **[`dospo/START_HERE.md`](./dospo/START_HERE.md)**: Decentralized OSPO Governance Specification & RACI Matrix.

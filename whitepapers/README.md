@@ -1,7 +1,7 @@
 # Open Source Frontiers — Whitepaper Series
 
 > **LF Decentralized Trust · Stage 0 Research Candidate Series**  
-> *Release Candidate Edition: `v0.8.0-rc.1` · Master Architecture Whitepapers*
+> *Release Candidate Edition: `v0.8.0-rc.1` · Master Architecture Whitepapers & PDF Documents*
 
 ---
 
@@ -9,7 +9,7 @@
 
 The **Open Source Frontiers (OSF) Whitepaper Series** establishes the theoretical, legal, economic, and operational foundations for open-source software sustainability in decentralized ecosystems.
 
-The series is structured across three core architectural whitepapers:
+The series is available in both **Publication-Grade Markdown Specifications** and **Original Downloadable PDF Documents**:
 
 ```text
                ┌──────────────────────────────────────────┐
@@ -23,6 +23,17 @@ The series is structured across three core architectural whitepapers:
 │ (Governance)    │        │  (Deployment)   │        │ (Replenishment) │
 └─────────────────┘        └─────────────────┘        └─────────────────┘
 ```
+
+---
+
+## 1. Original PDF Whitepaper Downloads
+
+- **dOSPO Whitepaper PDF**: [`dospo-whitepaper-v1.0.pdf`](./dospo-whitepaper-v1.0.pdf)
+- **OMF Whitepaper PDF**: [`open-maintenance-framework-omf-v1.0.pdf`](./open-maintenance-framework-omf-v1.0.pdf)
+
+---
+
+## 2. Markdown Specifications
 
 1. **[`DOSPO_WHITEPAPER.md`](./DOSPO_WHITEPAPER.md)**: *Decentralized Open Source Program Office (dOSPO) Whitepaper v1.0*. Defines non-custodial governance coordination, RACI matrices, legal foundation execution wrappers (Polkadot PCF model), and operator replaceability safeguards.
 2. **[`OMF_WHITEPAPER.md`](./OMF_WHITEPAPER.md)**: *Open Maintenance Framework (OMF) Whitepaper v1.0*. Details the five maintenance deployment programs (Maintainer Retainers, Bug Bounties, Contributor Pathways, Security Resilience, and DPG Incubation).
