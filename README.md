@@ -1,79 +1,104 @@
-# Open Source Frontiers Lab (LF Decentralized Trust)
+# Open Source Frontiers (OSF) Lab
 
-> **Guidance Frameworks on Open-Source Sustainability in Web3**  
-> *A 3-Piece Architecture: Governance (dOSPO), Deployment (OMF), and Collection (ORF)*
+> **Linux Foundation Decentralized Trust · Stage 0 Research Candidate**  
+> *Release Candidate Edition: `v0.8.0-rc.1` · Open Source Governance & Replenishment System*
 
-[![License: Apache 2.0 / CC-BY-4.0](https://img.shields.io/badge/License-Apache_2.0_%7C_CC--BY--4.0-blue.svg)](./LICENSE-CODE)
-[![LF Decentralized Trust](https://img.shields.io/badge/LF-Decentralized_Trust_Lab-green.svg)](https://lfdecentralizedtrust.org)
-[![Edition: July 2026 Research Candidate](https://img.shields.io/badge/Edition-July_2026_Research_Candidate-orange.svg)](./VALIDATION.md)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Release Candidate](https://img.shields.io/badge/Status-Stage_0_Research_Candidate-orange.svg)](VALIDATION.md)
+[![DCO Signed](https://img.shields.io/badge/DCO-Signed_Commits-green.svg)](CONTRIBUTING.md)
 
 ---
 
-## Executive Overview
+## Executive Summary
 
-Open-source software powers critical global infrastructure, yet digital commons remain systematically under-funded and under-maintained. The **Open Source Frontiers Lab** (hosted at **LF Decentralized Trust**) provides a complete, 3-piece framework suite to transform open-source funding from episodic charity into a self-sustaining economic loop.
+The **Open Source Frontiers Lab (OSF)** is a research and architectural framework built within **LF Decentralized Trust** to solve the open-source maintenance crisis. Modern digital society relies on thousands of critical open-source software libraries, yet funding has historically suffered from one-way capital outflows — short-term grants, volunteer burnout, and corporate capture.
 
+OSF synthesizes Web2 and Web3 precedents into a unified, three-piece closed-loop architecture:
+
+```text
+               ┌──────────────────────────────────────────┐
+               │  dOSPO (Decentralized OSPO Governance)   │
+               │   • Holds Zero Direct Treasury Custody   │
+               │   • Sets Policy, Charters & Budget Caps  │
+               └────────────────────┬─────────────────────┘
+                                    │
+               ┌────────────────────┴─────────────────────┐
+               ▼                                          ▼
+┌──────────────────────────────┐          ┌──────────────────────────────┐
+│   OMF (Maintenance Engine)   │          │  ORF (Replenishment Engine)  │
+│ • Maintainer Retainers       │          │ • Structural Network Revenue │
+│ • Resilience & Security      │◄─────────┤ • Enterprise Assurance & SLAs│
+│ • Contributor Pathways       │  Net $   │ • Consortium Dues & Certs    │
+│ • Incubation Charters        │ Flows    │ • Governed Endowment Yield   │
+└──────────────────────────────┘          └──────────────────────────────┘
 ```
-                     COMMUNITY GOVERNANCE
-                  Mandate · Budget · Rules
-                            |
-                            v
-                         dOSPO
-                Coordinate · Draft · Report
-                      /             \
-                     v               v
-                  OMF                 ORF
-               DEPLOY              REPLENISH
-           maintenance capital   economic inflows
-                     \               /
-                      \             /
-                       v           v
-                  GOVERNED TREASURY
-                            |
-                            v
-                   INDEPENDENT AUDIT
+
+1. **dOSPO (Decentralized Open Source Program Office)**: *Who Decides*. A non-custodial governance layer that sets policy guidelines, defines maintenance charters, and enforces operator replaceability.
+2. **OMF (Open Maintenance Framework)**: *How Money Goes Out*. A structured maintenance deployment engine executing maintainer retainers, vulnerability audits, contributor pathways, and dependency incubation.
+3. **ORF (Open Replenishment Framework)**: *How Money Comes Back*. A portfolio framework identifying, validating, collecting, and diversifying recurring sources of value to replenish ecosystem treasuries.
+
+---
+
+## Key Core Principles of ORF
+
+- **Legitimacy & Counter-Value**: Optional commercial collection must provide independent counter-value (assurances, SLAs, registries, training). Protocol-native collection requires explicit governance legitimacy.
+- **Strict Functional Separation**: Decouples *Revenue Sources* (new money generated) from *Routing Rails* (smart contracts moving existing money like Drips/Superfluid) and *Allocation Engines* (AI/voting algorithms).
+- **Correlation-Aware Diversification**: Requires multiple uncorrelated revenue risk classes (enterprise contracts, protocol fees, capital yield) rather than token-price-correlated instruments.
+- **Net Contribution Auditability**: Evaluated strictly on *Net Contribution* after deducting sales, legal, tax, support delivery, and administrative overhead.
+- **8 Hard Gates for Self-Sustainability**: Enforces strict quantitative criteria (Measurement, Cash evidence, Net coverage $\ge 100\%$, Diversity $\ge 2$ classes, Concentration $\le 25\%$, Stress runway $\ge 24$ mo., Liabilities covered, Independent Audit).
+
+---
+
+## Master Document Directory & Navigation
+
+### Core Architectural Specification
+- **[`dospo/START_HERE.md`](./dospo/START_HERE.md)**: Decentralized OSPO Governance Specification & RACI Matrix.
+- **[`omf/PROGRAM_PORTFOLIO.md`](./omf/PROGRAM_PORTFOLIO.md)**: Maintenance Program Specifications (Retainers, Bounties, Pathways, Resilience, Incubation).
+- **[`orf/START_HERE.md`](./orf/START_HERE.md)**: Open Replenishment Framework Master Introduction & 5 Revenue Families.
+- **[`orf/INSTRUMENT_CATALOG.md`](./orf/INSTRUMENT_CATALOG.md)**: Inventory of Revenue Families, Routing Rails, and Advanced Financial Products.
+- **[`orf/GOVERNANCE_RULES.md`](./orf/GOVERNANCE_RULES.md)**: The 8 Hard Gates, 5 Replenishment Ratios, Correlation Classes, and Legal Entity Architecture.
+- **[`VALIDATION.md`](./VALIDATION.md)**: 4-Stage Research Validation Lifecycle & Honest Stage 0 Labelling.
+
+### Evidence, Research & Scenarios
+- **[`docs/EVIDENCE_REGISTER.md`](./docs/EVIDENCE_REGISTER.md)**: Primary-Source Precedent Audit Matrix & Transferability Ratings.
+- **[`docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md`](./docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md)**: 5-Vector Deep Dives into STF, Protocol Guild, Tidelift, Project Odin, Optimism, Polkadot, and ENS.
+- **[`docs/TIER_1_FEASIBILITY_MODEL.md`](./docs/TIER_1_FEASIBILITY_MODEL.md)**: Financial Scenario Model & Compound Stress Test.
+
+### Multi-Chain Ecosystem Profiles
+- **[`use-cases/CARDANO_POSM.md`](./use-cases/CARDANO_POSM.md)**: Cardano Paid Open Source Model (POSM) Precursor.
+- **[`use-cases/ETHEREUM_EVM.md`](./use-cases/ETHEREUM_EVM.md)**: Protocol Guild, Project Odin, and ENS Endowment Architecture.
+- **[`use-cases/OPTIMISM_SUPERCHAIN.md`](./use-cases/OPTIMISM_SUPERCHAIN.md)**: Superchain 15% Net Fee Split & OSO Impact Tracing.
+- **[`use-cases/POLKADOT_OPENGOV.md`](./use-cases/POLKADOT_OPENGOV.md)**: Technical Fellowship Ranks 0–9 & PCF Legal Foundation Execution.
+
+### Tool & Infrastructure Specifications
+- **[`tools/PROJECT_ODIN.md`](./tools/PROJECT_ODIN.md)**: EF Funding Coordination & Renaissance Philanthropy DPG Incubation Lab.
+- **[`tools/OPEN_SOURCE_OBSERVER.md`](./tools/OPEN_SOURCE_OBSERVER.md)**: Multi-Ecosystem BigQuery Data Warehouse & Hasura GraphQL API.
+- **[`tools/DRIPS_PROTOCOL.md`](./tools/DRIPS_PROTOCOL.md)**: EVM Smart Contracts for Dependency Graph Fund Splitting (ORF Routing Rail).
+- **[`tools/SUPERFLUID.md`](./tools/SUPERFLUID.md)**: Constant Flow Agreements for Real-Time Streaming Stipends (ORF Routing Rail).
+- **[`tools/GRIMOIRELAB_CHAOSS.md`](./tools/GRIMOIRELAB_CHAOSS.md)**: Perceval Data Retrieval & SortingHat Identity Resolution Engine.
+- **[`tools/MERIT_SYSTEMS.md`](./tools/MERIT_SYSTEMS.md)**: GitHub Commit Attribution & AgentCash x402/MPP Agentic Commerce Gateway.
+- **[`tools/ANDAMIO.md`](./tools/ANDAMIO.md)**: Cardano Plutus Course Validators & Tokenized Contributor Credentials.
+
+---
+
+## Canonical Systems Evaluator & CLI
+
+The repository includes a reference implementation of the **Canonical Systems Evaluator** in Python and Node.js:
+
+```bash
+# Run unit test suite
+python evaluator/tests/test_evaluator.py
+
+# Run Canonical Systems Assessment on sample configuration
+python evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.json
+
+# Run experimental QUAID heuristic scanner
+python evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
 ```
 
 ---
 
-## The 3-Piece Framework Recipe
+## Legal & License
 
-The suite enforces **distinct functional mandates with explicit interfaces and shared safeguards**:
-
-### 1. [dOSPO — Decentralized Open Source Program Office](./dospo/START_HERE.md)
-* **Question Answered**: *WHO* coordinates policy and portfolio oversight?
-* **Role**: Time-bounded, community-mandated coordination body holding the governance triangle (**legitimacy, neutrality, execution**). Translates mandates into policy without holding direct discretionary treasury custody.
-
-### 2. [OMF — Open Maintenance Framework](./omf/START_HERE.md)
-* **Question Answered**: *HOW* is capital deployed to sustain infrastructure?
-* **Role**: Governed portfolio of operational programs translating approved budgets into long-term infrastructure health (Maintainer Retainers, Contributor Pathways, Tooling Stewardship).
-
-### 3. [ORF — Open Replenishment Framework](./orf/START_HERE.md)
-* **Question Answered**: *HOW* does value flow back to replenish the treasury?
-* **Role**: Governed portfolio of collection instruments matching value generation across ecosystem layers (Enterprise SLAs, badging, IPS endowments, stake pool margins).
-
----
-
-## Quick Navigation & Master Document Index
-
-| Framework / Module | Description | Core Artifacts & Templates |
-|---|---|---|
-| 🏛️ **dOSPO** | Governance & Policy Framework | [dOSPO Specification](./dospo/START_HERE.md) • [dOSPO Charter](./dospo/CHARTER.md) • [Funding Principles](./dospo/FUNDING_PRINCIPLES.md) |
-| 🛠️ **OMF** | Maintenance & Deployment Framework | [OMF Specification](./omf/START_HERE.md) • [Program Charter Template](./omf/PROGRAM_CHARTER_TEMPLATE.md) • [Stewardship](./omf/STEWARDSHIP.md) |
-| 💰 **ORF** | Replenishment & Inflow Framework | [ORF Specification](./orf/START_HERE.md) • [Instrument Catalog](./orf/INSTRUMENT_CATALOG.md) • [Governance Rules](./orf/GOVERNANCE_RULES.md) |
-| 📈 **Pro-Forma Model** | Tier 1 Feasibility Scenario Model | [Tier 1 Feasibility Scenario Model](./docs/TIER_1_FEASIBILITY_MODEL.md) |
-| 🏆 **Validation Lifecycle** | 4-Stage Validation Framework | [Validation Framework & Register](./VALIDATION.md) |
-| 🌍 **Use Cases** | Multi-Chain Ecosystem Profiles | [Cardano POSM](./use-cases/CARDANO_POSM.md) • [Optimism Superchain](./use-cases/OPTIMISM_SUPERCHAIN.md) • [Polkadot](./use-cases/POLKADOT_OPENGOV.md) • [Ethereum EVM](./use-cases/ETHEREUM_EVM.md) |
-| 🛠️ **Tools & Protocols** | Governance & Replenishment Tools | [Project Odin](./tools/PROJECT_ODIN.md) • [Open Source Observer](./tools/OPEN_SOURCE_OBSERVER.md) • [Drips Protocol](./tools/DRIPS_PROTOCOL.md) • [Superfluid](./tools/SUPERFLUID.md) |
-| 📊 **Evaluator Suite** | QUAID, CHAOSS & Systems Assessor | [Evaluator Documentation](./evaluator/README.md) • [QUAID Audit Example](./evaluator/examples/CARDANO_QUAID_SCANNER_REPORT.md) |
-| 📜 **Smart Contracts** | Reference Solidity & Aiken Vaults | [Native Contracts Guide](./contracts/README.md) • [EVM Solidity Contract](./contracts/solidity/ORFSlaVault.sol) • [Cardano Aiken Validator](./contracts/aiken/validators/orf_sla_vault.ak) |
-| 📊 **Pitch & Adoption Kit** | Executive Decks & Proposal Templates | [Pitch Deck](./pitch/EXECUTIVE_PITCH_DECK.md) • [One-Pager](./pitch/ONE_PAGER.md) • [Forum Proposal](./pitch/GOVERNANCE_PROPOSAL_TEMPLATE.md) • [Enterprise Sales Kit](./pitch/ENTERPRISE_SPONSOR_KIT.md) |
-| 🌐 **Web Suite App** | Interactive 3-Piece Dashboard | Launch [`index.html`](./index.html) in your browser for the Interactive Catalog, 3-Piece Evaluator, Pro-Forma Calculator, and Exporter. |
-
----
-
-## Citation & License
-
-**Research Edition — Candidate for External Validation**  
-*Author*: Christian Taylor (`opensourcecowboy.org`) · Open Source Frontiers Lab · LF Decentralized Trust  
-*License*: Code & CLI Tools under [Apache-2.0](./LICENSE-CODE); Documentation & Frameworks under [CC-BY-4.0](./LICENSE-DOCS).
+All code and specifications in this repository are licensed under the **Apache License 2.0**. See [`LICENSE`](LICENSE) for details.
+All contributions must include a Developer Certificate of Origin (DCO) sign-off (`git commit -s`).
