@@ -3,7 +3,7 @@
 > **HOW COLLECT: Value-Aligned Collection for Self-Sustaining Open Source Ecosystems**  
 > *Author: Christian Taylor · Open Source Frontiers Lab · LF Decentralized Trust*  
 > *Companion to the dOSPO Framework and the Open Maintenance Framework (OMF)*  
-> *Validated Research Edition · Final Revised & Expanded July 2026 · `opensourcecowboy.org`*
+> *Research Candidate · v0.8.0-rc.1 · See [`VALIDATION.md`](../VALIDATION.md) for maturity status*
 
 ---
 

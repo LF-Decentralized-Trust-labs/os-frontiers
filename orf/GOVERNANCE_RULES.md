@@ -1,7 +1,7 @@
 # ORF Collection Governance Rules
 
 > **Governing the Collection Side of the Sustainability Loop**  
-> *Excerpted from the Open Replenishment Framework (ORF) July 2026 Validated Edition*
+> *Excerpted from the Open Replenishment Framework (ORF) Research Candidate v0.8.0-rc.1*
 
 ---
 
@@ -29,7 +29,7 @@ Every collection instrument is chartered like a spending program. It receives:
 
 The separation of policy and execution carries over intact from the dOSPO model:
 - **dOSPO (Policy)**: Defines collection policy — which instruments are authorized, at what rates, with what benefit bundles — under its delegated, replaceable mandate.
-- **OMF / Program Operator (Execution)**: Operates the machinery — administering certifications, selling and servicing SLAs, managing endowment sleeves, running metering infrastructure.
+- **ORF Operator (Execution)**: Operates the machinery — administering certifications, selling and servicing SLAs, managing endowment sleeves, running metering infrastructure.
 
 > 🔄 *Operator Replaceability*: The operator of collection must be as replaceable as the operator of anything else; a replenishment system that depends on one irreplaceable commercial entity is a renamed sponsor.
 

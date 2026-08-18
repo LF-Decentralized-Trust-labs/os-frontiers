@@ -1,6 +1,7 @@
 /// Open Replenishment Framework (ORF) Enterprise SLA Vault - Aiken Reference Pseudocode
 /// LF Decentralized Trust · Open Source Frontiers Lab
 /// Stage 0 Architectural Reference Sketch (Unaudited)
+/// ⚠️ NOTICE: NON-EXECUTABLE ARCHITECTURAL REFERENCE PSEUDOCODE (Illustrative UTxO Specification)
 
 type Datum {
   dospo_admin: ByteArray,

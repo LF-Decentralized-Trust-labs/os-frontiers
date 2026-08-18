@@ -1,8 +1,9 @@
-Here is the completed template for GrimoireLab:
+# Tool Profile: GrimoireLab
+
+> **LF Decentralized Trust · Open Source Frontiers Lab**  
+> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Production Precedent`*
 
 ---
-
-# Open Source Frontiers Lab — Tool Submission Template
 
 ## Tool Name
 GrimoireLab

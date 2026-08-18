@@ -1,7 +1,7 @@
 # ORF Instrument Catalog
 
 > **The Complete Portfolio of Open Replenishment Framework Collection Instruments**  
-> *Excerpted from the Open Replenishment Framework (ORF) July 2026 Validated Edition*
+> *Excerpted from the Open Replenishment Framework (ORF) Research Candidate v0.8.0-rc.1*
 
 ---
 
@@ -16,7 +16,8 @@
 
 | Instrument Name | Layer | Fork-Resistance Anchor | Precedent & Evidence Status | Implementation Tier |
 |---|---|---|---|---|
-| **Fee & Expansion Split** | Protocol | Canonical ledger rules | 🟢 Cardano treasury (CIP-1694 / Monetary Policy) | Tier 1 (0-18m) |
+| **Protocol Fee Routing** | Protocol | Canonical ledger rules | 🟢 Cardano L1 transaction fee split (`tau`) | Tier 1 (0-18m) |
+| **Monetary Expansion Allocation** | Protocol | Canonical ledger rules | 🟡 Transitional protocol issuance (Does not count toward Net Replenishment Ratio) | Tier 1 (Transitional) |
 | **Surplus Sequencer / Priority Tithe** | Protocol | Sequencing and ledger activity | 🟢 Optimism sequencer allocation / RetroPGF | Tier 3 (36m+) |
 | **Slashing & Penalty Routing** | Protocol | Canonical ledger rules | 🟢 Polkadot directs portion of slashes to Treasury | Tier 3 (36m+) |
 | **Certification-Gated Contribution** | Application | Brand, registry, support bundle | 🟡 Protocol Guild + Tidelift partial analog | Tier 1 (0-18m) |

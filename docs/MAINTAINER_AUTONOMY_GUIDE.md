@@ -27,9 +27,9 @@ The **Open Maintenance Framework (OMF)** and **Open Replenishment Framework (ORF
 |  [ Enterprise Client / Treasury ]                                                 |
 |               │                                                                   |
 |               ▼ (Purchases Support SLA / Grants Retainer)                         |
-|   [ dOSPO Neutral Operator ]                                                      |
+|   [ OMF Program Operator (under dOSPO Policy Safeguards) ]                         |
 |               │                                                                   |
-|               ▼ (Provides Monthly Stipend & Retainer)                             |
+|               ▼ (Provides Monthly Stipend & Retainer Stream)                      |
 |    [ Open Source Maintainer ] ───> 100% Autonomous Technical Roadmap Control      |
 +-----------------------------------------------------------------------------------+
 ```

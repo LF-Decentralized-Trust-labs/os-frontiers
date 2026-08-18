@@ -22,33 +22,35 @@
 
 ## Slide 2: The Solution — A 3-Piece Framework Suite
 
-A clean division of labor with **zero functional overlap**:
+Enforces **distinct functional mandates with explicit interfaces and shared safeguards**:
 
 ```
-       +-------------------------------------------------------+
-       |                        dOSPO                          |
-       |       (Decentralized Open Source Program Office)       |
-       |   WHO: Mandate, Governance, Policy & Neutrality       |
-       +---------------------------+---------------------------+
-                                   |
-         +-------------------------+-------------------------+
-         |                                                   |
-         v                                                   v
-+---------------------------------+         +---------------------------------+
-|               OMF               |         |               ORF               |
-|   (Open Maintenance Framework)  |         |  (Open Replenishment Framework) |
-| HOW DEPLOY: Program Retainers,  |========>| HOW COLLECT: Value Alignment,   |
-| Maintenance, Contributor Paths  | Treasury| Collection Instruments, Yield,  |
-|                                 | Buffer  | Enterprise SLAs & Endowments    |
-+---------------------------------+         +---------------------------------+
+                     COMMUNITY GOVERNANCE
+                  Mandate · Budget · Rules
+                            |
+                            v
+                         dOSPO
+                Coordinate · Draft · Report
+                      /             \
+                     v               v
+                  OMF                 ORF
+               DEPLOY              REPLENISH
+           maintenance capital   economic inflows
+                     \               /
+                      \             /
+                       v           v
+                  GOVERNED TREASURY
+                            |
+                            v
+                   INDEPENDENT AUDIT
 ```
 
 ---
 
 ## Slide 3: Piece 1 — dOSPO (Governance Authority)
-- **Question Answered**: *WHO* holds authority and sets policy?
+- **Question Answered**: *WHO* coordinates policy and portfolio oversight?
 - **Core Principle**: Bounded, community-mandated coordination body holding the governance triangle (**legitimacy, neutrality, execution**).
-- **Key Capability**: Sets spending priorities and collection rules while remaining **fully replaceable** by the community upon evidence-based renewal votes.
+- **Key Capability**: Translates mandates into policy without holding direct discretionary treasury custody; remains **fully replaceable** by the community upon evidence-based renewal votes.
 
 ---
 
@@ -61,7 +63,7 @@ A clean division of labor with **zero functional overlap**:
 
 ## Slide 5: Piece 3 — ORF (Value Collection & Replenishment)
 - **Question Answered**: *HOW* does value flow back to replenish the treasury?
-- **Core Principle**: Collect at the point where value is realized, attach to fork-resistant anchors, and sell bundled benefits ("Sold, not taxed").
+- **Core Principle**: Collect at the point where value is realized, attach to fork-resilient economic anchors, and sell bundled benefits ("Sold, not taxed").
 - **5 Collection Layers**:
   1. **Protocol Layer**: Fee splits, sequencer tithes, slashing routing.
   2. **Application Layer**: "Sustains the Commons" certifications, dependency graph splitting (Drips/tea).
@@ -73,15 +75,14 @@ A clean division of labor with **zero functional overlap**:
 
 ## Slide 6: The Four Collection Governing Rules
 1. **Program Chartering**: Every collection rail receives a traceable mandate, bounded budget interface, and time-limited charter.
-2. **Separation of Policy & Execution**: dOSPO sets policy; OMF operates machinery; operators are replaceable.
-3. **Legal & Regulatory Posture**: Legal entity, jurisdiction, tax treatment, and suspension triggers defined as design inputs.
+2. **Separation of Policy & Execution**: dOSPO sets policy; OMF/ORF operate machinery; operators are replaceable.
+3. **Legal & Regulatory Posture**: Legal entity, jurisdiction, tax treatment, and suspension triggers defined as design inputs (subject to local legal review).
 4. **Independent Audit Review**: Inflows, cost to collect, and concentration metrics independently audited before renewal votes.
 
 ---
 
-## Slide 7: Phased Adoption — "The Bootstrap Loan" Reframing
-
-Reframes initial reserve usage as a measured **bootstrap loan** to be systematically reduced:
+## Slide 7: Phased Adoption — "Bootstrap Reserve Allocation"
+Reframes initial reserve usage as a measured **Bootstrap Reserve Allocation** to be systematically reduced:
 
 ```
 [ Phase 1: Reserve-Funded ] ──> [ Phase 2: Fee-Supplemented ] ──> [ Phase 3: Self-Sustaining ]
@@ -92,9 +93,9 @@ Reframes initial reserve usage as a measured **bootstrap loan** to be systematic
 
 ---
 
-## Slide 8: Business Case & Cardano POSM Tier 1 Pro-Forma
+## Slide 8: Business Case — Conservative Pilot Scenario (Phase 1 Initial Launch)
 
-*Illustrative $2.5M–$4.0M Baseline Maintenance Budget*:
+*Conservative Executive Pilot Scenario (See `docs/TIER_1_FEASIBILITY_MODEL.md` for Canonical Steady-State Model)*:
 - **Enterprise Maintenance SLAs** (10 contracts @ $75k): **$750,000**
 - **Paid Training & Certifications** (400 certs @ $750): **$300,000**
 - **Voluntary Application Badges** (20 dApps @ $15k): **$300,000**

@@ -1,8 +1,9 @@
-Now I have a thorough picture of Merit Systems. Here is the completed template:
+# Tool Profile: Merit Systems
+
+> **LF Decentralized Trust · Open Source Frontiers Lab**  
+> *Metadata: `observed_at: 2026-08-13` · `evidence_status: Live Beta Tooling`*
 
 ---
-
-# Open Source Frontiers Lab — Tool Submission Template
 
 ## Tool Name
 Merit Systems
