@@ -7,7 +7,7 @@
 
 Open Source Frontiers Lab takes software and framework security seriously. If you discover a security vulnerability in the repository code, CLI evaluators, web dashboard, or reference smart contracts, please report it immediately:
 
-- **Security Email**: **security@opensourcefrontiers.org** (or **chris@opensourcecowboy.org**)
+- **Security Email**: **oscowboyc@gmail.com** 
 
 Please do **NOT** create a public GitHub issue for security vulnerabilities.
 
