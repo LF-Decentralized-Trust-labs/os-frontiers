@@ -39,19 +39,15 @@ OSF synthesizes Web2 and Web3 precedents into a unified, three-piece closed-loop
 
 ---
 
-## Key Core Principles of ORF
-
-- **Legitimacy & Counter-Value**: Optional commercial collection must provide independent counter-value (assurances, SLAs, registries, training). Protocol-native collection requires explicit governance legitimacy.
-- **Strict Functional Separation**: Decouples *Revenue Sources* (new money generated) from *Routing Rails* (smart contracts moving existing money like Drips/Superfluid) and *Allocation Engines* (AI/voting algorithms).
-- **Correlation-Aware Diversification**: Requires multiple uncorrelated revenue risk classes (enterprise contracts, protocol fees, capital yield) rather than token-price-correlated instruments.
-- **Net Contribution Auditability**: Evaluated strictly on *Net Contribution* after deducting sales, legal, tax, support delivery, and administrative overhead.
-- **8 Hard Gates for Self-Sustainability**: Enforces strict quantitative criteria (Measurement, Cash evidence, Net coverage $\ge 100\%$, Diversity $\ge 2$ classes, Concentration $\le 25\%$, Stress runway $\ge 24$ mo., Liabilities covered, Independent Audit).
-
----
-
 ## Master Document Directory & Navigation
 
-### Core Architectural Specification
+### Master Architectural Whitepapers Series ([`whitepapers/`](./whitepapers))
+- **[`whitepapers/README.md`](./whitepapers/README.md)**: Master Whitepaper Series Index & Executive Architecture Overview.
+- **[`whitepapers/DOSPO_WHITEPAPER.md`](./whitepapers/DOSPO_WHITEPAPER.md)**: **dOSPO Whitepaper v1.0** — Non-custodial governance, RACI matrix, and PCF legal execution wrapper.
+- **[`whitepapers/OMF_WHITEPAPER.md`](./whitepapers/OMF_WHITEPAPER.md)**: **OMF Whitepaper v1.0** — Maintenance deployment engine, 5 core programs, and DPG incubation.
+- **[`whitepapers/ORF_WHITEPAPER.md`](./whitepapers/ORF_WHITEPAPER.md)**: **ORF Whitepaper v1.0** — Closed-loop replenishment, 5 Revenue Families, 8 Hard Gates, and D0–D5 scale.
+
+### Core Architectural Specifications
 - **[`dospo/START_HERE.md`](./dospo/START_HERE.md)**: Decentralized OSPO Governance Specification & RACI Matrix.
 - **[`omf/PROGRAM_PORTFOLIO.md`](./omf/PROGRAM_PORTFOLIO.md)**: Maintenance Program Specifications (Retainers, Bounties, Pathways, Resilience, Incubation).
 - **[`orf/START_HERE.md`](./orf/START_HERE.md)**: Open Replenishment Framework Master Introduction & 5 Revenue Families.
