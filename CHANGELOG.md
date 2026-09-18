@@ -4,6 +4,11 @@
 
 ---
 
+## Unreleased
+
+### Removed
+- **Contracts directory** (20 August 2026): `contracts/solidity/ORFSlaVault.sol`, `contracts/aiken/validators/orf_sla_vault.ak`, and `contracts/README.md` were deleted (commit message "Delete contracts directory"). They are not in the tree and are not a present Stage 0 artifact. The [0.8.0-rc.1] Changed note about `ORFSlaVault.sol` records work that was later removed.
+
 ## [0.8.0-rc.1] - 2026-08-13
 
 ### Added
