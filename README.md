@@ -23,7 +23,13 @@ The evaluator sample's `PASSED` output is a hypothetical, not a gate. No compone
 
 ## The loop, as a page
 
-The triangle and the closed loop are one page: [`docs/index.html`](./docs/index.html). GitHub Pages serves that file as the site root.
+The triangle, the closed loop, and the fifteen-indicator scorer are one page.
+
+- Live site: https://lf-decentralized-trust-labs.github.io/os-frontiers/
+- Scorer, on that site: https://lf-decentralized-trust-labs.github.io/os-frontiers/#evaluator
+- Source: [`docs/index.html`](./docs/index.html)
+
+The scorer is the same 15-indicator preview as `evaluator/preview`. A level it prints is not one of the eight hard gates.
 
 ## Executive Summary
 
