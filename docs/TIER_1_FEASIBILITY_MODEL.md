@@ -1,118 +1,107 @@
 # Tier 1 Ecosystem Feasibility Scenario Model
 
+> **Illustrative scenario, not a forecast and not evidence.** This file predates the arithmetic in the ORF whitepaper, section 15 (18 August 2026). An earlier draft of this file used certification net $193,150, commercial-pilot net $918,150 (IECR 30.6%), and a stressed total of $1,803,150 (SCR 1.002), and it treated a 47.4% protocol-fee share as payer concentration (RCR). Section 15 uses certification net $195,000, pilot net $920,000 (IECR 30.7%), and a stressed total of $1,835,000 (SCR 1.019), and it treats the 47.4% protocol-fee share as mechanism concentration (MCR), not RCR. The tables below are the whitepaper's tables. The two sets are not averaged. Neither set is a measured result. **No gate in this file is PASSED.** A gate passes only on audited receipts in an adopting ecosystem. Do not cite this file as validation.
+
 > **LF Decentralized Trust · Open Source Frontiers Lab Analysis**  
-> *Stage 0 Research Candidate Scenario Model · Edition: `v0.8.0-rc.1`*
+> *Stage 0 Research Candidate · Edition: `v0.8.0-rc.1` · Illustrative only*
 
 ---
 
-## 1. Executive Summary
+## 1. What this file is
 
-This document presents a quantitative feasibility scenario model evaluating the financial viability of a closed-loop sustainability architecture. The model compares an **Illustrative Ecosystem Maintenance Scenario ($3.0M Annual Cost Floor)** against realistic revenue inflows under the **Open Replenishment Framework (ORF)**.
+This document records one author's illustrative scenario for a closed-loop sustainability architecture. It is the scenario in whitepaper section 15, copied here so the repository does not keep a second arithmetic. It is not a forecast, not evidence, and not a third case.
 
-The model explicitly distinguishes **Defensible Initial Commercial Pilots** ($918,150 net = 30.6% cost floor coverage) from broader protocol fee allocations, proving that a multi-family replenishment strategy can satisfy all **8 Hard Gates for Self-Sustainability** under compound market stress.
+The cost floor is an illustrative mid-sized ecosystem at **$3,000,000 / year**. The commercial pilot does not claim self-sustainability. The full portfolio's coverage ratio is arithmetic on assumed inflows.
 
 ---
 
-## 2. Illustrative Ecosystem Maintenance Cost Floor ($C_{\text{base}}$)
-
-The scenario models a mid-sized, production-grade blockchain ecosystem requiring a baseline maintenance budget of **$3,000,000 / year**:
+## 2. Illustrative Maintenance Cost Floor ($C_{\text{base}}$)
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│             ILLUSTRATIVE ECOSYSTEM MAINTENANCE BUDGET ($3.0M)          │
+│        ILLUSTRATIVE ECOSYSTEM MAINTENANCE BUDGET ($3.0M)              │
 ├─────────────────────────────────────┬──────────────────┬───────────────┤
 │ Component Expense Area              │ Annual Allocation│ Budget Share  │
 ├─────────────────────────────────────┼──────────────────┼───────────────┤
 │ Core Consensus & Client Maintenance │ $1,600,000       │ 53.3%         │
 │ Core SDK & Tooling Maintenance      │ $600,000         │ 20.0%         │
-│ Security Audits & Vulnerability Triage│ $400,000        │ 13.3%         │
+│ Security Audits & Vulnerability Triage│ $400,000       │ 13.3%         │
 │ Program Ops, Legal & Admin Overhead │ $400,000         │ 13.3%         │
 ├─────────────────────────────────────┼──────────────────┼───────────────┤
 │ TOTAL BASELINE MAINTENANCE FLOOR    │ $3,000,000       │ 100.0%        │
 └─────────────────────────────────────┴──────────────────┴───────────────┘
 ```
 
-> *Methodological Note: Sourced as an illustrative operational budget scenario modeled on mid-sized layer-1/layer-2 developer ecosystem requirements.*
+These shares are scenario parameters. They are not a measured cost floor.
 
 ---
 
-## 3. Replenishment Revenue Inflow Scenarios
+## 3. Whitepaper Tables (illustrative, not a forecast)
 
-### 3.1 Defensible Initial Commercial Pilot Scenario
-An initial commercial launch focusing strictly on high-probability, validated enterprise instruments:
+### 3.1 Defensible initial commercial pilot
 
-1. **Enterprise Open Infrastructure Assurance (Product A)**: 5 customers @ $75,000/yr gross ($375,000 gross). With 20% sales/operating overhead, net contribution = **$300,000**.
-2. **Ecosystem Sustaining Consortium Memberships**: 10 member companies @ $50,000/yr gross ($500,000 gross). With 15% admin overhead, net contribution = **$425,000**.
-3. **Certified Ecosystem Provider / Conformance Program**: 10 provider offerings @ $25,000/yr gross ($250,000 gross). With 22% testing/audit overhead, net contribution = **$193,150**.
-- **Defensible Commercial Net Total**: **$918,150 / year** (Yielding an Incremental Earned Coverage Ratio $\text{IECR} = 30.6\%$).
+Restricting the launch portfolio to the instruments in section 15:
 
-### 3.2 Full Multi-Family Replenishment Scenario
-Combining defensible commercial pilot revenue with structural protocol fee splits ($\tau$) and governed capital yield:
+| Instrument | Assumption | Gross | Overhead | Net Contribution |
+|---|---|---|---|---|
+| Open Infrastructure Assurance | 5 customers @ $75K/yr | $375,000 | 20% | $300,000 |
+| Sustaining Consortium Memberships | 10 members @ $50K/yr | $500,000 | 15% | $425,000 |
+| Certified Ecosystem Provider | 10 offerings @ $25K/yr | $250,000 | 22% | $195,000 |
+| Defensible Commercial Net Total | — | $1,125,000 | — | $920,000 / yr |
 
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│                FULL MULTI-FAMILY REPLENISHMENT SCENARIO               │
-├──────────────────────────┬──────────────┬──────────────┬───────────────┤
-│ Revenue Instrument       │ Gross Inflow │ Operating Cost│ Net Contribution│
-├──────────────────────────┼──────────────┼──────────────┼───────────────┤
-│ Family A: Protocol Fees  │ $1,500,000   │ $30,000 (2%) │ $1,470,000    │
-│ Family B: Assurance Sub. │ $375,000     │ $75,000 (20%)│ $300,000      │
-│ Family C: Member Dues    │ $500,000     │ $75,000 (15%)│ $425,000      │
-│ Family C: Certifications │ $250,000     │ $56,850 (22%)│ $193,150      │
-│ Family E: Capital IPS    │ $750,000     │ $37,500 (5%) │ $712,500      │
-├──────────────────────────┼──────────────┼──────────────┼───────────────┤
-│ TOTAL REPLENISHMENT      │ $3,375,000   │ $274,350     │ $3,100,650    │
-└──────────────────────────┴──────────────┴──────────────┴───────────────┘
-```
+Incremental Earned Coverage Ratio: **30.7%** ($920,000 / $3,000,000). The scenario's point is that this does not claim self-sustainability.
 
----
+### 3.2 Full multi-family scenario
 
-## 4. Formal Replenishment Ratio Analysis
+Section 15 adds governance-legitimized structural protocol fees ($1.5M gross, 2% overhead, $1.47M net) and governed capital yield ($750K gross, 5% overhead, $712.5K net). Together with the pilot lines, stated net replenishment is **$3,102,500** against the $3.0M floor. Portfolio Coverage Ratio: **103.4%**. The scenario also states that no commercial customer exceeds 15% of net inflows and that four correlation classes are represented. Those are assumptions inside the scenario, not observed results.
 
-Under the Full Multi-Family Scenario, the ecosystem evaluates its financial health across the five formal ORF ratios:
+Two assumptions section 15 states explicitly, and which this file does not drop:
 
-1. **Incremental Earned Coverage Ratio (IECR)**:
-   $$\text{IECR} = \frac{\$300,000 + \$425,000 + \$193,150}{\$3,000,000} = 30.6\%$$
-2. **Structural Protocol Coverage Ratio (SPCR)**:
-   $$\text{SPCR} = \frac{\$1,470,000}{\$3,000,000} = 49.0\%$$
-3. **Portfolio Coverage Ratio (PCR)**:
-   $$\text{PCR} = \frac{\$3,100,650}{\$3,000,000} = 103.4\% \quad (\text{Satisfies Hard Gate 3: } \ge 100\%)$$
-4. **Revenue Concentration Ratio (RCR)**:
-   $$\text{RCR} = \frac{\$1,470,000}{\$3,100,650} = 47.4\%$$
-   > *Note: Protocol fee split represents 47.4% of inflows. To satisfy Hard Gate 5 ($\le 25\%$), protocol fees are treated as structural network baseline rather than a single commercial payer.*
+- The $750,000 gross capital-yield sleeve requires approximately **$15M–$25M** of productive principal already under management, at the 3–5% real yield assumed for Family E, before operating costs, reserves, tax, and volatility. An ecosystem without that principal cannot include the line.
+- Gate 6 runway in the scenario is computed from a stated opening liquid operating reserve of **$5,130,000** in stable assets, against an austerity floor of **$1,800,000** per year ($150,000 per month). The resulting **34.2 months** assumes stressed inflows cease entirely rather than continuing at stressed levels.
+
+### 3.3 Ratios in this scenario
+
+1. **IECR** = ($300,000 + $425,000 + $195,000) / $3,000,000 = **30.7%**.
+2. **SPCR** = $1,470,000 / $3,000,000 = **49.0%**.
+3. **PCR** = $3,102,500 / $3,000,000 = **103.4%**. This is scenario arithmetic. It does not satisfy Gate 3, because Gate 3 requires audited cash.
+4. **MCR** = $1,470,000 / $3,102,500 = **47.4%**. This is mechanism concentration on the protocol-fee line, not payer concentration. It is not RCR. In the whitepaper an MCR above 0.50 is a review trigger, not a hard gate. 47.4% is below that trigger. It is still a disclosure, not a pass.
+5. **RCR** is not 47.4%. The scenario's separate assumption is that no commercial customer exceeds 15% of net inflows. That assumption is not a Gate 5 result.
 
 ---
 
-## 5. Compound Stress Test Analysis
+## 4. Compound Stress Test (section 15 shocks only)
 
-To verify financial resilience under extreme market drawdowns, the model executes a **Compound Stress Test** applying four simultaneous shocks:
-- **Shock 1 (Crypto Winter)**: Protocol transaction fees drop by 50% ($1,470,000 \rightarrow \$735,000$).
-- **Shock 2 (Enterprise Churn)**: Commercial assurance customers churn by 40% ($300,000 \rightarrow \$180,000$).
-- **Shock 3 (Membership Contraction)**: Consortium members reduce dues by 30% ($425,000 \rightarrow \$297,500$).
-- **Shock 4 (Capital Drawdown)**: Endowment yield contracts by 40% ($712,500 \rightarrow \$427,500$).
+Four simultaneous shocks, as section 15 states them. Certification is held flat. That hold is an assumption, not an omission. No other shock set is added.
 
-```text
-┌────────────────────────────────────────────────────────────────────────┐
-│                   COMPOUND STRESS TEST OUTCOMES                        │
-├─────────────────────────────────────────┬──────────────────────────────┤
-│ Stressed Net Inflow Total               │ $1,803,150 / year            │
-│ Austerity Maintenance Floor (Essential)  │ $1,800,000 / year            │
-│ Stressed Net Surplus / (Deficit)        │ +$3,150 / year               │
-├─────────────────────────────────────────┼──────────────────────────────┤
-│ STRESS COVERAGE RATIO (SCR)             │ 1.002  (PASSED ≥ 1.0)        │
-│ PRESERVED LIQUID RUNWAY                 │ 34.2 Months                  │
-└─────────────────────────────────────────┴──────────────────────────────┘
-```
+| Line | Base Net | Shock | Stressed Net |
+|---|---|---|---|
+| Protocol fees | $1,470,000 | −50% | $735,000 |
+| Enterprise assurance | $300,000 | −40% | $180,000 |
+| Membership dues | $425,000 | −30% | $297,500 |
+| Capital yield | $712,500 | −40% | $427,500 |
+| Certification | $195,000 | held flat | $195,000 |
+| Stressed total | $3,102,500 | — | $1,835,000 |
+| Austerity floor | — | — | $1,800,000 |
+| Surplus / (deficit) | — | — | +$35,000 |
+
+Stress Coverage Ratio: **1.019** ($1,835,000 / $1,800,000). Section 15 treats that margin as thin. It is not a pass. Combined with the stated $5,130,000 opening reserve, the scenario preserves 34.2 months only under the assumption noted above.
 
 ---
 
-## 6. Evaluation against the 8 Hard Gates
+## 5. The 8 Hard Gates — none passed
 
-1. **Gate 1 (Measurement)**: PASSED ($3.0M verified baseline cost floor).
-2. **Gate 2 (Cash Evidence)**: PASSED (Models audited cash/stablecoin receipts).
-3. **Gate 3 (Net Coverage)**: PASSED ($\text{PCR} = 103.4\% \ge 100\%$).
-4. **Gate 4 (Diversity)**: PASSED (Combines Class 1 Protocol Fees, Class 3 Enterprise Contracts, Class 4 Dues, and Class 5 Capital Yield).
-5. **Gate 5 (Concentration)**: PASSED (No commercial customer exceeds 15% of net inflows).
-6. **Gate 6 (Stress Runway)**: PASSED ($\text{SCR} = 1.002$; 34.2 months liquid reserve).
-7. **Gate 7 (Liabilities Covered)**: PASSED (All SLAs backed by contracted maintainers and $300k refund pool).
-8. **Gate 8 (Audit)**: PASSED (Requires annual independent audit publication).
+No gate in this file is PASSED. A gate passes only on audited receipts in an adopting ecosystem.
+
+1. **Gate 1 (Measurement)**: not passed. The $3.0M floor is an assumed parameter.
+2. **Gate 2 (Cash Evidence)**: not passed. This file contains no audited cash or stablecoin receipts.
+3. **Gate 3 (Net Coverage)**: not passed. PCR 103.4% is scenario arithmetic.
+4. **Gate 4 (Diversity)**: not passed. Naming four classes in a scenario does not establish independence.
+5. **Gate 5 (Concentration)**: not passed. RCR is not demonstrated. The 47.4% figure is MCR.
+6. **Gate 6 (Stress Runway)**: not passed. SCR 1.019 and 34.2 months are scenario arithmetic, including an assumed opening reserve.
+7. **Gate 7 (Liabilities Covered)**: not passed. No customer liabilities have been measured.
+8. **Gate 8 (Independent Audit)**: not passed. This file is not an audit.
+
+### Methodological note
+
+These figures are scenario parameters, not forecasts. They show how the ratios can be computed. They do not show that another ecosystem will achieve the same prices, demand, costs, or mix. Every parameter has to be derived again locally.

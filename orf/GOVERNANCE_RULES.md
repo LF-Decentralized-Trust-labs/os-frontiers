@@ -42,9 +42,9 @@ An ecosystem MAY NOT claim Level 3 "Self-Sustaining" maturity based on additive 
 
 ---
 
-## 3. The 5 Formal Replenishment Ratios
+## 3. The 6 Formal Replenishment Ratios
 
-ORF quantifies ecosystem health using five standardized financial ratios:
+ORF quantifies ecosystem health using six standardized financial ratios:
 
 ### 1. Incremental Earned Coverage Ratio (IECR)
 $$\text{IECR} = \frac{R_{\text{earned\_net}}}{C_{\text{base}}}$$
@@ -60,11 +60,15 @@ $$\text{PCR} = \frac{R_{\text{earned\_net}} + R_{\text{protocol\_net}} + R_{\tex
 
 ### 4. Stress Coverage Ratio (SCR)
 $$\text{SCR} = \frac{R_{\text{stressed\_inflows}}}{C_{\text{austerity\_floor}}}$$
-*Evaluates treasury resilience under a compound stress scenario (50% token price crash + 30% transaction drop + 25% customer churn).*
+*Evaluates treasury resilience under the compound stress scenario used in the Tier 1 illustrative model: protocol fees −50%, enterprise assurance −40%, membership dues −30%, capital yield −40%, and certification held flat.*
 
 ### 5. Revenue Concentration Ratio (RCR)
 $$\text{RCR} = \frac{\max(R_i)}{\sum R_i}$$
-*Measures single-payer dependency risk. RCR must remain $\le 0.25$.*
+*Measures counterparty concentration: the largest single payer's share of recurring net inflows. RCR must remain $\le 0.25$. It is a hard gate (Gate 5). A revenue family is not, by itself, a payer.*
+
+### 6. Mechanism Concentration Ratio (MCR)
+$$\text{MCR} = \frac{\text{largest single mechanism's net contribution}}{\text{total recurring net inflows}}$$
+*Measures source concentration. RCR can stay at or below 0.25 while one mechanism is still most of the portfolio. MCR is disclosed every quarter. An MCR above 0.50 triggers portfolio review and a written stress justification. It is not a hard gate. Where a structural mechanism has an identifiable dominant counterparty, that counterparty is a payer and RCR applies in full.*
 
 ---
 
@@ -148,6 +152,7 @@ The ORF Operator must publish a public **Quarterly Replenishment Audit** contain
 1. Gross receipts collected by revenue family.
 2. Itemized cost-to-collect (sales overhead, legal fees, tax payments, platform fees).
 3. Net contribution transferred to Governed Treasury.
-4. Single-payer revenue concentration ratios ($\text{RCR}$).
-5. Stressed operating runway metrics ($\text{SCR}$).
-6. Status of customer SLA liabilities and wind-down reserves.
+4. Single-payer revenue concentration ($\text{RCR}$).
+5. Mechanism concentration ($\text{MCR}$). Disclosed every quarter. An MCR above 0.50 is a review trigger, not a hard-gate failure.
+6. Stressed operating runway metrics ($\text{SCR}$), using the same compound stress scenario as section 3.
+7. Status of customer SLA liabilities and wind-down reserves.
