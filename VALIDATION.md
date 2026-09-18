@@ -30,7 +30,7 @@ Candidate                           Precursors       Production
 | **OMF Retainers** | **Stage 0 (Research Candidate)** | Grounded in Cardano POSM Maintainer Retainer pilot cohort. | Longitudinal maintainer retention outcome measurement. |
 | **ORF Replenishment** | **Stage 0 (Research Candidate)** | Modeled after Optimism sequencer fee-split & Polkadot Treasury inflows. | Pilot implementation of enterprise SLA vault. |
 | **QUAID Heuristic Adapter** | **Stage 0 (Research Candidate)** | Experimental QUAID-inspired heuristic scanner script (`quaid_adapter.py`). | Independent code review & QUAID CLI integration. |
-| **Solidity & Aiken Reference Contracts** | **Stage 0 (Research Candidate)** | Architectural sketches (`ORFSlaVault.sol` & `orf_sla_vault.ak`). | Smart contract security audit. |
+| **Solidity & Aiken Reference Contracts** | **Removed 20 August 2026** | Deleted with the `contracts/` directory (`ORFSlaVault.sol`, `orf_sla_vault.ak`). Not a present Stage 0 artifact. | Not restored. |
 
 ---
 
