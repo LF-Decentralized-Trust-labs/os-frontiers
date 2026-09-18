@@ -1,4 +1,4 @@
-# Open Source Frontiers Lab — Use Case Submission Template
+# Open Source Frontiers Lab — Precedent Note
 
 ## Use Case Title
 Polkadot OpenGov: Technical Fellowship Ranks 0–9 & PCF Legal Execution Architecture
@@ -168,7 +168,7 @@ Polkadot provides battle-tested Web3 reference models for maintainer rank progre
 ## Program Relevance & Direct OSF Alignment
 
 ### 1. OMF Contributor Pathways (Technical Fellowship Rank Ladder)
-- **OSF Mapping**: **OMF Program 3 (Contributor Pathways — Maintainer Ladder)** & **[`PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **OSF Mapping**: **OMF Program 3 (Contributor Pathways — Maintainer Ladder)** & **[`PROGRAM_PORTFOLIO.md`](../../omf/PROGRAM_PORTFOLIO.md)**.
 - **Mechanism Validated**: Validates that explicit rank-based progression (Ranks 0 to 9) combined with peer evaluation creates a transparent maintainer pipeline that retains senior talent.
 - **Operator Takeaway**: OMF adopts Polkadot's Fellowship rank progression model to structure its contributor onboarding ladder from Entry Contributor to Core Maintainer.
 
@@ -178,7 +178,7 @@ Polkadot provides battle-tested Web3 reference models for maintainer rank progre
 - **Operator Takeaway**: dOSPO specifications adopt the PCF architecture — placing legal contracting authority in a neutral foundation wrapper while reserving charter authorization, budget votes, and operator replacement for Community Governance.
 
 ### 3. ORF Protocol Layer Slashing Penalty Routing
-- **OSF Mapping**: **ORF Layer 1 (Protocol Fee & Slashing Routing)** & **[`INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
+- **OSF Mapping**: **ORF Layer 1 (Protocol Fee & Slashing Routing)** & **[`INSTRUMENT_CATALOG.md`](../../orf/INSTRUMENT_CATALOG.md)**.
 - **Mechanism Validated**: Demonstrates that protocol-level penalty burns can be safely redirected to fund ecosystem maintenance treasuries.
 - **Operator Takeaway**: ORF incorporates validator slashing penalty routing into its protocol fee split specifications.
 

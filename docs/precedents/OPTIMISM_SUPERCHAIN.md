@@ -1,4 +1,4 @@
-# Open Source Frontiers Lab — Use Case Submission Template
+# Open Source Frontiers Lab — Precedent Note
 
 ## Use Case Title
 Optimism Superchain: Sequencer Revenue Tithe & RetroFunding Architecture
@@ -163,12 +163,12 @@ The Optimism Superchain represents the leading Web3 production model for protoco
 ## Program Relevance & Direct OSF Alignment
 
 ### 1. ORF Protocol Fee Split ($\tau$)
-- **OSF Mapping**: **ORF Layer 1 (Protocol Fee Routing — $\tau$ Split)** & **[`INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
+- **OSF Mapping**: **ORF Layer 1 (Protocol Fee Routing — $\tau$ Split)** & **[`INSTRUMENT_CATALOG.md`](../../orf/INSTRUMENT_CATALOG.md)**.
 - **Mechanism Validated**: Proves that protocol-level transaction fee splits generate massive recurring treasury replenishment without relying on token minting or inflationary expansion.
 - **Operator Takeaway**: An ORF Operator adopts Optimism's 15% net profit split as the primary protocol-layer inflow rail ($\tau = 0.15$) to fund baseline ecosystem maintenance.
 
 ### 2. dOSPO Separation of Collection vs Allocation
-- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../dospo/START_HERE.md))** & **Safeguard 3 (No Granular Budget Approval)**.
+- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../../dospo/START_HERE.md))** & **Safeguard 3 (No Granular Budget Approval)**.
 - **Mechanism Validated**: Demonstrates that while automated revenue collection works seamlessly, using subjective retroactive voter rounds for routine maintenance creates voter fatigue and unpredictable maintainer stipends.
 - **Operator Takeaway**: dOSPO routes protocol fee revenue directly into predictable OMF maintainer retainers rather than subjecting routine maintenance to periodic popularity contests.
 

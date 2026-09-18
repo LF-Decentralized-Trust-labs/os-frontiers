@@ -84,14 +84,14 @@ jobs:
         run: |
           node evaluator/cli/index.js ./evaluator/examples/sample_input_config.json
 
-      - name: Verify Web Dashboard HTML Structure
+      - name: Verify local preview HTML structure
         run: |
           node -e "
           const fs = require('fs');
-          const html = fs.readFileSync('index.html', 'utf8');
+          const html = fs.readFileSync('evaluator/preview/index.html', 'utf8');
           if (!html.includes('id=\"tab-dospo\"') || !html.includes('eval-indicator-15')) {
-              console.error('❌ Web dashboard HTML structure validation failed.');
+              console.error('❌ Local preview HTML structure validation failed.');
               process.exit(1);
           }
-          console.log('✅ Web dashboard HTML structure verified.');
+          console.log('✅ Local preview HTML structure verified.');
           "
