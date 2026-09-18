@@ -310,6 +310,23 @@
       animation: none !important;
     }
   }
+
+  .eval-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem 2rem; margin-top: 1.6rem; }
+  .eval-grid h3 { font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; margin: 0 0 0.4rem; color: var(--muted); }
+  .eval-grid label { display: block; font-family: var(--sans); font-size: 0.92rem; color: var(--text); margin: 0.85rem 0 0; }
+  .eval-grid select, .eval-grid input {
+    display: block; width: 100%; margin-top: 0.35rem;
+    background: #1c1916; color: var(--text); border: 1px solid rgba(163,155,144,0.55);
+    padding: 0.45rem 0.5rem; font-family: var(--sans); font-size: 0.92rem;
+  }
+  .scores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.7rem; margin-top: 1.8rem; }
+  .scores div { border-top: 1px solid rgba(163,155,144,0.45); padding-top: 0.55rem; font-family: var(--sans); font-size: 0.85rem; color: var(--muted); }
+  .scores strong { display: block; margin-top: 0.2rem; font-family: var(--serif); font-size: 1.25rem; font-weight: 500; color: var(--text); }
+  .level { font-family: var(--serif); font-size: 1.55rem; margin: 1.2rem 0 0.4rem; }
+  .warn { font-family: var(--sans); color: var(--muted); font-size: 0.95rem; max-width: 40rem; }
+  @media (max-width: 800px) {
+    .eval-grid, .scores { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -475,8 +492,135 @@ Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter tab
       <li><span class="where">docs</span><span class="role">evidence</span></li>
       <li><span class="where">docs/precedents</span><span class="role">case studies of other programs</span></li>
       <li><span class="where">pitch</span><span class="role">the ask</span></li>
-      <li><span class="where">evaluator/preview</span><span class="role">a local scorer, not a published site</span></li>
+      <li><span class="where">this page</span><span class="role">the 15-indicator preview scorer, not the eight gates</span></li>
     </ul>
+  </section>
+
+
+  <section id="evaluator" aria-labelledby="eval-heading">
+    <p class="kicker">Run it here</p>
+    <h2 id="eval-heading">Fifteen-indicator scorer</h2>
+    <p class="warn">Same instrument as <span class="file">evaluator/preview</span>. It sums points. It does not apply the eight hard gates. A level it prints, including Level 3, is not a passed gate.</p>
+    <div class="eval-grid">
+      <div>
+        <h3 style="color: var(--clay)">dOSPO</h3>
+        <label>1. Legitimacy charter
+          <select class="eval-indicator-input" data-pillar="dospo" id="eval-indicator-1">
+            <option value="0">0 — Low, missing</option>
+            <option value="3">3 — Partial, draft charter</option>
+            <option value="5">5 — High, community-mandated charter</option>
+          </select>
+        </label>
+        <label>2. Neutrality guarantee
+          <select class="eval-indicator-input" data-pillar="dospo" id="eval-indicator-2">
+            <option value="0">0 — Low, vendor dominant</option>
+            <option value="3">3 — Partial, disclosures required</option>
+            <option value="5">5 — High, strict neutrality rules</option>
+          </select>
+        </label>
+        <label>3. Operator replaceability
+          <select class="eval-indicator-input" data-pillar="dospo" id="eval-indicator-3">
+            <option value="0">0 — Low, permanent authority</option>
+            <option value="3">3 — Partial, crisis replacement</option>
+            <option value="5">5 — High, annual renewal vote</option>
+          </select>
+        </label>
+        <label>4. Policy engine
+          <select class="eval-indicator-input" data-pillar="dospo" id="eval-indicator-4">
+            <option value="0">0 — Low, ad-hoc decisions</option>
+            <option value="3">3 — Partial, informal caps</option>
+            <option value="5">5 — High, governed allocation engine</option>
+          </select>
+        </label>
+        <label>5. Transparency reporting
+          <select class="eval-indicator-input" data-pillar="dospo" id="eval-indicator-5">
+            <option value="0">0 — Low, closed accounting</option>
+            <option value="3">3 — Partial, annual summary</option>
+            <option value="5">5 — High, quarterly public audits</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <h3 style="color: var(--sage)">OMF</h3>
+        <label>6. Maintainer retainers
+          <select class="eval-indicator-input" data-pillar="omf" id="eval-indicator-6">
+            <option value="0">0 — Low, one-off grants</option>
+            <option value="3">3 — Partial, informal stipends</option>
+            <option value="5">5 — High, 12-month streamed retainers</option>
+          </select>
+        </label>
+        <label>7. Contributor pathways
+          <select class="eval-indicator-input" data-pillar="omf" id="eval-indicator-7">
+            <option value="0">0 — Low, high burnout</option>
+            <option value="3">3 — Partial, informal mentorship</option>
+            <option value="5">5 — High, structured grant ladders</option>
+          </select>
+        </label>
+        <label>8. Tooling stewardship
+          <select class="eval-indicator-input" data-pillar="omf" id="eval-indicator-8">
+            <option value="0">0 — Low, neglected dependencies</option>
+            <option value="3">3 — Partial, bounties only</option>
+            <option value="5">5 — High, managed portfolio</option>
+          </select>
+        </label>
+        <label>9. Autonomy safeguard
+          <select class="eval-indicator-input" data-pillar="omf" id="eval-indicator-9">
+            <option value="0">0 — Low, funder veto power</option>
+            <option value="3">3 — Partial, informal autonomy</option>
+            <option value="5">5 — High, signed autonomy clause</option>
+          </select>
+        </label>
+        <label>10. Impact metrics
+          <select class="eval-indicator-input" data-pillar="omf" id="eval-indicator-10">
+            <option value="0">0 — Low, no health data</option>
+            <option value="3">3 — Partial, star count only</option>
+            <option value="5">5 — High, OSO analytics and scorecards</option>
+          </select>
+        </label>
+      </div>
+      <div>
+        <h3 style="color: var(--copper)">ORF</h3>
+        <label>11. Net replenishment ratio
+          <input type="number" step="0.05" value="0" id="eval-repl-ratio" inputmode="decimal">
+        </label>
+        <label>12. Fork resistance
+          <select class="eval-indicator-input" data-pillar="orf" id="eval-indicator-12">
+            <option value="0">0 — Low, license fees</option>
+            <option value="3">3 — Partial, token fees only</option>
+            <option value="5">5 — High, state and registry badging</option>
+          </select>
+        </label>
+        <label>13. Benefit bundling and SLAs
+          <select class="eval-indicator-input" data-pillar="orf" id="eval-indicator-13">
+            <option value="0">0 — Low, pure donation</option>
+            <option value="3">3 — Partial, badge display</option>
+            <option value="5">5 — High, enterprise patch windows</option>
+          </select>
+        </label>
+        <label>14. IPS yield sleeve
+          <select class="eval-indicator-input" data-pillar="orf" id="eval-indicator-14">
+            <option value="0">0 — Low, zero yield sleeve</option>
+            <option value="3">3 — Partial, ungoverned stables</option>
+            <option value="5">5 — High, governed IPS endowment</option>
+          </select>
+        </label>
+        <label>15. Independent audit
+          <select class="eval-indicator-input" data-pillar="orf" id="eval-indicator-15">
+            <option value="0">0 — Low, unaudited</option>
+            <option value="3">3 — Partial, internal accounting</option>
+            <option value="5">5 — High, independent audit function</option>
+          </select>
+        </label>
+      </div>
+    </div>
+    <div class="scores" aria-live="polite">
+      <div>dOSPO <strong id="dospo-score">0 / 25</strong></div>
+      <div>OMF <strong id="omf-score">0 / 25</strong></div>
+      <div>ORF <strong id="orf-score">0 / 25</strong></div>
+      <div>Total <strong id="total-score">0 / 75 (0%)</strong></div>
+    </div>
+    <p class="level" id="eval-level">Level 0: Un-Architected / Fragile</p>
+    <p class="warn">Indicator 11 is scored from the ratio you type: 5 points at 1.0 or above, 3 points at 0.20 or above, otherwise 0. Level 3 also requires that ratio at 1.0 or above. None of that is a gate.</p>
   </section>
 
   <footer>
@@ -514,6 +658,38 @@ Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter tab
     });
   });
 })();
+
+  var evalInputs = document.querySelectorAll(".eval-indicator-input");
+  var ratioInput = document.getElementById("eval-repl-ratio");
+  function calculateMaturityScore() {
+    var dospo = 0, omf = 0, orf = 0;
+    evalInputs.forEach(function (input) {
+      var val = parseInt(input.value, 10) || 0;
+      var type = input.getAttribute("data-pillar");
+      if (type === "dospo") dospo += val;
+      if (type === "omf") omf += val;
+      if (type === "orf") orf += val;
+    });
+    var repl = parseFloat(ratioInput && ratioInput.value) || 0;
+    var ind11 = 0;
+    if (repl >= 1.0) ind11 = 5;
+    else if (repl >= 0.20) ind11 = 3;
+    orf += ind11;
+    var total = dospo + omf + orf;
+    var pct = Math.round((total / 75) * 100);
+    document.getElementById("dospo-score").textContent = dospo + " / 25";
+    document.getElementById("omf-score").textContent = omf + " / 25";
+    document.getElementById("orf-score").textContent = orf + " / 25";
+    document.getElementById("total-score").textContent = total + " / 75 (" + pct + "%)";
+    var level = "Level 0: Un-Architected / Fragile";
+    if (total >= 65 && repl >= 1.0) level = "Level 3: Self-Sustaining Closed Loop";
+    else if (total >= 50) level = "Level 2: Fee-Supplemented Maintenance";
+    else if (total >= 25) level = "Level 1: Governance & Retainers Bootstrapped";
+    document.getElementById("eval-level").textContent = level;
+  }
+  evalInputs.forEach(function (input) { input.addEventListener("change", calculateMaturityScore); });
+  if (ratioInput) ratioInput.addEventListener("input", calculateMaturityScore);
+  calculateMaturityScore();
 </script>
 </body>
 </html>
