@@ -45,14 +45,14 @@ OSF synthesizes Web2 and Web3 precedents into a unified, three-piece closed-loop
 - **[`whitepapers/README.md`](./whitepapers/README.md)**: Master Whitepaper Series Index & Executive Architecture Overview.
 - **dOSPO Whitepaper**: [`whitepapers/DOSPO_WHITEPAPER.md`](./whitepapers/DOSPO_WHITEPAPER.md) | PDF: [`dospo-whitepaper-v1.0.pdf`](./whitepapers/dospo-whitepaper-v1.0.pdf)
 - **OMF Whitepaper**: [`whitepapers/OMF_WHITEPAPER.md`](./whitepapers/OMF_WHITEPAPER.md) | PDF: [`open-maintenance-framework-omf-v1.0.pdf`](./whitepapers/open-maintenance-framework-omf-v1.0.pdf)
-- **ORF Whitepaper**: [`whitepapers/ORF_WHITEPAPER.md`](./whitepapers/ORF_WHITEPAPER.md)
+- **ORF Whitepaper**: [`whitepapers/orf-v1.0.pdf`](./whitepapers/orf-v1.0.pdf). Citation layer: [`whitepapers/ORF_ERRATA.md`](./whitepapers/ORF_ERRATA.md). Where the errata differs from the PDF, the errata controls until those sentences are pasted into a new PDF. Stage 0. No gate is marked passed.
 
 ### Core Architectural Specifications
 - **[`dospo/START_HERE.md`](./dospo/START_HERE.md)**: Decentralized OSPO Governance Specification & RACI Matrix.
 - **[`omf/PROGRAM_PORTFOLIO.md`](./omf/PROGRAM_PORTFOLIO.md)**: Maintenance Program Specifications (Retainers, Bounties, Pathways, Resilience, Incubation).
 - **[`orf/START_HERE.md`](./orf/START_HERE.md)**: Open Replenishment Framework Master Introduction & 5 Revenue Families.
-- **[`orf/INSTRUMENT_CATALOG.md`](./orf/INSTRUMENT_CATALOG.md)**: Inventory of Revenue Families, Routing Rails, and Advanced Financial Products.
-- **[`orf/GOVERNANCE_RULES.md`](./orf/GOVERNANCE_RULES.md)**: The 8 Hard Gates, 5 Replenishment Ratios, Correlation Classes, and Legal Entity Architecture.
+- **[`orf/INSTRUMENT_CATALOG.md`](./orf/INSTRUMENT_CATALOG.md)**: Inventory of Revenue Families, Routing Rails, and Advanced Financial Products, rated on the P-scale (external precedent, P0–P5) and the D-scale (local deployment, D0–D5).
+- **[`orf/GOVERNANCE_RULES.md`](./orf/GOVERNANCE_RULES.md)**: The 8 Hard Gates, 6 Replenishment Ratios, Correlation Classes, and Legal Entity Architecture.
 - **[`VALIDATION.md`](./VALIDATION.md)**: 4-Stage Research Validation Lifecycle & Honest Stage 0 Labelling.
 
 ### Evidence, Research & Scenarios
