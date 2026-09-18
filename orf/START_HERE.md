@@ -5,6 +5,8 @@
 
 ---
 
+Start with [`5_QUESTION_ASSESSMENT.md`](./5_QUESTION_ASSESSMENT.md). That is the first file to read.
+
 ## 1. Executive Summary & Definition
 
 The **Open Replenishment Framework (ORF)** is a governance and economic design framework for identifying, validating, collecting, diversifying, and routing recurring sources of value back into the maintenance of shared open-source infrastructure.
@@ -153,6 +155,6 @@ An ecosystem deploying ORF should not attempt all instruments simultaneously. A 
 ## 7. Master Document Directory
 
 - **[`INSTRUMENT_CATALOG.md`](./INSTRUMENT_CATALOG.md)**: Exhaustive specification of all 5 Revenue Families, Routing Rails, Allocation Engines, and Advanced Financial Products.
-- **[`GOVERNANCE_RULES.md`](./GOVERNANCE_RULES.md)**: The 8 Hard Gates for Self-Sustainability, 5 Replenishment Ratios, Revenue Correlation Classes, Service Capacity Tests, and Legal Entity Architecture.
+- **[`GOVERNANCE_RULES.md`](./GOVERNANCE_RULES.md)**: The 8 Hard Gates for Self-Sustainability, 6 Replenishment Ratios, Revenue Correlation Classes, Service Capacity Tests, and Legal Entity Architecture.
 - **[`../docs/TIER_1_FEASIBILITY_MODEL.md`](../docs/TIER_1_FEASIBILITY_MODEL.md)**: Financial scenario modeling comparing commercial pilots against cost floors under compound stress tests.
 - **[`../docs/EVIDENCE_REGISTER.md`](../docs/EVIDENCE_REGISTER.md)**: Primary-source audit matrix mapping external precedents, verified statuses, and transferability ratings.

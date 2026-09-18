@@ -1,6 +1,6 @@
 # Contributing to Open Source Frontiers Lab
 
-> **Guidelines for Contributing Specifications, Evaluators, Reference Contracts, and Ecosystem Profiles**  
+> **Guidelines for Contributing Specifications, Evaluators, and Ecosystem Profiles**  
 > *LF Decentralized Trust · Open Source Frontiers Lab*
 
 ---
@@ -13,7 +13,6 @@ Thank you for your interest in contributing to the **Open Source Frontiers Lab**
 - 🛠️ **Maintenance Frameworks** (`omf/`)
 - 💰 **Replenishment Frameworks** (`orf/`)
 - 📊 **Evaluator Tools & Adapters** (`evaluator/`)
-- 📜 **Reference Smart Contracts** (`contracts/`)
 - 🌍 **Ecosystem Profiles & Use Cases** (`use-cases/`)
 - 🛠️ **Tooling Integrations** (`tools/`)
 
@@ -29,7 +28,6 @@ LF-Decentralized-Trust-labs/os-frontiers/
 ├── omf/                    # Open Maintenance Framework
 ├── orf/                    # Open Replenishment Framework
 ├── evaluator/              # Assessment Tools, QUAID Adapters & Examples
-├── contracts/              # Unaudited Reference Smart Contracts (Solidity & Aiken)
 ├── use-cases/              # Ecosystem Profiles (Cardano, Optimism, Polkadot, EVM)
 ├── tools/                  # Tooling & Protocol Integrations
 ├── pitch/                  # Executive Decks & Adoption Templates
@@ -47,4 +45,4 @@ All Linux Foundation repositories strictly enforce the **Developer Certificate o
 ## 4. Licensing
 
 - **Code & Smart Contracts**: Licensed under [Apache-2.0](LICENSE).
-- **Documentation & Whitepapers**: Licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE).
+- **Documentation & Whitepapers**: Licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE-DOCS).

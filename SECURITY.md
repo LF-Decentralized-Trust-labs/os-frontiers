@@ -5,7 +5,7 @@
 
 ## Reporting a Vulnerability
 
-Open Source Frontiers Lab takes software and framework security seriously. If you discover a security vulnerability in the repository code, CLI evaluators, web dashboard, or reference smart contracts, please report it immediately:
+Open Source Frontiers Lab takes software and framework security seriously. If you discover a security vulnerability in the repository code, CLI evaluators, or web dashboard, please report it immediately:
 
 - **Security Email**: **security@opensourcefrontiers.org** (or **chris@opensourcecowboy.org**)
 
@@ -17,6 +17,5 @@ This repository contains:
 1. **Normative Guidance & Framework Documents**: Architectural standards for dOSPO, OMF, and ORF.
 2. **CLI Tools & Evaluator Engines**: Python and Node.js command-line tools (`assess_ecosystem.py`, `quaid_adapter.py`).
 3. **Web Dashboard**: Client-side JavaScript web application (`index.html`, `app.js`).
-4. **Reference Smart Contracts**: EVM Solidity (`ORFSlaVault.sol`) and Cardano Aiken (`orf_sla_vault.ak`) research candidate sketches.
 
-> ⚠️ **Smart Contract Notice**: Smart contract artifacts in `contracts/` are unaudited reference sketches intended for research and feasibility modeling. They must undergo formal security auditing before deployment in production environments.
+`ORFSlaVault.sol`, `orf_sla_vault.ak`, and the `contracts/` directory are not in this tree. [`VALIDATION.md`](VALIDATION.md) records that directory as removed on 20 August 2026.

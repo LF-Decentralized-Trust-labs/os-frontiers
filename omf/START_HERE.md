@@ -39,6 +39,8 @@ To qualify for OMF maintenance deployment, a program or repository must meet fiv
 
 ## 4. Key OMF Documents & Templates
 
+[`PROGRAM_CHARTER_TEMPLATE.md`](./PROGRAM_CHARTER_TEMPLATE.md) is first; read it before the other templates.
+
 - 📋 [Program Charter Template](./PROGRAM_CHARTER_TEMPLATE.md)
 - 🔍 [Dependency Audit Template](./DEPENDENCY_AUDIT_TEMPLATE.md)
 - 🛡️ [Legitimacy Safeguards](./LEGITIMACY_SAFEGUARDS.md)
