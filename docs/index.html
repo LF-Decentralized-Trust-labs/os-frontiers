@@ -334,6 +334,30 @@
 
   .jump { display: flex; gap: 1.2rem; flex-wrap: wrap; margin: 0 0 1.4rem; }
   .jump a { font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--text); }
+
+  .ask-btn {
+    position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 20;
+    background: var(--text); color: var(--bg); border: 0;
+    font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.7rem 0.95rem; cursor: pointer;
+  }
+  .chat {
+    position: fixed; right: 1.1rem; bottom: 4.2rem; z-index: 20;
+    width: min(22rem, calc(100vw - 2.2rem));
+    background: #161616; color: var(--text);
+    border: 1px solid #3a3a3a;
+    display: flex; flex-direction: column; max-height: min(28rem, 70vh);
+  }
+  .chat[hidden] { display: none; }
+  .chat header { padding: 0.75rem 0.9rem 0.4rem; }
+  .chat header strong { font-family: var(--serif); font-weight: 400; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+  .chat header p { margin: 0.25rem 0 0; font-family: var(--sans); font-size: 0.78rem; color: var(--muted); }
+  .chat-log { overflow: auto; padding: 0.4rem 0.9rem 0.6rem; display: flex; flex-direction: column; gap: 0.55rem; }
+  .chat-log p { margin: 0; font-family: var(--sans); font-size: 0.9rem; line-height: 1.4; }
+  .chat-log .me { color: var(--muted); }
+  .chat form { display: flex; gap: 0.4rem; padding: 0.6rem 0.7rem 0.7rem; border-top: 1px solid #3a3a3a; }
+  .chat input { flex: 1; background: #0e0e0e; color: var(--text); border: 1px solid #3a3a3a; font-family: var(--sans); font-size: 0.9rem; padding: 0.45rem 0.5rem; }
+  .chat button[type=submit] { background: transparent; color: var(--text); border: 1px solid var(--text); font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.45rem 0.55rem; cursor: pointer; }
 </style>
 </head>
 <body>
@@ -348,6 +372,7 @@ Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter tab
 <nav class="jump" aria-label="On this page">
     <a href="#triangle">The loop</a>
     <a href="#evaluator">Run the scorer</a>
+    <a href="#ask" id="ask-open">Ask</a>
     <a href="https://www.opensourcecowboy.com/">Open Source Cowboy</a>
   </nav>
 
@@ -644,6 +669,20 @@ Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter tab
     <p>18 September 2026. Release candidate v0.8.0-rc.1, still a research candidate.</p>
   </footer>
 </main>
+
+<button class="ask-btn" type="button" id="ask-toggle">Ask</button>
+<section class="chat" id="ask" hidden aria-label="Ask the framework">
+  <header>
+    <strong>Ask the framework</strong>
+    <p>Answers from this page only. Nothing you type is sent anywhere.</p>
+  </header>
+  <div class="chat-log" id="chat-log"></div>
+  <form id="chat-form">
+    <input id="chat-input" type="text" name="q" autocomplete="off" placeholder="What is ORF?" aria-label="Question">
+    <button type="submit">Send</button>
+  </form>
+</section>
+
 <script>
 (function () {
   var svg = document.querySelector("svg.tri");
@@ -704,6 +743,58 @@ Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter tab
   evalInputs.forEach(function (input) { input.addEventListener("change", calculateMaturityScore); });
   if (ratioInput) ratioInput.addEventListener("input", calculateMaturityScore);
   calculateMaturityScore();
+
+  var chat = document.getElementById("ask");
+  var chatLog = document.getElementById("chat-log");
+  var chatForm = document.getElementById("chat-form");
+  var chatInput = document.getElementById("chat-input");
+  function say(text, mine) {
+    var p = document.createElement("p");
+    p.className = mine ? "me" : "bot";
+    p.textContent = text;
+    chatLog.appendChild(p);
+    chatLog.scrollTop = chatLog.scrollHeight;
+  }
+  function reply(q) {
+    var s = q.toLowerCase();
+    var hits = [];
+    function add(words, text) {
+      for (var i = 0; i < words.length; i++) if (s.indexOf(words[i]) !== -1) { hits.push(text); return; }
+    }
+    add(["dospo", "who decides", "custody"], "dOSPO is who decides. It sets policy and must not hold treasury custody or act as a sales agent. Next file: dospo/NON_POWERS.md, then dospo/CHARTER.md.");
+    add(["omf", "goes out", "retainer", "deploy"], "OMF is how money goes out. It runs maintenance programs and must not collect revenue or sign customer contracts. Next file: omf/PROGRAM_CHARTER_TEMPLATE.md.");
+    add(["orf", "come back", "replenish", "revenue famil"], "ORF is how money comes back. It is a portfolio of five revenue families, not one product. It must not be confused with routing rails. Next file: orf/5_QUESTION_ASSESSMENT.md.");
+    add(["gate", "self-sustain", "level 3", "passed"], "Self-sustaining means all eight hard gates, not a point total. They are Measurement, Cash Evidence, Net Coverage, Multi-Class Diversity, Concentration Limit, Stress Runway, Liability Coverage, and Independent Audit. None is marked passed. This lab is Stage 0.");
+    add(["scorer", "evaluator", "indicator", "score"], "The scorer on this page is the 15-indicator preview. It sums points. A level it prints, including Level 3, is not a hard gate.");
+    add(["routing", "drips", "superfluid"], "Routing rails move money that was already collected. Drips and Superfluid are rails. They are not a revenue family.");
+    add(["p-scale", "p scale", "d-scale", "d scale", "precedent"], "P0 to P5 is how mature a mechanism is somewhere else. D0 to D5 is what this ecosystem has shown with its own receipts. A P4 elsewhere can still be D0 here.");
+    add(["stage"], "Everything here is Stage 0. No component is past that. Stage 1 needs independent external review. That review is not in the repo.");
+    add(["paper", "pdf", "whitepaper"], "The papers are the PDFs in whitepapers/. The ORF errata controls where it differs from the August 18 PDF. The OMF PDF still calls dOSPO and OMF a complete model. The README says that sentence is not the series position.");
+    add(["ratio"], "The six ratios are IECR, SPCR, PCR, SCR, RCR, and MCR. MCR is mechanism concentration. It is disclosed, and it is not itself a hard gate. The formulas are in orf/GOVERNANCE_RULES.md.");
+    if (!hits.length) return "That is not in the framework on this page. The papers are in whitepapers/. The scorer is the section above. I do not look anything up on the web.";
+    return hits.join(" ");
+  }
+  function openChat() {
+    chat.hidden = false;
+    if (!chatLog.childElementCount) say("Ask about dOSPO, OMF, ORF, the gates, or the scorer. I only know what this page already says.");
+    chatInput.focus();
+  }
+  document.getElementById("ask-toggle").addEventListener("click", function () {
+    if (chat.hidden) openChat(); else chat.hidden = true;
+  });
+  document.getElementById("ask-open").addEventListener("click", function (e) {
+    e.preventDefault();
+    openChat();
+  });
+  chatForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var q = chatInput.value.trim();
+    if (!q) return;
+    say(q, true);
+    say(reply(q), false);
+    chatInput.value = "";
+  });
+
 </script>
 </body>
 </html>

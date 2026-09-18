@@ -31,6 +31,8 @@ The triangle, the closed loop, and the fifteen-indicator scorer are one page.
 
 The scorer is the same 15-indicator preview as `evaluator/preview`. A level it prints is not one of the eight hard gates.
 
+The same page has an Ask button. It answers from the framework on the page. It does not send the question anywhere.
+
 ## Executive Summary
 
 The **Open Source Frontiers Lab (OSF)** is a research and architectural framework built within **LF Decentralized Trust** to solve the open-source maintenance crisis. Modern digital society relies on thousands of critical open-source software libraries, yet funding has historically suffered from one-way capital outflows — short-term grants, volunteer burnout, and corporate capture.
