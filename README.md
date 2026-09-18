@@ -9,6 +9,18 @@
 
 ---
 
+## Read this first
+
+The OMF PDF's sentence that dOSPO and OMF "together constitute a complete institutional model" does not include replenishment and is not the series position. The 18 August 2026 ORF paper is the third installment. The return path is part of the loop. Each framework can still be used alone.
+
+Next file for each door, and only these:
+
+- dOSPO: [`dospo/NON_POWERS.md`](./dospo/NON_POWERS.md), then [`dospo/CHARTER.md`](./dospo/CHARTER.md)
+- OMF: [`omf/PROGRAM_CHARTER_TEMPLATE.md`](./omf/PROGRAM_CHARTER_TEMPLATE.md)
+- ORF: [`orf/5_QUESTION_ASSESSMENT.md`](./orf/5_QUESTION_ASSESSMENT.md)
+
+The evaluator sample's `PASSED` output is a hypothetical, not a gate. No component is past Stage 0.
+
 ## Executive Summary
 
 The **Open Source Frontiers Lab (OSF)** is a research and architectural framework built within **LF Decentralized Trust** to solve the open-source maintenance crisis. Modern digital society relies on thousands of critical open-source software libraries, yet funding has historically suffered from one-way capital outflows — short-term grants, volunteer burnout, and corporate capture.
@@ -83,14 +95,16 @@ The repository includes a reference implementation of the **Canonical Systems Ev
 
 ```bash
 # Run unit test suite
-python evaluator/tests/test_evaluator.py
+python3 evaluator/tests/test_evaluator.py
 
 # Run Canonical Systems Assessment on sample configuration
-python evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.json
+python3 evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.json
 
 # Run experimental QUAID heuristic scanner
-python evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
+python3 evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
 ```
+
+The `PASSED` line from that sample is the hypothetical above. It does not pass a gate.
 
 ---
 

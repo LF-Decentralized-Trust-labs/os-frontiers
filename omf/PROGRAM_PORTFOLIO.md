@@ -29,7 +29,7 @@ OMF consists of five core programs, each supported by real-world Web3 production
 
 ### 2.1 Program 1: Maintainer Retainers
 - **Objective**: Provide continuous, predictable monthly stipends to core developers, eliminating grant dependency and salary compression.
-- **Web3 Precedents**: **Protocol Guild** ($7.2M raised from 6,202 donors in 2025, 187 members in 2026 across 10+ core Ethereum clients) and **Cardano POSM** (Maintainer Retainer 6-developer pre-pilot).
+- **Web3 Precedents**: **Protocol Guild** (187 members in 2026 across 10+ core Ethereum clients) and **Cardano POSM** (Maintainer Retainer 6-developer pre-pilot).
 - **Operational Mechanics**: Operates via on-chain time-weighted tenure formulas or Superfluid CFA per-second token streams. Developers undergo a 30-day evaluation window before entering 12-month retainers.
 
 ### 2.2 Program 2: Code Bounties & Bug Bounties

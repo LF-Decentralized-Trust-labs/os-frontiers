@@ -2,6 +2,8 @@
 
 This file is a pointer, not the paper.
 
-The canonical paper is the forthcoming `whitepapers/orf-v1.0.pdf`. That PDF is not in this commit.
+The canonical paper is the PDF [`whitepapers/orf-v1.0.pdf`](./orf-v1.0.pdf).
 
-Specifications under `orf/` are Stage 0. Where they differ from the paper, the paper controls.
+The citation layer is [`whitepapers/ORF_ERRATA.md`](./ORF_ERRATA.md). Where the errata differs from the PDF, the errata controls.
+
+Specifications under `orf/` are Stage 0. No gate is marked passed.

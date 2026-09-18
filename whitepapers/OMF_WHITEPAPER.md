@@ -30,7 +30,7 @@ This whitepaper introduces the **Open Maintenance Framework (OMF)** — a struct
 
 ### 1.1 Program 1: Maintainer Retainers
 - **Purpose**: Provide predictable, continuous monthly stipends to core developers, eliminating grant dependency and salary compression.
-- **Web3 Precedents**: **Protocol Guild** ($7.2M raised from 6,202 donors in 2025; 187 members in 2026 across 10+ Ethereum clients) and **Cardano POSM** (Maintainer Retainer pre-pilot).
+- **Web3 Precedents**: **Protocol Guild** (187 members in 2026 across 10+ Ethereum clients) and **Cardano POSM** (Maintainer Retainer pre-pilot).
 - **Execution Rails**: Time-weighted tenure vesting contracts or Superfluid Constant Flow Agreements (CFA) per-second token streaming.
 
 ### 1.2 Program 2: Code Bounties & Bug Bounties

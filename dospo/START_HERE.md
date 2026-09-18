@@ -5,6 +5,8 @@
 
 ---
 
+First, read [`NON_POWERS.md`](./NON_POWERS.md), then [`CHARTER.md`](./CHARTER.md).
+
 ## 1. Executive Summary & Core Definition
 
 The **Decentralized Open Source Program Office (dOSPO)** defines *who decides* in an open-source ecosystem. A dOSPO is a non-custodial governance-coordination and portfolio-oversight layer that establishes ecosystem maintenance charters, sets budget caps, audits maintainer performance, and enforces operator replaceability.
