@@ -1,5 +1,7 @@
 # Open Source Frontiers Lab — Tool Submission Template
 
+This file is a precedent, not a tool.
+
 ## Tool Name
 Project Odin (Ethereum Foundation & Renaissance Philanthropy)
 
@@ -182,12 +184,12 @@ Project Odin represents the leading Web3 implementation of structured DPG incuba
 ## Program Relevance & Direct OSF Alignment
 
 ### 1. OMF Incubation Program Alignment
-- **OSF Mapping**: **OMF Program 5 (Incubation Program)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **OSF Mapping**: **OMF Program 5 (Incubation Program)** & **[`omf/PROGRAM_PORTFOLIO.md`](../../omf/PROGRAM_PORTFOLIO.md)**.
 - **Mechanism Validated**: Direct Web3 implementation of OMF's Incubation Program (Emerging -> Growing transition). Proves that structured 3-stage incubation equips DPG maintainers to transition from passive grant recipients to commercial contractors.
 - **Operator Takeaway**: An OMF Operator adopts Project Odin's 3-stage milestone structure to onboard emerging critical dependencies, guiding them from Stage 1 domain mapping to Stage 3 contract execution.
 
 ### 2. ORF Enterprise Services Layer Alignment
-- **OSF Mapping**: **ORF Layer 3 (Enterprise & Services Layer)** & **[`orf/INSTRUMENT_CATALOG.md`](../orf/INSTRUMENT_CATALOG.md)**.
+- **OSF Mapping**: **ORF Layer 3 (Enterprise & Services Layer)** & **[`orf/INSTRUMENT_CATALOG.md`](../../orf/INSTRUMENT_CATALOG.md)**.
 - **Mechanism Validated**: Demonstrates how open-source research and engineering can be packaged into contracted deliverables (Enterprise SLAs, custom extensions, compliance reviews) that enterprise clients purchase.
 - **Operator Takeaway**: An ORF Operator utilizes Odin's BD collateral templates (one-pagers, statements of work) to build enterprise sales pipelines that route commercial service revenue back into ecosystem treasuries.
 

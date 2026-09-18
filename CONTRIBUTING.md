@@ -13,7 +13,7 @@ Thank you for your interest in contributing to the **Open Source Frontiers Lab**
 - 🛠️ **Maintenance Frameworks** (`omf/`)
 - 💰 **Replenishment Frameworks** (`orf/`)
 - 📊 **Evaluator Tools & Adapters** (`evaluator/`)
-- 🌍 **Ecosystem Profiles & Use Cases** (`use-cases/`)
+- 🌍 **Ecosystem precedents** (`docs/precedents/`). The submission template stays in `use-cases/`.
 - 🛠️ **Tooling Integrations** (`tools/`)
 
 ---
@@ -27,11 +27,11 @@ LF-Decentralized-Trust-labs/os-frontiers/
 ├── dospo/                  # Decentralized OSPO Governance Framework
 ├── omf/                    # Open Maintenance Framework
 ├── orf/                    # Open Replenishment Framework
-├── evaluator/              # Assessment Tools, QUAID Adapters & Examples
-├── use-cases/              # Ecosystem Profiles (Cardano, Optimism, Polkadot, EVM)
-├── tools/                  # Tooling & Protocol Integrations
+├── evaluator/              # Assessment tools, adapters, and the local preview
+├── use-cases/              # Use-case submission template only
+├── tools/                  # Tooling and protocol integrations (not precedents)
 ├── pitch/                  # Executive Decks & Adoption Templates
-└── docs/                   # Feasibility Models & Technical Guides
+└── docs/                   # Guides, evidence, and precedents/
 ```
 
 ---

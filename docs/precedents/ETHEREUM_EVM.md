@@ -1,4 +1,4 @@
-# Open Source Frontiers Lab — Use Case Submission Template
+# Open Source Frontiers Lab — Precedent Note
 
 ## Use Case Title
 Ethereum & EVM Ecosystem: Protocol Guild, Project Odin & Endowment Architecture
@@ -53,7 +53,7 @@ Ethereum is the critical settlement layer for thousands of decentralized applica
 
 ## Description
 The Ethereum ecosystem addresses open-source sustainability through a multi-layered, de-coupled approach:
-1. Protocol Guild: An on-chain split contract where ecosystem projects pledge 1% of token supply or protocol yield. Vested funds stream automatically to ~180 core Ethereum client maintainers based on a transparent time-weighted tenure formula.
+1. Protocol Guild: An on-chain split contract where ecosystem projects pledge 1% of token supply or protocol yield. Vested funds stream automatically to core Ethereum client maintainers based on a transparent time-weighted tenure formula.
 2. Project Odin: A 12-month incubation program launched by the EF Funding Coordination team and Renaissance Philanthropy. Odin guides strategic DPGs through a 3-stage framework (*Stage 1 Discovery/Mapping*, *Stage 2 Validation/Planning*, *Stage 3 Execution/De-risking*) to transition from grant dependency into self-sustaining Frontier Research Contractors with client-contracted earned revenue.
 3. ENS EP 6.46 Investment Policy Statement: A governed DAO endowment policy managing $100M+ in reserves across liquid USDC/treasury sleeves and ETH yield strategies to preserve a 3+ year maintainer operating runway.
 4. Octant Staking Yield: Locks 100,000 ETH in native staking, routing validator yield directly into a public-goods allocation pool with a 25% operational stewardship anchor.
@@ -106,7 +106,7 @@ Funding is completely decoupled from protocol minting inflation:
 # Open Source Impact
 
 ## Expected Benefits
-- Custody-free, tenure-weighted maintainer retainers for ~180 core Ethereum developers
+- Custody-free, tenure-weighted maintainer retainers for core Ethereum developers
 - Diversified earned-revenue pathways for strategic DPG research teams
 - Elimination of single-source grant dependency cliffs
 - 3+ year operating runway protection against crypto bear markets
@@ -121,8 +121,8 @@ Funding is completely decoupled from protocol minting inflation:
 
 | Metric | Description |
 |---|---|
-| Core Maintainers Funded | Number of core L1 developers receiving Protocol Guild retainers (~180 active) |
-| Assets Committed to Guild | Total ecosystem assets locked in Protocol Guild split contract ($80M+) |
+| Core Maintainers Funded | Number of core L1 developers receiving Protocol Guild retainers |
+| Assets Committed to Guild | Total ecosystem assets locked in Protocol Guild split contract |
 | DPG Commercial Conversion | Number of EF DPG teams converted to Frontier Research Contractors via Odin |
 | Endowment Operating Runway | Preserved operating expense runway under ENS EP 6.46 IPS (3+ years target) |
 | Staking Yield Distributed | Annual ETH staking yield routed to public goods via Octant ($M+/yr) |
@@ -171,7 +171,7 @@ The Ethereum ecosystem demonstrates premier Web3 implementations of custody-free
 ## Program Relevance & Direct OSF Alignment
 
 ### 1. OMF Maintainer Retainers (Protocol Guild Model)
-- **OSF Mapping**: **OMF Program 1 (Maintainer Retainers)** & **[`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md)**.
+- **OSF Mapping**: **OMF Program 1 (Maintainer Retainers)** & **[`omf/PROGRAM_PORTFOLIO.md`](../../omf/PROGRAM_PORTFOLIO.md)**.
 - **Mechanism Validated**: Proves that tenure-weighted, custody-free streaming contract allocations successfully fund core maintainers while preserving 100% technical autonomy.
 - **Operator Takeaway**: OMF implementations utilize Protocol Guild's time-weighted tenure formula for automated maintainer stipend streams.
 
@@ -181,7 +181,7 @@ The Ethereum ecosystem demonstrates premier Web3 implementations of custody-free
 - **Operator Takeaway**: OMF and ORF operators adopt Odin's 3-stage incubation methodology (Discovery -> Validation -> Execution) to transition emerging Web3 projects into commercial maintenance providers.
 
 ### 3. ORF Capital Layer Governed Endowments (ENS EP 6.46 Model)
-- **OSF Mapping**: **ORF Layer 4 (Capital Layer — Governed Endowment IPS)** & **[`GOVERNANCE_RULES.md`](../orf/GOVERNANCE_RULES.md)**.
+- **OSF Mapping**: **ORF Layer 4 (Capital Layer — Governed Endowment IPS)** & **[`GOVERNANCE_RULES.md`](../../orf/GOVERNANCE_RULES.md)**.
 - **Mechanism Validated**: Demonstrates that governed treasury endowment policy statements convert static reserves into yield-bearing income streams that cover baseline maintenance floors.
 - **Operator Takeaway**: ORF adopts ENS EP 6.46 into its governance rules for capital-layer reserve management.
 

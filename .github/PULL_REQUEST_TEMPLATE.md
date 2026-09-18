@@ -12,5 +12,5 @@ Please provide a concise summary of the changes included in this PR:
 ## Verification Checklist
 
 - [ ] All markdown links are working and follow GitHub relative link conventions.
-- [ ] Interactive web application (`index.html`) tested if modified.
+- [ ] Local preview (`evaluator/preview/index.html`) tested if modified.
 - [ ] No hardcoded assumptions or broken references.

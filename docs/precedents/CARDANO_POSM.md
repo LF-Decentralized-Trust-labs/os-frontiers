@@ -1,4 +1,4 @@
-# Open Source Frontiers Lab — Use Case Submission Template
+# Open Source Frontiers Lab — Precedent Note
 
 ## Use Case Title
 Cardano Paid Open Source Model (POSM)
@@ -223,17 +223,17 @@ POSM represents a major real-world experiment in decentralized open source susta
 ## Program Relevance & Direct OSF Alignment
 
 ### 1. dOSPO Governance & CIP-1694 Alignment
-- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../dospo/START_HERE.md))** & **Safeguard 1 (No Treasury Custody)**.
+- **OSF Mapping**: **dOSPO Specification ([`dospo/START_HERE.md`](../../dospo/START_HERE.md))** & **Safeguard 1 (No Treasury Custody)**.
 - **Mechanism Validated**: Validates that decentralized governance bodies (DReps, Constitutional Committee) authorize overall ecosystem mandates and budget caps, while delegating operational oversight to specialized bodies (OSC/dOSPO) that hold zero direct custody of treasury funds.
 - **Operator Takeaway**: POSM serves as the primary practical precursor for dOSPO governance chartering, operator replaceability rules, and transparency reporting.
 
 ### 2. OMF Maintenance Retainer Deployment
 - **OSF Mapping**: **OMF Program 1 (Maintainer Retainers)** & **Program 4 (Operational Support)**.
 - **Mechanism Validated**: Demonstrates the 30-day evaluation onboarding window, two-tier role structures (Core Client vs SDK Tooling), and dual technical/compliance review workflows.
-- **Operator Takeaway**: OMF incorporates POSM's Maintainer Retainer charter rules, evaluation benchmarks, and operational support service catalogs directly into [`omf/PROGRAM_PORTFOLIO.md`](../omf/PROGRAM_PORTFOLIO.md).
+- **Operator Takeaway**: OMF incorporates POSM's Maintainer Retainer charter rules, evaluation benchmarks, and operational support service catalogs directly into [`omf/PROGRAM_PORTFOLIO.md`](../../omf/PROGRAM_PORTFOLIO.md).
 
 ### 3. Pro-Forma Maintenance Cost Baseline
-- **OSF Mapping**: **Tier 1 Feasibility Scenario Model ([`docs/TIER_1_FEASIBILITY_MODEL.md`](../docs/TIER_1_FEASIBILITY_MODEL.md))**.
+- **OSF Mapping**: **Tier 1 Feasibility Scenario Model ([`docs/TIER_1_FEASIBILITY_MODEL.md`](../TIER_1_FEASIBILITY_MODEL.md))**.
 - **Mechanism Validated**: Grounded in maintainer cost floor estimates to model baseline infrastructure preservation requirements.
 - **Operator Takeaway**: Provides the empirical cost floor benchmarks used to calibrate ecosystem maintenance funding targets.
 

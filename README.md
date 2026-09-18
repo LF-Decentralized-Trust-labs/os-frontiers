@@ -55,8 +55,8 @@ OSF synthesizes Web2 and Web3 precedents into a unified, three-piece closed-loop
 
 ### Master Architectural Whitepapers Series ([`whitepapers/`](./whitepapers))
 - **[`whitepapers/README.md`](./whitepapers/README.md)**: Master Whitepaper Series Index & Executive Architecture Overview.
-- **dOSPO Whitepaper**: [`whitepapers/DOSPO_WHITEPAPER.md`](./whitepapers/DOSPO_WHITEPAPER.md) | PDF: [`dospo-whitepaper-v1.0.pdf`](./whitepapers/dospo-whitepaper-v1.0.pdf)
-- **OMF Whitepaper**: [`whitepapers/OMF_WHITEPAPER.md`](./whitepapers/OMF_WHITEPAPER.md) | PDF: [`open-maintenance-framework-omf-v1.0.pdf`](./whitepapers/open-maintenance-framework-omf-v1.0.pdf)
+- **dOSPO Whitepaper**: Canonical PDF [`whitepapers/dospo-whitepaper-v1.0.pdf`](./whitepapers/dospo-whitepaper-v1.0.pdf) (March 3, 2026). Pointer: [`whitepapers/DOSPO_WHITEPAPER.md`](./whitepapers/DOSPO_WHITEPAPER.md). The PDF is canonical.
+- **OMF Whitepaper**: Canonical PDF [`whitepapers/open-maintenance-framework-omf-v1.0.pdf`](./whitepapers/open-maintenance-framework-omf-v1.0.pdf) (March 7, 2026). Pointer: [`whitepapers/OMF_WHITEPAPER.md`](./whitepapers/OMF_WHITEPAPER.md). The PDF is canonical.
 - **ORF Whitepaper**: [`whitepapers/orf-v1.0.pdf`](./whitepapers/orf-v1.0.pdf). Citation layer: [`whitepapers/ORF_ERRATA.md`](./whitepapers/ORF_ERRATA.md). Where the errata differs from the PDF, the errata controls until those sentences are pasted into a new PDF. Stage 0. No gate is marked passed.
 
 ### Core Architectural Specifications
@@ -72,14 +72,14 @@ OSF synthesizes Web2 and Web3 precedents into a unified, three-piece closed-loop
 - **[`docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md`](./docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md)**: 5-Vector Deep Dives into STF, Protocol Guild, Tidelift, Project Odin, Optimism, Polkadot, and ENS.
 - **[`docs/TIER_1_FEASIBILITY_MODEL.md`](./docs/TIER_1_FEASIBILITY_MODEL.md)**: Financial Scenario Model & Compound Stress Test.
 
-### Multi-Chain Ecosystem Profiles
-- **[`use-cases/CARDANO_POSM.md`](./use-cases/CARDANO_POSM.md)**: Cardano Paid Open Source Model (POSM) Precursor.
-- **[`use-cases/ETHEREUM_EVM.md`](./use-cases/ETHEREUM_EVM.md)**: Protocol Guild, Project Odin, and ENS Endowment Architecture.
-- **[`use-cases/OPTIMISM_SUPERCHAIN.md`](./use-cases/OPTIMISM_SUPERCHAIN.md)**: Superchain 15% Net Fee Split & OSO Impact Tracing.
-- **[`use-cases/POLKADOT_OPENGOV.md`](./use-cases/POLKADOT_OPENGOV.md)**: Technical Fellowship Ranks 0–9 & PCF Legal Foundation Execution.
+### Ecosystem precedents
+- **[`docs/precedents/CARDANO_POSM.md`](./docs/precedents/CARDANO_POSM.md)**: Cardano Paid Open Source Model (POSM) Precursor.
+- **[`docs/precedents/ETHEREUM_EVM.md`](./docs/precedents/ETHEREUM_EVM.md)**: Protocol Guild, Project Odin, and ENS Endowment Architecture.
+- **[`docs/precedents/OPTIMISM_SUPERCHAIN.md`](./docs/precedents/OPTIMISM_SUPERCHAIN.md)**: Superchain 15% Net Fee Split & OSO Impact Tracing.
+- **[`docs/precedents/POLKADOT_OPENGOV.md`](./docs/precedents/POLKADOT_OPENGOV.md)**: Technical Fellowship Ranks 0–9 & PCF Legal Foundation Execution.
+- **[`docs/precedents/PROJECT_ODIN.md`](./docs/precedents/PROJECT_ODIN.md)**: Ethereum Foundation Funding Coordination and Renaissance Philanthropy incubation program. A precedent, not a rail.
 
 ### Tool & Infrastructure Specifications
-- **[`tools/PROJECT_ODIN.md`](./tools/PROJECT_ODIN.md)**: EF Funding Coordination & Renaissance Philanthropy DPG Incubation Lab.
 - **[`tools/OPEN_SOURCE_OBSERVER.md`](./tools/OPEN_SOURCE_OBSERVER.md)**: Multi-Ecosystem BigQuery Data Warehouse & Hasura GraphQL API.
 - **[`tools/DRIPS_PROTOCOL.md`](./tools/DRIPS_PROTOCOL.md)**: EVM Smart Contracts for Dependency Graph Fund Splitting (ORF Routing Rail).
 - **[`tools/SUPERFLUID.md`](./tools/SUPERFLUID.md)**: Constant Flow Agreements for Real-Time Streaming Stipends (ORF Routing Rail).
@@ -105,6 +105,8 @@ python3 evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
 ```
 
 The `PASSED` line from that sample is the hypothetical above. It does not pass a gate.
+
+Local scorer preview, opened from its own folder, not a published site: [`evaluator/preview/index.html`](./evaluator/preview/index.html), with [`evaluator/preview/app.js`](./evaluator/preview/app.js) and [`evaluator/preview/style.css`](./evaluator/preview/style.css). GitHub Pages for this repository is not published.
 
 ---
 

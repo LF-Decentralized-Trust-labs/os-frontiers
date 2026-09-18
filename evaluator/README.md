@@ -24,3 +24,9 @@ python evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.
 # Run experimental QUAID-inspired scanner heuristic
 python evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
 ```
+
+---
+
+## 3. Local scorer preview
+
+Open [`preview/index.html`](./preview/index.html) from this directory's `preview/` folder (`app.js` and `style.css` sit beside it). It is a local preview, not a published site. GitHub Pages for this repository is not published. Scoring logic is unchanged.

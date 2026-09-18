@@ -9,7 +9,7 @@
 
 The **Open Source Frontiers (OSF) Whitepaper Series** establishes the theoretical, legal, economic, and operational foundations for open-source software sustainability in decentralized ecosystems.
 
-The series is available in both **Publication-Grade Markdown Specifications** and **Original Downloadable PDF Documents**:
+The canonical papers are the PDFs. The markdown files beside them are pointers, not publication-grade papers:
 
 ```text
                ┌──────────────────────────────────────────┐
@@ -34,10 +34,10 @@ The series is available in both **Publication-Grade Markdown Specifications** an
 
 ---
 
-## 2. Markdown Specifications
+## 2. Markdown pointers
 
-1. **[`DOSPO_WHITEPAPER.md`](./DOSPO_WHITEPAPER.md)**: *Decentralized Open Source Program Office (dOSPO) Whitepaper v1.0*. Defines non-custodial governance coordination, RACI matrices, legal foundation execution wrappers (Polkadot PCF model), and operator replaceability safeguards.
-2. **[`OMF_WHITEPAPER.md`](./OMF_WHITEPAPER.md)**: *Open Maintenance Framework (OMF) Whitepaper v1.0*. Details the five maintenance deployment programs (Maintainer Retainers, Bug Bounties, Contributor Pathways, Security Resilience, and DPG Incubation).
+1. **[`DOSPO_WHITEPAPER.md`](./DOSPO_WHITEPAPER.md)**: Pointer, not the paper. Canonical PDF [`dospo-whitepaper-v1.0.pdf`](./dospo-whitepaper-v1.0.pdf), dated March 3, 2026.
+2. **[`OMF_WHITEPAPER.md`](./OMF_WHITEPAPER.md)**: Pointer, not the paper. Canonical PDF [`open-maintenance-framework-omf-v1.0.pdf`](./open-maintenance-framework-omf-v1.0.pdf), dated March 7, 2026. Series position is the repository README [Read this first](../README.md#read-this-first) block. The ORF paper is the third installment.
 3. **ORF**: The canonical paper is [`orf-v1.0.pdf`](./orf-v1.0.pdf), with [`ORF_ERRATA.md`](./ORF_ERRATA.md) as the citation layer. It establishes closed-loop sustainability, the 5 Revenue Families, the two-dimensional matrix, 8 Hard Gates for Self-Sustainability, 6 Replenishment Ratios, the P-scale (external precedent, P0–P5), and the D-scale (local deployment, D0–D5). Specifications under `orf/` remain Stage 0. Where they differ from the paper, the paper controls. No gate is marked passed.
 
 ---
