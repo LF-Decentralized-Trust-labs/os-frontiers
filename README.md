@@ -21,6 +21,10 @@ Next file for each door, and only these:
 
 The evaluator sample's `PASSED` output is a hypothetical, not a gate. No component is past Stage 0.
 
+## The loop, as a page
+
+The triangle and the closed loop are one page: [`docs/index.html`](./docs/index.html). GitHub Pages serves that file as the site root.
+
 ## Executive Summary
 
 The **Open Source Frontiers Lab (OSF)** is a research and architectural framework built within **LF Decentralized Trust** to solve the open-source maintenance crisis. Modern digital society relies on thousands of critical open-source software libraries, yet funding has historically suffered from one-way capital outflows — short-term grants, volunteer burnout, and corporate capture.

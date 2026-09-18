@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Open Source Frontiers — Stage 0</title>
+<style>
+  :root {
+    --bg: #141210;
+    --text: #f4efe6;
+    --muted: #a39b90;
+    --copper: #d4844a;
+    --sage: #8aa392;
+    --clay: #c4b49a;
+    --serif: "Iowan Old Style", Palatino, Georgia, serif;
+    --sans: "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    line-height: 1.55;
+    padding: 0 1.35rem;
+  }
+  .sheet {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4.6rem 0 5.2rem;
+  }
+  .kicker {
+    font-family: var(--sans);
+    font-variant: small-caps;
+    letter-spacing: 0.18em;
+    text-transform: lowercase;
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin: 0;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2.7rem, 6.4vw, 4.55rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    margin: 0.7rem 0 1.15rem;
+  }
+  .chip {
+    display: inline-block;
+    margin: 0 0 1.6rem;
+    padding: 0.38rem 0.72rem 0.32rem;
+    border: 1px solid var(--clay);
+    color: var(--clay);
+  }
+  .chip .kicker { color: var(--clay); }
+  .lede {
+    max-width: 38rem;
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+  hr.rule {
+    border: 0;
+    border-top: 1px solid var(--muted);
+    margin: 3.4rem 0 0;
+    opacity: 0.55;
+  }
+  section { margin-top: 4.6rem; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.85rem;
+    line-height: 1.15;
+    margin: 0.45rem 0 0;
+  }
+  .caption {
+    font-family: var(--sans);
+    color: var(--muted);
+    font-size: 0.92rem;
+    max-width: 40rem;
+    margin: 1.1rem 0 0;
+  }
+  svg.tri {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.6rem;
+    overflow: visible;
+  }
+  svg.tri text { font-family: var(--serif); fill: var(--text); }
+  svg.tri .job {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    font-variant: small-caps;
+  }
+  svg.tri .name { font-size: 30px; }
+  svg.tri .sel-label {
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    font-variant: small-caps;
+    opacity: 0;
+  }
+  svg.tri .vertex.is-selected .sel-label { opacity: 1; }
+  svg.tri .mark {
+    fill: var(--bg);
+    stroke-width: 1.35;
+    transition: stroke-width 160ms linear;
+  }
+  svg.tri .core { opacity: 0; transition: opacity 160ms linear; }
+  svg.tri .vertex.is-selected .mark { stroke-width: 3.4; }
+  svg.tri .vertex.is-selected .core { opacity: 1; }
+  svg.tri .ring { fill: none; stroke: var(--text); stroke-width: 1; opacity: 0; }
+  svg.tri .vertex:focus { outline: none; }
+  svg.tri .vertex:focus-visible .ring { opacity: 0.85; }
+  svg.tri .edge {
+    fill: none;
+    stroke: var(--muted);
+    stroke-width: 1;
+    opacity: 0.7;
+    pointer-events: none;
+    transition: stroke 160ms linear, opacity 160ms linear;
+  }
+  svg.tri[data-active="dospo"] .e-dospo { stroke: var(--clay); opacity: 1; }
+  svg.tri[data-active="omf"] .e-omf { stroke: var(--sage); opacity: 1; }
+  svg.tri[data-active="orf"] .e-orf { stroke: var(--copper); opacity: 1; }
+  svg.tri .v-dospo { stroke: var(--clay); fill: var(--clay); }
+  svg.tri .v-omf { stroke: var(--sage); fill: var(--sage); }
+  svg.tri .v-orf { stroke: var(--copper); fill: var(--copper); }
+  svg.tri .job.j-dospo, svg.tri .sel-label.j-dospo { fill: var(--clay); }
+  svg.tri .job.j-omf, svg.tri .sel-label.j-omf { fill: var(--sage); }
+  svg.tri .job.j-orf, svg.tri .sel-label.j-orf { fill: var(--copper); }
+  svg.tri .hit { fill: transparent; stroke: none; cursor: pointer; }
+  #detail { margin-top: 2.4rem; min-height: 12rem; }
+  .panel {
+    max-width: 44rem;
+    padding-left: 1.15rem;
+    border-left: 2px solid var(--muted);
+  }
+  .panel[data-panel="dospo"] { border-left-color: var(--clay); }
+  .panel[data-panel="omf"] { border-left-color: var(--sage); }
+  .panel[data-panel="orf"] { border-left-color: var(--copper); }
+  .panel[hidden] { display: none; }
+  .jobline {
+    font-family: var(--sans);
+    font-variant: small-caps;
+    letter-spacing: 0.16em;
+    text-transform: lowercase;
+    font-size: 0.86rem;
+    margin: 0 0 0.35rem;
+  }
+  .panel[data-panel="dospo"] .jobline { color: var(--clay); }
+  .panel[data-panel="omf"] .jobline { color: var(--sage); }
+  .panel[data-panel="orf"] .jobline { color: var(--copper); }
+  .panel h2 { font-size: 2rem; margin-bottom: 0.85rem; }
+  .panel p { margin: 0.75rem 0; }
+  .must { color: var(--text); }
+  .tag {
+    font-family: var(--sans);
+    font-variant: small-caps;
+    letter-spacing: 0.14em;
+    text-transform: lowercase;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  .limits {
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0 0.2rem;
+  }
+  .limits li {
+    padding-left: 1rem;
+    text-indent: -1rem;
+    margin: 0.35rem 0;
+    color: var(--text);
+  }
+  .limits li::before { content: "–  "; color: var(--clay); }
+  .next {
+    margin-top: 1.35rem;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .path {
+    font-family: var(--mono);
+    font-size: 0.86em;
+    color: var(--text);
+    letter-spacing: 0;
+  }
+  .loop {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0 0;
+    margin: 0;
+  }
+  .loop li {
+    position: relative;
+    flex: 1 1 10.5rem;
+    min-width: 9.6rem;
+    padding: 1.45rem 1.15rem 0.2rem 0;
+  }
+  .loop li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    border-top: 1px solid var(--muted);
+  }
+  .loop li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--bg);
+    box-shadow: 0 0 0 1px var(--muted);
+  }
+  .idx {
+    display: block;
+    font-family: var(--sans);
+    font-variant: small-caps;
+    letter-spacing: 0.16em;
+    text-transform: lowercase;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .st {
+    display: block;
+    font-family: var(--serif);
+    font-size: 1.12rem;
+    line-height: 1.25;
+    margin-top: 0.28rem;
+  }
+  .quiet {
+    display: block;
+    font-family: var(--sans);
+    color: var(--muted);
+    font-size: 0.84rem;
+    margin-top: 0.35rem;
+  }
+  .loop .note {
+    display: block;
+    font-family: var(--sans);
+    color: var(--copper);
+    font-size: 0.86rem;
+    line-height: 1.4;
+    margin-top: 0.55rem;
+    max-width: 16rem;
+  }
+  .pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem 4rem;
+    align-items: start;
+    margin-top: 1.2rem;
+  }
+  .pair h2 { font-size: 1.7rem; margin-bottom: 1rem; }
+  .pair p { margin: 0 0 0.95rem; }
+  .pair .tag { display: block; margin-bottom: 0.15rem; }
+  .reader {
+    margin: 2.4rem 0 0;
+    max-width: 46rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+  .place {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.1rem 1.6rem;
+    padding: 1.2rem 0 0;
+    margin: 0;
+  }
+  .place li { flex: 0 1 auto; }
+  .where {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.86rem;
+    color: var(--text);
+  }
+  .role {
+    display: block;
+    font-family: var(--serif);
+    color: var(--muted);
+    margin-top: 0.2rem;
+  }
+  footer {
+    margin-top: 4.8rem;
+    padding-top: 0.2rem;
+    max-width: 42rem;
+    color: var(--muted);
+    font-size: 1rem;
+  }
+  footer p { margin: 0.55rem 0; }
+  footer .kicker { color: var(--clay); margin-bottom: 0.8rem; }
+  @media (max-width: 760px) {
+    .pair { grid-template-columns: 1fr; gap: 2.4rem; }
+    section { margin-top: 3.4rem; }
+    .sheet { padding-top: 2.8rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+</style>
+</head>
+<body>
+<!--
+Triangle jobs are README.md: Who Decides, How Money Goes Out, How Money Comes Back.
+The pitch files use "governance triangle" for legitimacy, neutrality, and execution inside dOSPO. This figure is not that triangle.
+Closed-loop stage names are the boxes in orf/START_HERE.md: Economic Value Generation, ORF Collection Layer, Governed Treasury, Routing & Allocation Rails, OMF Maintenance Deployment, Critical Open Infrastructure.
+The briefing line "these distribute; they never collect" is not in that file. The note under routing uses orf/START_HERE.md: a routing rail moves already-collected money.
+Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter table headers and not the threshold arithmetic.
+-->
+<main class="sheet">
+  <header>
+    <p class="kicker">Linux Foundation Decentralized Trust</p>
+    <h1>Open Source Frontiers</h1>
+    <p class="chip"><span class="kicker">Stage 0</span></p>
+    <p class="lede">A coordination layer, a deployment layer, and a replenishment layer.</p>
+  </header>
+  <hr class="rule">
+
+  <section aria-labelledby="tri-heading">
+    <p class="kicker">The three layers</p>
+    <h2 id="tri-heading">Who decides, how money goes out, how money comes back</h2>
+    <svg class="tri" data-active="orf" viewBox="0 0 1000 690" role="group" aria-label="Three layers. dOSPO, OMF, and ORF.">
+      <g class="edges">
+        <line class="edge e-dospo e-omf" x1="500" y1="168" x2="168" y2="520"></line>
+        <line class="edge e-omf e-orf" x1="168" y1="520" x2="832" y2="520"></line>
+        <line class="edge e-orf e-dospo" x1="832" y1="520" x2="500" y2="168"></line>
+      </g>
+
+      <g class="vertex" data-vertex="dospo" role="button" tabindex="0" aria-pressed="false" aria-controls="detail" aria-label="dOSPO. Who decides.">
+        <circle class="hit" cx="500" cy="168" r="78"></circle>
+        <circle class="ring" cx="500" cy="168" r="22"></circle>
+        <circle class="mark v-dospo" cx="500" cy="168" r="8"></circle>
+        <circle class="core v-dospo" cx="500" cy="168" r="2.4"></circle>
+        <text class="name" x="500" y="58" text-anchor="middle">dOSPO</text>
+        <text class="job j-dospo" x="500" y="86" text-anchor="middle">Who decides</text>
+        <text class="sel-label j-dospo" x="500" y="112" text-anchor="middle">selected</text>
+      </g>
+
+      <g class="vertex" data-vertex="omf" role="button" tabindex="0" aria-pressed="false" aria-controls="detail" aria-label="OMF. How money goes out.">
+        <circle class="hit" cx="168" cy="520" r="78"></circle>
+        <circle class="ring" cx="168" cy="520" r="22"></circle>
+        <circle class="mark v-omf" cx="168" cy="520" r="8"></circle>
+        <circle class="core v-omf" cx="168" cy="520" r="2.4"></circle>
+        <text class="name" x="168" y="582" text-anchor="middle">OMF</text>
+        <text class="job j-omf" x="168" y="608" text-anchor="middle">How money goes out</text>
+        <text class="sel-label j-omf" x="168" y="632" text-anchor="middle">selected</text>
+      </g>
+
+      <g class="vertex is-selected" data-vertex="orf" role="button" tabindex="0" aria-pressed="true" aria-controls="detail" aria-label="ORF. How money comes back.">
+        <circle class="hit" cx="832" cy="520" r="78"></circle>
+        <circle class="ring" cx="832" cy="520" r="22"></circle>
+        <circle class="mark v-orf" cx="832" cy="520" r="8"></circle>
+        <circle class="core v-orf" cx="832" cy="520" r="2.4"></circle>
+        <text class="name" x="832" y="582" text-anchor="middle">ORF</text>
+        <text class="job j-orf" x="832" y="608" text-anchor="middle">How money comes back</text>
+        <text class="sel-label j-orf" x="832" y="632" text-anchor="middle">selected</text>
+      </g>
+    </svg>
+    <p class="caption">ORF is the reading that opens. The 18 August 2026 paper is the third installment. Each framework can still be used alone.</p>
+
+    <div id="detail">
+      <article class="panel" data-panel="dospo" hidden>
+        <p class="jobline">Who decides</p>
+        <h2>Decentralized Open Source Program Office</h2>
+        <p>A non-custodial governance layer that sets policy guidelines, defines maintenance charters, and enforces operator replaceability.</p>
+        <p class="must"><span class="tag">Must not.</span> It never holds direct discretionary custody of treasury funds. dOSPO managers must not act as commercial sales agents.</p>
+        <ul class="limits">
+          <li>The operator may not set ecosystem roadmaps, project priorities, or development direction unilaterally.</li>
+          <li>The operator may not allocate funds outside governance-approved programs.</li>
+          <li>The operator may not require IP assignment, or take ownership of projects, repositories, or tooling.</li>
+          <li>The operator may not operate any program indefinitely. Programs carry sunset clauses, and the mandate does not continue after charter expiry without re-authorization.</li>
+        </ul>
+        <p class="next">Next <span class="path">dospo/NON_POWERS.md</span> then <span class="path">dospo/CHARTER.md</span></p>
+      </article>
+
+      <article class="panel" data-panel="omf" hidden>
+        <p class="jobline">How money goes out</p>
+        <h2>Open Maintenance Framework</h2>
+        <p>A structured maintenance deployment engine: maintainer retainers, vulnerability audits, contributor pathways, and dependency incubation.</p>
+        <p class="must"><span class="tag">Must not.</span> OMF does not collect revenue and does not sign customer contracts. The neutral legal entity invoices and signs. OMF managers must not act as commercial sales agents. Funding supports maintenance capacity; it never purchases technical roadmap authority.</p>
+        <p class="next">Next <span class="path">omf/PROGRAM_CHARTER_TEMPLATE.md</span></p>
+      </article>
+
+      <article class="panel" data-panel="orf">
+        <p class="jobline">How money comes back</p>
+        <h2>Open Replenishment Framework</h2>
+        <p>A portfolio framework for identifying, validating, collecting, and diversifying recurring sources of value that replenish ecosystem treasuries.</p>
+        <p class="must"><span class="tag">Must not.</span> ORF is not a routing rail. Revenue sources generate new money. Routing rails move money already collected. Allocation engines only set split percentages.</p>
+        <p><span class="tag">Five revenue families.</span> A, Structural Network Revenue. B, Enterprise Earned Revenue. C, Ecosystem Membership &amp; Certification. D, Voluntary / Incentivized Contributions. E, Capital Income.</p>
+        <p><span class="tag">Six ratios.</span> Incremental Earned Coverage Ratio (IECR). Structural Protocol Coverage Ratio (SPCR). Portfolio Coverage Ratio (PCR). Stress Coverage Ratio (SCR). Revenue Concentration Ratio (RCR). Mechanism Concentration Ratio (MCR). MCR is disclosed. It is not itself a hard gate.</p>
+        <p><span class="tag">Eight hard gates.</span> Measurement. Cash Evidence. Net Coverage. Multi-Class Diversity. Concentration Limit. Stress Runway. Liability Coverage. Independent Audit. All eight. Not an additive score. None is marked passed.</p>
+        <p class="next">Next <span class="path">orf/5_QUESTION_ASSESSMENT.md</span></p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="loop-heading">
+    <p class="kicker">The closed loop</p>
+    <h2 id="loop-heading">From value back to infrastructure</h2>
+    <ol class="loop">
+      <li>
+        <span class="idx">One</span>
+        <span class="st">Economic value generation</span>
+        <span class="quiet">Gross inflows</span>
+      </li>
+      <li>
+        <span class="idx">Two</span>
+        <span class="st">ORF collection layer</span>
+        <span class="quiet">Net replenishment</span>
+      </li>
+      <li>
+        <span class="idx">Three</span>
+        <span class="st">Governed treasury</span>
+        <span class="quiet">Approved allocations</span>
+      </li>
+      <li>
+        <span class="idx">Four</span>
+        <span class="st">Routing and allocation rails</span>
+        <span class="quiet">Streaming disbursements</span>
+        <span class="note">Routing rails move already-collected money. They are not revenue sources.</span>
+      </li>
+      <li>
+        <span class="idx">Five</span>
+        <span class="st">OMF maintenance deployment</span>
+        <span class="quiet">Maintainer retainers</span>
+      </li>
+      <li>
+        <span class="idx">Six</span>
+        <span class="st">Critical open infrastructure</span>
+        <span class="quiet">Sustained codebase</span>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="cut-heading">
+    <div class="pair">
+      <div>
+        <p class="kicker">Cuts in the series</p>
+        <h2 id="cut-heading">What is original here</h2>
+        <p><span class="tag">The three-layer split.</span> Coordination, deployment, and replenishment are separate layers. No reviewed ecosystem in the prior-art note runs the full loop under these names with that separation.</p>
+        <p><span class="tag">Routing is not revenue.</span> A routing rail moves money that was already collected. Drips and Superfluid are rails. They are not a revenue family.</p>
+        <p><span class="tag">P-scale versus D-scale.</span> External precedent, P0–P5, is how mature a mechanism is where it already operates. Local deployment, D0–D5, is what this ecosystem has shown with its own receipts. A P4 elsewhere can still be D0 here.</p>
+        <p><span class="tag">The hard gates.</span> Self-sustaining is not a sum of points. The eight names above all have to hold. The lab has marked none of them passed.</p>
+        <p><span class="tag">Non-powers.</span> Coordination is not control. An operator that can determine outcomes, withhold support without published criteria, shape the agenda, or persist because nobody stopped it has left the design.</p>
+      </div>
+      <div>
+        <p class="kicker">Already operating elsewhere</p>
+        <h2>What is a catalog</h2>
+        <p>Cardano POSM, Protocol Guild, Optimism, Polkadot, and ENS are precedents. They show pieces that already run. They are not the contribution.</p>
+        <p>The catalog is there so a mechanism can be named, rated on the two scales, and kept distinct from a revenue source. Reading a precedent is not the same as having local receipts.</p>
+      </div>
+    </div>
+    <p class="reader">A reader who starts at README.md, whitepapers/orf-v1.0.pdf, whitepapers/ORF_ERRATA.md, and orf/GOVERNANCE_RULES.md can adopt a piece. A reader who starts at docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md or the evaluator sample pass will pick up claims docs/EVIDENCE_REGISTER.md does not support.</p>
+  </section>
+
+  <section aria-labelledby="place-heading">
+    <p class="kicker">Placement</p>
+    <h2 id="place-heading">What kind of file this is</h2>
+    <ul class="place">
+      <li><span class="where">whitepapers</span><span class="role">papers</span></li>
+      <li><span class="where">dospo / omf / orf</span><span class="role">kits</span></li>
+      <li><span class="where">docs</span><span class="role">evidence</span></li>
+      <li><span class="where">docs/precedents</span><span class="role">case studies of other programs</span></li>
+      <li><span class="where">pitch</span><span class="role">the ask</span></li>
+      <li><span class="where">evaluator/preview</span><span class="role">a local scorer, not a published site</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p class="kicker">Stage 0</p>
+    <p>No gate has passed. The evaluator sample’s PASSED line is a hypothetical. It does not pass a gate.</p>
+    <p>The OMF PDF still says that dOSPO and OMF together constitute a complete institutional model. README.md says that sentence does not include replenishment and is not the series position.</p>
+    <p>18 September 2026. Release candidate v0.8.0-rc.1, still a research candidate.</p>
+  </footer>
+</main>
+<script>
+(function () {
+  var svg = document.querySelector("svg.tri");
+  var buttons = svg.querySelectorAll("[data-vertex]");
+  function select(id) {
+    svg.setAttribute("data-active", id);
+    buttons.forEach(function (b) {
+      var on = b.getAttribute("data-vertex") === id;
+      b.classList.toggle("is-selected", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    document.querySelectorAll("[data-panel]").forEach(function (p) {
+      if (p.getAttribute("data-panel") === id) p.removeAttribute("hidden");
+      else p.setAttribute("hidden", "");
+    });
+  }
+  buttons.forEach(function (b) {
+    var id = b.getAttribute("data-vertex");
+    b.addEventListener("click", function () { select(id); });
+    b.addEventListener("focus", function () { select(id); });
+    b.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        select(id);
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
