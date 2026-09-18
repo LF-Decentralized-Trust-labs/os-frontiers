@@ -234,7 +234,7 @@ POSM represents a major real-world experiment in decentralized open source susta
 
 ### 3. Pro-Forma Maintenance Cost Baseline
 - **OSF Mapping**: **Tier 1 Feasibility Scenario Model ([`docs/TIER_1_FEASIBILITY_MODEL.md`](../docs/TIER_1_FEASIBILITY_MODEL.md))**.
-- **Mechanism Validated**: Grounded in maintainer cost floor estimates ($1.6M core + $600K tooling + $400K security + $400K admin) to model baseline infrastructure preservation requirements.
+- **Mechanism Validated**: Grounded in maintainer cost floor estimates to model baseline infrastructure preservation requirements.
 - **Operator Takeaway**: Provides the empirical cost floor benchmarks used to calibrate ecosystem maintenance funding targets.
 
 ---
