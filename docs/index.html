@@ -3,24 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <title>Open Source Frontiers — Stage 0</title>
 <style>
   :root {
-    --bg: #141210;
-    --text: #f4efe6;
-    --muted: #a39b90;
-    --copper: #d4844a;
-    --sage: #8aa392;
-    --clay: #c4b49a;
-    --serif: "Iowan Old Style", Palatino, Georgia, serif;
-    --sans: "Segoe UI", system-ui, sans-serif;
+    --bg: #0e0e0e;
+    --text: #fafafa;
+    --muted: #a9a9a9;
+    --copper: #fafafa;
+    --sage: #d7d2c8;
+    --clay: #fafafa;
+    --serif: "Archivo Black", "Arial Black", sans-serif;
+    --sans: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
     --mono: ui-monospace, "Cascadia Mono", "Segoe UI Mono", Menlo, Consolas, monospace;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--bg); color: var(--text); }
   body {
-    font-family: var(--serif);
-    font-size: 1.125rem;
+    font-family: var(--sans);
+    font-size: 1.05rem;
     line-height: 1.55;
     padding: 0 1.35rem;
   }
@@ -40,8 +43,9 @@
   }
   h1 {
     font-family: var(--serif);
-    font-weight: 500;
-    font-size: clamp(2.7rem, 6.4vw, 4.55rem);
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 4.2rem);
+    text-transform: uppercase;
     line-height: 0.98;
     letter-spacing: -0.02em;
     margin: 0.7rem 0 1.15rem;
@@ -327,6 +331,9 @@
   @media (max-width: 800px) {
     .eval-grid, .scores { grid-template-columns: 1fr; }
   }
+
+  .jump { display: flex; gap: 1.2rem; flex-wrap: wrap; margin: 0 0 1.4rem; }
+  .jump a { font-family: var(--sans); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--text); }
 </style>
 </head>
 <body>
@@ -338,6 +345,12 @@ The briefing line "these distribute; they never collect" is not in that file. Th
 Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter table headers and not the threshold arithmetic.
 -->
 <main class="sheet">
+<nav class="jump" aria-label="On this page">
+    <a href="#triangle">The loop</a>
+    <a href="#evaluator">Run the scorer</a>
+    <a href="https://www.opensourcecowboy.com/">Open Source Cowboy</a>
+  </nav>
+
   <header>
     <p class="kicker">Linux Foundation Decentralized Trust</p>
     <h1>Open Source Frontiers</h1>
@@ -423,79 +436,6 @@ Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter tab
       </article>
     </div>
   </section>
-
-  <section aria-labelledby="loop-heading">
-    <p class="kicker">The closed loop</p>
-    <h2 id="loop-heading">From value back to infrastructure</h2>
-    <ol class="loop">
-      <li>
-        <span class="idx">One</span>
-        <span class="st">Economic value generation</span>
-        <span class="quiet">Gross inflows</span>
-      </li>
-      <li>
-        <span class="idx">Two</span>
-        <span class="st">ORF collection layer</span>
-        <span class="quiet">Net replenishment</span>
-      </li>
-      <li>
-        <span class="idx">Three</span>
-        <span class="st">Governed treasury</span>
-        <span class="quiet">Approved allocations</span>
-      </li>
-      <li>
-        <span class="idx">Four</span>
-        <span class="st">Routing and allocation rails</span>
-        <span class="quiet">Streaming disbursements</span>
-        <span class="note">Routing rails move already-collected money. They are not revenue sources.</span>
-      </li>
-      <li>
-        <span class="idx">Five</span>
-        <span class="st">OMF maintenance deployment</span>
-        <span class="quiet">Maintainer retainers</span>
-      </li>
-      <li>
-        <span class="idx">Six</span>
-        <span class="st">Critical open infrastructure</span>
-        <span class="quiet">Sustained codebase</span>
-      </li>
-    </ol>
-  </section>
-
-  <section aria-labelledby="cut-heading">
-    <div class="pair">
-      <div>
-        <p class="kicker">Cuts in the series</p>
-        <h2 id="cut-heading">What is original here</h2>
-        <p><span class="tag">The three-layer split.</span> Coordination, deployment, and replenishment are separate layers. No reviewed ecosystem in the prior-art note runs the full loop under these names with that separation.</p>
-        <p><span class="tag">Routing is not revenue.</span> A routing rail moves money that was already collected. Drips and Superfluid are rails. They are not a revenue family.</p>
-        <p><span class="tag">P-scale versus D-scale.</span> External precedent, P0–P5, is how mature a mechanism is where it already operates. Local deployment, D0–D5, is what this ecosystem has shown with its own receipts. A P4 elsewhere can still be D0 here.</p>
-        <p><span class="tag">The hard gates.</span> Self-sustaining is not a sum of points. The eight names above all have to hold. The lab has marked none of them passed.</p>
-        <p><span class="tag">Non-powers.</span> Coordination is not control. An operator that can determine outcomes, withhold support without published criteria, shape the agenda, or persist because nobody stopped it has left the design.</p>
-      </div>
-      <div>
-        <p class="kicker">Already operating elsewhere</p>
-        <h2>What is a catalog</h2>
-        <p>Cardano POSM, Protocol Guild, Optimism, Polkadot, and ENS are precedents. They show pieces that already run. They are not the contribution.</p>
-        <p>The catalog is there so a mechanism can be named, rated on the two scales, and kept distinct from a revenue source. Reading a precedent is not the same as having local receipts.</p>
-      </div>
-    </div>
-    <p class="reader">A reader who starts at README.md, whitepapers/orf-v1.0.pdf, whitepapers/ORF_ERRATA.md, and orf/GOVERNANCE_RULES.md can adopt a piece. A reader who starts at docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md or the evaluator sample pass will pick up claims docs/EVIDENCE_REGISTER.md does not support.</p>
-  </section>
-
-  <section aria-labelledby="place-heading">
-    <p class="kicker">Placement</p>
-    <h2 id="place-heading">What kind of file this is</h2>
-    <ul class="place">
-      <li><span class="where">whitepapers</span><span class="role">papers</span></li>
-      <li><span class="where">dospo / omf / orf</span><span class="role">kits</span></li>
-      <li><span class="where">docs</span><span class="role">evidence</span></li>
-      <li><span class="where">docs/precedents</span><span class="role">case studies of other programs</span></li>
-      <li><span class="where">pitch</span><span class="role">the ask</span></li>
-      <li><span class="where">this page</span><span class="role">the 15-indicator preview scorer, not the eight gates</span></li>
-    </ul>
-  </section>
-
 
   <section id="evaluator" aria-labelledby="eval-heading">
     <p class="kicker">Run it here</p>
@@ -622,6 +562,80 @@ Gate names are the numbered list in orf/GOVERNANCE_RULES.md, not the shorter tab
     <p class="level" id="eval-level">Level 0: Un-Architected / Fragile</p>
     <p class="warn">Indicator 11 is scored from the ratio you type: 5 points at 1.0 or above, 3 points at 0.20 or above, otherwise 0. Level 3 also requires that ratio at 1.0 or above. None of that is a gate.</p>
   </section>
+
+
+  <section aria-labelledby="loop-heading">
+    <p class="kicker">The closed loop</p>
+    <h2 id="loop-heading">From value back to infrastructure</h2>
+    <ol class="loop">
+      <li>
+        <span class="idx">One</span>
+        <span class="st">Economic value generation</span>
+        <span class="quiet">Gross inflows</span>
+      </li>
+      <li>
+        <span class="idx">Two</span>
+        <span class="st">ORF collection layer</span>
+        <span class="quiet">Net replenishment</span>
+      </li>
+      <li>
+        <span class="idx">Three</span>
+        <span class="st">Governed treasury</span>
+        <span class="quiet">Approved allocations</span>
+      </li>
+      <li>
+        <span class="idx">Four</span>
+        <span class="st">Routing and allocation rails</span>
+        <span class="quiet">Streaming disbursements</span>
+        <span class="note">Routing rails move already-collected money. They are not revenue sources.</span>
+      </li>
+      <li>
+        <span class="idx">Five</span>
+        <span class="st">OMF maintenance deployment</span>
+        <span class="quiet">Maintainer retainers</span>
+      </li>
+      <li>
+        <span class="idx">Six</span>
+        <span class="st">Critical open infrastructure</span>
+        <span class="quiet">Sustained codebase</span>
+      </li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="cut-heading">
+    <div class="pair">
+      <div>
+        <p class="kicker">Cuts in the series</p>
+        <h2 id="cut-heading">What is original here</h2>
+        <p><span class="tag">The three-layer split.</span> Coordination, deployment, and replenishment are separate layers. No reviewed ecosystem in the prior-art note runs the full loop under these names with that separation.</p>
+        <p><span class="tag">Routing is not revenue.</span> A routing rail moves money that was already collected. Drips and Superfluid are rails. They are not a revenue family.</p>
+        <p><span class="tag">P-scale versus D-scale.</span> External precedent, P0–P5, is how mature a mechanism is where it already operates. Local deployment, D0–D5, is what this ecosystem has shown with its own receipts. A P4 elsewhere can still be D0 here.</p>
+        <p><span class="tag">The hard gates.</span> Self-sustaining is not a sum of points. The eight names above all have to hold. The lab has marked none of them passed.</p>
+        <p><span class="tag">Non-powers.</span> Coordination is not control. An operator that can determine outcomes, withhold support without published criteria, shape the agenda, or persist because nobody stopped it has left the design.</p>
+      </div>
+      <div>
+        <p class="kicker">Already operating elsewhere</p>
+        <h2>What is a catalog</h2>
+        <p>Cardano POSM, Protocol Guild, Optimism, Polkadot, and ENS are precedents. They show pieces that already run. They are not the contribution.</p>
+        <p>The catalog is there so a mechanism can be named, rated on the two scales, and kept distinct from a revenue source. Reading a precedent is not the same as having local receipts.</p>
+      </div>
+    </div>
+    <p class="reader">A reader who starts at README.md, whitepapers/orf-v1.0.pdf, whitepapers/ORF_ERRATA.md, and orf/GOVERNANCE_RULES.md can adopt a piece. A reader who starts at docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md or the evaluator sample pass will pick up claims docs/EVIDENCE_REGISTER.md does not support.</p>
+  </section>
+
+  <section aria-labelledby="place-heading">
+    <p class="kicker">Placement</p>
+    <h2 id="place-heading">What kind of file this is</h2>
+    <ul class="place">
+      <li><span class="where">whitepapers</span><span class="role">papers</span></li>
+      <li><span class="where">dospo / omf / orf</span><span class="role">kits</span></li>
+      <li><span class="where">docs</span><span class="role">evidence</span></li>
+      <li><span class="where">docs/precedents</span><span class="role">case studies of other programs</span></li>
+      <li><span class="where">pitch</span><span class="role">the ask</span></li>
+      <li><span class="where">this page</span><span class="role">the 15-indicator preview scorer, not the eight gates</span></li>
+    </ul>
+  </section>
+
 
   <footer>
     <p class="kicker">Stage 0</p>
