@@ -13,7 +13,7 @@ Thank you for your interest in contributing to the **Open Source Frontiers Lab**
 - 🛠️ **Maintenance Frameworks** (`omf/`)
 - 💰 **Replenishment Frameworks** (`orf/`)
 - 📊 **Evaluator Tools & Adapters** (`evaluator/`)
-- 🌍 **Ecosystem precedents** (`docs/precedents/`). The submission template stays in `use-cases/`.
+- 🌍 **Ecosystem precedents** (`docs/precedents/`). Stage 0 use-case research and the submission template stay in `use-cases/`.
 - 🛠️ **Tooling Integrations** (`tools/`)
 
 ---
@@ -28,7 +28,7 @@ LF-Decentralized-Trust-labs/os-frontiers/
 ├── omf/                    # Open Maintenance Framework
 ├── orf/                    # Open Replenishment Framework
 ├── evaluator/              # Assessment tools, adapters, and the local preview
-├── use-cases/              # Use-case submission template only
+├── use-cases/              # Stage 0 use-case research and the submission template
 ├── tools/                  # Tooling and protocol integrations (not precedents)
 ├── pitch/                  # Executive Decks & Adoption Templates
 └── docs/                   # Guides, evidence, and precedents/
