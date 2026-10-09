@@ -619,7 +619,7 @@ For universities, the claim matrix, the errata layer and the Tidelift-ordered ne
 - [S21] thanks.dev, Canonical case (2025; aggregate totals Unverified) — https://canonical.com/blog/canonical-thanks-dev-giving-back-to-open-source-developers  
 - [S22] ecosyste.ms / A. Nesbitt, *State of OSS Funding Data* (CHAOSScon NA 2025) — https://github.com/andrew/state-of-oss-funding  
 - [S23] CHAOSS, STA, NGI Commons & LF, *Toolkit for Measuring the Impacts of Public Funding on OSS* (2024) — https://www.sovereign.tech/news/measuring-the-impact-of-our-funding  
-- [S27] Protocol Guild annual report and quarterly membership audits (pack capture `chains/data/pg-*`; Q3 2026 audit capture: 190 members as of 5 Aug 2026)  
+- [S27] Protocol Guild (2026). Annual Report 2025, 29 Jan 2026, https://www.protocolguild.org/blog/20260129-annual-report-2025 ; Q3 2026 Membership Audit, 26 Aug 2026, https://www.protocolguild.org/blog/20260826-q3-quarterly-audit (captures `chains/data/pg-20260129-annual-report-2025-2026-10-09.html` and `chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.html`, 9 Oct 2026; 190 members as of 5 Aug 2026)  
 - [S29] Heath, *Report on Burnout in Open Source Software* (Nov 2025) — https://mirandaheath.website/static/oss_burnout_report_mh_25.pdf  
 - Inventory entries not cited in this draft: S04, S05, S08, S09, S11, S15, S19, S24, S25, S26, S28, S30 (see `surveys/oss-survey-inventory.md`).
 
