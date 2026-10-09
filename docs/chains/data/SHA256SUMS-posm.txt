@@ -1,0 +1,4 @@
+8e41db71f7f10be3ce45d9d72a45d4f968710ac108052ee793ae0dc64cb27906  posm-cycle-diagram-whitepaper-p11.png
+44723107215c65e422418ec211e1d6dcc5ec0ad221e18a910a210232315f73bb  Paid Open Source Model- LIVE.pdf
+c9fe85f103e71b6b3ea6c12ff913392ec2b6de271f6e6e3e845daeb9692f2f4d  posm-gitbook-image-8.png
+eb2ae374e4bf192fa95a502a403270896a51ef7fe53c38720aa9efbf2ed3370b  posm-gitbook-oso-workflow-image-2.png

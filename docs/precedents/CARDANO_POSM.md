@@ -108,6 +108,14 @@ Funding is sourced from the Cardano treasury through governance-approved budget 
 
 Unlike donation-based models, POSM attempts to institutionalize open source sustainability directly into ecosystem governance and treasury operations. 
 
+### Treasury evidence (dated 9 October 2026, Stage 0)
+- **2025 OSC/POSM treasury withdrawal: ₳5,885,000.** High (on-chain): governance action `8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e#11`, enacted epoch 576 (12 August 2025).
+- **2026–27 OSC request (₳4,601,000):** the text exists on the OSC GitBook, but no matching treasury-withdrawal action had been submitted on-chain as of epoch 660 (9 October 2026). There is no confirmed POSM funding beyond the 2025 tranche.
+- **Where treasury inflow comes from (P6 edge):** each epoch the treasury takes τ = 20% of a reward pot made of transaction fees plus reserve expansion. By Researchy's derivation from on-chain epoch totals (Koios, epochs 588–660), about 0.2% of treasury inflow is fee-derived and about **99.8% is reserve issuance (derived; not an official figure)**. Cite the split as *derived*. Under ORF, issuance is not replenishment, so POSM's return edge is asserted rather than measured.
+- "$300K bounty fully utilized" remains Unverified ($300K was a planned allocation).
+
+Sources and method: [`docs/chains/posm-cycle-chain-map.md`](../chains/posm-cycle-chain-map.md) and [`docs/chains/researchy-chain-check.md`](../chains/researchy-chain-check.md). No Hard Gate is marked passed.
+
 ---
 
 # Technical Details

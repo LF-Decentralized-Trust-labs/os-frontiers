@@ -30,12 +30,14 @@ Also fix the spelling in the research-finding box and the bibliography: **Hoffma
 
 The Synopsys bibliography URL is the SBOM blog, which does contain the 96% sentence and also a conflicting "2,400 codebases / 81%" line. Add the 27 February 2024 press release as the report announcement and note that the press release states the high-risk finding (74%) and does not restate 96%.
 
-## Protocol Guild — downgrade, do not delete the precedent
+## Protocol Guild — corrected scale (approved 9 October 2026)
 
-Keep the mechanism (voluntary 1% pledges, vesting, revocable). Replace the scale sentence until the annual-report body is captured:
+This entry supersedes the earlier "downgrade, do not delete the precedent" paragraph, which held the 2025 dollar totals back until the 2025 annual report was quoted directly. That condition is now met. Keep the mechanism (voluntary 1% pledges, vesting, revocable). Replace the scale sentence with:
 
-> Protocol Guild's Q2 2026 membership audit records 196 funded members as of 22 May 2026, up from 187 the previous quarter. Dollar totals widely repeated for 2025 — including $7.2 million from 6,202 donors, and commitments above $80 million — were not recoverable from a rendered primary page in this review and should not be published as High until the 2025 annual report is quoted directly.
-> — https://www.protocolguild.org/blog/20260604-Q2-quarterly-audit
+> Protocol Guild's 2025 Annual Report (29 January 2026) reports total 2025 donations of $7,231,668, valued at time of donation, from 6,202 unique donors. Its Q3 2026 membership audit (26 August 2026) records 190 funded members as of 5 August 2026, a net decrease of 6 from 196 the previous quarter.
+> — https://www.protocolguild.org/blog/20260129-annual-report-2025 ; https://www.protocolguild.org/blog/20260826-q3-quarterly-audit
+
+Confidence: High. Both pages are JavaScript-rendered; rendered PDF and DOM captures taken 9 October 2026 are archived at [`docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.pdf`](../docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.pdf) (with `.html`) and [`docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.pdf`](../docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.pdf) (with `.html`). The report also values the same donations at report-date value ($2,634,505); cite the time-of-donation figure unless the valuation basis is stated. "Commitments above $80 million" is not in the 2025 annual report and stays Unverified. The 196-member figure (22 May 2026, Q2 audit) is superseded, not wrong for its date. Verification record: [`docs/chains/researchy-chain-check.md`](../docs/chains/researchy-chain-check.md).
 
 ## Claims to mark unverified, not to invent replacements for
 
@@ -54,6 +56,10 @@ Move these from High to "citation not yet attached" until a page is opened:
 > Optimism (current). Capital allocation. https://docs.optimism.io/governance/capital-allocation
 >
 > CoinDesk (2026). Optimism governance approves OP token buyback plan tied to superchain revenue. 28 January 2026. https://www.coindesk.com/business/2026/01/28/optimism-governance-approves-op-token-buyback-plan-tied-to-superchain-revenue
+>
+> Protocol Guild (2026). Annual Report 2025. 29 January 2026. https://www.protocolguild.org/blog/20260129-annual-report-2025
+>
+> Protocol Guild (2026). Q3 2026 Membership Audit. 26 August 2026. https://www.protocolguild.org/blog/20260826-q3-quarterly-audit
 >
 > Hoffmann, M., Nagle, F., and Zhou, Y. (2024). The Value of Open Source Software. Harvard Business School Working Paper 24-038. https://www.hbs.edu/faculty/Pages/item.aspx?num=65230
 >
