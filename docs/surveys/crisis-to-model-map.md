@@ -113,7 +113,7 @@ Project types used throughout:
 - **Limit:** pay reaches only projects that an ecosystem's dependency audit selects. These are chosen by centrality and inverse bus factor: OMF §14 p37–38; App A p47; App E p61, where W2 has weight 0.25.
 
 **Labelled examples (not spec changes)**
-- **Protocol Guild vesting:** OMF §8 p23 and §12 Instr. 2 p32 name it. $12.4M distributed in 2025 (S27).
+- **Protocol Guild vesting:** OMF §8 p23 and §12 Instr. 2 p32 name it (S27). The 2025 distribution total is a later-errata candidate and is not used here (`docs/chains/pg-followups.md` §4).
 - **Tidelift-style recurring payments:** OMF §12 Instr. 2 p32 cites Tidelift 2024. 19% of maintainers report Tidelift income (S01 p15). The publisher itself pays, so treat this figure with care.
 - **STA Fellowship:** OMF §9 p24 cites STA milestone contracts.
 - **Open Source Pledge** as an ORF Family D inflow (§8 p25): $3,756,826 in the past year, self-reported (S20).

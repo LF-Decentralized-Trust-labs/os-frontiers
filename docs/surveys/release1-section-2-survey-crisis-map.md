@@ -155,7 +155,7 @@ The programs below are **examples**. They are not recommendations and imply no c
 
 | Example | Mechanism it fits | Needs | Evidence |
 |---|---|---|---|
-| Protocol Guild vesting registry | OMF §8, p. 23; §12 Instrument 2, p. 32 | N1, N5 | $12.4 million distributed in 2025 [S27] |
+| Protocol Guild vesting registry | OMF §8, p. 23; §12 Instrument 2, p. 32 | N1, N5 | 2025 distribution total not used here: later-errata candidate (`docs/chains/pg-followups.md` §4) [S27] |
 | Sovereign Tech Agency contracts and Fellowship | OMF §9, p. 24; §12 Instrument 3, p. 33; App. C, pp. 55–56 | N1, N4, N5 | €41.1 million across 118 technologies [S16] |
 | Alpha-Omega | OMF §12 Instruments 1–3; dOSPO §6, p. 19 | N2, N4 | $6,155,410 in 31 grants in 2025 [S17, p. 26] |
 | GitHub Secure Open Source Fund | OMF §12 Instrument 1, p. 31; §9, p. 24 | N2, N8 | $10,000 per project [S18] |
