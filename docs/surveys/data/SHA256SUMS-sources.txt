@@ -1,0 +1,6 @@
+9bd73045bafc08a2523bec8806e5559373eeb04c912e531ebd57214837d604e4  ecosystems-state-of-oss-funding-slides-2025.pdf
+cf2696ab9a87ce5e5d814ee509c63e0eea92eedb3156d5f59db2eb9f8e072ba4  tidelift-2021-open-source-maintainer-survey.pdf
+161a0bc1b7837c4476f432c713e0051dd99f49ce9e8dddace2d26a88b040c290  tidelift-2023-state-of-the-open-source-maintainer-report.pdf
+f40e80b70403ec13c3e95fa9d71b28c544a561117a277a6d3c3f6fed1f87ab5b  tidelift-2024-state-of-the-open-source-maintainer-report.pdf
+772fec7886f2b7547d9e8af05bf099b2cba05e5825e328d9e28bff9099376449  lf-funding-blog-2024-2026-10-09.html
+0a01b9512a8d7397ddae4f1aefa25178904fd4bf2c05ce2cbca823f61cc06917  sta-what-maintainers-shared-2026-10-09.html

@@ -1,0 +1,3394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Critical Open Source Packages | Ecosyste.ms: Packages
+    </title>
+    <meta name="description" content="Find key open source software packages that are crucial to most projects, representing 80% of all downloads or dependent repositories in their ecosystems.">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Zk_mt6zAmkRKM_7yyGe-ZteeY_leqUNE7aJvcwms5xVj3CpYSmjfC_25LyI9TY-1DDw01kXijPHQ8W7znRAd1g" />
+    <link rel="stylesheet" href="/assets/application-3aa75c453b6abebeaf140d9742b7706ee27c2f7afecbb6daf60e15330366a6a9.css" media="all" />
+    <script src="/assets/application-fbc401ac737a52373f0c42465847dbe38684e2ef69de3bfe52b937294680a295.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+    
+  </head>
+  <body>
+		<header class="header">
+  <div class="header__global">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-6 header__global__site-logo-wrapper mb-3 mb-lg-0">
+          <h1>
+            <a class="site-logo" href="/">ecosyste.ms</a>
+          </h1>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a class="header__global__menu-link" role="button" aria-expanded="false" aria-controls="header__global__menu" data-bs-toggle="collapse" href="#header__global__menu">All services <svg width="12" height="12" class="bi bi-caret-down-fill" viewBox="0 0 16 16" fill="currentColor" version="1.1" aria-hidden="true"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"></path></svg></a>
+        </div>
+      </div>
+      <div id="header__global__menu" class="collapse header__global__menu">
+          <div class="header__global__menu__category">
+            <h2 class="header__global__menu__category-title">Data</h2>
+            <ul class="header__global__menu__category-links">
+                <li>
+                  <a href="https://packages.ecosyste.ms" target="_blank" class="active"
+                    >Packages</a
+                  >
+                </li>
+                <li>
+                  <a href="https://repos.ecosyste.ms" target="_blank" class=""
+                    >Repositories</a
+                  >
+                </li>
+                <li>
+                  <a href="https://advisories.ecosyste.ms" target="_blank" class=""
+                    >Advisories</a
+                  >
+                </li>
+            </ul>
+          </div>
+          <div class="header__global__menu__category">
+            <h2 class="header__global__menu__category-title">Tools</h2>
+            <ul class="header__global__menu__category-links">
+                <li>
+                  <a href="https://parser.ecosyste.ms" target="_blank" class=""
+                    >Dependency Parser</a
+                  >
+                </li>
+                <li>
+                  <a href="https://resolve.ecosyste.ms" target="_blank" class=""
+                    >Dependency Resolver</a
+                  >
+                </li>
+                <li>
+                  <a href="https://sbom.ecosyste.ms" target="_blank" class=""
+                    >SBOM Parser</a
+                  >
+                </li>
+                <li>
+                  <a href="https://licenses.ecosyste.ms" target="_blank" class=""
+                    >License Parser</a
+                  >
+                </li>
+                <li>
+                  <a href="https://digest.ecosyste.ms" target="_blank" class=""
+                    >Digest</a
+                  >
+                </li>
+                <li>
+                  <a href="https://archives.ecosyste.ms" target="_blank" class=""
+                    >Archives</a
+                  >
+                </li>
+                <li>
+                  <a href="https://diff.ecosyste.ms" target="_blank" class=""
+                    >Diff</a
+                  >
+                </li>
+                <li>
+                  <a href="https://summary.ecosyste.ms" target="_blank" class=""
+                    >Summary</a
+                  >
+                </li>
+            </ul>
+          </div>
+          <div class="header__global__menu__category">
+            <h2 class="header__global__menu__category-title">Indexes</h2>
+            <ul class="header__global__menu__category-links">
+                <li>
+                  <a href="https://timeline.ecosyste.ms" target="_blank" class=""
+                    >Timeline</a
+                  >
+                </li>
+                <li>
+                  <a href="https://commits.ecosyste.ms" target="_blank" class=""
+                    >Commits</a
+                  >
+                </li>
+                <li>
+                  <a href="https://issues.ecosyste.ms" target="_blank" class=""
+                    >Issues</a
+                  >
+                </li>
+                <li>
+                  <a href="https://sponsors.ecosyste.ms" target="_blank" class=""
+                    >Sponsors</a
+                  >
+                </li>
+                <li>
+                  <a href="https://docker.ecosyste.ms" target="_blank" class=""
+                    >Docker</a
+                  >
+                </li>
+                <li>
+                  <a href="https://opencollective.ecosyste.ms" target="_blank" class=""
+                    >Open Collective</a
+                  >
+                </li>
+                <li>
+                  <a href="https://dependabot.ecosyste.ms" target="_blank" class=""
+                    >Dependabot</a
+                  >
+                </li>
+            </ul>
+          </div>
+          <div class="header__global__menu__category">
+            <h2 class="header__global__menu__category-title">Applications</h2>
+            <ul class="header__global__menu__category-links">
+                <li>
+                  <a href="https://funds.ecosyste.ms" target="_blank" class=""
+                    >Funds</a
+                  >
+                </li>
+                <li>
+                  <a href="https://dashboards.ecosyste.ms" target="_blank" class=""
+                    >Dashboards</a
+                  >
+                </li>
+            </ul>
+          </div>
+          <div class="header__global__menu__category">
+            <h2 class="header__global__menu__category-title">Experiments</h2>
+            <ul class="header__global__menu__category-links">
+                <li>
+                  <a href="https://ost.ecosyste.ms" target="_blank" class=""
+                    >OST</a
+                  >
+                </li>
+                <li>
+                  <a href="https://papers.ecosyste.ms" target="_blank" class=""
+                    >Papers</a
+                  >
+                </li>
+                <li>
+                  <a href="https://awesome.ecosyste.ms" target="_blank" class=""
+                    >Awesome</a
+                  >
+                </li>
+                <li>
+                  <a href="https://ruby.ecosyste.ms" target="_blank" class=""
+                    >Ruby</a
+                  >
+                </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__local pt-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4">
+          <h1 class="h3 header__local__sitename">
+            <a class="header__local__homelink" href="/">
+              Packages
+            </a>
+          </h1>
+        </div>
+        <div class="col-lg-5 col-md-8">
+          <p class="header__local__description">
+            An open API service providing package, version and dependency metadata of many open source software ecosystems and registries.
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <nav class="header__local__navigation">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link" href="https://opencollective.com/ecosystems" target="_blank">Support</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/ecosyste-ms/packages" target="_blank">GitHub</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/docs">API</a>
+    </li>
+  </ul>
+</nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+		
+    <div class="main">
+      
+<div class="container-sm">
+  <h1 class='mb-3'>
+    Critical Open Source Packages
+  </h1>
+
+  <p class='lead'>
+    Find key open source software packages that are crucial to most projects, representing 80% of all downloads or dependent repositories in their ecosystems.
+  </p>
+
+  <ul class="nav nav-tabs my-3">
+    <li class="nav-item ms-auto">
+  <div class="dropdown">
+    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Sort
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item " href="/critical?order=asc&amp;sort=name">Name</a></li>
+      <li><a class="dropdown-item " href="/critical?order=desc&amp;sort=versions_count">Versions</a></li>
+      <li><a class="dropdown-item " href="/critical?order=desc&amp;sort=latest_release_published_at">Latest Release</a></li>
+      <li><a class="dropdown-item " href="/critical?order=asc&amp;sort=latest_release_published_at">Oldest Release</a></li>
+      <li><a class="dropdown-item " href="/critical?order=desc&amp;sort=dependent_packages_count">Dependent packages</a></li>
+      <li><a class="dropdown-item " href="/critical?order=desc&amp;sort=dependent_repos_count">Dependent repositories</a></li>
+      <li><a class="dropdown-item " href="/critical?order=desc&amp;sort=downloads">Downloads</a></li>
+      <li><a class="dropdown-item " href="/critical?order=desc&amp;sort=maintainers_count">Maintainers</a></li>
+      <li><a class="dropdown-item " href="/critical?order=desc&amp;sort=stargazers_count">Most Stars</a></li>
+    </ul>
+  </div>
+</li>
+
+  </ul>
+
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/fluent%2Ffluent-bit">fluent/fluent-bit</a>
+        <small class='text-muted'>
+        5.1.0
+        </small>
+    </h5>
+
+      Fluent Bit, lightweight logs and metrics collector and forwarder<br/>
+
+    <small class='text-muted'>
+        2,138 versions
+
+        - <span title="2026-08-06 02:08:38 UTC">Latest release: 2 months ago</span>
+
+
+        - 302 dependent repositories
+
+        - 15.7 billion downloads total
+
+        - 67 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fnginx">library/nginx</a>
+        <small class='text-muted'>
+        1.31.6
+        </small>
+    </h5>
+
+      Official build of Nginx.<br/>
+
+    <small class='text-muted'>
+        1,339 versions
+
+        - <span title="2026-09-16 04:52:05 UTC">Latest release: 23 days ago</span>
+
+
+        - 66 dependent repositories
+
+        - 13.4 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fmemcached">library/memcached</a>
+        <small class='text-muted'>
+        1.6.45
+        </small>
+    </h5>
+
+      Free &amp; open source, high-performance, distributed memory object caching system.<br/>
+
+    <small class='text-muted'>
+        306 versions
+
+        - <span title="2026-08-05 14:34:35 UTC">Latest release: 2 months ago</span>
+
+
+        - 5 dependent repositories
+
+        - 13.4 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.7% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.dependencyinjection.abstractions">microsoft.extensions.dependencyinjection.abstractions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Abstractions for dependency injection.
+
+Commonly Used Types:
+Microsoft.Extensions.DependencyInjec...<br/>
+
+    <small class='text-muted'>
+        175 versions
+
+        - <span title="2026-09-08 19:03:17 UTC">Latest release: about 1 month ago</span>
+
+        - 8,940 dependent packages
+
+        - 9 dependent repositories
+
+        - 13 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fbusybox">library/busybox</a>
+        <small class='text-muted'>
+        1.38.0
+        </small>
+    </h5>
+
+      Busybox base image.<br/>
+
+    <small class='text-muted'>
+        219 versions
+
+        - <span title="2026-05-24 10:58:15 UTC">Latest release: 5 months ago</span>
+
+
+        - 1 dependent repositories
+
+        - 12.9 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.logging.abstractions">microsoft.extensions.logging.abstractions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Logging abstractions for Microsoft.Extensions.Logging.
+
+Commonly Used Types:
+Microsoft.Extensions...<br/>
+
+    <small class='text-muted'>
+        184 versions
+
+        - <span title="2026-09-08 19:03:13 UTC">Latest release: about 1 month ago</span>
+
+        - 6,672 dependent packages
+
+
+        - 12.6 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 1.2% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.primitives">microsoft.extensions.primitives</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Primitives shared by framework extensions. Commonly used types include:
+
+Commonly Used Types:
+Mic...<br/>
+
+    <small class='text-muted'>
+        175 versions
+
+        - <span title="2026-09-08 19:03:09 UTC">Latest release: about 1 month ago</span>
+
+        - 404 dependent packages
+
+        - 5 dependent repositories
+
+        - 12.3 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Falpine">library/alpine</a>
+        <small class='text-muted'>
+        3.24.2
+        </small>
+    </h5>
+
+      A minimal Docker image based on Alpine Linux with a complete package index and only 5 MB in size!<br/>
+
+    <small class='text-muted'>
+        224 versions
+
+        - <span title="2026-09-18 17:24:43 UTC">Latest release: 21 days ago</span>
+
+
+        - 32 dependent repositories
+
+        - 12.3 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fpostgres">library/postgres</a>
+        <small class='text-muted'>
+        18.6
+        </small>
+    </h5>
+
+      The PostgreSQL object-relational database system provides reliability and data integrity.<br/>
+
+    <small class='text-muted'>
+        1,427 versions
+
+        - <span title="2026-08-13 20:41:36 UTC">Latest release: about 2 months ago</span>
+
+
+        - 459 dependent repositories
+
+        - 11.8 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fredis">library/redis</a>
+        <small class='text-muted'>
+        8.10.2
+        </small>
+    </h5>
+
+      Redis is the world’s fastest data platform for caching, vector search, and NoSQL databases.<br/>
+
+    <small class='text-muted'>
+        1,196 versions
+
+        - <span title="2026-09-29 15:05:06 UTC">Latest release: 10 days ago</span>
+
+
+        - 243 dependent repositories
+
+        - 11.4 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/datadog%2Fagent">datadog/agent</a>
+        <small class='text-muted'>
+        7.82.3
+        </small>
+    </h5>
+
+      Docker container for the new Datadog Agent<br/>
+
+    <small class='text-muted'>
+        2,776 versions
+
+        - <span title="2026-08-26 11:38:38 UTC">Latest release: about 1 month ago</span>
+
+
+        - 201 dependent repositories
+
+        - 11.3 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.options">microsoft.extensions.options</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides a strongly typed way of specifying and accessing settings using dependency injection.<br/>
+
+    <small class='text-muted'>
+        180 versions
+
+        - <span title="2026-09-08 19:03:11 UTC">Latest release: about 1 month ago</span>
+
+        - 4,079 dependent packages
+
+
+        - 11.2 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.diagnostics.diagnosticsource">system.diagnostics.diagnosticsource</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides Classes that allow you to decouple code logging rich (unserializable) diagnostics/teleme...<br/>
+
+    <small class='text-muted'>
+        144 versions
+
+        - <span title="2026-09-08 19:02:59 UTC">Latest release: about 1 month ago</span>
+
+        - 706 dependent packages
+
+
+        - 10.2 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.netcore.platforms">microsoft.netcore.platforms</a>
+        <small class='text-muted'>
+        7.0.4
+        </small>
+    </h5>
+
+      Provides runtime information required to resolve target framework, platform, and runtime specific...<br/>
+
+    <small class='text-muted'>
+        134 versions
+
+        - <span title="2023-07-11 13:37:56 UTC">Latest release: about 3 years ago</span>
+
+        - 452 dependent packages
+
+
+        - 10.2 billion downloads total
+
+        - 18,316 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fubuntu">library/ubuntu</a>
+        <small class='text-muted'>
+        stonking-20260913.1
+        </small>
+    </h5>
+
+      Ubuntu is a Debian-based Linux operating system based on free software.<br/>
+
+    <small class='text-muted'>
+        750 versions
+
+        - <span title="2026-09-16 07:04:47 UTC">Latest release: 23 days ago</span>
+
+
+        - 77 dependent repositories
+
+        - 10.1 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.configuration.abstractions">microsoft.extensions.configuration.abstractions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides abstractions of key-value pair based configuration. Interfaces defined in this package a...<br/>
+
+    <small class='text-muted'>
+        177 versions
+
+        - <span title="2026-09-08 19:03:18 UTC">Latest release: about 1 month ago</span>
+
+        - 4,033 dependent packages
+
+
+        - 9.7 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/newtonsoft.json">newtonsoft.json</a>
+        <small class='text-muted'>
+        13.0.4
+        </small>
+    </h5>
+
+      Json.NET is a popular high-performance JSON framework for .NET<br/>
+
+    <small class='text-muted'>
+        86 versions
+
+        - <span title="2025-09-16 08:13:09 UTC">Latest release: about 1 year ago</span>
+
+        - 26,480 dependent packages
+
+
+        - 9.33 billion downloads total
+
+        - 11,315 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fpython">library/python</a>
+        <small class='text-muted'>
+        3.14.8
+        </small>
+    </h5>
+
+      Python is an interpreted, interactive, object-oriented, open-source programming language.<br/>
+
+    <small class='text-muted'>
+        2,619 versions
+
+        - <span title="2026-10-01 23:18:59 UTC">Latest release: 7 days ago</span>
+
+
+        - 99 dependent repositories
+
+        - 9.32 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.runtime.compilerservices.unsafe">system.runtime.compilerservices.unsafe</a>
+        <small class='text-muted'>
+        6.1.2
+        </small>
+    </h5>
+
+      Provides the System.Runtime.CompilerServices.Unsafe class, which provides generic, low-level func...<br/>
+
+    <small class='text-muted'>
+        61 versions
+
+        - <span title="2025-04-04 18:04:10 UTC">Latest release: over 1 year ago</span>
+
+        - 1,624 dependent packages
+
+
+        - 8.6 billion downloads total
+
+        - 18,316 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/containrrr%2Fwatchtower">containrrr/watchtower</a>
+        <small class='text-muted'>
+        1.7.1
+        </small>
+    </h5>
+
+      A process for automating Docker container base image updates.<br/>
+
+    <small class='text-muted'>
+        160 versions
+
+        - <span title="2023-11-11 18:52:12 UTC">Latest release: almost 3 years ago</span>
+
+
+        - 1,074 dependent repositories
+
+        - 8.25 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.4% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.dependencyinjection">microsoft.extensions.dependencyinjection</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Default implementation of dependency injection for Microsoft.Extensions.DependencyInjection.<br/>
+
+    <small class='text-muted'>
+        178 versions
+
+        - <span title="2026-09-08 19:03:17 UTC">Latest release: about 1 month ago</span>
+
+        - 5,680 dependent packages
+
+        - 87 dependent repositories
+
+        - 8.01 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.6% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.logging">microsoft.extensions.logging</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Logging infrastructure default implementation for Microsoft.Extensions.Logging.<br/>
+
+    <small class='text-muted'>
+        178 versions
+
+        - <span title="2026-09-08 19:03:13 UTC">Latest release: about 1 month ago</span>
+
+        - 3,711 dependent packages
+
+        - 33 dependent repositories
+
+        - 7.89 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.6% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.configuration">microsoft.extensions.configuration</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Implementation of key-value pair based configuration for Microsoft.Extensions.Configuration. Incl...<br/>
+
+    <small class='text-muted'>
+        178 versions
+
+        - <span title="2026-09-08 19:03:18 UTC">Latest release: about 1 month ago</span>
+
+        - 4,164 dependent packages
+
+        - 48 dependent repositories
+
+        - 7.09 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fnode">library/node</a>
+        <small class='text-muted'>
+        26.10.0
+        </small>
+    </h5>
+
+      Node.js is a JavaScript-based platform for server-side and networking applications.<br/>
+
+    <small class='text-muted'>
+        3,905 versions
+
+        - <span title="2026-09-22 20:40:19 UTC">Latest release: 16 days ago</span>
+
+
+        - 94 dependent repositories
+
+        - 7.04 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.configuration.binder">microsoft.extensions.configuration.binder</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides the functionality to bind an object to data in configuration providers for Microsoft.Ext...<br/>
+
+    <small class='text-muted'>
+        185 versions
+
+        - <span title="2026-09-08 19:03:18 UTC">Latest release: about 1 month ago</span>
+
+        - 3,111 dependent packages
+
+
+        - 6.9 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.threading.tasks.extensions">system.threading.tasks.extensions</a>
+        <small class='text-muted'>
+        4.6.3
+        </small>
+    </h5>
+
+      System.Threading.Tasks.Extensions<br/>
+
+    <small class='text-muted'>
+        21 versions
+
+        - <span title="2025-04-04 18:04:11 UTC">Latest release: over 1 year ago</span>
+
+        - 1,374 dependent packages
+
+
+        - 6.85 billion downloads total
+
+        - 44 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/curlimages%2Fcurl">curlimages/curl</a>
+        <small class='text-muted'>
+        8.22.0
+        </small>
+    </h5>
+
+      Official curl docker (http://curl.se): command line tool and library for transferring data with URLs<br/>
+
+    <small class='text-muted'>
+        85 versions
+
+        - <span title="2026-09-02 10:30:56 UTC">Latest release: about 1 month ago</span>
+
+
+        - 403 dependent repositories
+
+        - 6.72 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.fileproviders.abstractions">microsoft.extensions.fileproviders.abstractions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Abstractions of files and directories.
+
+Commonly Used Types:
+Microsoft.Extensions.FileProviders.I...<br/>
+
+    <small class='text-muted'>
+        174 versions
+
+        - <span title="2026-09-08 19:03:15 UTC">Latest release: about 1 month ago</span>
+
+        - 209 dependent packages
+
+
+        - 6.69 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 1.7% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.memory">system.memory</a>
+        <small class='text-muted'>
+        4.6.3
+        </small>
+    </h5>
+
+      System.Memory<br/>
+
+    <small class='text-muted'>
+        16 versions
+
+        - <span title="2025-04-04 18:04:09 UTC">Latest release: over 1 year ago</span>
+
+        - 2,242 dependent packages
+
+        - 9 dependent repositories
+
+        - 6.44 billion downloads total
+
+        - 44 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.7% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.text.json">system.text.json</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides high-performance and low-allocating types that serialize objects to JavaScript Object No...<br/>
+
+    <small class='text-muted'>
+        181 versions
+
+        - <span title="2026-09-08 19:02:55 UTC">Latest release: about 1 month ago</span>
+
+        - 5,306 dependent packages
+
+        - 22 dependent repositories
+
+        - 6.43 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.text.encodings.web">system.text.encodings.web</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides types for encoding and escaping strings for use in JavaScript, HyperText Markup Language...<br/>
+
+    <small class='text-muted'>
+        140 versions
+
+        - <span title="2026-09-08 19:02:55 UTC">Latest release: about 1 month ago</span>
+
+        - 1,161 dependent packages
+
+
+        - 6.21 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.buffers">system.buffers</a>
+        <small class='text-muted'>
+        4.6.1
+        </small>
+    </h5>
+
+      System.Buffers<br/>
+
+    <small class='text-muted'>
+        15 versions
+
+        - <span title="2025-03-19 23:28:26 UTC">Latest release: over 1 year ago</span>
+
+        - 991 dependent packages
+
+
+        - 6.1 billion downloads total
+
+        - 44 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.5% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.csharp">microsoft.csharp</a>
+        <small class='text-muted'>
+        4.7.0
+        </small>
+    </h5>
+
+      Provides support for compilation and code generation, including dynamic, using the C# language.
+
+...<br/>
+
+    <small class='text-muted'>
+        40 versions
+
+        - <span title="2019-12-03 16:39:33 UTC">Latest release: almost 7 years ago</span>
+
+        - 3,430 dependent packages
+
+        - 15 dependent repositories
+
+        - 5.79 billion downloads total
+
+        - 17,463 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/envoyproxy%2Fenvoy">envoyproxy/envoy</a>
+        <small class='text-muted'>
+        v1.29.1
+        </small>
+    </h5>
+
+      Cloud-native high-performance edge/middle/service proxy<br/>
+
+    <small class='text-muted'>
+        12,137 versions
+
+        - <span title="2024-02-10 04:06:58 UTC">Latest release: over 2 years ago</span>
+
+
+        - 509 dependent repositories
+
+        - 5.74 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.hosting.abstractions">microsoft.extensions.hosting.abstractions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Hosting and startup abstractions for applications.<br/>
+
+    <small class='text-muted'>
+        171 versions
+
+        - <span title="2026-09-08 19:03:14 UTC">Latest release: about 1 month ago</span>
+
+        - 2,684 dependent packages
+
+
+        - 5.52 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/bitnami%2Fkubectl">bitnami/kubectl</a>
+        <small class='text-muted'>
+        1.31.2
+        </small>
+    </h5>
+
+      Bitnami Secure Image for kubectl<br/>
+
+    <small class='text-muted'>
+        2,464 versions
+
+        - <span title="2024-10-24 17:16:44 UTC">Latest release: almost 2 years ago</span>
+
+
+        - 72 dependent repositories
+
+        - 5.38 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/grafana%2Fgrafana">grafana/grafana</a>
+        <small class='text-muted'>
+        13.2.3
+        </small>
+    </h5>
+
+      The official Grafana docker container<br/>
+
+    <small class='text-muted'>
+        1,997 versions
+
+        - <span title="2026-09-29 07:33:07 UTC">Latest release: 10 days ago</span>
+
+
+        - 9,893 dependent repositories
+
+        - 5.35 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.security.cryptography.protecteddata">system.security.cryptography.protecteddata</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides access to Windows Data Protection Api.
+
+Commonly Used Types:
+System.Security.Cryptograph...<br/>
+
+    <small class='text-muted'>
+        133 versions
+
+        - <span title="2026-09-08 19:02:56 UTC">Latest release: about 1 month ago</span>
+
+        - 181 dependent packages
+
+
+        - 5.28 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fmysql">library/mysql</a>
+        <small class='text-muted'>
+        26.7.0
+        </small>
+    </h5>
+
+      MySQL is a widely used, open-source relational database management system (RDBMS).<br/>
+
+    <small class='text-muted'>
+        384 versions
+
+        - <span title="2026-07-28 02:02:27 UTC">Latest release: 2 months ago</span>
+
+
+        - 86 dependent repositories
+
+        - 5.16 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 6.0% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.netcore.targets">microsoft.netcore.targets</a>
+        <small class='text-muted'>
+        5.0.0
+        </small>
+    </h5>
+
+      Provides supporting infrastructure for portable projects: support identifiers that define framewo...<br/>
+
+    <small class='text-muted'>
+        59 versions
+
+        - <span title="2020-11-09 23:41:37 UTC">Latest release: almost 6 years ago</span>
+
+        - 98 dependent packages
+
+
+        - 5.13 billion downloads total
+
+        - 18,316 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/jenkins%2Fjenkins">jenkins/jenkins</a>
+        <small class='text-muted'>
+        2.584
+        </small>
+    </h5>
+
+      The leading open source automation server<br/>
+
+    <small class='text-muted'>
+        4,020 versions
+
+        - <span title="2026-09-29 08:11:32 UTC">Latest release: 10 days ago</span>
+
+
+        - 3,815 dependent repositories
+
+        - 5 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 6.0% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.security.cryptography.cng">system.security.cryptography.cng</a>
+        <small class='text-muted'>
+        5.0.0
+        </small>
+    </h5>
+
+      Provides cryptographic algorithm implementations and key management with Windows Cryptographic Ne...<br/>
+
+    <small class='text-muted'>
+        47 versions
+
+        - <span title="2020-11-09 23:44:21 UTC">Latest release: almost 6 years ago</span>
+
+        - 192 dependent packages
+
+
+        - 4.91 billion downloads total
+
+        - 18,316 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 6.0% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.security.principal.windows">system.security.principal.windows</a>
+        <small class='text-muted'>
+        5.0.0
+        </small>
+    </h5>
+
+      Provides classes for retrieving the current Windows user and for interacting with Windows users a...<br/>
+
+    <small class='text-muted'>
+        57 versions
+
+        - <span title="2020-11-09 23:44:03 UTC">Latest release: almost 6 years ago</span>
+
+        - 421 dependent packages
+
+
+        - 4.89 billion downloads total
+
+        - 18,316 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fmongo">library/mongo</a>
+        <small class='text-muted'>
+        8.3.11
+        </small>
+    </h5>
+
+      MongoDB document databases provide high availability and easy scalability.<br/>
+
+    <small class='text-muted'>
+        2,965 versions
+
+        - <span title="2026-09-14 21:09:24 UTC">Latest release: 24 days ago</span>
+
+
+        - 48 dependent repositories
+
+        - 4.87 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.runtime">system.runtime</a>
+        <small class='text-muted'>
+        4.3.1
+        </small>
+    </h5>
+
+      Provides the fundamental primitives, classes and base classes that define commonly-used value and...<br/>
+
+    <small class='text-muted'>
+        23 versions
+
+        - <span title="2019-02-12 16:16:34 UTC">Latest release: over 7 years ago</span>
+
+        - 1,343 dependent packages
+
+
+        - 4.85 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/grafana%2Floki">grafana/loki</a>
+        <small class='text-muted'>
+        3.7.8
+        </small>
+    </h5>
+
+      Loki - Cloud Native Log Aggregation by Grafana<br/>
+
+    <small class='text-muted'>
+        11,249 versions
+
+        - <span title="2026-09-17 15:45:46 UTC">Latest release: 22 days ago</span>
+
+
+        - 465 dependent repositories
+
+        - 4.8 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.bcl.asyncinterfaces">microsoft.bcl.asyncinterfaces</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides the IAsyncEnumerable&lt;T&gt; and IAsyncDisposable interfaces and helper types for .NET Standa...<br/>
+
+    <small class='text-muted'>
+        109 versions
+
+        - <span title="2026-09-08 19:03:24 UTC">Latest release: about 1 month ago</span>
+
+        - 1,513 dependent packages
+
+
+        - 4.79 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fhttpd">library/httpd</a>
+        <small class='text-muted'>
+        2.4.68
+        </small>
+    </h5>
+
+      The Apache HTTP Server Project<br/>
+
+    <small class='text-muted'>
+        199 versions
+
+        - <span title="2026-06-24 22:52:30 UTC">Latest release: 4 months ago</span>
+
+
+        - 2 dependent repositories
+
+        - 4.74 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.configuration.configurationmanager">system.configuration.configurationmanager</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides types that support using XML configuration files (app.config). This package exists only ...<br/>
+
+    <small class='text-muted'>
+        132 versions
+
+        - <span title="2026-09-08 19:02:59 UTC">Latest release: about 1 month ago</span>
+
+        - 1,872 dependent packages
+
+
+        - 4.56 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 7.7% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.identitymodel.tokens">microsoft.identitymodel.tokens</a>
+        <small class='text-muted'>
+        8.23.0
+        </small>
+    </h5>
+
+      Includes types that provide support for SecurityTokens, Cryptographic operations: Signing, Verify...<br/>
+
+    <small class='text-muted'>
+        141 versions
+
+        - <span title="2026-09-18 21:42:05 UTC">Latest release: 20 days ago</span>
+
+        - 807 dependent packages
+
+
+        - 4.46 billion downloads total
+
+        - 1,152 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/azure.core">azure.core</a>
+        <small class='text-muted'>
+        1.63.0
+        </small>
+    </h5>
+
+      This is the implementation of the Azure Client Pipeline<br/>
+
+    <small class='text-muted'>
+        83 versions
+
+        - <span title="2026-09-25 23:02:04 UTC">Latest release: 13 days ago</span>
+
+        - 398 dependent packages
+
+
+        - 4.42 billion downloads total
+
+        - 6,059 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.security.accesscontrol">system.security.accesscontrol</a>
+        <small class='text-muted'>
+        6.0.1
+        </small>
+    </h5>
+
+      Provides base classes that enable managing access and audit control lists on securable objects.
+
+...<br/>
+
+    <small class='text-muted'>
+        59 versions
+
+        - <span title="2024-04-09 16:52:20 UTC">Latest release: over 2 years ago</span>
+
+        - 142 dependent packages
+
+
+        - 4.41 billion downloads total
+
+        - 18,316 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 7.7% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.identitymodel.logging">microsoft.identitymodel.logging</a>
+        <small class='text-muted'>
+        8.23.0
+        </small>
+    </h5>
+
+      Includes Event Source based logging support.<br/>
+
+    <small class='text-muted'>
+        147 versions
+
+        - <span title="2026-09-18 21:41:51 UTC">Latest release: 20 days ago</span>
+
+        - 89 dependent packages
+
+
+        - 4.36 billion downloads total
+
+        - 1,152 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 2.4% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection.typeextensions">system.reflection.typeextensions</a>
+        <small class='text-muted'>
+        4.7.0
+        </small>
+    </h5>
+
+      Provides extensions methods for System.Type that are designed to be source-compatible with older ...<br/>
+
+    <small class='text-muted'>
+        39 versions
+
+        - <span title="2019-12-03 16:41:19 UTC">Latest release: almost 7 years ago</span>
+
+        - 672 dependent packages
+
+        - 4 dependent repositories
+
+        - 4.27 billion downloads total
+
+        - 17,463 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.collections.immutable">system.collections.immutable</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      This package provides collections that are thread safe and guaranteed to never change their conte...<br/>
+
+    <small class='text-muted'>
+        144 versions
+
+        - <span title="2026-09-08 19:03:00 UTC">Latest release: about 1 month ago</span>
+
+        - 1,452 dependent packages
+
+
+        - 4.27 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.io">system.io</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides base input and output (I/O) types, including System.IO.Stream, System.IO.StreamReader an...<br/>
+
+    <small class='text-muted'>
+        17 versions
+
+        - <span title="2016-11-15 23:44:43 UTC">Latest release: almost 10 years ago</span>
+
+        - 516 dependent packages
+
+
+        - 4.08 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 5.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection.emit">system.reflection.emit</a>
+        <small class='text-muted'>
+        4.7.0
+        </small>
+    </h5>
+
+      Provides classes that allow a compiler or tool to emit metadata and optionally generate a PE file...<br/>
+
+    <small class='text-muted'>
+        31 versions
+
+        - <span title="2019-12-03 16:41:09 UTC">Latest release: almost 7 years ago</span>
+
+        - 783 dependent packages
+
+
+        - 4.07 billion downloads total
+
+        - 17,463 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.text.encoding">system.text.encoding</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides base abstract encoding classes for converting blocks of characters to and from blocks of...<br/>
+
+    <small class='text-muted'>
+        17 versions
+
+        - <span title="2016-11-15 23:55:47 UTC">Latest release: almost 10 years ago</span>
+
+        - 343 dependent packages
+
+
+        - 4.06 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 7.7% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.identitymodel.tokens.jwt">system.identitymodel.tokens.jwt</a>
+        <small class='text-muted'>
+        8.23.0
+        </small>
+    </h5>
+
+      Includes types that provide support for creating, serializing and validating JSON Web Tokens. As ...<br/>
+
+    <small class='text-muted'>
+        161 versions
+
+        - <span title="2026-09-18 21:42:11 UTC">Latest release: 20 days ago</span>
+
+        - 2,110 dependent packages
+
+
+        - 4.06 billion downloads total
+
+        - 1,152 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 7.1% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection.emit.lightweight">system.reflection.emit.lightweight</a>
+        <small class='text-muted'>
+        4.7.0
+        </small>
+    </h5>
+
+      Provides the System.Reflection.Emit.DynamicMethod class, which represents a dynamic method that c...<br/>
+
+    <small class='text-muted'>
+        31 versions
+
+        - <span title="2019-12-03 16:41:13 UTC">Latest release: almost 7 years ago</span>
+
+        - 663 dependent packages
+
+
+        - 4.04 billion downloads total
+
+        - 17,463 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection">system.reflection</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides types that retrieve information about assemblies, modules, members, parameters, and othe...<br/>
+
+    <small class='text-muted'>
+        17 versions
+
+        - <span title="2016-11-15 23:49:44 UTC">Latest release: almost 10 years ago</span>
+
+        - 698 dependent packages
+
+
+        - 4.01 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.runtime.extensions">system.runtime.extensions</a>
+        <small class='text-muted'>
+        4.3.1
+        </small>
+    </h5>
+
+      Provides commonly-used classes for performing mathematical functions, conversions, string compari...<br/>
+
+    <small class='text-muted'>
+        20 versions
+
+        - <span title="2019-02-12 16:16:38 UTC">Latest release: over 7 years ago</span>
+
+        - 760 dependent packages
+
+
+        - 4.01 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/prom%2Fnode-exporter">prom/node-exporter</a>
+        <small class='text-muted'>
+        v1.12.1
+        </small>
+    </h5>
+
+      prom/node-exporter<br/>
+
+    <small class='text-muted'>
+        60 versions
+
+        - <span title="2026-07-14 12:13:00 UTC">Latest release: 3 months ago</span>
+
+
+        - 897 dependent repositories
+
+        - 4 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.threading.tasks">system.threading.tasks</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides types that simplify the work of writing concurrent and asynchronous code.
+
+Commonly Used...<br/>
+
+    <small class='text-muted'>
+        30 versions
+
+        - <span title="2016-11-15 23:56:53 UTC">Latest release: almost 10 years ago</span>
+
+        - 507 dependent packages
+
+
+        - 3.99 billion downloads total
+
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 7.7% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.identitymodel.jsonwebtokens">microsoft.identitymodel.jsonwebtokens</a>
+        <small class='text-muted'>
+        8.23.0
+        </small>
+    </h5>
+
+      Includes types that provide support for creating, serializing and validating JSON Web Tokens. Thi...<br/>
+
+    <small class='text-muted'>
+        125 versions
+
+        - <span title="2026-09-18 21:41:49 UTC">Latest release: 20 days ago</span>
+
+        - 260 dependent packages
+
+
+        - 3.98 billion downloads total
+
+        - 1,152 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.filesystemglobbing">microsoft.extensions.filesystemglobbing</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      File system globbing to find files matching a specified pattern.<br/>
+
+    <small class='text-muted'>
+        173 versions
+
+        - <span title="2026-09-08 19:03:15 UTC">Latest release: about 1 month ago</span>
+
+        - 109 dependent packages
+
+
+        - 3.98 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection.primitives">system.reflection.primitives</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides common enumerations for reflection-based libraries.
+
+Commonly Used Types:
+System.Reflect...<br/>
+
+    <small class='text-muted'>
+        14 versions
+
+        - <span title="2016-11-15 23:50:49 UTC">Latest release: almost 10 years ago</span>
+
+        - 168 dependent packages
+
+
+        - 3.96 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.resources.resourcemanager">system.resources.resourcemanager</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides classes and attributes that allow developers to create, store, and manage various cultur...<br/>
+
+    <small class='text-muted'>
+        14 versions
+
+        - <span title="2016-11-15 23:51:14 UTC">Latest release: almost 10 years ago</span>
+
+        - 513 dependent packages
+
+
+        - 3.95 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.globalization">system.globalization</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides classes that define culture-related information, including language, country/region, cal...<br/>
+
+    <small class='text-muted'>
+        17 versions
+
+        - <span title="2016-11-15 23:44:18 UTC">Latest release: almost 10 years ago</span>
+
+        - 459 dependent packages
+
+
+        - 3.94 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.threading">system.threading</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides the fundamental synchronization primitives, including System.Threading.Monitor and Syste...<br/>
+
+    <small class='text-muted'>
+        17 versions
+
+        - <span title="2016-11-15 23:56:29 UTC">Latest release: almost 10 years ago</span>
+
+        - 746 dependent packages
+
+
+        - 3.92 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.caching.memory">microsoft.extensions.caching.memory</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      In-memory cache implementation of Microsoft.Extensions.Caching.Memory.IMemoryCache.<br/>
+
+    <small class='text-muted'>
+        182 versions
+
+        - <span title="2026-09-08 19:03:19 UTC">Latest release: about 1 month ago</span>
+
+        - 1,694 dependent packages
+
+
+        - 3.92 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.collections">system.collections</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides classes that define generic collections, which allow developers to create strongly typed...<br/>
+
+    <small class='text-muted'>
+        17 versions
+
+        - <span title="2016-11-15 23:39:54 UTC">Latest release: almost 10 years ago</span>
+
+        - 921 dependent packages
+
+
+        - 3.91 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.fileproviders.physical">microsoft.extensions.fileproviders.physical</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      File provider for physical files for Microsoft.Extensions.FileProviders.<br/>
+
+    <small class='text-muted'>
+        174 versions
+
+        - <span title="2026-09-08 19:03:15 UTC">Latest release: about 1 month ago</span>
+
+        - 258 dependent packages
+
+
+        - 3.89 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.diagnostics.debug">system.diagnostics.debug</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides classes and attributes that allows basic interaction with a debugger.
+
+Commonly Used Typ...<br/>
+
+    <small class='text-muted'>
+        17 versions
+
+        - <span title="2016-11-15 23:42:46 UTC">Latest release: almost 10 years ago</span>
+
+        - 530 dependent packages
+
+
+        - 3.89 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Frabbitmq">library/rabbitmq</a>
+        <small class='text-muted'>
+        4.3.6
+        </small>
+    </h5>
+
+      RabbitMQ is an open source multi-protocol messaging broker.<br/>
+
+    <small class='text-muted'>
+        1,442 versions
+
+        - <span title="2026-09-19 02:53:19 UTC">Latest release: 20 days ago</span>
+
+
+        - 27 dependent repositories
+
+        - 3.88 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.caching.abstractions">microsoft.extensions.caching.abstractions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Caching abstractions for in-memory cache and distributed cache.
+
+Commonly Used Types:
+Microsoft.E...<br/>
+
+    <small class='text-muted'>
+        179 versions
+
+        - <span title="2026-09-08 19:03:19 UTC">Latest release: about 1 month ago</span>
+
+        - 1,268 dependent packages
+
+
+        - 3.88 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on rubygems.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/rubygems.org/packages/bundler">bundler</a>
+        <small class='text-muted'>
+        4.0.22
+        </small>
+        <small title='Accepts funding'>
+          💰
+        </small>
+    </h5>
+
+      Bundler manages an application&#39;s dependencies through its entire life, across many machines, syst...<br/>
+
+    <small class='text-muted'>
+        434 versions
+
+        - <span title="2026-09-30 07:52:13 UTC">Latest release: 9 days ago</span>
+
+        - 70,013 dependent packages
+
+        - 225,927 dependent repositories
+
+        - 3.82 billion downloads total
+
+        - 3,976 stars on GitHub
+
+        - 1 maintainer
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.linq">system.linq</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides classes and interfaces that supports queries that use Language-Integrated Query (LINQ).
+...<br/>
+
+    <small class='text-muted'>
+        14 versions
+
+        - <span title="2016-11-15 23:46:38 UTC">Latest release: almost 10 years ago</span>
+
+        - 768 dependent packages
+
+
+        - 3.81 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/bitnami%2Fpostgresql">bitnami/postgresql</a>
+        <small class='text-muted'>
+        17.6.0
+        </small>
+    </h5>
+
+      Bitnami Secure Image for postgresql<br/>
+
+    <small class='text-muted'>
+        3,734 versions
+
+        - <span title="2025-08-14 17:13:45 UTC">Latest release: about 1 year ago</span>
+
+
+        - 1,049 dependent repositories
+
+        - 3.77 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/amazon%2Faws-for-fluent-bit">amazon/aws-for-fluent-bit</a>
+        <small class='text-muted'>
+        3.5.0
+        </small>
+    </h5>
+
+      Fluent Bit image with plugins for AWS<br/>
+
+    <small class='text-muted'>
+        1,548 versions
+
+        - <span title="2026-09-28 16:32:14 UTC">Latest release: 11 days ago</span>
+
+
+        - 18 dependent repositories
+
+        - 3.77 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/netstandard.library">netstandard.library</a>
+        <small class='text-muted'>
+        2.0.3
+        </small>
+    </h5>
+
+      A set of standard .NET APIs that are prescribed to be used and supported together. 
+18a36291e4880...<br/>
+
+    <small class='text-muted'>
+        10 versions
+
+        - <span title="2018-05-07 15:27:55 UTC">Latest release: over 8 years ago</span>
+
+        - 7,356 dependent packages
+
+
+        - 3.74 billion downloads total
+
+        - 3,036 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.options.configurationextensions">microsoft.extensions.options.configurationextensions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides additional configuration specific functionality related to Options.<br/>
+
+    <small class='text-muted'>
+        177 versions
+
+        - <span title="2026-09-08 19:03:10 UTC">Latest release: about 1 month ago</span>
+
+        - 2,514 dependent packages
+
+
+        - 3.73 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.runtime.interopservices">system.runtime.interopservices</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides types that support COM interop and platform invoke services.
+
+Commonly Used Types:
+Syste...<br/>
+
+    <small class='text-muted'>
+        20 versions
+
+        - <span title="2016-11-15 23:52:15 UTC">Latest release: almost 10 years ago</span>
+
+        - 479 dependent packages
+
+
+        - 3.73 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 6.0% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.win32.registry">microsoft.win32.registry</a>
+        <small class='text-muted'>
+        5.0.0
+        </small>
+    </h5>
+
+      Provides support for accessing and modifying the Windows Registry.
+
+Commonly Used Types:
+Microsof...<br/>
+
+    <small class='text-muted'>
+        55 versions
+
+        - <span title="2020-11-09 23:41:41 UTC">Latest release: almost 6 years ago</span>
+
+        - 685 dependent packages
+
+
+        - 3.72 billion downloads total
+
+        - 18,316 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 5.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection.emit.ilgeneration">system.reflection.emit.ilgeneration</a>
+        <small class='text-muted'>
+        4.7.0
+        </small>
+    </h5>
+
+      Provides classes that allow a compiler or tool to emit Microsoft intermediate language (MSIL). Th...<br/>
+
+    <small class='text-muted'>
+        31 versions
+
+        - <span title="2019-12-03 16:41:11 UTC">Latest release: almost 7 years ago</span>
+
+        - 216 dependent packages
+
+
+        - 3.69 billion downloads total
+
+        - 17,463 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.linq.expressions">system.linq.expressions</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides classes, interfaces and enumerations that enable language-level code expressions to be r...<br/>
+
+    <small class='text-muted'>
+        18 versions
+
+        - <span title="2016-11-15 23:46:46 UTC">Latest release: almost 10 years ago</span>
+
+        - 323 dependent packages
+
+
+        - 3.69 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.text.encoding.codepages">system.text.encoding.codepages</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides support for code-page based encodings, including Windows-1252, Shift-JIS, and GB2312.
+
+C...<br/>
+
+    <small class='text-muted'>
+        146 versions
+
+        - <span title="2026-09-08 19:02:55 UTC">Latest release: about 1 month ago</span>
+
+        - 1,043 dependent packages
+
+
+        - 3.68 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.5% on npmjs.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/npmjs.org/packages/semver">semver</a>
+        <small class='text-muted'>
+        7.8.5
+        </small>
+    </h5>
+
+      The semantic version parser used by npm.<br/>
+
+    <small class='text-muted'>
+        119 versions
+
+        - <span title="2026-06-19 18:32:48 UTC">Latest release: 4 months ago</span>
+
+        - 43,561 dependent packages
+
+        - 1,325,167 dependent repositories
+
+        - 3.67 billion downloads last month
+
+        - 5,465 stars on GitHub
+
+        - 4 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.configuration.fileextensions">microsoft.extensions.configuration.fileextensions</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides a base class for file-based configuration providers used with Microsoft.Extensions.Confi...<br/>
+
+    <small class='text-muted'>
+        178 versions
+
+        - <span title="2026-09-08 19:03:18 UTC">Latest release: about 1 month ago</span>
+
+        - 731 dependent packages
+
+
+        - 3.65 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.text.regularexpressions">system.text.regularexpressions</a>
+        <small class='text-muted'>
+        4.3.1
+        </small>
+    </h5>
+
+      Provides the System.Text.RegularExpressions.Regex class, an implementation of a regular expressio...<br/>
+
+    <small class='text-muted'>
+        19 versions
+
+        - <span title="2019-05-14 12:43:47 UTC">Latest release: over 7 years ago</span>
+
+        - 628 dependent packages
+
+
+        - 3.64 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/gitlab%2Fgitlab-runner">gitlab/gitlab-runner</a>
+        <small class='text-muted'>
+        v19.3.0
+        </small>
+    </h5>
+
+      GitLab CI Multi Runner used to fetch and run pipeline jobs with GitLab CI<br/>
+
+    <small class='text-muted'>
+        2,257 versions
+
+        - <span title="2026-08-19 11:32:41 UTC">Latest release: about 2 months ago</span>
+
+
+        - 344 dependent repositories
+
+        - 3.64 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/microsoft.extensions.dependencymodel">microsoft.extensions.dependencymodel</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      Provides abstractions for reading `.deps` files. When a .NET application is compiled, the SDK gen...<br/>
+
+    <small class='text-muted'>
+        152 versions
+
+        - <span title="2026-09-08 19:03:16 UTC">Latest release: about 1 month ago</span>
+
+        - 793 dependent packages
+
+
+        - 3.64 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.runtime.handles">system.runtime.handles</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides base classes, including System.Runtime.InteropServices.CriticalHandle and System.Runtime...<br/>
+
+    <small class='text-muted'>
+        14 versions
+
+        - <span title="2016-11-15 23:52:05 UTC">Latest release: almost 10 years ago</span>
+
+        - 175 dependent packages
+
+
+        - 3.62 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.net.http">system.net.http</a>
+        <small class='text-muted'>
+        4.3.4
+        </small>
+    </h5>
+
+      Provides a programming interface for modern HTTP applications, including HTTP client components t...<br/>
+
+    <small class='text-muted'>
+        25 versions
+
+        - <span title="2018-10-09 20:20:29 UTC">Latest release: almost 8 years ago</span>
+
+        - 2,306 dependent packages
+
+        - 10 dependent repositories
+
+        - 3.62 billion downloads total
+
+
+        - 3 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Fdocker">library/docker</a>
+        <small class='text-muted'>
+        29.8.1
+        </small>
+    </h5>
+
+      Docker in Docker! (commonly known as &quot;dind&quot;)<br/>
+
+    <small class='text-muted'>
+        2,667 versions
+
+        - <span title="2026-09-16 01:08:08 UTC">Latest release: 23 days ago</span>
+
+
+        - 4 dependent repositories
+
+        - 3.61 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.2% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/rancher%2Francher-agent">rancher/rancher-agent</a>
+        <small class='text-muted'>
+        v2.15.1
+        </small>
+    </h5>
+
+
+    <small class='text-muted'>
+        11,902 versions
+
+        - <span title="2026-08-27 23:36:06 UTC">Latest release: about 1 month ago</span>
+
+
+        - 1 dependent repositories
+
+        - 3.61 billion downloads total
+
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection.extensions">system.reflection.extensions</a>
+        <small class='text-muted'>
+        4.3.0
+        </small>
+    </h5>
+
+      Provides custom attribute extension methods for System.Reflection types.
+
+Commonly Used Types:
+Sy...<br/>
+
+    <small class='text-muted'>
+        14 versions
+
+        - <span title="2016-11-15 23:50:32 UTC">Latest release: almost 10 years ago</span>
+
+        - 401 dependent packages
+
+
+        - 3.6 billion downloads total
+
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.1% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/library%2Ftraefik">library/traefik</a>
+        <small class='text-muted'>
+        3.7.13
+        </small>
+    </h5>
+
+      Traefik, The Cloud Native Edge Router<br/>
+
+    <small class='text-muted'>
+        2,222 versions
+
+        - <span title="2026-09-04 20:10:22 UTC">Latest release: about 1 month ago</span>
+
+
+        - 5 dependent repositories
+
+        - 3.57 billion downloads total
+
+        - 7,005 stars on GitHub
+
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 8.9% on nuget.org
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/nuget.org/packages/system.reflection.metadata">system.reflection.metadata</a>
+        <small class='text-muted'>
+        10.0.12
+        </small>
+    </h5>
+
+      This package provides a low-level .NET (ECMA-335) metadata reader and writer. It&#39;s geared for per...<br/>
+
+    <small class='text-muted'>
+        160 versions
+
+        - <span title="2026-09-08 19:02:57 UTC">Latest release: about 1 month ago</span>
+
+        - 197 dependent packages
+
+
+        - 3.56 billion downloads total
+
+        - 1,287 stars on GitHub
+
+        - 2 maintainers
+    </small>
+  </div>
+</div><div class="card mb-3">
+  <div class="card-body">
+      <span class='badge bg-secondary float-end'>
+        Top 0.2% on hub.docker.com
+      </span>
+
+    <h5 class="card-title">
+      <a href="/registries/hub.docker.com/packages/newrelic%2Finfrastructure-bundle">newrelic/infrastructure-bundle</a>
+        <small class='text-muted'>
+        3.3.42
+        </small>
+    </h5>
+
+      New Relic Infrastructure containerised agent bundle<br/>
+
+    <small class='text-muted'>
+        448 versions
+
+        - <span title="2026-09-03 08:20:22 UTC">Latest release: about 1 month ago</span>
+
+
+        - 1 dependent repositories
+
+        - 3.54 billion downloads total
+
+
+    </small>
+  </div>
+</div>
+      <nav class="pagy-bootstrap nav" aria-label="Pages"><ul class="pagination"><li class="page-item prev disabled"><a role="link" class="page-link" aria-disabled="true" aria-label="Previous">&lt;</a></li><li class="page-item active"><a role="link" class="page-link" aria-current="page" aria-disabled="true">1</a></li><li class="page-item"><a href="/critical?page=2&per_page=100" class="page-link">2</a></li><li class="page-item"><a href="/critical?page=3&per_page=100" class="page-link">3</a></li><li class="page-item"><a href="/critical?page=4&per_page=100" class="page-link">4</a></li><li class="page-item"><a href="/critical?page=5&per_page=100" class="page-link">5</a></li><li class="page-item gap disabled"><a role="link" class="page-link" aria-disabled="true">&hellip;</a></li><li class="page-item"><a href="/critical?page=99&per_page=100" class="page-link">99</a></li><li class="page-item next"><a href="/critical?page=2&per_page=100" class="page-link" aria-label="Next">&gt;</a></li></ul></nav>  
+    </div>
+    <div class="col">
+      <div class="card mb-3">
+        <div class="card-header">
+          Filter by Registry
+        </div>
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=metacpan.org">
+              metacpan.org
+              <span class="badge bg-primary rounded-pill">20</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=forge.puppet.com">
+              forge.puppet.com
+              <span class="badge bg-primary rounded-pill">53</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=github+actions">
+              github actions
+              <span class="badge bg-primary rounded-pill">70</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=cocoapods.org">
+              cocoapods.org
+              <span class="badge bg-primary rounded-pill">77</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=swiftpackageindex.com">
+              swiftpackageindex.com
+              <span class="badge bg-primary rounded-pill">97</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=bower.io">
+              bower.io
+              <span class="badge bg-primary rounded-pill">112</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=pub.dev">
+              pub.dev
+              <span class="badge bg-primary rounded-pill">122</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=hub.docker.com">
+              hub.docker.com
+              <span class="badge bg-primary rounded-pill">143</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=hex.pm">
+              hex.pm
+              <span class="badge bg-primary rounded-pill">153</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=juliahub.com">
+              juliahub.com
+              <span class="badge bg-primary rounded-pill">173</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=formulae.brew.sh">
+              formulae.brew.sh
+              <span class="badge bg-primary rounded-pill">261</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=clojars.org">
+              clojars.org
+              <span class="badge bg-primary rounded-pill">280</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=cran.r-project.org">
+              cran.r-project.org
+              <span class="badge bg-primary rounded-pill">299</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=nuget.org">
+              nuget.org
+              <span class="badge bg-primary rounded-pill">376</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=conda-forge.org">
+              conda-forge.org
+              <span class="badge bg-primary rounded-pill">390</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=pypi.org">
+              pypi.org
+              <span class="badge bg-primary rounded-pill">522</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=packagist.org">
+              packagist.org
+              <span class="badge bg-primary rounded-pill">548</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=proxy.golang.org">
+              proxy.golang.org
+              <span class="badge bg-primary rounded-pill">645</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=hackage.haskell.org">
+              hackage.haskell.org
+              <span class="badge bg-primary rounded-pill">696</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=repo1.maven.org">
+              repo1.maven.org
+              <span class="badge bg-primary rounded-pill">704</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=crates.io">
+              crates.io
+              <span class="badge bg-primary rounded-pill">813</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=rubygems.org">
+              rubygems.org
+              <span class="badge bg-primary rounded-pill">974</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center " href="/critical?registry=npmjs.org">
+              npmjs.org
+              <span class="badge bg-primary rounded-pill">2,295</span>
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <footer class="footer dark-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <a class="site-logo site-logo--white" href="/">Ecosyste.ms</a>
+        <p class="small">Tools and open datasets to support, sustain, and secure critical digital infrastructure.</p>
+        <p class="small">
+          Code: <a href="https://github.com/ecosyste-ms/documentation/blob/main/LICENSE">AGPL-3</a>  — 
+          Data: <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
+        </p>
+        <p class='footer-icons'>
+          <a target="_blank" href="https://github.com/ecosyste-ms">
+            <svg width="20" height="20" alt="ecosyste.ms on Github" class="bi bi-github" viewBox="0 0 16 16" fill="currentColor" version="1.1" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"></path></svg>
+</a>          <a target="_blank" href="https://mastodon.social/@ecosystems">
+            <svg width="20" height="20" alt="ecosyste.ms on Mastodon" class="bi bi-mastodon" viewBox="0 0 16 16" fill="currentColor" version="1.1" aria-hidden="true"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a4 4 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522q0-1.288.66-2.046c.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764q.662.757.661 2.046z"></path></svg>
+</a>          <a target="_blank" href="https://opencollective.com/ecosystems">
+            <svg width="20" height="20" alt="ecosyste.ms on Open Collective" class="bi bi-opencollective" viewBox="0 0 16 16" fill="currentColor" version="1.1" aria-hidden="true"><path fill-opacity=".4" d="M12.995 8.195c0 .937-.312 1.912-.78 2.693l1.99 1.99c.976-1.327 1.6-2.966 1.6-4.683 0-1.795-.624-3.434-1.561-4.76l-2.068 2.028c.468.781.78 1.679.78 2.732z"></path>
+  <path d="M8 13.151a4.995 4.995 0 1 1 0-9.99c1.015 0 1.951.273 2.732.82l1.95-2.03a7.805 7.805 0 1 0 .04 12.449l-1.951-2.03a5.07 5.07 0 0 1-2.732.781z"></path></svg>
+</a>        </p>
+        <div>
+          <h3 class="mt-5 h6">Supported by</h3>
+          <div class="row justify-content-start align-items-center g-4 mb-4 mb-lg-0">		
+            <div class="col-auto">
+              <a href="https://www.schmidtfutures.org">
+                <img alt="Schmidt Futures" class="img-fluid p3" src="/assets/logo-schmidt-white-efa52873280decb2588e601323ef616a96a7891c254db5cdf0cca626ed85acc5.svg" width="267" height="20" />
+              </a>
+            </div>
+      
+            <div class="col-auto">
+              <a href="https://oscollective.org">
+                <img alt="Open Source Collective" class="img-fluid p3" src="/assets/logo-osc-white-43e420a5624e755fe206869f9c3ff608e9476881d847007a020ea01d37e36dfa.png" width="210" height="56" />
+              </a>
+            </div>
+          </div>
+          <p class="mt-3"><a href="https://opencollective.com/ecosystems" class="small">Become a sponsor</a></p>
+          </div>
+        </div>
+      <div class="col-md-4">
+        <ul class="list-unstyled footer-links mt-3 small">
+          <li><strong><a href="https://ecosyste.ms">About</a></strong></li>
+          <li><strong><a href="https://blog.ecosyste.ms">Blog</a></strong></li>
+          <li><strong><a href="https://mastodon.social/@ecosystems">Contact</a></strong></li>
+          <li><strong><a href="https://ecosyste.ms/privacy">Privacy</a></strong></li>
+          <li><strong><a href="https://ecosyste.ms/terms">Terms</a></strong></li>
+          <li><strong><a href="https://ecosystems.appsignal-status.com/">Status</a></strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div data-ea-publisher="nesbittio" data-ea-type="text" data-ea-style="fixedfooter" class="adaptive"></div>
+  </body>
+</html>
