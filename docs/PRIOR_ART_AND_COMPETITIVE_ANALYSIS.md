@@ -82,12 +82,12 @@ timeline
 ```text
     SELECTED OBSERVED ANNUAL FINANCIAL FLOWS (USD MILLIONS)
     ┌────────────────────────────────────────────────────────────┐
-    │ Polkadot 2025 Treasury Spend       ■■■■■■■■■■■■■■ $70.6M   │
+    │ Polkadot 2025 Treasury Spend       ■■■■■■■■■■■■■■ $70.6M (UNVERIFIED) │
     │ ENS DAO 2025 Operating Revenue     ■■■ $18.22M             │
-    │ Protocol Guild 2025 Funds Raised   ■ $7.2M                 │
-    │ Octant Epoch 8 Distribution        ■ $1.7M                 │
-    │ Cardano 2025 Bug Bounty Pool       ■ $0.3M                 │
-    │ Deep Funding 2025 Challenge Pool   ■ $0.22M                │
+    │ Protocol Guild 2025 Donations      ■ $7.23M (at donation)  │
+    │ Octant Epoch 8 Distribution        ■ $1.7M (UNVERIFIED)    │
+    │ Cardano 2025 Bug Bounty Pool       ■ $0.3M (planned, not shown as paid) │
+    │ Deep Funding 2025 Challenge Pool   ■ $0.22M (UNVERIFIED)   │
     └────────────────────────────────────────────────────────────┘
 
     CAPITAL ENDOWMENT & RESERVE BASES
@@ -123,13 +123,13 @@ timeline
 ### 4.4 Cardano Paid Open Source Model (POSM)
 - **OSF Mapping**: **OMF Maintenance Deployment & dOSPO Precursor**.
 - **Detailed Mechanics**: Managed by Intersect MBO's Open Source Committee (OSC policy) and Open Source Office (OSO execution). Programs include Maintainer Retainers, Tooling Sustainability, Code for Us, and Bug Bounties.
-- **Empirical Metrics**: 2025 POSM budget request approved at **5.885M ADA**. First-year Bug Bounty pool of **$300K** was 100% utilized by July 23, 2026. Maintainer Retainers launched a 6-maintainer pre-pilot in April 2026.
+- **Empirical Metrics**: 2025 OSC/POSM treasury withdrawal of **₳5,885,000** enacted on-chain: governance action 8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e#11, proposed epoch 570, ratified epoch 575, **enacted epoch 576 (12 Aug 2025)** (High, on-chain; https://cardanoscan.io/govAction/gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlqkqx0ecg). This is a single 2025 tranche. The ₳4,601,000 2026–27 OSC request **was never submitted on-chain** (no TreasuryWithdrawals action on Koios as of epoch 660, checked 2026-10-09). The **$300K Bug Bounty pool was a planned allocation** (₳600K ≈ $300K at $0.50/ADA in the 2025 budget); utilization is **not shown** and stays UNVERIFIED. "6-maintainer pre-pilot in April 2026": **UNVERIFIED** (not re-checked in this pass).
 - **Key Takeaway**: Strongest Web3 laboratory for OMF maintenance programming, but relies on treasury allocations rather than earned ORF revenue.
 
 ### 4.5 Protocol Guild
 - **OSF Mapping**: **OMF Program 1 (Maintainer Retainers) & ORF Voluntary Pledges**.
-- **Detailed Mechanics**: On-chain split contract vesting voluntary 1% project token/yield pledges over 4 years for ~180 core Ethereum L1 developers. Formed a Cayman Islands entity in 2024, allocating 10% of vested funds for legal, tax, and operating reserves ($200K 2-year ops reserve).
-- **Empirical Metrics**: Raised **$7.2M from 6,202 unique donors** in 2025; stewards **187 members** across 10+ client teams in 2026.
+- **Detailed Mechanics**: On-chain split contract vesting voluntary 1% project token/yield pledges over 4 years for 190 funded members (as of 5 Aug 2026, Q3 2026 audit). Formed a Cayman Islands entity in 2024, allocating 10% of vested funds for legal, tax, and operating reserves ($200K 2-year ops reserve; UNVERIFIED, not re-checked in this pass).
+- **Empirical Metrics**: Raised **$7,231,668 (valued at time of donation) from 6,202 unique donors** in 2025 (Annual Report 2025, 29 Jan 2026); **190 funded members as of 5 Aug 2026**, a net decrease of 6 from 196 (Q3 2026 Membership Audit, 26 Aug 2026; capture docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.html, 2026-10-09).
 - **Key Takeaway**: Proves custody-free, tenure-weighted maintainer retainers scale, but demonstrates that even voluntary donation split contracts require legal/operating reserves.
 
 ### 4.6 Tidelift Enterprise
