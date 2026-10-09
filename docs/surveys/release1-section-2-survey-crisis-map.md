@@ -51,7 +51,7 @@ The reports' question structure gives the order:
 - why they quit or consider quitting (asked in 2023 and 2021, not in 2024);
 - what support they say they need.
 
-**Caveats.** The samples are self-selected, and per-question bases vary; the base is given where it matters. Where a report's chart and text disagree, the figure that agrees with the other editions is used: 52% for 2023 "not compensated" [S02, p. 26]; 37%, 36% and 39% for "users too demanding" in 2021, 2023 and 2024 [S03, p. 15; S01, p. 38, chart]. The 2024 report's closing narrative says "almost two-thirds" have quit or considered quitting [S01, p. 59]; the measured figure, 60% [S01, p. 40], is used. The 2024 report has two different pay questions: 60% describe themselves as unpaid hobbyists (single choice, n=437) [S01, p. 4], and 47% report no maintainer income at all (multi-select, n=421) [S01, p. 13]. Both are valid if labelled. Tidelift also pays maintainers, and its corporate status is currently subject to a definitive agreement announced by Sonar.
+**Caveats.** The samples are self-selected, and per-question bases vary; the base is given where it matters. Where a report's chart and text disagree, the figure that agrees with the other editions is used: 52% for 2023 "not compensated" [S02, p. 26]; 37%, 36% and 39% for "users too demanding" in 2021, 2023 and 2024 [S03, p. 15; S02, p. 25, chart; S01, p. 38, chart]. The 2024 report's closing narrative says "almost two-thirds" have quit or considered quitting [S01, p. 59]; the measured figure, 60% [S01, p. 40], is used. The 2024 report has two different pay questions: 60% describe themselves as unpaid hobbyists (single choice, n=437) [S01, p. 4], and 47% report no maintainer income at all (multi-select, n=421) [S01, p. 13]. Both are valid if labelled. Tidelift also pays maintainers, and its corporate status is currently subject to a definitive agreement announced by Sonar.
 
 **Other sources.** Corroborating sources are drawn from the inventory `surveys/oss-survey-inventory.md` (S01–S30):
 - the Census II and III studies;
@@ -137,7 +137,7 @@ ORF never pays maintainers directly. Its rating reflects whether it supplies the
 - *Evidence: what maintainers dislike (2024, n=338)* [S01, pp. 38–39]:
   - 48% found the work underappreciated or thankless (40% in 2021);
   - 43% said it added to personal stress (54% in 2023, 45% in 2021);
-  - 39% found users too demanding (chart; 36% in 2023, 37% in 2021 [S03, p. 15]);
+  - 39% found users too demanding (chart; 36% in 2023 [S02, p. 25, chart], 37% in 2021 [S03, p. 15]);
   - 32% found it lonely (42% in 2023, 36% in 2021).
 
   These are dislikes, not reasons for quitting. The 2024 report did not ask why maintainers quit.
@@ -166,7 +166,7 @@ The programs below are **examples**. They are not recommendations and imply no c
 
 **Not replenishment.** Gitcoin rounds, Optimism Retro Funding, Drips, Superfluid and token issuance are allocation, routing or dilution under ORF (§2, p. 14; §18, p. 42). They are not replenishment.
 
-**Chains.** Of the ten largest layer-1 networks reviewed for this release, none routes protocol fees to open source maintenance; fees are burned, paid to validators or miners, or used for buybacks. ORF's structural fee instrument (§8 A.1, p. 23) therefore remains unexercised by those networks. This bears on where N1 funding could come from, not on what projects need.
+**Chains.** Of the ten largest layer-1 and layer-2 networks reviewed for this release (no layer-2 ranks in the top ten), none routes protocol fees to open source maintenance; fees are burned, paid to validators or miners, or used for buybacks. ORF's structural fee instrument (§8 A.1, p. 23) therefore remains unexercised by those networks. This bears on where N1 funding could come from, not on what projects need.
 
 ### 2.6 Remaining gaps
 
@@ -211,4 +211,5 @@ Each gap marks a place where a written mechanism needs an external program befor
 
 **9 Oct 2026, earlier:** restructured needs-first on the Tidelift spine. The driver-based version is archived at `surveys/archive/release1-section-2.driver-version.md`.
 
-- 2026-10-09 05:47 PT: Protocol Guild $12.4M swapped for validated $7,231,668 / 6,202 donors ($12.4M held for later errata); bridging sentence added between 'no change proposed' and the section 2.7 Extensions.
+- 2026-10-09 05:47 PT: Protocol Guild distributions figure removed and replaced with the validated $7,231,668 / 6,202 donors (the removed figure is held for a later errata in chains/pg-followups.md §4); bridging sentence added between 'no change proposed' and the section 2.7 Extensions.
+- 2026-10-09 07:58 PT: Chains note scope aligned with section 4.3 (layer-1 and layer-2; no layer-2 in the top ten).

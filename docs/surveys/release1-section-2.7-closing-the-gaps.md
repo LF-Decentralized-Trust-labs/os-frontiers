@@ -2,11 +2,11 @@
 
 > **Stage 0. Every item in this section is a PROPOSAL, not a finding. No Hard Gate is claimed as passed, for ORF or for any ecosystem named here.** The dOSPO, OMF and ORF version 1.0 whitepapers remain the specification, with `ORF_ERRATA.md` controlling over the ORF PDF. **Nothing here changes the specification.** Each item is tagged:
 > - **Fits as written:** it applies a mechanism the whitepaper text already defines. Running it would change nothing in the text.
-> - **Extension:** it goes beyond the published text. It is recorded here as a gap the text leaves open, not as a change to the text. It would need author review before it could enter the specification.
+> - **Extension:** it goes beyond the published text. It is recorded here as a gap the text leaves open, not as a change to the text. It is an example, not a spec change, and would need author review.
 >
 > Every named program is an **example** of activity that already exists. Naming one is not an endorsement and does not report a result.
 
-The needs table in §2.3 (N1–N8, plus long-tail reach) finds that, within a funded ecosystem's portfolio, the whitepapers have a named mechanism for six of the eight needs. It rates **N7 recognition and relief from user burden** as **Partial** and **N3 a way to receive money** as a **Gap**. Reach to projects outside a funded ecosystem's dependency map is also a **Gap**. This section takes the needs in the same order as §2.3, which follows the order of Tidelift's questions. For each need it gives §2's verdict with its Tidelift 2024 citation, then the proposals that serve that need. Tidelift figures come first; other surveys only support them.
+The needs table in §2.3 (N1–N8, plus long-tail reach) finds that, within a funded ecosystem's portfolio, the whitepapers have a named mechanism for six of the eight needs. It rates **N7 recognition and relief from user burden** as **Partial** and **N3 a way to receive money** as a **Gap**. Reach to small projects outside a funded ecosystem's portfolio (the long tail) is also a **Gap**. This section takes the needs in the same order as §2.3, which follows the order of Tidelift's questions. For each need it gives §2's verdict with its Tidelift 2024 citation, then the proposals that serve that need. Tidelift figures come first; other surveys only support them.
 
 *Labels.* G1–G5 and R1–R5 are this section's own item labels. They are not the gap labels G1–G5 in `surveys/crisis-to-model-map.md` §3.
 
@@ -42,7 +42,7 @@ The needs table in §2.3 (N1–N8, plus long-tail reach) finds that, within a fu
   - *Evidence:* security time 11% [S01, p. 17]. Supporting: 72.8% of critical packages have no funding link in their package metadata, and 3.26% of packages carry funding links [S22].
 
 **N3. A way to receive money (GAP).**
-*§2.3 verdict: Gap. No whitepaper describes a way for projects to receive money. Donation programs pay 25% of maintainers and companies pay 5% directly [S01, pp. 15–16]. Supporting evidence only: 72.8% of critical packages have no funding link in their package metadata [S22].*
+*§2.3 verdict: Gap. No whitepaper describes a recipient-side route by which a project can receive money. Donation programs pay 25% of maintainers and companies pay 5% directly [S01, pp. 15–16]. Supporting evidence only: 72.8% of critical packages have no funding link in their package metadata [S22].*
 
 This is the model's clearest gap. **No whitepaper describes a recipient-side payment route.**
 - OMF's retainers (§9, p. 24) and federated co-funding (App. C, pp. 55–56) assume the recipient can already be paid.
@@ -73,7 +73,7 @@ There is no separate proposal for N5. R1 (under N7) strengthens the Contributor 
 R1 serves N6 as well as N7. It is set out under N7. There is no other proposal.
 
 **N7. Recognition and relief from user burden (PARTIAL).**
-*§2.3 verdict: Partial. In 2024, among the things maintainers dislike about the work, 48% named being thankless or underappreciated, 43% added personal stress, 39% users being too demanding (chart only) and 32% loneliness [S01, pp. 38–39]. These are dislikes; the 2024 report did not ask why people quit.* Supporting: the 2023 figures were 42% for loneliness and 36% for demanding users [S02, p. 26]; the 2021 figure was 37% [S03, p. 15]. The latest quit reasons are from 2023: burnout was a reason for 44% of those who quit or considered quitting [S02, p. 30]. Heath's report names toxic behaviour and hyper-responsibility alongside pay [S29].
+*§2.3 verdict: Partial. In 2024, among the things maintainers dislike about the work, 48% named being thankless or underappreciated, 43% added personal stress, 39% users being too demanding (chart only) and 32% loneliness [S01, pp. 38–39]. These are dislikes; the 2024 report did not ask why people quit.* Supporting: the 2023 figures were 42% for loneliness [S02, p. 26] and 36% for demanding users [S02, p. 25, chart]; the 2021 figure was 37% [S03, p. 15]. The latest quit reasons are from 2023: burnout was a reason for 44% of those who quit or considered quitting [S02, p. 30]. Heath's report names toxic behaviour and hyper-responsibility alongside pay [S29].
 
 The OMF text covers more of the recognition side than of the user side. R1 to R4 use mechanisms the text already contains. The user side has only partial written cover (R2), and the rest is an Extension (R5).
 
@@ -94,7 +94,7 @@ The OMF text covers more of the recognition side than of the user side. R1 to R4
   - *Evidence:* users too demanding 39%, lonely 32% [S01, pp. 38–39].
 - **R5. Back funded maintainers in moderating and handling users and in enforcing a code of conduct against abusive users, with moderation staff and escalation support.** **Extension.** No whitepaper addresses demanding or hostile users. The OMF, dOSPO and ORF texts contain no mechanism for codes of conduct, moderation or harassment.
   - *Example:* foundation-level code-of-conduct committees (qualitative; no figure used).
-  - *Evidence:* users too demanding 39% [S01, p. 38]. A code of conduct is in place on 53% of projects [S01, p. 32]. A conflict-resolution process exists on 17% of projects, and 50% would adopt one if paid [S01, p. 36]. Supporting: demanding users 36% in 2023 [S02, p. 26] and 37% in 2021 [S03, p. 15].
+  - *Evidence:* users too demanding 39% [S01, p. 38]. A code of conduct is in place on 53% of projects [S01, p. 32]. A conflict-resolution process exists on 17% of projects, and 50% would adopt one if paid [S01, p. 36]. Supporting: demanding users 36% in 2023 [S02, p. 25, chart] and 37% in 2021 [S03, p. 15].
 
 *A risk the text already guards.* ORF's LTS and SLA family (§8 Family B, Extended Lifecycle Support, p. 24) would put a price on maintainer availability, which could add to user pressure. The Service Capacity Test (§10, p. 28) and the "Liability Without Capacity" failure mode (§18, p. 42) are written to stop an ecosystem selling capacity it does not have. This section adds nothing to them.
 
