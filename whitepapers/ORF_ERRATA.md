@@ -39,12 +39,21 @@ This entry supersedes the earlier "downgrade, do not delete the precedent" parag
 
 Confidence: High. Both pages are JavaScript-rendered; rendered PDF and DOM captures taken 9 October 2026 are archived at [`docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.pdf`](../docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.pdf) (with `.html`) and [`docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.pdf`](../docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.pdf) (with `.html`). The report also values the same donations at report-date value ($2,634,505); cite the time-of-donation figure unless the valuation basis is stated. "Commitments above $80 million" is not in the 2025 annual report and stays Unverified. The 196-member figure (22 May 2026, Q2 audit) is superseded, not wrong for its date. Verification record: [`docs/chains/researchy-chain-check.md`](../docs/chains/researchy-chain-check.md).
 
+## Cardano POSM — 2025 treasury withdrawal confirmed on-chain (approved 9 October 2026)
+
+Move "5.885M ADA" out of "Claims to mark unverified". Use:
+
+> The Open Source Committee's 2025 budget for the Paid Open Source Model was funded by a Cardano treasury withdrawal of ₳5,885,000, governance action 8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e#11, proposed in epoch 570, ratified in epoch 575 and enacted in epoch 576 (12 August 2025).
+> — https://cardanoscan.io/govAction/gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlqkqx0ecg ; https://api.koios.rest/api/v1/proposal_list?proposal_id=eq.gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlqkqx0ecg
+
+Confidence: High (on-chain record) for the amount and enactment. This is a single 2025 tranche. The ₳4,601,000 2026–27 OSC request exists only as text on the OSC GitBook and **has not been submitted or enacted on-chain**: there is no TreasuryWithdrawals action for that amount on Koios as of epoch 660 (checked 9 October 2026). Do not describe it as approved, ratified or enacted. Under the repo rule, treasury withdrawals are OMF deployment, not ORF replenishment. "$300K bounty fully utilized" stays unverified. Verification record: [`docs/chains/researchy-chain-check.md`](../docs/chains/researchy-chain-check.md).
+
 ## Claims to mark unverified, not to invent replacements for
 
 Move these from High to "citation not yet attached" until a page is opened:
 
 - Polkadot "~$70.6M 2025 treasury spend," Anemoy "$1.5M," referenda #1122, #1416, #1591. The wiki page supports the legal design only: https://wiki.polkadot.com/general/pcf/
-- POSM "5.885M ADA" and "$300K bounty fully utilized." The Intersect explainer does not contain them: https://www.intersectmbo.org/news/the-paid-open-source-model
+- POSM "$300K bounty fully utilized." Not found as utilization. The only $300K located is a *planned* ₳600K (≈$300K at $0.50/ADA) bug-bounty allocation in the 2025 budget, not a utilization figure: https://governancespace.com/en-us/budget-discussions/152
 - Octant "Epoch 8: ~460 ETH (~$1.7M)." The fetched source is the 8 August 2023 announcement that the Foundation stakes 100,000 ETH, with validators not yet fully online: https://golem.foundation/2023/08/08/announcing-octant.html
 - Deep Funding "$220K," "34 seed repos," "5,000+ dependencies." Not fetched.
 - Tidelift: change "acquired by Sonar" to "under a definitive agreement announced by Sonar to acquire Tidelift," unless a closing announcement is added. Named customers hold.

@@ -11,6 +11,7 @@
 
 ### Changed
 - **Protocol Guild errata** (9 October 2026): `whitepapers/ORF_ERRATA.md` now carries the approved 2025 figures ($7,231,668 valued at time of donation, 6,202 unique donors) and 190 members as of 5 August 2026 (−6 from 196), Confidence High; applied to the v1.1 manuscript and `docs/release1-research.md`.
+- **Cardano POSM errata** (9 October 2026): `whitepapers/ORF_ERRATA.md` moves ₳5,885,000 out of "Claims to mark unverified" into a corrected entry rated High (on-chain; governance action enacted epoch 576, 12 August 2025) and states that the ₳4,601,000 2026–27 request was never submitted or enacted on-chain; applied to the v1.1 manuscript.
 - **`docs/precedents/CARDANO_POSM.md`**: dated treasury evidence; the ≈99.8% reserve-issuance share is labeled *derived*.
 
 ### Removed
