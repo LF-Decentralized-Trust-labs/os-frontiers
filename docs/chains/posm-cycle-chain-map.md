@@ -110,7 +110,7 @@ flowchart LR
   P5 -.-> LEAK(["value exits: burn / validators / miners / buyback"])
 
   %% Reference implementation
-  ADA(["Cardano (ref., #11)<br/>P1-P5 live; P6 = τ 20% of fees+reserves<br/>≈99.8% reserve issuance (derived)"]) --- P6
+  ADA(["Cardano (ref., #11 excl. WBT / #12 gas-token rule, CoinGecko 9 Oct 2026)<br/>P1-P5 live; P6 = τ 20% of fees+reserves<br/>≈99.8% reserve issuance (derived)"]) --- P6
 
   %% Current placement of top-10 chains (furthest connected POSM stage)
   BTC(["Bitcoin<br/>donor stewards (OpenSats/Brink)"]) --- P3
@@ -140,7 +140,7 @@ flowchart LR
   BTC -.->|"Brink 2026: enterprise testing software (D0)"| P4
 ```
 
-**Legend:** `---` = current placement (the furthest POSM stage reached through a connected, evidenced path; a link to LEAK means value generated at P5 leaves without returning). `==>` = a dated direction-of-travel signal. `-.->` = a possible path that nobody has announced or decided. Mermaid syntax parses (mermaid v11). **No top-10 chain closes P6 for OSS.** Cardano is shown as the reference implementation (#11 by market cap on 9 Oct 2026).
+**Legend:** `---` = current placement (the furthest POSM stage reached through a connected, evidenced path; a link to LEAK means value generated at P5 leaves without returning). `==>` = a dated direction-of-travel signal. `-.->` = a possible path that nobody has announced or decided. Mermaid syntax parses (mermaid v11). **No top-10 chain closes P6 for OSS.** Cardano is shown as the reference implementation (#11 by market cap with WBT excluded, #12 under the gas-token rule, CoinGecko 9 Oct 2026; see `top100-method.md`).
 
 ## 5. Per-chain placement and direction of travel
 
