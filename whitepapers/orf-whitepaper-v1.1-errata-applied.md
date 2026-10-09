@@ -4,7 +4,7 @@
 
 > **Edition:** v1.1 (errata-applied manuscript) · **Stage 0** Research Candidate  
 > **Author:** Christian Taylor — CoFounder & Chief Open Source Officer, Open Source Cowboy Consulting  
-> **Date:** 18 August 2026 (v1.0) · **Errata incorporated:** 1 October 2026 PT  
+> **Date:** 18 August 2026 (v1.0) · **Errata incorporated:** 1 October 2026 PT; Protocol Guild and Cardano POSM errata 9 October 2026 PT  
 > **Organization:** Open Source Cowboy Consulting · Web3 Open Source and Governance Advisory Firm  
 > **Series:** Third installment alongside dOSPO (who decides) and OMF (how resources go out). Each framework usable independently.  
 > **Controlling citation rule:** Where this manuscript differs from `orf-v1.0.pdf`, **this text controls**. Source errata: `whitepapers/ORF_ERRATA.md` / `sources/ORF_ERRATA.md`.  
@@ -121,10 +121,10 @@ Sources: https://gitcoin.co/program · Optimism Year 3 forum post (below). Site 
 | Optimism Superchain | Greater of 2.5% Chain Revenue or 15% Net Onchain Profit (standard chains); OP Mainnet 100% | Year 3 narrative + buyback vote (see below) | Partial |
 | ENS DAO / Endowment | Canonical `.eth` fees + governed endowment | Two dated closes (KPK; EP 6.46) — do not stack | Closest |
 | Tidelift | Enterprise assurance subscriptions | Named customers; Sonar **definitive agreement** to acquire | Partial |
-| Protocol Guild | Voluntary ~1% pledges, vesting, revocable | **196** funded members (22 May 2026); dollar totals not High | Partial |
+| Protocol Guild | Voluntary ~1% pledges, vesting, revocable | 2025: **$7,231,668** donated (valued at time of donation) from **6,202** unique donors; **190** funded members (5 Aug 2026) | Partial |
 | Polkadot / PCF | Fees, slashes, issuance; Cayman executor | Legal design sourced; 2025 spend magnitudes Unverified | Partial |
 | Octant (Golem) | Staking yield → public goods | 100k ETH stake announcement sourced; epoch totals Unverified | No |
-| Cardano POSM | Treasury-funded maintenance programs | Program shape sourced; ADA/$ bounty figures Unverified | No (deployment) |
+| Cardano POSM | Treasury-funded maintenance programs | Program shape sourced; ₳5,885,000 2025 withdrawal High (on-chain, enacted epoch 576); ₳4,601,000 2026–27 request not submitted on-chain; $300K bounty utilization Unverified | No (deployment) |
 | Drips / Superfluid / Deep Funding | Rails / allocation engines | Taxonomy: **zero replenishment**; Deep Funding $ figures Unverified | n/a |
 
 ### Optimism — The Structural Revenue Model
@@ -156,13 +156,13 @@ Tidelift — **under a definitive agreement announced by Sonar to acquire Tideli
 
 Protocol Guild demonstrates coordinated voluntary replenishment as a **mechanism**: voluntary ≈1% token/yield pledges, vesting, and revocability. That is Family D contribution material — useful diversification — not a foundation for guaranteed operating liabilities.
 
-Protocol Guild’s Q2 2026 membership audit records **196 funded members as of 22 May 2026**, up from 187 the previous quarter. Dollar totals widely repeated for 2025 — including $7.2 million from 6,202 donors, and commitments above $80 million — were **not recoverable** from a rendered primary page in this review and must not be published as High until the 2025 annual report is quoted directly.  
-— https://www.protocolguild.org/blog/20260604-Q2-quarterly-audit
+Protocol Guild’s 2025 Annual Report (29 January 2026) reports total 2025 donations of **$7,231,668, valued at time of donation**, from **6,202 unique donors**. Its Q3 2026 membership audit (26 August 2026) records **190 funded members as of 5 August 2026**, a net decrease of 6 from 196 the previous quarter. "Commitments above $80 million" is not in the annual report and remains Unverified.  
+— https://www.protocolguild.org/blog/20260129-annual-report-2025 ; https://www.protocolguild.org/blog/20260826-q3-quarterly-audit (rendered captures: `docs/chains/data/`)
 
 ### Polkadot / PCF, Cardano POSM, Octant — what is and is not attached
 
 - **Polkadot PCF:** Wiki supports Cayman foundation legal design (Neutral Legal Entity template). Figures such as “~$70.6M 2025 treasury spend,” Anemoy “$1.5M,” and referenda #1122/#1416/#1591 remain **Unverified** — primary citations not yet recovered. https://wiki.polkadot.com/general/pcf/  
-- **Cardano POSM:** Intersect explainer supports program shape (OSC/OSO, retainers, Code for Us, incubation) — deployment precedent, not replenishment. “5.885M ADA” and “$300K bounty fully utilized” are **not** on that explainer. https://www.intersectmbo.org/news/the-paid-open-source-model  
+- **Cardano POSM:** Intersect explainer supports program shape (OSC/OSO, retainers, Code for Us, incubation) — deployment precedent, not replenishment. https://www.intersectmbo.org/news/the-paid-open-source-model . The Open Source Committee's 2025 POSM budget was funded by a Cardano treasury withdrawal of **₳5,885,000**, governance action `8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e#11`, proposed in epoch 570, ratified in epoch 575 and **enacted in epoch 576 (12 August 2025)** — **High (on-chain)**. https://cardanoscan.io/govAction/gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlqkqx0ecg . This is a single 2025 tranche: the ₳4,601,000 2026–27 OSC request exists only as GitBook text and was **never submitted or enacted on-chain** (no matching TreasuryWithdrawals action as of epoch 660, checked 9 October 2026). Treasury withdrawals are OMF deployment, not ORF replenishment. “$300K bounty fully utilized” remains **Unverified**; the only $300K located is a *planned* ₳600K bug-bounty allocation in the 2025 budget.  
 - **Octant:** 8 August 2023 announcement that the Foundation stakes 100,000 ETH (validators not yet fully online on that page). “Epoch 8: ~460 ETH (~$1.7M)” remains **Unverified** — primary citation not yet recovered. https://golem.foundation/2023/08/08/announcing-octant.html
 
 ### The Routing Mirage
@@ -237,10 +237,10 @@ The evidence from production systems supports each **segment** of the loop. What
 | Optimism standard-chain greater-of rule; OP Mainnet 100% carve-out; Jan 2026 buyback pilot | docs.optimism.io/governance/capital-allocation; buybacks blog; CoinDesk 28 Jan 2026 | High for mechanism/vote existence; Medium as audited cash |
 | Cumulative Superchain 17,756 ETH; Base 6,210; OP Mainnet 11,170; 26.4M OP Retro / 437 grantees; residual not itemized; 5,868 ETH prior-12-mo in buyback proposal | Year 3 forum 24 Jun 2025; buybacks blog 8 Jan 2026 | Medium (Foundation narrative; Gate 2) |
 | ENS: dated KPK vs EP 6.46 closes; ~20% opex from endowment | KPK review 21 Jan 2026; EP 6.46 | Medium — do not stack AUM cells |
-| Protocol Guild: 196 members (22 May 2026); dollars not High | Q2 2026 audit post | Membership High for audit statement; dollars Unverified |
+| Protocol Guild: $7,231,668 (time of donation) from 6,202 unique donors in 2025; 190 members (5 Aug 2026, −6 from 196) | Annual Report 2025 (29 Jan 2026); Q3 2026 audit (26 Aug 2026); captures in `docs/chains/data/` | High (PG errata, 9 Oct 2026); ">$80M commitments" Unverified |
 | Tidelift: definitive agreement to acquire; named customers | Sonar press release | Sourced for agreement + names |
 | Polkadot PCF legal design | wiki.polkadot.com/general/pcf/ | Sourced design; spend Unverified |
-| POSM program shape | Intersect explainer | Sourced programs; budget Unverified |
+| POSM program shape; ₳5,885,000 2025 treasury withdrawal (enacted epoch 576, 12 Aug 2025); ₳4,601,000 2026–27 request not on-chain | Intersect explainer; Cardanoscan / Koios governance action `8ad3d454…833e#11` | Programs sourced; withdrawal High (on-chain); $300K bounty utilization Unverified |
 | Octant 100k ETH announcement | Golem 8 Aug 2023 | Sourced announcement; epochs Unverified |
 | Gitcoin = Family D + allocation; ≠ replenishment | gitcoin.co/program + Year 3 cut | Taxonomy High; counters are site counters |
 | No complete closed loop under ORF names among reviewed ecosystems | OSFL Evidence Register judgment | Judgment |
@@ -258,6 +258,8 @@ The evidence from production systems supports each **segment** of the loop. What
 - KPK (2026). KPK 2025 review for the ENS endowment. 21 January 2026. https://discuss.ens.domains/t/kpk-2025-review-for-the-ens-endowment/21829  
 - ENS DAO. EP 6.46 Investment Policy Statement. https://docs.ens.domains/dao/proposals/6.46/  
 - Protocol Guild. Q2 2026 Quarterly Audit. https://www.protocolguild.org/blog/20260604-Q2-quarterly-audit  
+- Protocol Guild (2026). Annual Report 2025. 29 January 2026. https://www.protocolguild.org/blog/20260129-annual-report-2025  
+- Protocol Guild (2026). Q3 2026 Membership Audit. 26 August 2026. https://www.protocolguild.org/blog/20260826-q3-quarterly-audit  
 - Sonar. Sonar to acquire Tidelift (definitive agreement announcement). https://www.sonarsource.com/company/press-releases/sonar-to-acquire-tidelift/  
 - Polkadot Wiki. Polkadot Community Foundation. https://wiki.polkadot.com/general/pcf/  
 - Intersect. The Paid Open Source Model. https://www.intersectmbo.org/news/the-paid-open-source-model  

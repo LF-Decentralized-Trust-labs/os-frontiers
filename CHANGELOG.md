@@ -6,6 +6,14 @@
 
 ## Unreleased
 
+### Added
+- **OSFL release 1, §3.3 (`docs/chains/`)** (9 October 2026): top-10 chains vs ORF and the POSM cycle, Researchy verification pass, and dated source captures in `docs/chains/data/`. Stage 0; no Hard Gate passed.
+
+### Changed
+- **Protocol Guild errata** (9 October 2026): `whitepapers/ORF_ERRATA.md` now carries the approved 2025 figures ($7,231,668 valued at time of donation, 6,202 unique donors) and 190 members as of 5 August 2026 (−6 from 196), Confidence High; applied to the v1.1 manuscript and `docs/release1-research.md`.
+- **Cardano POSM errata** (9 October 2026): `whitepapers/ORF_ERRATA.md` moves ₳5,885,000 out of "Claims to mark unverified" into a corrected entry rated High (on-chain; governance action enacted epoch 576, 12 August 2025) and states that the ₳4,601,000 2026–27 request was never submitted or enacted on-chain; applied to the v1.1 manuscript.
+- **`docs/precedents/CARDANO_POSM.md`**: dated treasury evidence; the ≈99.8% reserve-issuance share is labeled *derived*.
+
 ### Removed
 - **Contracts directory** (20 August 2026): `contracts/solidity/ORFSlaVault.sol`, `contracts/aiken/validators/orf_sla_vault.ak`, and `contracts/README.md` were deleted (commit message "Delete contracts directory"). They are not in the tree and are not a present Stage 0 artifact. The [0.8.0-rc.1] Changed note about `ORFSlaVault.sol` records work that was later removed.
 

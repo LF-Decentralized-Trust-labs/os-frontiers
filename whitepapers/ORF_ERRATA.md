@@ -30,19 +30,30 @@ Also fix the spelling in the research-finding box and the bibliography: **Hoffma
 
 The Synopsys bibliography URL is the SBOM blog, which does contain the 96% sentence and also a conflicting "2,400 codebases / 81%" line. Add the 27 February 2024 press release as the report announcement and note that the press release states the high-risk finding (74%) and does not restate 96%.
 
-## Protocol Guild — downgrade, do not delete the precedent
+## Protocol Guild — corrected scale (approved 9 October 2026)
 
-Keep the mechanism (voluntary 1% pledges, vesting, revocable). Replace the scale sentence until the annual-report body is captured:
+This entry supersedes the earlier "downgrade, do not delete the precedent" paragraph, which held the 2025 dollar totals back until the 2025 annual report was quoted directly. That condition is now met. Keep the mechanism (voluntary 1% pledges, vesting, revocable). Replace the scale sentence with:
 
-> Protocol Guild's Q2 2026 membership audit records 196 funded members as of 22 May 2026, up from 187 the previous quarter. Dollar totals widely repeated for 2025 — including $7.2 million from 6,202 donors, and commitments above $80 million — were not recoverable from a rendered primary page in this review and should not be published as High until the 2025 annual report is quoted directly.
-> — https://www.protocolguild.org/blog/20260604-Q2-quarterly-audit
+> Protocol Guild's 2025 Annual Report (29 January 2026) reports total 2025 donations of $7,231,668, valued at time of donation, from 6,202 unique donors. Its Q3 2026 membership audit (26 August 2026) records 190 funded members as of 5 August 2026, a net decrease of 6 from 196 the previous quarter.
+> — https://www.protocolguild.org/blog/20260129-annual-report-2025 ; https://www.protocolguild.org/blog/20260826-q3-quarterly-audit
+
+Confidence: High. Both pages are JavaScript-rendered; rendered PDF and DOM captures taken 9 October 2026 are archived at [`docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.pdf`](../docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.pdf) (with `.html`) and [`docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.pdf`](../docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.pdf) (with `.html`). The report also values the same donations at report-date value ($2,634,505); cite the time-of-donation figure unless the valuation basis is stated. "Commitments above $80 million" is not in the 2025 annual report and stays Unverified. The 196-member figure (22 May 2026, Q2 audit) is superseded, not wrong for its date. Verification record: [`docs/chains/researchy-chain-check.md`](../docs/chains/researchy-chain-check.md).
+
+## Cardano POSM — 2025 treasury withdrawal confirmed on-chain (approved 9 October 2026)
+
+Move "5.885M ADA" out of "Claims to mark unverified". Use:
+
+> The Open Source Committee's 2025 budget for the Paid Open Source Model was funded by a Cardano treasury withdrawal of ₳5,885,000, governance action 8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e#11, proposed in epoch 570, ratified in epoch 575 and enacted in epoch 576 (12 August 2025).
+> — https://cardanoscan.io/govAction/gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlqkqx0ecg ; https://api.koios.rest/api/v1/proposal_list?proposal_id=eq.gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlqkqx0ecg
+
+Confidence: High (on-chain record) for the amount and enactment. This is a single 2025 tranche. The ₳4,601,000 2026–27 OSC request exists only as text on the OSC GitBook and **has not been submitted or enacted on-chain**: there is no TreasuryWithdrawals action for that amount on Koios as of epoch 660 (checked 9 October 2026). Do not describe it as approved, ratified or enacted. Under the repo rule, treasury withdrawals are OMF deployment, not ORF replenishment. "$300K bounty fully utilized" stays unverified. Verification record: [`docs/chains/researchy-chain-check.md`](../docs/chains/researchy-chain-check.md).
 
 ## Claims to mark unverified, not to invent replacements for
 
 Move these from High to "citation not yet attached" until a page is opened:
 
 - Polkadot "~$70.6M 2025 treasury spend," Anemoy "$1.5M," referenda #1122, #1416, #1591. The wiki page supports the legal design only: https://wiki.polkadot.com/general/pcf/
-- POSM "5.885M ADA" and "$300K bounty fully utilized." The Intersect explainer does not contain them: https://www.intersectmbo.org/news/the-paid-open-source-model
+- POSM "$300K bounty fully utilized." Not found as utilization. The only $300K located is a *planned* ₳600K (≈$300K at $0.50/ADA) bug-bounty allocation in the 2025 budget, not a utilization figure: https://governancespace.com/en-us/budget-discussions/152
 - Octant "Epoch 8: ~460 ETH (~$1.7M)." The fetched source is the 8 August 2023 announcement that the Foundation stakes 100,000 ETH, with validators not yet fully online: https://golem.foundation/2023/08/08/announcing-octant.html
 - Deep Funding "$220K," "34 seed repos," "5,000+ dependencies." Not fetched.
 - Tidelift: change "acquired by Sonar" to "under a definitive agreement announced by Sonar to acquire Tidelift," unless a closing announcement is added. Named customers hold.
@@ -54,6 +65,10 @@ Move these from High to "citation not yet attached" until a page is opened:
 > Optimism (current). Capital allocation. https://docs.optimism.io/governance/capital-allocation
 >
 > CoinDesk (2026). Optimism governance approves OP token buyback plan tied to superchain revenue. 28 January 2026. https://www.coindesk.com/business/2026/01/28/optimism-governance-approves-op-token-buyback-plan-tied-to-superchain-revenue
+>
+> Protocol Guild (2026). Annual Report 2025. 29 January 2026. https://www.protocolguild.org/blog/20260129-annual-report-2025
+>
+> Protocol Guild (2026). Q3 2026 Membership Audit. 26 August 2026. https://www.protocolguild.org/blog/20260826-q3-quarterly-audit
 >
 > Hoffmann, M., Nagle, F., and Zhou, Y. (2024). The Value of Open Source Software. Harvard Business School Working Paper 24-038. https://www.hbs.edu/faculty/Pages/item.aspx?num=65230
 >
