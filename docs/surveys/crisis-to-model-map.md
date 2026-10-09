@@ -5,7 +5,7 @@
 > **Status:** OSFL research note · **Stage 0** · **no Hard Gate is passed** by ORF or by any ecosystem named here.
 > **Prepared:** 9 Oct 2026 (PT). Executor pass. **Not pushed to GitHub.** The driver-based version is archived at `surveys/archive/crisis-to-model-map.driver-version.md`.
 >
-> **Canon.** The dOSPO v1.0, OMF v1.0 and ORF v1.0 whitepapers, with `whitepapers/ORF_ERRATA.md` controlling over `orf-v1.0.pdf`. Source: repo `LF-Decentralized-Trust-labs/os-frontiers` @ `9a82a9c` (8 Oct 2026 07:42 PT; no newer commit on main at 9 Oct). **This note proposes no change to the model.** Programs are named only as **labelled examples** of things that already fit a written mechanism. Gaps are places where those written mechanisms need such programs.
+> **Canon.** The dOSPO v1.0, OMF v1.0 and ORF v1.0 whitepapers, with `whitepapers/ORF_ERRATA.md` controlling over `orf-v1.0.pdf`. Source: repo `LF-Decentralized-Trust-labs/os-frontiers` @ `9a82a9c` (8 Oct 2026 07:42 PT; no newer commit on main at 9 Oct). **This note proposes no change to the model.** Where a need has no written mechanism, it is recorded as a gap; the four Extensions in §2.7 are labelled examples of what could fill those gaps, not spec changes. Programs are named only as **labelled examples** of things that already fit a written mechanism. Gaps are places where those written mechanisms need such programs.
 >
 > **References.**
 > - Section refs use PDF page numbers of `dospo-whitepaper-v1.0.pdf`, `open-maintenance-framework-omf-v1.0.pdf` and `orf-v1.0.pdf`. Repo companion documents (e.g. `omf/PROGRAM_PORTFOLIO.md`) are cited by path and are not the whitepaper.
@@ -113,7 +113,7 @@ Project types used throughout:
 - **Limit:** pay reaches only projects that an ecosystem's dependency audit selects. These are chosen by centrality and inverse bus factor: OMF §14 p37–38; App A p47; App E p61, where W2 has weight 0.25.
 
 **Labelled examples (not spec changes)**
-- **Protocol Guild vesting:** OMF §8 p23 and §12 Instr. 2 p32 name it (S27). The 2025 distribution total is a later-errata candidate and is not used here (`docs/chains/pg-followups.md` §4).
+- **Protocol Guild vesting:** OMF §8 p23 and §12 Instr. 2 p32 name it. $7,231,668 raised from 6,202 unique donors in 2025 (S27, Validated).
 - **Tidelift-style recurring payments:** OMF §12 Instr. 2 p32 cites Tidelift 2024. 19% of maintainers report Tidelift income (S01 p15). The publisher itself pays, so treat this figure with care.
 - **STA Fellowship:** OMF §9 p24 cites STA milestone contracts.
 - **Open Source Pledge** as an ORF Family D inflow (§8 p25): $3,756,826 in the past year, self-reported (S20).
@@ -449,3 +449,5 @@ Project types used throughout:
 - **Verdict:** unchanged (6/8 for portfolio projects; N3 Gap; N7 Partial; long tail out of reach; Stage 0). No rating moved: N3 remains a Gap because no whitepaper has a recipient-side route, whatever the metadata shows, and N7 remains Partial on dislike evidence plus 2023 burnout as a quit reason.
 
 **9 Oct 2026, earlier:** restructured needs-first on the Tidelift spine; whitepaper ref corrections in §6. The driver-based version is archived.
+
+- 2026-10-09 05:47 PT: Protocol Guild $12.4M swapped for validated $7,231,668 / 6,202 donors ($12.4M held for later errata); bridging sentence added between 'no change proposed' and the section 2.7 Extensions.

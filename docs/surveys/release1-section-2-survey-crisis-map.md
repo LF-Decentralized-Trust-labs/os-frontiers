@@ -12,7 +12,7 @@ This section asks whether the three-part model meets the needs that open source 
 
 The needs are taken from the Tidelift *State of the Open Source Maintainer* reports and set out in the order of Tidelift's own questions. Other surveys are used only to corroborate or qualify them.
 
-The model is read strictly as written in the dOSPO, OMF and ORF version 1.0 whitepapers, with the ORF errata controlling. No change to the model is proposed.
+The model is read strictly as written in the dOSPO, OMF and ORF version 1.0 whitepapers, with the ORF errata controlling. No change to the model is proposed. Where a need has no written mechanism, this section records a gap; the four Extensions in §2.7 are labelled examples of what could fill those gaps, not spec changes.
 
 The answer is qualified.
 
@@ -155,7 +155,7 @@ The programs below are **examples**. They are not recommendations and imply no c
 
 | Example | Mechanism it fits | Needs | Evidence |
 |---|---|---|---|
-| Protocol Guild vesting registry | OMF §8, p. 23; §12 Instrument 2, p. 32 | N1, N5 | 2025 distribution total not used here: later-errata candidate (`docs/chains/pg-followups.md` §4) [S27] |
+| Protocol Guild vesting registry | OMF §8, p. 23; §12 Instrument 2, p. 32 | N1, N5 | $7,231,668 raised from 6,202 unique donors in 2025 [S27, Validated] |
 | Sovereign Tech Agency contracts and Fellowship | OMF §9, p. 24; §12 Instrument 3, p. 33; App. C, pp. 55–56 | N1, N4, N5 | €41.1 million across 118 technologies [S16] |
 | Alpha-Omega | OMF §12 Instruments 1–3; dOSPO §6, p. 19 | N2, N4 | $6,155,410 in 31 grants in 2025 [S17, p. 26] |
 | GitHub Secure Open Source Fund | OMF §12 Instrument 1, p. 31; §9, p. 24 | N2, N8 | $10,000 per project [S18] |
@@ -210,3 +210,5 @@ Each gap marks a place where a written mechanism needs an external program befor
 - **Verdict:** unchanged. Six of eight needs are met for portfolio projects, N3 is a gap, N7 is partial, the long tail is out of reach, and the model is at Stage 0. The N3 and N7 reframings change the evidence wording, not the ratings.
 
 **9 Oct 2026, earlier:** restructured needs-first on the Tidelift spine. The driver-based version is archived at `surveys/archive/release1-section-2.driver-version.md`.
+
+- 2026-10-09 05:47 PT: Protocol Guild $12.4M swapped for validated $7,231,668 / 6,202 donors ($12.4M held for later errata); bridging sentence added between 'no change proposed' and the section 2.7 Extensions.
