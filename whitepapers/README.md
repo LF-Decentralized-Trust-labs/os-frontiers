@@ -29,7 +29,7 @@ The canonical papers are the PDFs. The markdown files beside them are pointers, 
 ## 1. Original PDF Whitepaper Downloads
 
 - **dOSPO Whitepaper PDF**: [`dospo-whitepaper-v1.0.pdf`](./dospo-whitepaper-v1.0.pdf)
-- **OMF Whitepaper PDF**: [`open-maintenance-framework-omf-v1.0.pdf`](./open-maintenance-framework-omf-v1.0.pdf)
+- **OMF Whitepaper PDF**: [`open-maintenance-framework-omf-v1.0.pdf`](./open-maintenance-framework-omf-v1.0.pdf). Citation layer: [`OMF_ERRATA.md`](./OMF_ERRATA.md). Where the errata differs from the PDF, the errata controls until those sentences are pasted into a new PDF.
 - **ORF Whitepaper PDF**: [`orf-v1.0.pdf`](./orf-v1.0.pdf). Citation layer: [`ORF_ERRATA.md`](./ORF_ERRATA.md). Where the errata differs from the PDF, the errata controls until those sentences are pasted into a new PDF.
 
 ---

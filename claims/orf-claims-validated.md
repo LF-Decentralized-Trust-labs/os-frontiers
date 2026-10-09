@@ -29,7 +29,7 @@
 ## Hard flags for synthesis (do not soft-pedal)
 
 1. No ecosystem clears Gates 1–8 / PCR≥1.0 under ORF rules (`C-011`, `C-101`).
-2. Protocol Guild / Polkadot spend / POSM budget / Octant Epoch / Deep Funding dollars: **ERRATA unverified** (`C-026`–`C-030`, `C-111`).
+2. Polkadot spend / POSM $300K bounty / Octant Epoch / Deep Funding dollars: **ERRATA unverified** (`C-027`–`C-030`, `C-111`). Protocol Guild (`C-026`, `C-110`) corrected per ORF_ERRATA (approved 9 Oct 2026): $7,231,668 / 6,202 donors / 190 members High, $80M+ Unverified. POSM ₳5,885,000 is High (on-chain) per ORF_ERRATA; see `C-029`.
 3. Tidelift: **definitive agreement**, not acquired (`C-025`, `C-112`).
 4. ENS: **two closes** — do not stack KPK and EP 6.46 (`C-023`, `C-107`).
 5. Optimism: standard-chain vs OP Mainnet 100%; buyback is timed pilot; cite vote (`C-020`–`C-021`, `C-105`–`C-106`).
@@ -243,8 +243,8 @@
 - **Claim:** Protocol Guild: $7.2M from 6,202 donors (2025); 196 members as of Q2 2026; $80M+ committed.
 - **Source:** `whitepapers/orf-v1.0.pdf · §2 Protocol Guild`
 - **Validation status:** ERRATA
-- **Evidence:** sources/ORF_ERRATA.md · Protocol Guild; https://www.protocolguild.org/blog/20260604-Q2-quarterly-audit
-- **Notes:** 196 members (22 May 2026) recoverable. Dollar totals $7.2M / 6,202 donors / $80M+ NOT recoverable from rendered primary page — mark unverified.
+- **Evidence:** whitepapers/ORF_ERRATA.md · "Protocol Guild — corrected scale (approved 9 October 2026)"; https://www.protocolguild.org/blog/20260129-annual-report-2025 (capture docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.html, 2026-10-09); https://www.protocolguild.org/blog/20260826-q3-quarterly-audit (capture docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.html, 2026-10-09)
+- **Notes:** Corrected per errata (High): total 2025 donations $7,231,668, valued at time of donation, from 6,202 unique donors (Annual Report 2025, 29 Jan 2026). Membership: 190 funded members as of 5 Aug 2026, a net decrease of 6 from 196 (Q3 2026 audit, 26 Aug 2026). The 196 figure (22 May 2026) is superseded, not wrong for its date. "$80M+ committed" stays UNVERIFIED.
 
 ## C-027
 
@@ -268,7 +268,7 @@
 - **Source:** `whitepapers/orf-v1.0.pdf · §2 Cardano POSM`
 - **Validation status:** ERRATA
 - **Evidence:** sources/ORF_ERRATA.md; https://www.intersectmbo.org/news/the-paid-open-source-model ; sources/precedents/CARDANO_POSM.md
-- **Notes:** Program shape (retainers, Code for Us, incubation) SUPPORTS as OMF precursor. 5.885M ADA / $300K bounty NOT on explainer — UNVERIFIABLE.
+- **Notes:** Program shape (retainers, Code for Us, incubation) SUPPORTS as OMF precursor. ₳5,885,000 is High (on-chain): governance action 8ad3d454…833e#11, enacted epoch 576 (12 Aug 2025), per ORF_ERRATA (approved 9 Oct 2026). The ₳4,601,000 2026–27 OSC request was never submitted on-chain (Koios, epoch 660, checked 2026-10-09). "$300K bounty fully utilized" is UNVERIFIED: only a planned ₳600K (≈$300K) allocation is documented.
 
 ## C-030
 
@@ -912,11 +912,11 @@
 
 ## C-110
 
-- **Claim:** ERRATA Protocol Guild: Q2 2026 membership audit records 196 funded members as of 22 May 2026 (up from 187); dollar totals $7.2M/6,202 donors and $80M+ not recoverable from rendered primary page — do not publish as High until annual report quoted.
-- **Source:** `whitepapers/ORF_ERRATA.md · Protocol Guild`
+- **Claim:** ERRATA Protocol Guild (corrected scale, approved 9 Oct 2026): 2025 Annual Report (29 Jan 2026) reports total 2025 donations of $7,231,668, valued at time of donation, from 6,202 unique donors; Q3 2026 membership audit (26 Aug 2026) records 190 funded members as of 5 Aug 2026, a net decrease of 6 from 196. "Commitments above $80 million" stays unverified.
+- **Source:** `whitepapers/ORF_ERRATA.md · Protocol Guild — corrected scale (approved 9 October 2026)`
 - **Validation status:** SUPPORTS
-- **Evidence:** ORF_ERRATA.md Protocol Guild; protocolguild.org Q2 2026 audit
-- **Notes:** Membership recoverable; dollars downgraded.
+- **Evidence:** docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.html ($7,231,668 / 6,202); docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.html (190 members); both captured 2026-10-09
+- **Notes:** Supersedes the earlier downgrade (196 members as of 22 May 2026; dollars not High). High for $7,231,668 / 6,202 / 190; UNVERIFIED for $80M+.
 
 ## C-111
 
@@ -1181,7 +1181,7 @@
 | C-020–C-022, C-103–C-106 (Optimism) | PARTIAL / CONFLICTS / ERRATA SUPPORTS | URLs **200**; Year 3 / buyback / OP Mainnet carve-out guidance **unchanged** |
 | C-023–C-024, C-107 (ENS) | PARTIAL / SUPPORTS | KPK + EP 6.46 **200**; **do not stack** closes — unchanged |
 | C-025, C-112 (Tidelift) | CONFLICTS / ERRATA SUPPORTS | Sonar “to acquire” PR **200**; still **definitive agreement**, not acquired |
-| C-026, C-110 (Protocol Guild) | ERRATA / SUPPORTS | Q2 2026 audit **200**; 196 members hold; **$7.2M / $80M+ still not High** |
+| C-026, C-110 (Protocol Guild) | ERRATA / SUPPORTS | Per ORF_ERRATA (approved 9 Oct 2026): **$7,231,668 / 6,202 unique donors High**; **190 members (5 Aug 2026, Q3 2026 audit) High**; **$80M+ still Unverified** |
 | C-027–C-029 (Polkadot / POSM / Octant) | ERRATA | Wikis/explainers/announcement **200**; spend/budget/epoch magnitudes **still Unverified** |
 | C-030, C-113–C-114 (rails / Gitcoin) | PARTIAL / SUPPORTS | Live; taxonomy (≠ replenishment) unchanged |
 | C-101 (no gate passed) | SUPPORTS | Reinforced — Stage 0 |

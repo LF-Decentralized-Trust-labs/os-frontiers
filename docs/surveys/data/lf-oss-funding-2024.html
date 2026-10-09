@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sam Boysel (lead author)">
+<meta name="author" content="Frank Nagle">
+<meta name="author" content="Hilary Carter">
+<meta name="author" content="Anna Hermansen">
+<meta name="author" content="Kevin Crosby">
+<meta name="author" content="Jeff Luszcz">
+<meta name="author" content="Stephanie Lincoln">
+<meta name="author" content="Daniel Yue">
+<meta name="author" content="Manuel Hoffmann">
+<meta name="author" content="Alexander Staub">
+<meta name="dcterms.date" content="2024-11-19">
+
+<title>2024 Open Source Software Funding Report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="2024 Open Source Software Funding Report">
+<meta property="og:description" content="This report summarizes insights from the inaugural 2024 Open Source Software Funding Survey, a collaboration between GitHub, the Linux Foundation, and researchers from Harvard University. The objective of the survey was to better understand how organizations fund, contribute to, and otherwise support open s ource software.">
+<meta name="twitter:title" content="2024 Open Source Software Funding Report">
+<meta name="twitter:description" content="This report summarizes insights from the inaugural 2024 Open Source Software Funding Survey, a collaboration between GitHub, the Linux Foundation, and researchers from Harvard University. The objective of the survey was to better understand how organizations fund, contribute to, and otherwise support open s ource software.">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="floating slimcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <div id="quarto-announcement" data-announcement-id="c9b4dc5947f3334216e79798ac1598f3" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p>Be sure to check out the <a href="https://github.com/sboysel/open-source-funding-toolkit">open source funding toolkit</a> for resources to help improve insight into your organization’s open source impact!</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#about-the-survey" id="toc-about-the-survey" class="nav-link" data-scroll-target="#about-the-survey">About the survey</a></li>
+  <li><a href="#approach" id="toc-approach" class="nav-link" data-scroll-target="#approach">How do organizations contribute to open source software?</a></li>
+  </ul></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a>
+  <ul class="collapse">
+  <li><a href="#key-finding-organizations-invest-billions" id="toc-key-finding-organizations-invest-billions" class="nav-link" data-scroll-target="#key-finding-organizations-invest-billions">Organizations invest billions in open source</a>
+  <ul class="collapse">
+  <li><a href="#key-finding-organizations-invest-billions-extrapolation" id="toc-key-finding-organizations-invest-billions-extrapolation" class="nav-link" data-scroll-target="#key-finding-organizations-invest-billions-extrapolation">How much do <em>all</em> organizations contribute to open source?</a></li>
+  <li><a href="#key-finding-organizations-invest-billions-org-level" id="toc-key-finding-organizations-invest-billions-org-level" class="nav-link" data-scroll-target="#key-finding-organizations-invest-billions-org-level">How much do survey respondents contribute?</a></li>
+  <li><a href="#key-finding-organizations-invest-billions-sources-sinks" id="toc-key-finding-organizations-invest-billions-sources-sinks" class="nav-link" data-scroll-target="#key-finding-organizations-invest-billions-sources-sinks">Sources and sinks</a></li>
+  </ul></li>
+  <li><a href="#key-finding-contribution-blind-spots" id="toc-key-finding-contribution-blind-spots" class="nav-link" data-scroll-target="#key-finding-contribution-blind-spots">Organizations have contribution blind spots when it comes to <em>funding specifics</em></a></li>
+  <li><a href="#key-finding-challenges-of-decentralization" id="toc-key-finding-challenges-of-decentralization" class="nav-link" data-scroll-target="#key-finding-challenges-of-decentralization">Measuring contribution is more challenging when operations are decentralized</a></li>
+  </ul></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">Recommendations</a></li>
+  <li><a href="#detailed-findings" id="toc-detailed-findings" class="nav-link" data-scroll-target="#detailed-findings">Detailed Findings</a>
+  <ul class="collapse">
+  <li><a href="#survey-characteristics" id="toc-survey-characteristics" class="nav-link" data-scroll-target="#survey-characteristics">Survey Characteristics</a></li>
+  <li><a href="#respondent-characteristics" id="toc-respondent-characteristics" class="nav-link" data-scroll-target="#respondent-characteristics">Respondent Characteristics</a></li>
+  <li><a href="#code-contribution" id="toc-code-contribution" class="nav-link" data-scroll-target="#code-contribution">Code Contribution</a></li>
+  <li><a href="#non-code-contribution" id="toc-non-code-contribution" class="nav-link" data-scroll-target="#non-code-contribution">Non-code Contribution</a></li>
+  <li><a href="#motivations-and-incentives" id="toc-motivations-and-incentives" class="nav-link" data-scroll-target="#motivations-and-incentives">Motivations and Incentives</a></li>
+  <li><a href="#investment-prioritization-and-decision-making" id="toc-investment-prioritization-and-decision-making" class="nav-link" data-scroll-target="#investment-prioritization-and-decision-making">Investment Prioritization and Decision-making</a></li>
+  <li><a href="#general-remarks-from-survey-respondents" id="toc-general-remarks-from-survey-respondents" class="nav-link" data-scroll-target="#general-remarks-from-survey-respondents">General Remarks from Survey Respondents</a></li>
+  </ul></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  <li><a href="#appendix-measuring-labor" id="toc-appendix-measuring-labor" class="nav-link" data-scroll-target="#appendix-measuring-labor">Measuring Value of Contribution Labor</a></li>
+  <li><a href="#appendix-extrapolation" id="toc-appendix-extrapolation" class="nav-link" data-scroll-target="#appendix-extrapolation">Extrapolation to population of OSS organizations</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">2024 Open Source Software Funding Report</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Sam Boysel (lead author) <a href="mailto:sboysel@hbs.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Harvard University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Frank Nagle </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Harvard University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Hilary Carter </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            The Linux Foundation
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Anna Hermansen </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            The Linux Foundation
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Kevin Crosby </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            GitHub
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Jeff Luszcz </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            GitHub
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Stephanie Lincoln </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            GitHub
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Daniel Yue </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Georgia Tech
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Manuel Hoffmann </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Harvard University
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Alexander Staub </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            University of Lausanne
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 19, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">November 19, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1 page-columns page-full">
+<h1>Introduction</h1>
+<p>This report summarizes insights from the inaugural <strong>2024 Open Source Software Funding Survey</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, a collaboration between <a href="https://github.com/">GitHub</a>, the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>, and researchers from <a href="https://lish.harvard.edu/">Harvard University</a>. <span style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #fff2a8;">The objective of this study was to better understand <em>how organizations<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> fund, contribute to, and otherwise support open source software.</em></span></p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;A copy of the survey text can be found <a href="oss_funding_survey_copy.pdf">here</a>.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;For the purposes of this survey, an <strong><em>organization</em></strong> includes entities such as private companies, NGOs, or public agencies that commit contribution resources to open source software. Organizations were the focal point of the survey as we seek to better understand the scale of resources these entities pour into open source every year.</p></div></div><div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Key Findings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>Scale</dt>
+<dd>
+<ul>
+<li>Organizations contribute <strong><a href="#key-finding-organizations-invest-billions">$7.7 billion USD annually to open source software</a></strong><a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></li>
+<li>The majority (<strong>86%</strong>) of contribution value is <strong>employee labor</strong>.</li>
+</ul>
+</dd>
+<dt>Challenges</dt>
+<dd>
+<ul>
+<li>Organizations have a good sense of <em>why</em> and <em>how</em> they contribute, but <strong><a href="#key-finding-contribution-blind-spots">blind spots exist for <em>funding specifics</em></a></strong></li>
+<li>Measuring OSS funding becomes even <strong><a href="#key-finding-challenges-of-decentralization">more problematic when operations are decentralized</a></strong></li>
+</ul>
+</dd>
+<dt>Lessons learned</dt>
+<dd>
+<ul>
+<li><strong>Leave “fingerprints” on your organization’s OSS efforts</strong> to help managers, researchers, and other observers more easily collect this information.</li>
+<li><strong>Empower employees to self report</strong> contributions made under the organization’s banner.</li>
+<li><strong>Make OSS contribution part of your monitoring pipeline</strong> by conducting brief, regular surveys within your organization to collect key metrics.</li>
+<li>Consider <strong>sharing data to public OSS funding index</strong>.</li>
+</ul>
+</dd>
+<dt>Toolkit</dt>
+<dd>
+<ul>
+<li>Using these learnings, we develop a collection of resources for organizations looking to improve monitoring and insight into their open source engagement: <a href="https://github.com/sboysel/open-source-funding-toolkit">https://github.com/sboysel/open-source-funding-toolkit</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><div id="fn3"><p><sup>3</sup>&nbsp;We <a href="#key-finding-organizations-invest-billions-extrapolation">extrapolate</a> survey responses to generate a plausible estimate for total organization-driven investment in open source. Allowing some variation in underlying assumptions such as developer wages and total population of contributing organizations, our <a href="#appendix-extrapolation">methodology</a> generates a estimates of annual investment <a href="#fig-extrapolation-scenarios">ranging from $2.9B to $10.1B</a>. See <a href="#appendix-extrapolation">Extrapolation to population of OSS organizations</a> for more details.</p></div></div><section id="about-the-survey" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="about-the-survey">About the survey</h2>
+<ul>
+<li>The primary audience for the survey included OSPOs<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, Heads of Engineering and Product, C-Level Executives, and other individuals with a solid understanding of their organization’s open source engagement.</li>
+<li>This survey was distributed through the Linux Foundation’s <a href="https://www.linuxfoundation.org/blog/linux-foundation-newsletter-july-2024#research">Research Newsletter</a> and mailing list, GitHub newsletters, social media posts<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, <a href="https://todogroup.org/">TODO Group</a>, and outreach to open source leaders.</li>
+<li>The survey findings motivate a <em>call to action</em> and lead us to suggest <a href="#recommendations">several recommendations</a> to improve open source funding and visibility, including: <span style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #fff2a8;">continuous improvement and measuring contribution, empowering organization culture, and contributing back to public data sources for measuring impact.</span></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn4"><p><sup>4</sup>&nbsp;Open Source Program Office. For more information, see <a href="https://github.com/todogroup/ospodefinition.org">todogroup/ospodefinition.org</a> and <a href="https://www.linuxfoundation.org/resources/open-source-guides/creating-an-open-source-program">“Creating an Open Source Program”</a>.</p></div><div id="fn5"><p><sup>5</sup>&nbsp;To include a wider audience, we also announced and distributed the survey link via posts on X/Twitter, LinkedIn, and Mastodon. Less than <strong>7%</strong> of responses come from these broader social channels.</p></div><div id="fn6"><p><sup>6</sup>&nbsp;We discuss the survey’s implementation details and response rates in <a href="#survey-characteristics">Survey Characteristics</a> and provide demographic descriptive statistics of respondents in <a href="#respondent-characteristics">Respondent Characteristics</a>.</p></div></div><p>Start with the <a href="#key-findings">key findings</a> of the survey. We build on these takeaways and suggest <a href="#recommendations">policy recommendations</a> for improving open source funding insight. Finally, a more detailed discussion<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> of insights from each survey module is included in <a href="#detailed-findings">Detailed Findings</a>.</p>
+</section>
+<section id="approach" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="approach">How do organizations contribute to open source software?</h2>
+<div class="cell page-columns page-full" data-layout-align="default">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-funding-diagram" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-funding-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-funding-diagram">flowchart LR
+  A["🏢 Organizations"] --&gt; B{Funding}
+  B --&gt; C("💵 Financial")
+  B --&gt; D("🛠  Labor")
+  D --&gt; E(("💻 Open Source"))
+  C --&gt; E
+  E --&gt; F["🏛  Foundations"]
+  E --&gt; G["👥 Communities"]
+  E --&gt; H["📋 Projects"]
+  E --&gt; I["👷 Maintainers"]
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-funding-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: How Organizations Fund Open Source
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>A core objective of the survey is to estimate the “value-added” to open source by organizations.</p>
+<ul>
+<li><strong><em>How much does a typical organization contribute to open source?</em></strong></li>
+<li><strong><em>How is support distributed across different channels?</em></strong></li>
+<li><strong><em>Can we scale estimates from our survey to capture a wider population of organizations?</em></strong></li>
+</ul>
+<p>We use survey responses to estimate contribution value, taking care to distinguish labor<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> from direct financial contribution.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> In doing so, we can both (a) characterize a typical organization who contributes to open source and (b) extrapolate these findings to establish an aggregate estimate for <em>the value provided to open source by all contributing organizations</em>. <span style="border-radius: 0.2rem; padding: 0 0.2rem 0 0.2rem;background-color: #fff2a8;">This is important because it provides a baseline for the open source ecosystem to understand organizational contribution, funding mechanisms, and provides a way for other organizations to benchmark their own contributions.</span></p>
+<div class="no-row-height column-margin column-container"><div id="fn7"><p><sup>7</sup>&nbsp;<em>Labor contribution</em> considers the extent to which an organization’s employees contribute to open source projects during paid time.</p></div><div id="fn8"><p><sup>8</sup>&nbsp;<em>Direct financial contribution</em> (e.g.&nbsp;“non-code”) includes financial resources and other forms of support for OSS, including donations, event sponsorships, discounted services, training, and research.</p></div></div><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+From survey responses to estimates of contribution value
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Deriving dollar estimates from the raw survey responses requires information on the total number of labor hours a firm dedicates to open source work in a year. We discuss our preferred estimation and aggregation methodology to go from survey responses to labor value estimates in <a href="#appendix-measuring-labor">the appendix</a>.</p>
+</div>
+</div>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+</section>
+<section id="key-findings" class="level1 page-columns page-full">
+<h1>Key Findings</h1>
+<section id="key-finding-organizations-invest-billions" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="key-finding-organizations-invest-billions">Organizations invest billions in open source</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Organizations contribute billions to open source">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Organizations contribute billions to open source
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>Survey Respondents</dt>
+<dd>
+159 respondents<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> to the survey collectively contribute <strong>$1.7 billion</strong> (2023 USD) in annual value to open source. <strong>86%</strong> comes in the form of <strong>contribution labor</strong> by employees.
+</dd>
+<dt>Extrapolating survey to <em>all</em> organizations active in open source</dt>
+<dd>
+Using the survey responses on contribution, we estimate that organizations contribute <strong>$7.7 billion</strong> annually to OSS.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>
+</dd>
+</dl>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><div id="fn10"><p><sup>10</sup>&nbsp;Scaling our estimates of contribution value to <em>all</em> organizations requires a few assumptions. Our primary assumption is that the distribution of organization contribution in the wider population follows the distribution of observed commits to public GitHub repositories made by the employees of organizations. We discuss these in detail in <a href="#appendix-extrapolation">the appendix</a> and show how varying the assumptions could lead to a range of plausible estimates for the total value of organization support for open source.</p></div></div><div class="no-row-height column-margin column-container"><div id="fn9"><p><sup>9</sup>&nbsp;159 organizations from the survey provided either labor or financial contribution information that was greater than zero.</p></div></div><section id="key-finding-organizations-invest-billions-extrapolation" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="key-finding-organizations-invest-billions-extrapolation">How much do <em>all</em> organizations contribute to open source?</h3>
+<p>Under a set of varying hypothetical scenarios, <a href="#fig-extrapolation-scenarios" class="quarto-xref">Figure&nbsp;2</a> plots <em>extrapolations</em> of the OSS contribution value captured in the survey sample to create an estimate for the total value the wider population of OSS organizations contribute to open source each year.</p>
+<div id="cell-fig-extrapolation-scenarios" class="cell page-columns page-full" data-execution_count="3">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-extrapolation-scenarios" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-extrapolation-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-extrapolation-scenarios-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2: Estimates of Total (Global) Annual Contribution Value to OSS by Organizations under different scenarios. We allow assumptions over (1) how many organizations contribute to OSS worldwide and (2) what wage are contributing employees paid. We use data on GitHub public commits matched to organizations using the committers firm-issued email address to estimate the size of the contributing organization population. For example, 6,691 distinct organization make 100 commits within a year according to our data. Our preferred threshold is 5 commits per year (21,399 organizations) and our preferred wage estimate is $45 (2023 USD), to be consistent with @hoffmann2024value."><img src="index_files/figure-html/fig-extrapolation-scenarios-output-1.png" width="811" height="311" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-extrapolation-scenarios-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Estimates of Total (Global) Annual Contribution Value to OSS by Organizations under different scenarios. We allow assumptions over (1) how many organizations contribute to OSS worldwide and (2) what wage are contributing employees paid. We use data on GitHub public commits matched to organizations using the committers firm-issued email address to estimate the size of the contributing organization population. For example, 6,691 distinct organization make 100 commits within a year according to our data. <strong>Our preferred threshold is 5 commits per year (21,399 organizations) and our preferred wage estimate is $45 (2023 USD)</strong>, to be consistent with <span class="citation" data-cites="hoffmann2024value">Hoffmann, Nagle, and Zhou (<a href="#ref-hoffmann2024value" role="doc-biblioref">2024</a>)</span>.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Under our preferred set of assumptions, organizations worldwide contribute over <strong>$7.7 billion</strong> (2023 USD) to OSS each year.</p>
+<p><strong>How can we place these estimates of OSS investment by organizations into context?</strong> A number of other studies have sought to place value on either (1) the aggregate value of open source or (2) the scale of investment required to created this value. Their findings help contextualize the estimate we derive for the value of organization-driven contribution to open source (see <a href="#fig-extrapolation-comparisons" class="quarto-xref">Figure&nbsp;3</a>).</p>
+<div id="cell-fig-extrapolation-comparisons" class="cell page-columns page-full" data-execution_count="4">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-extrapolation-comparisons" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-extrapolation-comparisons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-extrapolation-comparisons-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;3: The value of organization-driven open source investment derived from this survey compared with similar studies."><img src="index_files/figure-html/fig-extrapolation-comparisons-output-1.png" width="790" height="290" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-extrapolation-comparisons-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The value of organization-driven open source investment derived from this survey compared with similar studies.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><span class="citation" data-cites="blind2021impact">Blind et al. (<a href="#ref-blind2021impact" role="doc-biblioref">2021</a>)</span> find that <strong>companies within the EU invested €1 billion into open source in 2018</strong>.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></li>
+<li><span class="citation" data-cites="hoffmann2024value">Hoffmann, Nagle, and Zhou (<a href="#ref-hoffmann2024value" role="doc-biblioref">2024</a>)</span> estimate that the one-time <strong>cost to redevelop core OSS infrastructure from scratch would require $4.15 billion</strong> (2023 USD).</li>
+<li><span class="citation" data-cites="korkmaz2024github">Korkmaz et al. (<a href="#ref-korkmaz2024github" role="doc-biblioref">2024</a>)</span> estimate that <strong>aggregate U.S. investment in open source totalled to $37.8 billion in 2019.</strong><a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></li>
+<li>Using GitHub commit data linked to organizations by committer email, <strong>organizations made nearly 8 million commits to public repositories</strong> in the last year of available data. To match $7.7 billion in total annual contribution at an hourly wage of $45, this would imply that <strong>employees make 1 commit every 21.4 hours</strong> they are paid to work on open source.</li>
+<li>Naively scaling the total value captured by the survey ($1.7 billion) to match the estimated number of contributing organizations worldwide (21k) would imply that over <strong>$225 billion</strong> invested each year, a value roughly equal to the total wage bill for software developers in the United States <span class="citation" data-cites="bls_software_developers2023">(<a href="#ref-bls_software_developers2023" role="doc-biblioref">Bureau of Labor Statistics 2024</a>)</span></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="ref-blind2021impact" class="csl-entry" role="listitem">
+Blind, Knut, Mirko Böhm, Paula Grzegorzewska, Andrew Katz, Sachiko Muto, Sivan Pätsch, and Torben Schubert. 2021. <span>“The Impact of Open Source Software and Hardware on Technological Independence, Competitiveness and Innovation in the EU Economy.”</span> <em>Final Study Report. European Commission, Brussels, Doi</em> 10: 430161.
+</div><div id="fn11"><p><sup>11</sup>&nbsp;The authors further estimate that this investment generates an additional €65 to €95 billion to union-wide GDP.</p></div><div id="ref-korkmaz2024github" class="csl-entry" role="listitem">
+Korkmaz, Gizem, J Bayoán Santiago Calderón, Brandon L Kramer, Ledia Guci, and Carol A Robbins. 2024. <span>“From GitHub to GDP: A Framework for Measuring Open Source Software Innovation.”</span> <em>Research Policy</em> 53 (3): 104954.
+</div><div id="fn12"><p><sup>12</sup>&nbsp;In a notable departure from the present survey, the authors consider investment by U.S.-affiliated developers across 7.6 million public repositories.</p></div><div id="fn13"><p><sup>13</sup>&nbsp;Typically by counting commits made by employees to open source projects.</p></div></div><p>While the previous studies rely on publicly observed contribution information<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a>, the findings of this report are derived from open source contribution estimates self-reported by the organizations themselves.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Methodology
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>How can the contribution value from the survey be scaled up for all organizations?</dt>
+<dd>
+Our survey was targeted towards organizations most likely to support open source. Simply scaling up the total value represented within the survey to match an estimate of the total number of organizations who participate in OSS is likely to <em>overestimate</em> the total value of contribution. To correct this bias, we use a <strong>calibrated bootstrap</strong> procedure to account for the fact that our survey likely is skewed towards large contributors. We describe our extrapolation methodology in detail in <a href="#appendix-extrapolation">the appendix</a>.
+</dd>
+</dl>
+</div>
+</div>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="key-finding-organizations-invest-billions-org-level" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="key-finding-organizations-invest-billions-org-level">How much do survey respondents contribute?</h3>
+<p>In <a href="#fig-financial-labor-distribution" class="quarto-xref">Figure&nbsp;4</a>, we plot the derived values for labor and financial contribution value for each survey respondent who gave answers the the corresponding questions.</p>
+<div id="cell-fig-financial-labor-distribution" class="cell page-columns page-full" data-execution_count="5">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-financial-labor-distribution" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-financial-labor-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-financial-labor-distribution-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;4: Empirical sample of financial and labor contribution value from survey respondents"><img src="index_files/figure-html/fig-financial-labor-distribution-output-1.png" width="789" height="290" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-financial-labor-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Empirical sample of financial and labor contribution value from survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>112 respondents provided information on the level of their organization’s open source contribution labor. 133 respondents provided information on the level of their organization’s financial contribution.<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a> Summary statistics for these distributions are presented in <a href="#tbl-respondents-value" class="quarto-xref">Table&nbsp;1</a></p>
+<div class="no-row-height column-margin column-container"><div id="fn14"><p><sup>14</sup>&nbsp;<strong>192</strong> respondents provided some information for <em>either</em> labor or financial contribution. However, some of these respondents did not provide enough information to derive a proper estimate of contribution using <a href="#appendix-measuring-labor">our empirical methodology</a>. <strong>159</strong> respondents provided sufficient information to calculate either financial or labor contribution value.</p></div></div><div id="tbl-respondents-value" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-respondents-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 12%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 8%">
+<col style="width: 13%">
+<col style="width: 8%">
+<col style="width: 8%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Source</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">Average</th>
+<th style="text-align: right;">Std. Dev.</th>
+<th style="text-align: right;">Min</th>
+<th style="text-align: right;">Median</th>
+<th style="text-align: right;">Max</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Labor</strong></td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">$12,936,973</td>
+<td style="text-align: right;">$63,175,021</td>
+<td style="text-align: right;">$2,592</td>
+<td style="text-align: right;">$345,600</td>
+<td style="text-align: right;">$622,080,000</td>
+<td style="text-align: right;">$1,448,940,960</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Financial</strong></td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">$1,796,592</td>
+<td style="text-align: right;">$7,333,217</td>
+<td style="text-align: right;">$600</td>
+<td style="text-align: right;">$175,000</td>
+<td style="text-align: right;">$77,850,000</td>
+<td style="text-align: right;">$238,946,678</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-respondents-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary statistics for reported contribution value by survey respondents
+</figcaption>
+</figure>
+</div>
+<p>The median responding organization contributes <strong>$520,600</strong> (2023 USD) of annual value to OSS</p>
+<ul>
+<li><strong>$345,600</strong> of this value is in labor, which corresponds to <strong>4 FTE</strong>.<a href="#fn15" class="footnote-ref" id="fnref15" role="doc-noteref"><sup>15</sup></a></li>
+<li><strong>$175,000</strong> is made in direct financial contributions.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn15"><p><sup>15</sup>&nbsp;Full time employees. In <a href="#appendix-measuring-labor">our methodology to measure labor value</a>, one FTE is equal to the annual salary paid to one full time software developer.</p></div></div><p>In aggregate, respondents to the survey contribute <strong>$1.7 billion</strong> (2023 USD) to open source every year.</p>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="key-finding-organizations-invest-billions-sources-sinks" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="key-finding-organizations-invest-billions-sources-sinks">Sources and sinks</h3>
+<p><strong>What are the various channels of open source funding? Where do organizations channel these resources?</strong> The survey allows us to disaggregate the flow of resources from organizations to open source a little further. In <a href="#fig-labor-financial-split" class="quarto-xref">Figure&nbsp;5</a> we plot the breakdown of total respondent contribution into labor and financial resources. <a href="#fig-labor-financial-split" class="quarto-xref">Figure&nbsp;5</a> demonstrates the overwhelming share of value contributed to OSS by organization comes from labor.</p>
+<div id="cell-fig-labor-financial-split" class="cell page-columns page-full" data-execution_count="6">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-labor-financial-split" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-labor-financial-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-labor-financial-split-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;5: Allocation of reported labor and direct financial contributions from survey respondents"><img src="index_files/figure-html/fig-labor-financial-split-output-1.png" width="790" height="122" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-labor-financial-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Allocation of reported labor and direct financial contributions from survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>We disaggregate labor and financial funding further in <a href="#fig-labor-split" class="quarto-xref">Figure&nbsp;6</a> and <a href="#fig-financial-split" class="quarto-xref">Figure&nbsp;7</a>.</p>
+<div id="cell-fig-labor-split" class="cell page-columns page-full" data-execution_count="7">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-labor-split" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-labor-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-labor-split-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;6: Allocation of reported labor contributions from survey respondents"><img src="index_files/figure-html/fig-labor-split-output-1.png" width="789" height="121" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-labor-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Allocation of reported labor contributions from survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-financial-split" class="cell page-columns page-full" data-execution_count="8">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-financial-split" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-financial-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-financial-split-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;7: Allocation of reported direct financial contributions from survey respondents"><img src="index_files/figure-html/fig-financial-split-output-1.png" width="790" height="141" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-financial-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Allocation of reported direct financial contributions from survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Note some organizations might report both contractor labor and financial resources directed to contractors. To avoid issues of double counting, we choose to exclude contractor labor when estimating the total value of contribution.</p>
+<p>It is interesting to note that a significant share of financial contribution is directed towards contractors and suggests that open source contribution work is either done “in house” or by contracting specialists. The survey responses characterizing financial contribution are also consistent with budgetary allocations of major open source non-profits. The allocation of financial resources reported in <a href="#fig-financial-split" class="quarto-xref">Figure&nbsp;7</a> aligns with the Linux Foundation’s expenditure shares for 2023 <span class="citation" data-cites="lf_annual_report_2023">(<a href="#ref-lf_annual_report_2023" role="doc-biblioref">The Linux Foundation 2023</a>)</span>.<a href="#fn16" class="footnote-ref" id="fnref16" role="doc-noteref"><sup>16</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="ref-lf_annual_report_2023" class="csl-entry" role="listitem">
+The Linux Foundation. 2023. <span>“2023 Linux Foundation Annual Report: Rising Tides of Open Source.”</span> <a href="https://www.linuxfoundation.org/resources/publications/linux-foundation-annual-report-2023">https://www.linuxfoundation.org/resources/publications/linux-foundation-annual-report-2023</a>.
+</div><div id="fn16"><p><sup>16</sup>&nbsp;See Page 158 from <a href="https://www.linuxfoundation.org/resources/publications/linux-foundation-annual-report-2023">“2023 Linux Foundation Annual Report: Rising Tides of Open Source”</a>.</p></div></div><p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+</section>
+<section id="key-finding-contribution-blind-spots" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="key-finding-contribution-blind-spots">Organizations have contribution blind spots when it comes to <em>funding specifics</em></h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Blind spots for <em>funding specifics</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Organizations have a <strong><em>great sense of why they contribute to OSS but seem unlikely to describe the value of this investment in refined detail</em></strong>. This is revealed by a dropoff in relative response rates for questions about funding specifics.</p>
+</div>
+</div>
+<div id="cell-fig-missingness" class="cell page-columns page-full" data-execution_count="9">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-missingness" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-missingness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-missingness-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;8: Conditional on providing some answer to the question ‘where do you contribute to open source?’, what share of respondents provided answers to detailed financial and labor contribution questions?"><img src="index_files/figure-html/fig-missingness-output-1.png" width="786" height="390" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-missingness-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Conditional on providing some answer to the question ‘where do you contribute to open source?’, what share of respondents provided answers to detailed financial and labor contribution questions?
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Of the 325 responding organizations who gave information on what types of contributions to they make to open source software projects</p>
+<ul>
+<li><strong>55%</strong> answered the question “How much financial support does your organization give to OSS in total?”</li>
+<li><strong>50%</strong> answered the question “Of the employees at your organization that work on OSS, what percentage of their time do they spend working on it?”</li>
+<li><strong>46%</strong> answered the question “How many employees of your organization work on OSS?”</li>
+<li><strong>32%</strong> answered the question “How much financial support does your organization give different OSS targets (e.g.&nbsp;projects, maintainers, foundations, etc.)?”</li>
+<li><strong>22%</strong> answered the question “What percentage of the organization’s budget is allocated to OSS?”</li>
+<li><strong>20%</strong> answered the question “How many total labor hours do employees of your organization spend working on OSS?”</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Labor is a critical blind spot
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Owing largely to its scale and potential for underreporting, OSS contribution <strong><em>labor is a critical blind spot</em></strong> for organizations.</p>
+</div>
+</div>
+<p>Respondents seem relatively more knowledgeable of their organization’s direct financial contribution compared with labor contribution. Of the 192 respondents who provided some estimates of either financial contributions or labor value</p>
+<ul>
+<li><strong>67%</strong> gave information on both</li>
+<li><strong>33%</strong> gave only financial information</li>
+<li><strong>1%</strong> gave only labor information</li>
+</ul>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="key-finding-challenges-of-decentralization" class="level2">
+<h2 class="anchored" data-anchor-id="key-finding-challenges-of-decentralization">Measuring contribution is more challenging when operations are decentralized</h2>
+<ul>
+<li><strong>Respondents cite few formal approval channels or other roadblocks to contribution.</strong> This is somewhat of a mixed blessing: how can we encourage OSS work but also have some visibility into what employees are working on (for reporting purposes)?</li>
+</ul>
+<blockquote class="blockquote">
+<p>“I work at a large research university - I don’t know how the university contributes to open source because there are programmers working in so many areas.”</p>
+</blockquote>
+<ul>
+<li><strong>64%</strong> of responding organizations <strong><em>do not have an OSPO</em></strong> (7% of respondents didn’t know if they had one).</li>
+<li><strong>Less than 1/3 of organizations require employees to commit using firm email addresses</strong> and a little more than 1/3 strongly encourage it.</li>
+<li>Important forms of non-financial, non-code contribution may still go unmeasured.</li>
+<li>Compared with full or part time employees, respondents (understandably) seem to <em>know relatively little about the amount of labor hours contractors spend working on open source</em>. On the other hand, the survey also reveals that payments to contractors makes up the largest share of financial contribution by organizations (see <a href="#fig-financial-split" class="quarto-xref">Figure&nbsp;7</a>).</li>
+</ul>
+<blockquote class="blockquote">
+<p>“We’re a funder and don’t make direct contributions.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Our devs are gig-workers.”</p>
+</blockquote>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+</section>
+<section id="recommendations" class="level1 page-columns page-full">
+<h1>Recommendations</h1>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Open Source Funding Toolkit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Using insights from the survey, we develop a collection of resources for organizations looking to better monitor their open source investments: <a href="https://github.com/sboysel/open-source-funding-toolkit">https://github.com/sboysel/open-source-funding-toolkit</a></p>
+</div>
+</div>
+<p><strong><em>Sign your organization’s OSS efforts with public identifiers</em></strong> to help managers, researchers, and other observers more easily collect this information.</p>
+<ul>
+<li>Adopt a policy for employees to author commits using their organization’s email address</li>
+<li>Consolidate OSS efforts under a public banner<a href="#fn17" class="footnote-ref" id="fnref17" role="doc-noteref"><sup>17</sup></a></li>
+<li>Make OSS use and contribution expectations explicit in public descriptions of organization’s roles<a href="#fn18" class="footnote-ref" id="fnref18" role="doc-noteref"><sup>18</sup></a></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn17"><p><sup>17</sup>&nbsp;For example, place open source projects under a GitHub Organization.</p></div><div id="fn18"><p><sup>18</sup>&nbsp;Such as job postings.</p></div></div><p><strong><em>Empower employees to self report contributions made under the organization’s banner</em></strong></p>
+<ul>
+<li>Encourage employees to time-track and publicize their contributions.<a href="#fn19" class="footnote-ref" id="fnref19" role="doc-noteref"><sup>19</sup></a></li>
+<li>Incentives, recognition, or awards for open source contribution are low cost ways to promote self reporting.</li>
+<li>Attract talent by offering and making known opportunities to contribute to open source as part of your recruiting strategy.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn19"><p><sup>19</sup>&nbsp;For example, Harvard’s <a href="https://www.iq.harvard.edu/">Institute for Quantitative Social Science (IQSS)</a> encourages affiliates to add open source projects they are working on to <a href="https://github.com/IQSS/open-source-at-harvard">a public GitHub repository</a>.</p></div></div><p><strong><em>Make OSS contribution part of your monitoring pipeline</em></strong> by conducting brief, regular surveys within your organization to collect key metrics.</p>
+<ul>
+<li>Keep it simple and quick. Emphasize breadth over width.</li>
+<li>Pay particular attention to the amount of OSS labor your employees contribute.</li>
+</ul>
+<p><strong><em>Consider sharing data to public OSS funding index</em></strong><a href="#fn20" class="footnote-ref" id="fnref20" role="doc-noteref"><sup>20</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn20"><p><sup>20</sup>&nbsp;A good example of a public index for code contribution presence across organizations is the <a href="https://opensourceindex.io/">Open Source Contributor Index (OSCI)</a>.</p></div></div><ul>
+<li>A <em>public index</em> could be a simple list that tracks the <em>what, where, and how much</em> for your organization’s open source investments.<a href="#fn21" class="footnote-ref" id="fnref21" role="doc-noteref"><sup>21</sup></a></li>
+<li>Helps to solidify standardization around contribution reporting.</li>
+<li>Fosters a sense of transparency and public access to the data.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn21"><p><sup>21</sup>&nbsp;Be sure to check out our <a href="https://github.com/sboysel/open-source-funding-toolkit">funding toolkit</a> for resources.</p></div></div><p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="detailed-findings" class="level1 page-columns page-full">
+<h1>Detailed Findings</h1>
+<p>In addition to estimate the scale of open source investment by organizations covered in <a href="#key-findings">key findings</a>, our survey delved deeper by asking respondents a wide range of questions on code and non-code contribution, motivations and incentives, investment prioritization, and organizational processes. In this section, we discuss more detailed insights gathered from the survey. We begin by first covering <a href="#survey-characteristics">the structure and implementation of the survey</a>. Next, we describe <a href="#respondent-characteristics">characteristics of responding organizations</a> captured in the survey. Finally, we summarize findings for each individual survey module: <a href="#code-contribution">code condtribution</a>, <a href="#non-code-contribution">non-code contribution</a>, <a href="#motivations-and-incentives">motivations and incentives</a>, and <a href="#investment-prioritization-and-decision-making">investment prioritization and decision-making</a>.</p>
+<section id="survey-characteristics" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="survey-characteristics">Survey Characteristics</h2>
+<p><a href="#tbl-survey-characteristics" class="quarto-xref">Table&nbsp;2</a> summarizes characteristics of the OSS Funding Survey.</p>
+<div id="tbl-survey-characteristics" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-survey-characteristics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 58%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Total survey responses</td>
+<td style="text-align: left;">501</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Survey start date</td>
+<td style="text-align: left;">June 27 2024</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Survey end date</td>
+<td style="text-align: left;">October 17 2024</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Survey format</td>
+<td style="text-align: left;">Online (Qualtrics)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Number of questions</td>
+<td style="text-align: left;">47</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Outreach</td>
+<td style="text-align: left;">Direct contacts (emails), targeted groups (GitHub blog, LF newsletter), broad channels (LinkedIn, Twitter/X, Mastodon)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-survey-characteristics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Overview of survey characteristics
+</figcaption>
+</figure>
+</div>
+<p>The study authors collaborated to develop 47 questions across 5 modules<a href="#fn22" class="footnote-ref" id="fnref22" role="doc-noteref"><sup>22</sup></a> and targeted an estimated time-to-complete of 19 minutes.<a href="#fn23" class="footnote-ref" id="fnref23" role="doc-noteref"><sup>23</sup></a> While survey outreach tailored towards organizations most likely to significantly contribute to open source, the survey link remained open to the public.<a href="#fn24" class="footnote-ref" id="fnref24" role="doc-noteref"><sup>24</sup></a> Distribution channels included direct email contacts, targeted newsletters, and social media posts. The survey was deployed online via <a href="https://www.qualtrics.com/">Qualtrics</a> beginning June 27th 2024. Through September 25th 2025, we collected 501 distinct responses.<a href="#fn25" class="footnote-ref" id="fnref25" role="doc-noteref"><sup>25</sup></a> 58% of responses came from outreach by the Linux Foundation, 24% from GitHub channels, and 18% from other channels.<a href="#fn26" class="footnote-ref" id="fnref26" role="doc-noteref"><sup>26</sup></a></p>
+<div class="no-row-height column-margin column-container"><div id="fn22"><p><sup>22</sup>&nbsp;Survey modules include “Code Contribution”, “Non-code Contribution”, “Motivations &amp; Incentives”, “Investment Prioritization &amp; Decision-making”, and “Respondent Descriptives”.</p></div><div id="fn23"><p><sup>23</sup>&nbsp;Early anecdotal feedback suggested the inaugural survey was too long. Future iterations of the OSS Funding Survey ought to be streamlined to improve response rates.</p></div><div id="fn24"><p><sup>24</sup>&nbsp;Respondents were only required to confirm they were age 18 or older.</p></div><div id="fn25"><p><sup>25</sup>&nbsp;Since we allowed respondents to skip questions and leave answers blank, completion rates vary by question.</p></div><div id="fn26"><p><sup>26</sup>&nbsp;Other channels include social posts on LinkedIn, X, Mastodon as well as direct email contacts. The differences in responses rates by source likely arise from the differences in timing in outreach.</p></div></div><p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="respondent-characteristics" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="respondent-characteristics">Respondent Characteristics</h2>
+<p>Who answered the survey? We asked respondents a series of demographic questions to help get a sense of what kind of organizations are captured in the survey.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Who answered the survey?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Broadly speaking, our survey captures three types of organizations:</p>
+<ul>
+<li>Non-profits / government formed with the intention of funding OSS</li>
+<li>Smaller startups and businesses focused on developing OSS</li>
+<li>Larger businesses that develop as part of their broader strategy</li>
+</ul>
+</div>
+</div>
+<p><a href="#fig-org-size" class="quarto-xref">Figure&nbsp;9</a> reveals the survey gathers input from firms of all sizes.<a href="#fn27" class="footnote-ref" id="fnref27" role="doc-noteref"><sup>27</sup></a> In <a href="#fig-org-industry" class="quarto-xref">Figure&nbsp;10</a> and <a href="#fig-org-nature" class="quarto-xref">Figure&nbsp;11</a>, we decompose respondents by their industry and operational niche, respectively. The majority (87%) of survey respondents are IT and computing adjacent, for-profit firms. Non-profits and academic institutions make up 13% of respondents. <a href="#fig-org-oss-experience" class="quarto-xref">Figure&nbsp;12</a> describes where survey respondents are in their open source journey corroborates the notion that most organizations consume open source while a more select few influence the project management and governance of major open source projects. <a href="#fig-org-region" class="quarto-xref">Figure&nbsp;13</a> shows the regional coverage skews towards North America and Europe.<a href="#fn28" class="footnote-ref" id="fnref28" role="doc-noteref"><sup>28</sup></a> Finally, <a href="#fig-org-has-ospo" class="quarto-xref">Figure&nbsp;14</a> reveals that, consistent with our choice of distribution targeting, 31% of respondents have an OSPO.</p>
+<div class="no-row-height column-margin column-container"><div id="fn27"><p><sup>27</sup>&nbsp;The representation of small firms is encouraging for the purposes of our extrapolation size and mitigates some concern that we are oversampling large OSS contributors.</p></div><div id="fn28"><p><sup>28</sup>&nbsp;Future iterations of the OSS funding survey efforts would do well to expand coverage into underrepresented regions.</p></div></div><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Compared with comparable studies of organization who participate in OSS <span class="citation" data-cites="lfosporeport2023">(<a href="#ref-lfosporeport2023" role="doc-biblioref">Hendrick and Santamaria 2023</a>)</span>, the sample from this survey has</p>
+<ul>
+<li>Greater representation from smaller firms.</li>
+<li>Slightly lower OSPO representation.</li>
+<li>Significantly less representation from regions outside of the U.S., Canada, and the EU.</li>
+</ul>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><div id="ref-lfosporeport2023" class="csl-entry" role="listitem">
+Hendrick, Stephen, and Ana Jimenez Santamaria. 2023. <span>“The 2023 State of OSPOs and OSS Initiatives.”</span> <a href="https://www.linuxfoundation.org/research/ospo-2023">https://www.linuxfoundation.org/research/ospo-2023</a>.
+</div></div><div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Size</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Industry</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Niche</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Experience with OSS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Region</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">Has OSPO?</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div id="cell-fig-org-size" class="cell page-columns page-full" data-execution_count="11">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-org-size" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-org-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-org-size-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;9: Organization’s size across survey respondents"><img src="index_files/figure-html/fig-org-size-output-1.png" width="788" height="290" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-org-size-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Organization’s size across survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div id="cell-fig-org-industry" class="cell page-columns page-full" data-execution_count="12">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-org-industry" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-org-industry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-org-industry-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;10: Organization’s industry across survey respondents"><img src="index_files/figure-html/fig-org-industry-output-1.png" width="796" height="690" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-org-industry-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Organization’s industry across survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div id="cell-fig-org-nature" class="cell page-columns page-full" data-execution_count="13">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-org-nature" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-org-nature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-org-nature-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Figure&nbsp;11: Organization’s size across survey respondents"><img src="index_files/figure-html/fig-org-nature-output-1.png" width="709" height="465" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-org-nature-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Organization’s size across survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div id="cell-fig-org-oss-experience" class="cell page-columns page-full" data-execution_count="14">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-org-oss-experience" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-org-oss-experience-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-org-oss-experience-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Figure&nbsp;12: Organization’s experience with open source software across survey respondents"><img src="index_files/figure-html/fig-org-oss-experience-output-1.png" width="789" height="490" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-org-oss-experience-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Organization’s experience with open source software across survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div id="cell-fig-org-region" class="cell page-columns page-full" data-execution_count="15">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-org-region" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-org-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-org-region-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Figure&nbsp;13: OSPO prevalence across survey respondents"><img src="index_files/figure-html/fig-org-region-output-1.png" width="789" height="290" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-org-region-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: OSPO prevalence across survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div id="cell-fig-org-has-ospo" class="cell page-columns page-full" data-execution_count="16">
+<div class="cell-output cell-output-display page-columns page-full">
+<div id="fig-org-has-ospo" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-org-has-ospo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="index_files/figure-html/fig-org-has-ospo-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Figure&nbsp;14: OSPO prevalence across survey respondents"><img src="index_files/figure-html/fig-org-has-ospo-output-1.png" width="789" height="290" class="figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-org-has-ospo-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: OSPO prevalence across survey respondents
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="code-contribution" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="code-contribution">Code Contribution</h2>
+<p><strong><em>Where does your organization contribute open source code?</em></strong></p>
+<ul>
+<li>Organizations are most likely to contribute to repositories that they directly manage (<strong>38%</strong>) but a close second are projects that are upstream dependencies (<strong>34%</strong>).</li>
+<li>Most firms (<strong>39%</strong>) contribute daily and <strong>60%</strong> of organizations contribute code at least weekly.</li>
+<li>There does not seem to be any strong correlation between firm size and frequency of code contribution.</li>
+<li>Some survey respondents report infrequent contribution, citing resource constraints and or commitment to other objectives.</li>
+</ul>
+<blockquote class="blockquote">
+<p>“Very seldom do we contribute. We are a non profit. If we were better funded we would allocate more resources to contribute back to the community but we already serve an underrepresented community.”</p>
+</blockquote>
+<p><strong><em>What kind of open source code contributions does your organization make?</em></strong></p>
+<ul>
+<li>Organizations are more likely to contribute in the form of bug reports (<strong>19%</strong>), features (<strong>19%</strong>), general maintenance (<strong>18%</strong>), documentation (<strong>16%</strong>) than they are to contribute by providing governance (<strong>7%</strong>), cybersecurity audits (<strong>6%</strong>), and legal advice (<strong>3%</strong>).</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Cybersecurity audits are not a point of emphasis for organizations
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>While security may receive some attention by way of bug reporting or general maintenance, it seems clear that comprehensive audits are not a point of emphasis from organizations.</p>
+</div>
+</div>
+<p><strong><em>Who at your organization contributes open source code?</em></strong></p>
+<ul>
+<li>After developer or software engineer (<strong>40%</strong>), community / developer advocates (<strong>17%</strong>) and IT / sysadmin / devops roles (<strong>11%</strong>) are the second and third most likely to contribute.</li>
+</ul>
+<p><strong><em>How does your organization incentivize employees to contribute to open source software projects?</em></strong></p>
+<ul>
+<li>Organizations are <em>diverse</em> when it comes to incentivizing employees to contribute.</li>
+</ul>
+<blockquote class="blockquote">
+<p>“All employees have a rider in their contract that explicitly permits contributions to open source. Some employees ONLY work on open source.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“[My organization give an] annual company award to most impactful contributor”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“…we encourage developers to contribute to OSS as a way to grow their career.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“We don’t really 🫣 We’re working on it by improving our Open Source Policy + trying to get more folks interested, but it’s kinda up to engineers themselves to seek it out (which only optimises for a subset of engineers).”</p>
+</blockquote>
+<ul>
+<li>OSS work is more likely to be part of the employee’s job (<strong>52%</strong>) than the entire job (<strong>31%</strong>).</li>
+<li>Organizations do not seem to cite excessive contribution “red tape”: most employees can contribute without explicit approval (<strong>38%</strong>) or as long as it doesn’t interfere with core work (<strong>33%</strong>).</li>
+<li>Relative to larger peers, smaller firms are much more likely to have employees where OSS work is the full time job.</li>
+<li>Most organizations (<strong>77%</strong>) do not pay more for open source contributions above and beyond the employee’s normal salary.</li>
+</ul>
+<p><strong><em>Are there any code contribution activities that are not allowed by your organization?</em></strong></p>
+<ul>
+<li>Most organizations (<strong>43%</strong>) do not report any code contribution types that are explicitly forbidden by their org.</li>
+<li>If they do, contributing to projects with particular licensing requirements<a href="#fn29" class="footnote-ref" id="fnref29" role="doc-noteref"><sup>29</sup></a> seems more likely to be prohibited (<strong>25%</strong>) as is contributing to projects maintained by competitors (<strong>10%</strong>).</li>
+<li>Other roadblocks to contribution include complicated CLAs, project bureaucracy, and projects maintained by competitors.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn29"><p><sup>29</sup>&nbsp;For example, a <a href="https://yahoo.github.io/oss-guide/docs/resources/what-is-cla.html">Contributor License Agreement (CLA)</a>.</p></div></div><blockquote class="blockquote">
+<p>“Contributions that would disclose company IP”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Making contributions to project with too much bureacracy”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Making contributions to projects with overly complicated CLAs”</p>
+</blockquote>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Contribution roadblocks may also arise from industrial or regulatory factors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some organizations in regulated industries like financial services outright prohibit open source contributions!</p>
+</div>
+</div>
+<p><strong><em>What is your organization’s approval process for employees working on open source projects?</em></strong></p>
+<ul>
+<li>Most respondents say there is not a rigorous approval process to work on OSS projects: only <strong>19%</strong> of organizations require explicit approval to contribute and only <strong>11%</strong> restrict contribution to a set of pre-approved projects.</li>
+</ul>
+<blockquote class="blockquote">
+<p>“No explicit policy. It’s a ‘if in doubt, talk to us’”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“This is an afterthought since all they want are the features. Consequences like IP management are not duly considered.”</p>
+</blockquote>
+<ul>
+<li>Smaller companies tend to have fewer restrictions over what OSS projects their employees can contribute to.</li>
+<li>Concerns about employees contributing to OSS with stringent licensing requirements seems to be more of a concern for larger or.</li>
+<li>Contribution restrictions also might vary with the level of contribution itself.</li>
+</ul>
+<blockquote class="blockquote">
+<p>“Employers can contribute minor code changes (bug fixes, improvements) without prior approval. Larger contributions and entire projects need approval.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Can contribute simple pieces to any project as long as on a broad list of licenses/projects and known CLAs.”</p>
+</blockquote>
+<ul>
+<li>Encouraging that some respondents are actively working to improve their review process.</li>
+</ul>
+<blockquote class="blockquote">
+<p>“No clear approval process as of today, but on the way to establish such a process.”</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Good organizational policy balances ease of contribution with maintaining oversight
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<dl>
+<dt>Recommendation</dt>
+<dd>
+<ul>
+<li>Reduce contribution frictions by making your contribution policy clear and encouraging for employees.</li>
+<li>At the same time, put a monitoring or self-reporting framework in place so that the scale of your employees’ investments into open source can be measured.</li>
+<li><strong>Multiple benefits:</strong> encourage contribution, reduce business risk, and increase contribution insights!</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>“Employees must complete training and map their github ID to the company organization before contributing to any public projects on company time.”</p>
+</blockquote>
+<p><strong><em>Does your organization evaluate any particular business risks before allowing employees to contribute to open source projects?</em></strong></p>
+<ul>
+<li>Business risk (in decreasing importance): security (<strong>20%</strong>), competitive edge (<strong>16%</strong>), patent risk (<strong>15%</strong>), technical debt (<strong>13%</strong>), dependence on external code (<strong>13%</strong>).</li>
+<li>However, <strong>16%</strong> of organizations say business risk does not factor into their decision to allow open source contribution from employees.</li>
+<li>Distribution of work time allocated to OSS is trimodal: employees who work on OSS typically do so with either 0-15%, 50%, or 100% of their time.</li>
+<li>Unfortunately, some organizations might consider excessive open source efforts to be wasteful or otherwise misaligned.<a href="#fn30" class="footnote-ref" id="fnref30" role="doc-noteref"><sup>30</sup></a></li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn30"><p><sup>30</sup>&nbsp;This line of thinking motivates a stronger understanding of the ROI of open source investment, especially from the perspective of an individual organization.</p></div></div><blockquote class="blockquote">
+<p>“Risk for high amount of waste. Correspondence, pull reviews, etc”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Supporting otherwise abandoned critical projects.”</p>
+</blockquote>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="non-code-contribution" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="non-code-contribution">Non-code Contribution</h2>
+<p><strong><em>How does your organization support open source beyond code contribution?</em></strong></p>
+<ul>
+<li>If respondents make non-code contributions, it’s most likely to be through donations (<strong>21%</strong>)<a href="#fn31" class="footnote-ref" id="fnref31" role="doc-noteref"><sup>31</sup></a>, foundation membership (<strong>17%</strong>), or event sponsorship (<strong>14%</strong>).</li>
+<li>Supporting open source research efforts is another encouraging form of non-code support cited by respondents.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn31"><p><sup>31</sup>&nbsp;Breaking the donations category down further, 11% of organizations donate to foundations, non-profits or general funds while 10% donate directly to maintainers or software projects.</p></div></div><blockquote class="blockquote">
+<p>“Funding of research projects that contribute to open source code.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“[Sponsoring] working group whitepapers/use cases etc”</p>
+</blockquote>
+<ul>
+<li>Providing speakers is the most common form of event sponsorship (<strong>30%</strong>) relative to financial sponsorship (<strong>22%</strong>), marketing (<strong>19%</strong>), logistics support (<strong>15%</strong>) or content curation (<strong>14%</strong>).</li>
+<li>If organizations support a foundation, the most cited reason is that the foundation supports open source projects that are useful to them (<strong>36%</strong>).</li>
+<li>There does not seem to be a strong relationship between company size and non-code contribution types.</li>
+<li>Non-code contribution is much more sporadic and infrequent compared with code contribution.</li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important forms of non-financial, non-code contribution may still go unmeasured.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What is the value of providing speakers for events? For logistics support or content curation? Unless respondents factored these services in when answering questions about non-code contribution levels, the survey might still be undercounting this potentially valuable form of contribution.</p>
+</div>
+</div>
+<p><strong><em>Are there any forms of non-code contribution explicitly forbidden by your organization?</em></strong></p>
+<ul>
+<li>Organizations typically do not explicitly forbid any non-code contribution activities: <strong>48%</strong> of respondents say nothing is off the table.</li>
+</ul>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="motivations-and-incentives" class="level2">
+<h2 class="anchored" data-anchor-id="motivations-and-incentives">Motivations and Incentives</h2>
+<p><strong><em>What are your organization’s primary motivations for supporting open source?</em></strong></p>
+<ul>
+<li>Top cited reasons for contributing to open source: concern for project sustainability (<strong>10%</strong>), giving back (<strong>10%</strong>), innovation (<strong>9%</strong>)</li>
+<li>When we break these motivations down by <em>by firm size</em>, strategic motivations become more clear:
+<ul>
+<li>Small organizations demonstrate a <strong><em>stronger concern for project sustainability</em></strong> and <strong><em>a desire to give back</em></strong>.</li>
+<li>Large organizations seem to place more emphasis on <strong><em>risk mitigation, desire to promote standards and interoperability</em></strong>.</li>
+</ul></li>
+</ul>
+<blockquote class="blockquote">
+<p>“Open Source Contributions help showcase work for consulting engagements.”</p>
+</blockquote>
+<p><strong><em>What are some factors that inhibit your organization’s desire to support open source?</em></strong></p>
+<ul>
+<li>Lack of resources, in either labor bandwidth (<strong>26%</strong>) or money (<strong>20%</strong>), is the most commonly cited obstacle for organizations to contribute.</li>
+<li>On the other hand, organizations seem to know exactly why and how they’d contribute if they had the resources: <strong>38%</strong> of respondents say that uncertainty over <em>how</em> to contribute doesn’t hold them back in any way.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Organizations know how to contribute but are resource constrained
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In other words, organizations tend to know exactly how and why they should contribute, but simply lack the bandwidth to participate more.</p>
+</div>
+</div>
+<ul>
+<li>More than half or organizations reward or recognize employees who contribute to OSS (at least to some extent)</li>
+<li>Smaller companies seem more likely to reward or recognize their employees for OSS contribution.</li>
+<li><strong>83%</strong> of organizations say OSS contribution is at least somewhat important to prospective hires.
+<ul>
+<li>The organization’s support of OSS seems to be more important for the prospective employees of smaller firms relative to larger firms</li>
+</ul></li>
+</ul>
+<p><strong><em>To what extent does your organization make code contributions to open source software that is critical to operations?</em></strong></p>
+<ul>
+<li>Smaller firms find OSS support extremely critical to operations while larger firms find it somewhat important.</li>
+</ul>
+<p><strong><em>Does tax exemption status factor into your decision to support open source?</em></strong></p>
+<ul>
+<li>Tax exemption status doesn’t appear to be a strong motivation to contribute: <strong>48%</strong> of respondents say is plays “no role at all” in determining contribution.</li>
+</ul>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="investment-prioritization-and-decision-making" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="investment-prioritization-and-decision-making">Investment Prioritization and Decision-making</h2>
+<ul>
+<li>Respondents highlight the need to <strong>durable open source funding streams</strong> that place value on <strong><em>all aspects</em></strong> of project development</li>
+</ul>
+<blockquote class="blockquote">
+<p>“We have created several popular and useful open source tools over the years. It is always a struggle to find funding for basic maintenance for these projects. Funding sources like to pay for new features but not closing issues and basic maintenance. It would be good if the Linux Foundation had funding streams for this type of work for projects.”</p>
+</blockquote>
+<ul>
+<li>In terms of targets, organizations tend to send the most direct financial support to OSS contractors.<a href="#fn32" class="footnote-ref" id="fnref32" role="doc-noteref"><sup>32</sup></a></li>
+<li>The distribution of the share of an organization’s budget that is allocated to open source is bimodal: organizations typically spend either &lt;10% or &gt;90% on open source support.<a href="#fn33" class="footnote-ref" id="fnref33" role="doc-noteref"><sup>33</sup></a></li>
+<li><strong>57%</strong> of firms include at least some mention OSS-related expectations in job postings.</li>
+<li>In general, response rates for specific labor or financial contribution questions were quite low compared with other questions.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="fn32"><p><sup>32</sup>&nbsp;After contractors, organizations support (in decreasing order) bounty platforms, foundations, communities, projects, and individual maintainers.</p></div><div id="fn33"><p><sup>33</sup>&nbsp;This is consistent respondents representing both for-profit and non-profit enterprises.</p></div></div><p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+<section id="general-remarks-from-survey-respondents" class="level2">
+<h2 class="anchored" data-anchor-id="general-remarks-from-survey-respondents">General Remarks from Survey Respondents</h2>
+<blockquote class="blockquote">
+<p>“Especially for startups that want to contribute, it’d be great to have more information available about sponsored programs that lend financial support back to sought-after contributions. There are a great many projects that create corporate sponsors that themselves contribute heavily to the open source project, but which then largely don’t pay anything out to non-associated contributors, so some sort of more equitable arrangement could make useful contributions even more frequent (especially at my company where I have to balance donating time to open source to actively sourcing revenue for my own business).”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“Your survey has a bias that it wants to measure open source as a profit center, when it’s just tools and not accounted that way. I worked at DreamWorks Animation. There, all of our animation software was created in house for Linux. If you asked us how much How to Train Your Dragon profited, how much using Linux made that a film a hit, is that possible to answer? DreamWorks builds all tools in house for competitive advantage. I wrote code working there that the company approved me to release open source later. However, the company prohibited me contributing open source in its name, due to fear of patent trolls mounting vexatious lawsuits.”</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>“A lot of open source communities and orgs seem gatekeepy these days limits involvement.”</p>
+</blockquote>
+<p><a href="https://opensourcefundingsurvey2024.com">return to top</a></p>
+</section>
+</section>
+<section id="appendix" class="level1 page-columns page-full">
+<h1>Appendix</h1>
+<section id="appendix-measuring-labor" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="appendix-measuring-labor">Measuring Value of Contribution Labor</h2>
+<p>We can use survey responses to measure the value of OSS labor contribution from organizations in two ways.</p>
+<ol type="1">
+<li>Use the question that directly asks how many labor hours employees at their organization contribute to OSS in a year.</li>
+<li>Use the questions that ask (a) how many employees at the organization contribute to OSS and (b) what percentage of their time these employees spend contributing to OSS projects.</li>
+</ol>
+<p>While a direct answer on working hours relies less on interpolation, response rates were much higher for the second approach. We therefore used the following expression to estimate the value of a single organizations labor contribution: <span id="eq-firm-labor-value"><span class="math display">\[
+\begin{aligned}
+\text{Annual value of organization's OSS labor} &amp; = (\text{number of OSS employees}) \\
+  &amp; \times (\text{percentage of time working on OSS}) \\
+  &amp; \times (\text{working hours in 1 year}) \\
+  &amp; \times (\text{wage})
+\end{aligned}
+\tag{1}\]</span></span></p>
+<p>We refer to this approach as <strong>Method 3b</strong> in <a href="#tbl-labor-value" class="quarto-xref">Table&nbsp;3</a>.</p>
+<p><strong>Assumptions:</strong></p>
+<ul>
+<li>We assume 48 working weeks and 40 working hours per week (1920 hours per year).</li>
+<li>Following <span class="citation" data-cites="hoffmann2024value">Hoffmann, Nagle, and Zhou (<a href="#ref-hoffmann2024value" role="doc-biblioref">2024</a>)</span>, we assume a global composite hourly wage of $45 for software developers in year 2023.</li>
+<li>For the questions on how many employees within the organization contribute to OSS, respondents could select from a set of binned ranges (e.g.&nbsp;1 to 5, 6 to 10, etc.). We obtain a point estimates for the measures by taking the median of the ranges when they are bounded and the minimum when they are not. For example, if the response category is “1 to 5”, we use 3. If the category is “More than 5000”, we (conservatively) choose 5000.</li>
+<li>As discussed in <strong>Method 3b</strong>, we count only full and part time employees and assume the organizations answer for the percentage of time employees spend contributing is a group average.</li>
+</ul>
+<div class="no-row-height column-margin column-container"><div id="ref-hoffmann2024value" class="csl-entry" role="listitem">
+Hoffmann, Manuel, Frank Nagle, and Yanuo Zhou. 2024. <span>“The Value of Open Source Software.”</span> <em>Harvard Business School Strategy Unit Working Paper</em>, no. 24-038.
+</div></div><p><a href="#tbl-labor-value" class="quarto-xref">Table&nbsp;3</a> contains alternative estimates for the total of annual OSS labor contribution value across all responding organizations. Since the survey asked about the organization’s labor contribution in multiple ways, we assess several alternative methods to estimate total labor value.</p>
+<ul>
+<li><strong>Method 1:</strong> Use reported labor hours only.</li>
+<li><strong>Method 2:</strong> Use reported labor hours if present, otherwise use number of employees who contribute to OSS and percentage of time spent working on OSS.</li>
+<li><strong>Method 3:</strong> Use number of employees who contribute to OSS and percentage of time spent working on OSS only.</li>
+</ul>
+<div id="tbl-labor-value" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-labor-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<colgroup>
+<col style="width: 44%">
+<col style="width: 27%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Method</th>
+<th style="text-align: right;">Number of responses</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Method 1: Reported Annual Labor Hours</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">$9,117,000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Method 2a: Full time employees</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">$475,341,138</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Method 2b: Full and part time employees</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">$670,298,751</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Method 2c: Full and part time employees plus contractors</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">$677,818,143</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Method 3a: Full time employees</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">$967,495,968</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Method 3b: Full and part time employees</strong></td>
+<td style="text-align: right;"><strong>112</strong></td>
+<td style="text-align: right;"><strong>$1,448,940,960</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Method 3c: Full and part time employees plus contractors</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">$1,723,433,760</td>
+</tr>
+</tbody>
+</table>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-labor-value-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Value of annual labor contribution to OSS from survey respondents
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We prefer estimates from <strong>Method 3b</strong> since (1) the data is derived from responses to a consistent set of questions, (2) excluding contractor labor avoids double counting, and (3) response rates were higher for these questions than for reported labor hours.</p>
+</div>
+</div>
+</section>
+<section id="appendix-extrapolation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="appendix-extrapolation">Extrapolation to population of OSS organizations</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Key Assumptions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>The population distribution of contribution value follows the observed distribution of organization-affiliated commits to public repos.</li>
+<li>10% of organizations population-wide who contribute labor to open source, also contribute financial resources.</li>
+</ol>
+</div>
+</div>
+<p>In order to scale the contribution value captured by the survey to generate an estimate of <em>total</em> contribution by orgs, we must first account for the fact that the survey is likely skewed towards large contributors. Indeed roughly half of the survey labor value is driven by one respondent. We address this complication by using a calibrated bootstrap approach <span class="citation" data-cites="rao1992some canty1999resampling">(<a href="#ref-rao1992some" role="doc-biblioref">Rao, Wu, and Yue 1992</a>; <a href="#ref-canty1999resampling" role="doc-biblioref">Canty 1999</a>)</span>. Naively scaling the total value captured by the survey ($1.7 billion) to match the estimated number of contributing organizations worldwide (21k) would imply that over $225 billion invested each year, a value that is roughly equal to the total wage bill for software developers in the United States <span class="citation" data-cites="bls_software_developers2023">(<a href="#ref-bls_software_developers2023" role="doc-biblioref">Bureau of Labor Statistics 2024</a>)</span>. Our primary assumption is that the population distribution of contribution value follows the observed distribution of organization-affiliated commits to public repositories.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-rao1992some" class="csl-entry" role="listitem">
+Rao, JNK, CFJ Wu, and Kim Yue. 1992. <span>“Some Recent Work on Resampling Methods for Complex Surveys.”</span> <em>Survey Methodology</em> 18 (2): 209–17.
+</div><div id="ref-canty1999resampling" class="csl-entry" role="listitem">
+Canty, Angelo J. 1999. <span>“Resampling-Based Variance Estimation for Labour Force Surveys.”</span> <em>Journal of the Royal Statistical Society Series D: The Statistician</em> 48 (3): 379–91.
+</div><div id="ref-bls_software_developers2023" class="csl-entry" role="listitem">
+Bureau of Labor Statistics, U. S. Department of Labor. 2024. <span>“Software Developers, Quality Assurance Analysts, and Testers.”</span> <a href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm">https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm</a>.
+</div><div id="fn34"><p><sup>34</sup>&nbsp;This is the latest full year of organization-matched data that was available at the time of publication.</p></div><div id="fn35"><p><sup>35</sup>&nbsp;For example, a commit is made by an author with the email <code>jdoe@microsoft.com</code> is associated with Microsoft.</p></div></div><p>We begin with a sample of organization-affiliated commits to public GitHub repositories from April 2022 through April 2023.<a href="#fn34" class="footnote-ref" id="fnref34" role="doc-noteref"><sup>34</sup></a> Individual commits can be matched to organizations by linking the domain name of the commit author’s email address to organizations domain, under the assumption that that employee is contributing to open source as on behalf of their employer.<a href="#fn35" class="footnote-ref" id="fnref35" role="doc-noteref"><sup>35</sup></a> We next use this sample to approximate how many organizations contribute to open source each year. This is operationalized by taking a threshold of (X) annual commits and counting the set of (N) firms who made (X) total commits over the past year. We then use (N) as the size of our total population.</p>
+<p>We next use this distribution of (N) firms and their annual commit totals as a <em>ground truth</em> population distribution which we seek to mimic in our bootstrap sampling procedure. We bin this distribution and calculate relative frequencies for each bin. These relative frequencies are then used as resampling weights to draw bootstrap sample, of size (N) from the empirical sample of labor contribution values.<a href="#fn36" class="footnote-ref" id="fnref36" role="doc-noteref"><sup>36</sup></a> We repeat this process to draw a bootstrapped sample of size (0.1 N) from the empirical sample of financial contribution values. The assumption here is that 10% percent of organizations with employees who contribute their labor to open source also make financial contributions. Finally, the bootstrap estimates for the sums of these distributions are combined to form an estimate of the total annual contribution value for all OSS contributing organizations.</p>
+
+
+<div class="no-row-height column-margin column-container"><div id="fn36"><p><sup>36</sup>&nbsp;Specifically, we draw (10,000) bootstrap samples with replacement of size (N).</p></div></div>
+</section>
+</section>
+
+
+</main> <!-- /main -->
+<script type="application/vnd.jupyter.widget-state+json">
+{"state":{"1880318ec45941ed996a61f14f189b11":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":"auto"}},"33da059ba50f413b95f579597df1e5f7":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"FloatProgressModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"FloatProgressModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"ProgressView","bar_style":"","description":"","description_allow_html":false,"layout":"IPY_MODEL_35318430d8a940a59fc098c99178dd36","max":100,"min":0,"orientation":"horizontal","style":"IPY_MODEL_a99e01f3ed8349e1adefd44735d6bdb2","tabbable":null,"tooltip":null,"value":100}},"35318430d8a940a59fc098c99178dd36":{"model_module":"@jupyter-widgets/base","model_module_version":"2.0.0","model_name":"LayoutModel","state":{"_model_module":"@jupyter-widgets/base","_model_module_version":"2.0.0","_model_name":"LayoutModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"LayoutView","align_content":null,"align_items":null,"align_self":null,"border_bottom":null,"border_left":null,"border_right":null,"border_top":null,"bottom":null,"display":null,"flex":null,"flex_flow":null,"grid_area":null,"grid_auto_columns":null,"grid_auto_flow":null,"grid_auto_rows":null,"grid_column":null,"grid_gap":null,"grid_row":null,"grid_template_areas":null,"grid_template_columns":null,"grid_template_rows":null,"height":null,"justify_content":null,"justify_items":null,"left":null,"margin":null,"max_height":null,"max_width":null,"min_height":null,"min_width":null,"object_fit":null,"object_position":null,"order":null,"overflow":null,"padding":null,"right":null,"top":null,"visibility":null,"width":"auto"}},"54f8c9449a18410ea4102704c369abf4":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"ProgressStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"ProgressStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","bar_color":"black","description_width":""}},"6415cb096b0e460bad1062a3fad554b2":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"FloatProgressModel","state":{"_dom_classes":[],"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"FloatProgressModel","_view_count":null,"_view_module":"@jupyter-widgets/controls","_view_module_version":"2.0.0","_view_name":"ProgressView","bar_style":"","description":"","description_allow_html":false,"layout":"IPY_MODEL_1880318ec45941ed996a61f14f189b11","max":100,"min":0,"orientation":"horizontal","style":"IPY_MODEL_54f8c9449a18410ea4102704c369abf4","tabbable":null,"tooltip":null,"value":100}},"a99e01f3ed8349e1adefd44735d6bdb2":{"model_module":"@jupyter-widgets/controls","model_module_version":"2.0.0","model_name":"ProgressStyleModel","state":{"_model_module":"@jupyter-widgets/controls","_model_module_version":"2.0.0","_model_name":"ProgressStyleModel","_view_count":null,"_view_module":"@jupyter-widgets/base","_view_module_version":"2.0.0","_view_name":"StyleView","bar_color":"black","description_width":""}}},"version_major":2,"version_minor":0}
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/opensourcefundingreport2024\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

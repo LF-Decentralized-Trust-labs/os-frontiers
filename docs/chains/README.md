@@ -9,8 +9,18 @@
 | [`posm-cycle-chain-map.md`](./posm-cycle-chain-map.md) | Where each chain sits on Intersect's POSM cycle (P1–P6); Cardano as reference |
 | [`paid-oss-cycle-chain-map.md`](./paid-oss-cycle-chain-map.md) | Paid-OSS funding-cycle map of the same chains |
 | [`researchy-chain-check.md`](./researchy-chain-check.md) | Researchy's 58-row live verification pass (statuses, corrections, open items) |
+| [`top100-audit.md`](./top100-audit.md) | Top-100 audit, batch 1 (ranks 1–25 under the gas-token scope rule): funding mechanism, ORF/POSM gaps, proposals |
+| [`top100-method.md`](./top100-method.md) | Top-100 method: CoinGecko snapshot (fetched 9 Oct 2026 05:19 PT, data as of 05:17:50 PT), scope rule, Cardano #11 / #12 |
+| [`top100-qa-rubric.md`](./top100-qa-rubric.md) | QA rubric v1.0 for the top-100 rows |
+| [`top100-qa-log.md`](./top100-qa-log.md) | QA log for batch 1 |
+| [`pg-followups.md`](./pg-followups.md) | Protocol Guild and Cardano follow-up corrections (§1–3 applied in this batch; §4 is for a later errata decision only) |
 | [`data/`](./data/POSM-SOURCES.md) | Market snapshots (CoinGecko, CoinMarketCap), POSM whitepaper and diagram, and rendered PDF + DOM captures of the Protocol Guild Annual Report 2025 and Q3 2026 Membership Audit. Hashes: `SHA256SUMS-posm.txt`, `SHA256SUMS-snapshots.txt` |
 
 Labels to keep when quoting:
 - Cardano's treasury inflow split (≈0.2% fees / ≈99.8% reserve issuance) is **derived** by Researchy from on-chain epoch totals. It is not an official figure.
 - Protocol Guild 2025 figures ($7,231,668 valued at time of donation; 6,202 unique donors; 190 members as of 5 Aug 2026, −6 from 196) are **High** under the approved entry in [`../../whitepapers/ORF_ERRATA.md`](../../whitepapers/ORF_ERRATA.md). "Commitments above $80 million" stays Unverified.
+
+Top-100 batch 1 notes:
+- The top-100 snapshot files the batch-1 docs cite as `chains/coingecko-snapshot-2026-10-09.json` and `chains/coingecko-snapshot-2026-10-09-page2.json` are in `data/`, with the other 9 Oct 2026 captures for batch 1. Hashes: `data/SHA256SUMS-top100-batch1.txt`.
+- Working files mentioned in the method and QA log (`chains/work/`, `chains/tools/qa_rank.py`, `top100-qa-ranking-crosscheck.md`) are not part of this repo.
+- Batches 2–4 (ranks 26–100) are on hold.
