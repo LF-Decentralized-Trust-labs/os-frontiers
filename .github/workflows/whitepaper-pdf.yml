@@ -1,0 +1,27 @@
+name: Whitepaper PDF
+
+on:
+  pull_request:
+  push:
+    branches: [ main, cursor/** ]
+
+jobs:
+  orf-v1-1-pdf:
+    name: Build ORF v1.1 PDF from the markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pandoc and WeasyPrint
+        run: sudo apt-get update && sudo apt-get install -y pandoc weasyprint
+
+      - name: Build the PDF
+        run: pandoc whitepapers/orf-whitepaper-v1.1-errata-applied.md -o orf-whitepaper-v1.1.pdf --pdf-engine=weasyprint
+
+      - name: Upload the PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: orf-whitepaper-v1.1
+          path: orf-whitepaper-v1.1.pdf
+          if-no-files-found: error

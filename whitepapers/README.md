@@ -9,7 +9,19 @@
 
 The **Open Source Frontiers (OSF) Whitepaper Series** establishes the theoretical, legal, economic, and operational foundations for open-source software sustainability in decentralized ecosystems.
 
-The canonical papers are the PDFs. The markdown files beside them are pointers, not publication-grade papers:
+## Series position
+
+The OMF PDF's sentence that dOSPO and OMF "together constitute a complete institutional model" does not include replenishment and is not the series position. The 18 August 2026 ORF paper is the third installment. The return path is part of the loop. Each framework can still be used alone.
+
+## Which text controls
+
+- **ORF.** The canonical text is the v1.1 errata-applied manuscript, [`orf-whitepaper-v1.1-errata-applied.md`](./orf-whitepaper-v1.1-errata-applied.md). Where it differs from [`orf-v1.0.pdf`](./orf-v1.0.pdf), the v1.1 markdown controls. [`ORF_ERRATA.md`](./ORF_ERRATA.md) is the citation layer that the manuscript already folds in. The v1.0 PDF stays in the tree as the previous edition. A v1.1 PDF is built in CI from the markdown (workflow `whitepaper-pdf.yml`) and uploaded as an artifact. It is not committed.
+- **dOSPO.** The v1.0 PDF is the paper. [`DOSPO_WHITEPAPER.md`](./DOSPO_WHITEPAPER.md) is a pointer, dated March 3, 2026. There is no v1.1 manuscript in this tree.
+- **OMF.** The v1.0 PDF is the paper. [`OMF_WHITEPAPER.md`](./OMF_WHITEPAPER.md) is a pointer, dated March 7, 2026. Where [`OMF_ERRATA.md`](./OMF_ERRATA.md) differs from the PDF, the errata controls until those sentences are in a new edition. There is no v1.1 OMF manuscript in this tree.
+
+No hard gate is marked passed. Specifications under `orf/` remain Stage 0.
+
+The figure below is the series, not a claim that every box has a v1.1 markdown edition:
 
 ```text
                ┌──────────────────────────────────────────┐
@@ -26,19 +38,11 @@ The canonical papers are the PDFs. The markdown files beside them are pointers, 
 
 ---
 
-## 1. Original PDF Whitepaper Downloads
+## 1. Files
 
-- **dOSPO Whitepaper PDF**: [`dospo-whitepaper-v1.0.pdf`](./dospo-whitepaper-v1.0.pdf)
-- **OMF Whitepaper PDF**: [`open-maintenance-framework-omf-v1.0.pdf`](./open-maintenance-framework-omf-v1.0.pdf). Citation layer: [`OMF_ERRATA.md`](./OMF_ERRATA.md). Where the errata differs from the PDF, the errata controls until those sentences are pasted into a new PDF.
-- **ORF Whitepaper PDF**: [`orf-v1.0.pdf`](./orf-v1.0.pdf). Citation layer: [`ORF_ERRATA.md`](./ORF_ERRATA.md). Where the errata differs from the PDF, the errata controls until those sentences are pasted into a new PDF.
-
----
-
-## 2. Markdown pointers
-
-1. **[`DOSPO_WHITEPAPER.md`](./DOSPO_WHITEPAPER.md)**: Pointer, not the paper. Canonical PDF [`dospo-whitepaper-v1.0.pdf`](./dospo-whitepaper-v1.0.pdf), dated March 3, 2026.
-2. **[`OMF_WHITEPAPER.md`](./OMF_WHITEPAPER.md)**: Pointer, not the paper. Canonical PDF [`open-maintenance-framework-omf-v1.0.pdf`](./open-maintenance-framework-omf-v1.0.pdf), dated March 7, 2026. Series position is the repository README [Read this first](../README.md#read-this-first) block. The ORF paper is the third installment.
-3. **ORF**: The canonical paper is [`orf-v1.0.pdf`](./orf-v1.0.pdf), with [`ORF_ERRATA.md`](./ORF_ERRATA.md) as the citation layer. It establishes closed-loop sustainability, the 5 Revenue Families, the two-dimensional matrix, 8 Hard Gates for Self-Sustainability, 6 Replenishment Ratios, the P-scale (external precedent, P0–P5), and the D-scale (local deployment, D0–D5). Specifications under `orf/` remain Stage 0. Where they differ from the paper, the paper controls. No gate is marked passed. Paste-ready errata-applied markdown: [`orf-whitepaper-v1.1-errata-applied.md`](./orf-whitepaper-v1.1-errata-applied.md) (not a second normative PDF).
+- **dOSPO v1.0 PDF**: [`dospo-whitepaper-v1.0.pdf`](./dospo-whitepaper-v1.0.pdf). Pointer: [`DOSPO_WHITEPAPER.md`](./DOSPO_WHITEPAPER.md).
+- **OMF v1.0 PDF**: [`open-maintenance-framework-omf-v1.0.pdf`](./open-maintenance-framework-omf-v1.0.pdf). Pointer: [`OMF_WHITEPAPER.md`](./OMF_WHITEPAPER.md). Errata: [`OMF_ERRATA.md`](./OMF_ERRATA.md).
+- **ORF v1.1 manuscript (canonical)**: [`orf-whitepaper-v1.1-errata-applied.md`](./orf-whitepaper-v1.1-errata-applied.md). Previous edition: [`orf-v1.0.pdf`](./orf-v1.0.pdf). Errata record: [`ORF_ERRATA.md`](./ORF_ERRATA.md).
 
 ---
 
