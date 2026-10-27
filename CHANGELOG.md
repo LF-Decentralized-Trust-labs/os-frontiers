@@ -20,7 +20,8 @@
 - **`docs/precedents/CARDANO_POSM.md`**: dated treasury evidence; the ≈99.8% reserve-issuance share is labeled *derived*.
 
 ### Removed
-- **Contracts directory** (20 August 2026): `contracts/solidity/ORFSlaVault.sol`, `contracts/aiken/validators/orf_sla_vault.ak`, and `contracts/README.md` were deleted (commit message "Delete contracts directory"). They are not in the tree and are not a present Stage 0 artifact. The [0.8.0-rc.1] Changed note about `ORFSlaVault.sol` records work that was later removed.
+- **Contracts directory** (20 August 2026): `contracts/solidity/ORFSlaVault.sol`, `contracts/aiken/validators/orf_sla_vault.ak`, and `contracts/README.md` were deleted (commit message "Delete contracts directory"). They are not in the tree and are not a present Stage 0 artifact. `.github/CODEOWNERS` no longer lists `/contracts/`. The [0.8.0-rc.1] Changed note about `ORFSlaVault.sol` records work that was later removed.
+- **`LICENSE-CODE`**: the file is not in the tree. It was deleted in commit `e9ef8f3` ("Delete LICENSE-CODE"). Code in this repository is under [`LICENSE`](LICENSE) (Apache-2.0). Documentation is under [`LICENSE-DOCS`](LICENSE-DOCS) (CC-BY-4.0). The [0.8.0-rc.1] note that says a canonical `LICENSE-CODE` file was completed is historical. It is not a claim that the file is present.
 
 ## [0.8.0-rc.1] - 2026-08-13
 

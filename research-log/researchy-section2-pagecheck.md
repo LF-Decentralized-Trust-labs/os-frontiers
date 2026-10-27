@@ -1,4 +1,4 @@
-# §2 page-by-page check of Tidelift figures and page citations (Researchy)
+# §2 page-by-page check of Tidelift figures and page citations (the working check)
 
 > **Checked:** 2026-10-09, 05:20–05:50 PT. Live web plus the official PDFs, downloaded on 2026-10-09 and saved to `surveys/sources/` (SHA-256 in `surveys/sources/SHA256SUMS.txt`).
 > **Files checked (not edited):** `surveys/release1-section-2-survey-crisis-map.md` (R1), `surveys/crisis-to-model-map.md` (CM), `surveys/section-2.7-ref-check.md` (RC).
@@ -62,7 +62,7 @@
 - row 34: "successor";
 - rows 34–35: base and "most-chosen".
 
-## Contradictions USe Me flagged: resolved with quotes
+## Contradictions the review pass flagged: resolved with quotes
 
 **A. 60% vs "almost two-thirds" quit or considered quitting (2024).** Same question, same base. The measured figure is 60%. The p59 phrase is a loose restatement in the closing narrative and is not supported by any figure in the report.
 - S01 p40 (Headline #8 data, n=350, "Have you quit or considered quitting maintaining a project?"): "This year the percentage of maintainers who have either quit or considered quitting their work was 60%, which is consistent with the 58% in 2023 and 59% in 2021." Chart: 22% "Yes, I have quit", 38% "Yes, I have considered quitting", 40% "No".

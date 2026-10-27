@@ -1,4 +1,4 @@
-# Researchy chain check: live-web fact-check of the top-10 ORF matrix + POSM map
+# the working check chain check: live-web fact-check of the top-10 ORF matrix + POSM map
 
 > **Date:** 9 Oct 2026, checks run ~03:58–04:20 PT. **Method:** live web only: primary pages via curl/WebFetch, on-chain APIs (Hyperliquid info API, Koios for Cardano, Blockchair), DefiLlama, CoinGecko/CMC re-pulls, governance forums, ZIP texts. Nothing was confirmed from memory. **Stage 0.** No ORF Hard Gate is passed for any ecosystem or for ORF. ORF scoring rules are unchanged: issuance, grants, and Retro rounds are not replenishment, and unverified dollar figures stay Unverified.
 > **Inputs:** `chains/top10-chains-orf-alignment.md` (incl. §5 Unverified queue), `chains/paid-oss-cycle-chain-map.md`, `chains/posm-cycle-chain-map.md`, `chains/data/*`. Those files were **not edited**. Repo errata was read from `LF-Decentralized-Trust-labs/os-frontiers@main:whitepapers/ORF_ERRATA.md` (fetched today).

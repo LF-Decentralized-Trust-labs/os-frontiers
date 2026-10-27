@@ -29,4 +29,4 @@ python evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
 
 ## 3. Local scorer preview
 
-Open [`preview/index.html`](./preview/index.html) from this directory's `preview/` folder (`app.js` and `style.css` sit beside it). It is a local preview, not a published site. GitHub Pages for this repository is not published. Scoring logic is unchanged.
+Open [`preview/index.html`](./preview/index.html) from this directory's `preview/` folder (`app.js` and `style.css` sit beside it). The same page is published at https://lf-decentralized-trust-labs.github.io/os-frontiers/ (checked 27 October 2026). Scoring logic is unchanged.

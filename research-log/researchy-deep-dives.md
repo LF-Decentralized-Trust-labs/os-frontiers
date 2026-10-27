@@ -1,9 +1,9 @@
-# Researchy deep dives — new OSFL prototypes (Stage 0)
+# the working check deep dives — new OSFL prototypes (Stage 0)
 
 > **Pass date:** 2026-09-24 PT  
 > **Stage 0:** research candidates only — **no Hard Gate passed**.  
-> **Method:** live WebSearch / WebFetch / curl (no Grok CLI). Magnitudes = primary publisher or site counter; else UNKNOWN.  
-> **Errata:** `sources/ORF_ERRATA.md` controls Optimism / ENS / Guild / POSM / Polkadot / Octant / Tidelift claims — not reasserted here.  
+> **Method:** live page fetches and curl. Magnitudes = primary publisher or site counter; else UNKNOWN.  
+> **Errata:** `whitepapers/ORF_ERRATA.md` controls Optimism / ENS / Guild / POSM / Polkadot / Octant / Tidelift claims — not reasserted here.  
 > **Parent catalog:** `web2-web3-prototypes-expansion.md` rows N1–N3, N5.  
 > **Style peer:** deep dossiers A–E in `web2-web3-prototypes.md` (Optimism / ENS / POSM / LF-CNCF / Protocol Guild).
 
@@ -13,9 +13,9 @@
 
 | File | Subject | Pillar codes (short) |
 |---|---|---|
-| [`dossier-geomys.md`](./dossier-geomys.md) | Geomys — professional Go maintainer firm | OMF · ORF B-adjacent |
-| [`dossier-open-source-endowment.md`](./dossier-open-source-endowment.md) | Open Source Endowment (OSE) | ORF E · OMF microgrants · dOSPO-like members |
-| [`dossier-pledge-thanksdev.md`](./dossier-pledge-thanksdev.md) | Open Source Pledge + thanks.dev (linked loop) | ORF D · OMF cash · Routing |
+| [`dossier-geomys.md`](../use-cases/dossier-geomys.md) | Geomys — professional Go maintainer firm | OMF · ORF B-adjacent |
+| [`dossier-open-source-endowment.md`](../use-cases/dossier-open-source-endowment.md) | Open Source Endowment (OSE) | ORF E · OMF microgrants · dOSPO-like members |
+| [`dossier-pledge-thanksdev.md`](../use-cases/dossier-pledge-thanksdev.md) | Open Source Pledge + thanks.dev (linked loop) | ORF D · OMF cash · Routing |
 
 ---
 

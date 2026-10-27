@@ -1,7 +1,7 @@
 # Top-100 audit QA log
 
 > **QA owner:** executor. **Rubric:** `chains/top100-qa-rubric.md` (v1.0, 9 Oct 2026 05:23 PT). **Ranking reference:** `chains/top100-qa-ranking-crosscheck.md` (CoinGecko, data 05:15 PT).
-> **Rules:** Researchy's `top100-audit.md` is never edited by QA. Each row gets **PASS** or **FIX (rule ID: reason)**. **FIX-SPEC** = a PROPOSAL that implies changing the dOSPO/OMF/ORF spec; escalate to Christian. Stage 0; no Hard Gate passed.
+> **Rules:** the working check's `top100-audit.md` is never edited by QA. Each row gets **PASS** or **FIX (rule ID: reason)**. **FIX-SPEC** = a PROPOSAL that implies changing the dOSPO/OMF/ORF spec; escalate to Christian. Stage 0; no Hard Gate passed.
 
 ---
 
@@ -9,13 +9,13 @@
 
 **Status: waiting on batch 1.** `chains/top100-audit.md` doesn't exist yet, so **0 rows QA'd** (0 PASS / 0 FIX).
 
-**Pre-QA findings from Researchy's working classifier** (`chains/work/classify.py`, read-only, 05:22 PT). These are advisory, since there are no audit rows yet:
+**Pre-QA findings from the working check's working classifier** (`chains/work/classify.py`, read-only, 05:22 PT). These are advisory, since there are no audit rows yet:
 
 | # | Item | Rule | Note |
 |---|---|---|---|
 | Q-1 | Exchange-origin tokens included (WBT #11, CRO, OKB, BGB, GT, KCS, GRX) | E1 / F2 | Consistent internally, but it **reverses the top-10 WBT exclusion**, so Cardano becomes chain #12. Team decision needed before batch 1 ships (batch 1 = chains 1–25 contains WBT, CRO and OKB). |
 | Q-2 | WLD counted as World Chain's L2 token | F2 | WLD isn't World Chain gas (ETH is). Include only if a sourced governance role exists (**Unverified**). Otherwise exclude, as the cross-check does. |
-| Q-3 | Lighter, XCN and Beam included (marked UNVERIFIED by Researchy) | F2 | App-rollup or subnet tokens. Fine if the batch keeps the UNVERIFIED flag and gives the rule. |
+| Q-3 | Lighter, XCN and Beam included (marked UNVERIFIED by the working check) | F2 | App-rollup or subnet tokens. Fine if the batch keeps the UNVERIFIED flag and gives the rule. |
 | Q-4 | Chain set for #79–#100 differs (11 swaps) | F1 | A knock-on effect of Q-1. It resolves once Q-1 is decided. |
 
 ---
@@ -28,7 +28,7 @@ Checked against **upstream `main` @ `9a82a9c`** (8 Oct 2026 07:42 PT) and **PR #
 
 ### (1) Protocol Guild follow-ups (`chains/pg-followups.md`)
 
-**Status: checked at 05:24 PT** against `pg-followups.md` (mtime 05:23 PT, Researchy draft, NOT APPLIED). **Verdict: PASS on figures, dating and $80M+; FIX on 5 items before the PM applies it.**
+**Status: checked at 05:24 PT** against `pg-followups.md` (mtime 05:23 PT, the working check draft, NOT APPLIED). **Verdict: PASS on figures, dating and $80M+; FIX on 5 items before the PM applies it.**
 
 | # | Check | Result |
 |---|---|---|
@@ -36,7 +36,7 @@ Checked against **upstream `main` @ `9a82a9c`** (8 Oct 2026 07:42 PT) and **PR #
 | 1-b | "Commitments >$80M" stays Unverified | **PASS.** UNVERIFIED in every proposed cell. |
 | 1-c | Dating clear | **PASS.** 2025 calendar year; report dated 29 Jan 2026; audit dated 26 Aug 2026; membership as of 5 Aug 2026; checked 2026-10-09. |
 | 1-d | Line numbers vs **upstream `main` @ 9a82a9c** | **PASS.** C-026 claim L243, C-110 L915, table L1184, index L32, EVIDENCE_REGISTER L37/L60, PRIOR_ART L131–132/L87 all match upstream. The draft's "no `docs/` on the box" path note is moot: upstream paths are `docs/EVIDENCE_REGISTER.md` and `docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md`, and PR #105 doesn't touch them. |
-| 1-e | **Errata identity** | **FIX (G1).** There are **two different PG errata texts**. Box `/workspace/osfl/sources/ORF_ERRATA.md` (05:18 PT) has "Protocol Guild — 2025 figures restored", which adds "$12.4 million vested and distributed" and keeps the old paragraph as SUPERSEDED. **PR #105** `whitepapers/ORF_ERRATA.md` has "Protocol Guild — corrected scale (approved 9 October 2026)", which has **no $12.4M**, replaces the old paragraph, and adds "196 … superseded, not wrong for its date". `pg-followups.md` cites the **box** heading. Pick one text for the PR; downstream cells must cite that heading verbatim. The core figures agree in both. |
+| 1-e | **Errata identity** | **FIX (G1).** There are **two different PG errata texts**. Box `whitepapers/ORF_ERRATA.md` (05:18 PT) has "Protocol Guild — 2025 figures restored", which adds "$12.4 million vested and distributed" and keeps the old paragraph as SUPERSEDED. **PR #105** `whitepapers/ORF_ERRATA.md` has "Protocol Guild — corrected scale (approved 9 October 2026)", which has **no $12.4M**, replaces the old paragraph, and adds "196 … superseded, not wrong for its date". `pg-followups.md` cites the **box** heading. Pick one text for the PR; downstream cells must cite that heading verbatim. The core figures agree in both. |
 | 1-f | Extra figures beyond the errata | **FIX (G1).** EVIDENCE_REGISTER 2a and C-110 add **$12.4M distributed** and **"1% pledges ≈83%"**. Both are Validated in `researchy-chain-check.md`, but the ≈83% isn't in either errata text and the $12.4M isn't in PR #105's. Either add them to the chosen errata entry, or drop them / label them "Validated (annual report), not errata". |
 | 1-g | Capture paths | **FIX.** 2b cites `chains/data/pg-*`. In the repo (PR #105) the captures are at **`docs/chains/data/`**. SHA-256 of the box and PR copies match. |
 | 1-h | Index line L32 (1d) | **FIX (minor).** The proposed text drops "POSM budget" but keeps the range "C-027–C-030". POSM is in that range, and its removal depends on §4 (₳5.885M) being applied. Keep "POSM budget ('$300K bounty')" in the unverified list, since "$300K" stays unverified even after §4. |
@@ -95,7 +95,7 @@ Checked against **upstream `main` @ `9a82a9c`** (8 Oct 2026 07:42 PT) and **PR #
 2. Add a new entry, e.g. "## Cardano POSM — 2025 treasury withdrawal (verified on-chain 9 October 2026)": *The 2025 OSC/POSM treasury withdrawal of ₳5,885,000 is governance action `8ad3d454f3496a35cb0d07b0fd32f687f66338b7d60e787fc0a22939e5d8833e#11` (CIP-129 `gov_action13tfag48nf94rtjcdq7c06vhkslmxxw9h6c88sl7q5g5nnewcsvlqkqx0ecg`), submitted epoch 570, ratified epoch 575, enacted epoch 576 (12 August 2025). Confidence: High (on-chain; Koios and Cardanoscan agree). The OSC's 2026–27 request (₳4,601,000) had not been submitted on-chain as of epoch 660 (9 October 2026) and is not enacted. A treasury withdrawal is deployment (OMF), not replenishment.* Cite the Cardanoscan URL and `docs/chains/researchy-chain-check.md`.
 3. Mirror this in `orf-whitepaper-v1.1-errata-applied.md` (L165 and the precedent-table row) so the manuscript matches the errata.
 
-**`pg-followups.md` §4 (Researchy's draft of this same move), checked 05:24 PT: PASS, with one addition.**
+**`pg-followups.md` §4 (the working check's draft of this same move), checked 05:24 PT: PASS, with one addition.**
 - It cites action `8ad3d454…e5d8833e#11` with the full hash and CIP-129 ID, Cardanoscan and Koios.
 - Epochs 570/575/576 and 12 Aug 2025 (14:44 PT) are correct.
 - The ₳4.601M request is explicitly "has not been submitted on-chain … Do not describe it as approved, ratified or enacted", and "$300K bounty" stays unverified with the allocation explanation.
@@ -110,7 +110,7 @@ Checked against **upstream `main` @ `9a82a9c`** (8 Oct 2026 07:42 PT) and **PR #
 
 ## Batch 1 QA (ranks 1-25), 2026-10-09
 
-**Checked:** 9 Oct 2026, 05:25–05:40 PT. **Inputs:** `top100-audit.md` (mtime 05:32 PT), `top100-method.md` (05:32), `pg-followups.md` (05:28), rubric v1.0, `top100-qa-ranking-crosscheck.md` + `tools/qa_rank.py`, `top10-chains-orf-alignment.md` (LOCKED), `posm-cycle-chain-map.md`, `release1-section-3.3-chains.md`, `chains/data/`. **Definitions:** checked against repo PDFs (`whitepapers/dospo-whitepaper-v1.0.pdf` p.13, `open-maintenance-framework-omf-v1.0.pdf` p.5/p.15, `orf-v1.0.pdf` pp.2, 8, 18, §8 pp.23–25). **Errata:** `sources/ORF_ERRATA.md` is byte-identical to PR #105 head `065e843` (`whitepapers/ORF_ERRATA.md`, SHA-256 `bb0b53cf…b904`, fetched 05:33 PT). Researchy's files were not edited.
+**Checked:** 9 Oct 2026, 05:25–05:40 PT. **Inputs:** `top100-audit.md` (mtime 05:32 PT), `top100-method.md` (05:32), `pg-followups.md` (05:28), rubric v1.0, `top100-qa-ranking-crosscheck.md` + `tools/qa_rank.py`, `top10-chains-orf-alignment.md` (LOCKED), `posm-cycle-chain-map.md`, `release1-section-3.3-chains.md`, `chains/data/`. **Definitions:** checked against repo PDFs (`whitepapers/dospo-whitepaper-v1.0.pdf` p.13, `open-maintenance-framework-omf-v1.0.pdf` p.5/p.15, `orf-v1.0.pdf` pp.2, 8, 18, §8 pp.23–25). **Errata:** `sources/ORF_ERRATA.md` is byte-identical to PR #105 head `065e843` (`whitepapers/ORF_ERRATA.md`, SHA-256 `bb0b53cf…b904`, fetched 05:33 PT). the working check's files were not edited.
 
 ### Verdict: **SHIP WITH FIXES.** Blockers B-1 and B-2 must be applied before batch 1 ships.
 
@@ -152,7 +152,7 @@ Both blockers are text fixes. Neither changes a Present/Partial/Missing count or
 | UNVERIFIED tags | **11** (Zcash 3) | **12** (Zcash 4: fund balance; retainer-like programs; Family D to ZF; "retainer UNVERIFIED" in Missing pieces) | **✗ → F-1** |
 | PROPOSAL prefix | all 25 | all 25 start "PROPOSAL (example; not a finding):" | ✓ |
 | Market cap and CG rank | 25 rows | all 25 match `coingecko-snapshot-2026-10-09.json` exactly (value and `market_cap_rank`) | ✓ |
-| Exclusions (CG 1–49) | 24 = 9 stablecoins + 4 RWA/commodity + 11 no own chain (Researchy, per parent) | Stablecoins 9: USDT, USDC, USDS, USDe (counted once), DAI, USD1, USDG, PYUSD, RLUSD. RWA/commodity 4: FIGR_HELOC, XAUT, USYC, USDY. No own chain 11: LINK, LEO, RAIN, UNI, BTW, QNT, SHIB, ENA, PUMP, AAVE, ONDO. 25 included + 24 excluded = 49 = CG #1–#49, no gaps; each CG id matches the snapshot rank | ✓ (9/4/11 = 24). The table itself never states the split → N-6 |
+| Exclusions (CG 1–49) | 24 = 9 stablecoins + 4 RWA/commodity + 11 no own chain (the working check, per parent) | Stablecoins 9: USDT, USDC, USDS, USDe (counted once), DAI, USD1, USDG, PYUSD, RLUSD. RWA/commodity 4: FIGR_HELOC, XAUT, USYC, USDY. No own chain 11: LINK, LEO, RAIN, UNI, BTW, QNT, SHIB, ENA, PUMP, AAVE, ONDO. 25 included + 24 excluded = 49 = CG #1–#49, no gaps; each CG id matches the snapshot rank | ✓ (9/4/11 = 24). The table itself never states the split → N-6 |
 | Ranking vs cross-check (F1) | | Ranks 1–10 are identical. After removing WBT/CRO/OKB, 11–25 match the cross-check order. AVAX is CG #26 vs #27 (05:19 vs 05:17 snapshot, stated) | ✓ |
 | Cardano rank | #12 (rule D) / #11 (WBT excluded) | #12 under rule D at both 05:19 and 03:53 PT (`coingecko-markets-2026-10-09.json`: WBT #15 sits above ADA #17) | ✓ |
 
@@ -250,12 +250,12 @@ The spec IDs also exist: `orf/INSTRUMENT_CATALOG.md` A.1, A.2, A.4, B.1, B.2, C.
 
 ### 7. Blocked explorers (rule D liveness)
 
-`top100-method.md` §4 says only that 403'd explorers "were accepted when the chain is plainly live". **No alternative evidence is logged for Avalanche or Bitcoin Cash.** Canton's alternative (lighthouse.cantonloop.com HTTP 200) is logged and is adequate. QA collected the evidence below, and Researchy should copy it into the method (F-8):
+`top100-method.md` §4 says only that 403'd explorers "were accepted when the chain is plainly live". **No alternative evidence is logged for Avalanche or Bitcoin Cash.** Canton's alternative (lighthouse.cantonloop.com HTTP 200) is logged and is adequate. QA collected the evidence below, and the working check should copy it into the method (F-8):
 
 | Chain | Blocked | QA alternative (9 Oct 2026) | Adequate? |
 |---|---|---|---|
 | Avalanche | snowtrace, avascan (QA saw HTTP 202 challenge pages) | Public C-Chain RPC `api.avax.network/ext/bc/C/rpc` `eth_getBlockByNumber latest` → block **97,122,948** at **05:36:17 PT** | Yes |
-| Bitcoin Cash | bchexplorer (403 for Researchy; HTTP 200 "Bitcoin Cash Explorer" for QA); blockchair.com HTML 401 | `api.blockchair.com/bitcoin-cash/stats` → best block **972,125** at **05:30:44 PT**, 15,203 tx/24h | Yes |
+| Bitcoin Cash | bchexplorer (403 for the working check; HTTP 200 "Bitcoin Cash Explorer" for QA); blockchair.com HTML 401 | `api.blockchair.com/bitcoin-cash/stats` → best block **972,125** at **05:30:44 PT**, 15,203 tx/24h | Yes |
 | Canton | ccview 403 (QA confirms) | lighthouse.cantonloop.com HTTP 200 (QA confirms) | Yes (already logged) |
 | X Layer (extra) | — | `rpc.xlayer.tech` → block 72,780,451 at 05:38:07 PT | Supports inclusion |
 

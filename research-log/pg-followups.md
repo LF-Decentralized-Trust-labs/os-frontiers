@@ -12,7 +12,7 @@
 - Annual Report 2025: `docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.html` (and `.pdf`), captured 2026-10-09, for $7,231,668 / 6,202 only.
 - Q3 2026 audit: `docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.html` (and `.pdf`), captured 2026-10-09, for **190 members** only. It records "membership is now 190, with a net decrease of 6 (-3.1%) members from 196", for funded members as of August 5, 2026.
 - The 190 figure is cited **only** to the Q3 audit capture. Membership figures in the Annual Report are from a different date and are not used here.
-(On the box these captures sit under `/workspace/osfl/chains/data/`. In the repo, PR #105 places them under `docs/chains/data/`.)
+(On the box these captures sit under `docs/chains/data/`. In the repo, PR #105 places them under `docs/chains/data/`.)
 
 **Path note:** there is no `docs/` directory on the box. The upstream files `docs/EVIDENCE_REGISTER.md` and `docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md` exist on the box as `sources/EVIDENCE_REGISTER.md` (near-duplicate: `sources/evidence-register.md`) and `sources/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md`. Line numbers below refer to those box copies and must be re-located with `rg` in the repo before applying.
 
@@ -37,7 +37,7 @@
 - **Evidence:** whitepapers/ORF_ERRATA.md · "Protocol Guild — corrected scale (approved 9 October 2026)"; https://www.protocolguild.org/blog/20260129-annual-report-2025 (capture docs/chains/data/pg-20260129-annual-report-2025-2026-10-09.html, 2026-10-09); https://www.protocolguild.org/blog/20260826-q3-quarterly-audit (capture docs/chains/data/pg-20260826-q3-quarterly-audit-2026-10-09.html, 2026-10-09)
 - **Notes:** Corrected per errata (High): total 2025 donations $7,231,668, valued at time of donation, from 6,202 unique donors (Annual Report 2025, 29 Jan 2026). Membership: 190 funded members as of 5 Aug 2026, a net decrease of 6 from 196 (Q3 2026 audit, 26 Aug 2026). The 196 figure (22 May 2026) is superseded, not wrong for its date. "$80M+ committed" stays UNVERIFIED.
 ```
-(The claim line stays in the paper's original wording ($7.2M, 196, $80M+) as the record of the original claim. Status is **ERRATA**, and all corrections are in Notes. This is the form USe Me's QA log accepts, per Batch 1 QA "For Projects Manager" item 2, 2026-10-09.)
+(The claim line stays in the paper's original wording ($7.2M, 196, $80M+) as the record of the original claim. Status is **ERRATA**, and all corrections are in Notes. This is the form the review pass's QA log accepts, per Batch 1 QA "For Projects Manager" item 2, 2026-10-09.)
 
 ### 1b. C-110 (box lines 915–919)
 **Current (stale):**
