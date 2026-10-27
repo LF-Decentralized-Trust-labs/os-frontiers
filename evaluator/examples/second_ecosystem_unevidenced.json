@@ -1,0 +1,23 @@
+{
+  "name": "Evidence-free scaffold (not a measured ecosystem)",
+  "note": "Not a score of any ecosystem. Money fields are 0 because no evidence was entered. Supplied indicators are 0 for the same reason. Indicator 11 is computed from the money fields. TODO (Christian): name a second ecosystem and replace this file with public evidence. Do not treat these zeros as a measurement.",
+  "annual_maintenance_budget_usd": 0,
+  "treasury_reserve_usd": 0,
+  "annual_tx_fee_inflow_usd": 0,
+  "annual_reserve_expansion_usd": 0,
+  "annual_earned_non_inflation_usd": 0,
+  "indicator_1_legitimacy_charter": 0,
+  "indicator_2_neutrality_guarantee": 0,
+  "indicator_3_operator_replaceable": 0,
+  "indicator_4_policy_engine": 0,
+  "indicator_5_transparency_reporting": 0,
+  "indicator_6_maintainer_retainers": 0,
+  "indicator_7_contributor_pathways": 0,
+  "indicator_8_tooling_stewardship": 0,
+  "indicator_9_autonomy_safeguard": 0,
+  "indicator_10_impact_metrics": 0,
+  "indicator_12_fork_resistance": 0,
+  "indicator_13_benefit_bundling_slas": 0,
+  "indicator_14_ips_endowments": 0,
+  "indicator_15_independent_audit": 0
+}

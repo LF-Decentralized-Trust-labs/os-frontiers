@@ -22,6 +22,8 @@ Read the three entry points below, in any order. Each one names the next file.
 | [OMF](GLOSSARY.md#omf) | How money goes out | [omf/START_HERE.md](omf/START_HERE.md) | [omf/PROGRAM_CHARTER_TEMPLATE.md](omf/PROGRAM_CHARTER_TEMPLATE.md) |
 | [ORF](GLOSSARY.md#orf) | How money comes back | [orf/START_HERE.md](orf/START_HERE.md) | [orf/5_QUESTION_ASSESSMENT.md](orf/5_QUESTION_ASSESSMENT.md) |
 
-The fifteen-indicator scorer is separate from the eight hard gates. Run it only as a hypothetical: [evaluator/README.md](evaluator/README.md).
+The fifteen-indicator scorer is separate from the eight hard gates. Run it only as a hypothetical: [evaluator/README.md](evaluator/README.md). An evidence-free scaffold, not a second measured ecosystem, is [evaluator/examples/SECOND_ECOSYSTEM.md](evaluator/examples/SECOND_ECOSYSTEM.md).
 
 Working checks live in [research-log/README.md](research-log/README.md). They are an audit trail, not the specification.
+
+Comparison profiles of other organizations are in [docs/landscape/README.md](docs/landscape/README.md). They are not scores. A draft invitation, with no ecosystem named, is [docs/CALL_FOR_PILOTS.md](docs/CALL_FOR_PILOTS.md).

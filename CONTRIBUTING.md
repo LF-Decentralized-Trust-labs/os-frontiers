@@ -35,6 +35,8 @@ LF-Decentralized-Trust-labs/os-frontiers/
 ├── whitepapers/            # Series index, errata, v1.1 manuscript, and the v1.0 PDFs
 ├── claims/                 # Claim-validation notes
 ├── research-log/           # Working audit trail (not the specification)
+├── reviews/                # Independent review records (none filed)
+├── meetings/               # Meeting notes template (no meeting filed)
 ├── LICENSE                 # Apache-2.0 for code
 └── LICENSE-DOCS            # CC-BY-4.0 for documentation
 ```

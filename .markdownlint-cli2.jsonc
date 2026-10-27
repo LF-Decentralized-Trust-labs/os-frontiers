@@ -16,6 +16,10 @@
     "outreach/**/*.md",
     "evaluator/docs/CHAOSS_MAPPING.md",
     "evaluator/README.md",
+    "evaluator/examples/SECOND_ECOSYSTEM.md",
+    "docs/CALL_FOR_PILOTS.md",
+    "docs/release-notes/v0.9.0-draft.md",
+    "reviews/**/*.md",
     ".github/ISSUE_TEMPLATE/*.md"
   ],
   "config": {

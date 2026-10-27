@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you reference or use this research framework, please cite it as below."
+message: "If you reference or use this research framework, please cite it as below. This version is the latest tagged release. A Zenodo DOI has not been issued."
 authors:
   - family-names: "Taylor"
     given-names: "Christian"
@@ -9,3 +9,5 @@ date-released: 2026-08-13
 url: "https://github.com/LF-Decentralized-Trust-labs/os-frontiers"
 repository-code: "https://github.com/LF-Decentralized-Trust-labs/os-frontiers"
 license: Apache-2.0 AND CC-BY-4.0
+# TODO (Christian): request a Zenodo DOI before the next tagged release. Do not invent one.
+# Draft notes for a proposed v0.9.0 are in docs/release-notes/v0.9.0-draft.md. They are not a release, and this file stays on the tagged version.
