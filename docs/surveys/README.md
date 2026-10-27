@@ -18,7 +18,7 @@ These are the standalone §2 and §2.7 files. They are not yet folded into [`../
 
 ## Source PDFs are not committed
 
-The publishers' PDFs (and their `pdftotext` extractions) are not in this repository, for copyright reasons. Where these files mention a local copy under `surveys/sources/` or a PDF under `surveys/data/`, use the official URL instead. The SHA-256 hashes in `data/` let anyone confirm they hold the same file.
+The publishers' PDFs (and their `pdftotext` extractions) are not in this repository. The HTML and text captures that were in `data/` were removed as well. Where these files mention a local copy, use the official URL. Hashes and archive links: [`../SOURCES.md`](../SOURCES.md). The SHA-256 files in `data/` still let anyone confirm they hold the same bytes.
 
 | Source | Official URL |
 |---|---|
