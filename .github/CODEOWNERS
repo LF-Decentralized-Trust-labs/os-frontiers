@@ -1,4 +1,8 @@
-# Codeowners for LF Decentralized Trust · Open Source Frontiers Lab
+# Each area needs two owners. One GitHub account has agreed.
+# TODO (Christian): add a second owner on every line below.
+# Do not add a handle until that person has agreed in public.
+# Do not list a consulting firm. The lead maintainer's consulting firm gets no special status.
+# There is no /contracts/ path. Do not add one.
 
 * @ThatGuyLLC
 
@@ -7,3 +11,7 @@
 /orf/ @ThatGuyLLC
 /evaluator/ @ThatGuyLLC
 /docs/ @ThatGuyLLC
+/whitepapers/ @ThatGuyLLC
+/outreach/ @ThatGuyLLC
+/research-log/ @ThatGuyLLC
+/meetings/ @ThatGuyLLC
