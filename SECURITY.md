@@ -15,8 +15,9 @@ Please do **NOT** create a public GitHub issue for security vulnerabilities.
 ## Scope & Security Controls
 
 This repository contains:
+
 1. **Normative Guidance & Framework Documents**: Architectural standards for dOSPO, OMF, and ORF.
 2. **CLI Tools & Evaluator Engines**: Python and Node.js command-line tools (`assess_ecosystem.py`, `quaid_adapter.py`).
-3. **Published page and local preview**: GitHub Pages for this repository is published at https://lf-decentralized-trust-labs.github.io/os-frontiers/ (checked 27 October 2026). The same files can be opened locally from `evaluator/preview/` (`index.html`, `app.js`, `style.css`).
+3. **Published page and local preview**: GitHub Pages for this repository is published at <https://lf-decentralized-trust-labs.github.io/os-frontiers/> (checked 27 October 2026). The same files can be opened locally from `evaluator/preview/` (`index.html`, `app.js`, `style.css`).
 
 `ORFSlaVault.sol`, `orf_sla_vault.ak`, and the `contracts/` directory are not in this tree. [`VALIDATION.md`](VALIDATION.md) records that directory as removed on 20 August 2026.

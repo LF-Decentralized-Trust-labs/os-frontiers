@@ -1,0 +1,33 @@
+name: Weekly link check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    name: Check front-door links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          fail: true
+          args: >-
+            --no-progress
+            --timeout 20
+            README.md
+            START_HERE.md
+            QUICKSTART_FOR_TREASURIES.md
+            GLOSSARY.md
+            GOVERNANCE.md
+            STATUS.md
+            evaluator/docs/CHAOSS_MAPPING.md
+            evaluator/README.md

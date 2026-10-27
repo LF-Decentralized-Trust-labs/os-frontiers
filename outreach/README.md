@@ -7,8 +7,8 @@ Adoption material for a treasury, a foundation, or a governance forum. Web3 is t
 
 Calls to action:
 
-- Repository: https://github.com/LF-Decentralized-Trust-labs/os-frontiers
-- LF Decentralized Trust labs page: https://www.lfdecentralizedtrust.org/projects/labs
+- Repository: <https://github.com/LF-Decentralized-Trust-labs/os-frontiers>
+- LF Decentralized Trust labs page: <https://www.lfdecentralizedtrust.org/projects/labs>
 
 This directory does not claim that Open Source Frontiers is listed on the labs page.
 

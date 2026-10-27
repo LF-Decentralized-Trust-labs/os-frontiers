@@ -1,5 +1,6 @@
 {
   "name": "Hypothetical Fully Architected Ecosystem",
+  "note": "Hypothetical illustration. This file does not include hard_gates, so the eight governance gates stay NOT MET. A replenishment ratio at or above 1.0 is the point-rubric line, not those gates.",
   "annual_maintenance_budget_usd": 3500000,
   "treasury_reserve_usd": 650000000,
   "annual_tx_fee_inflow_usd": 4500000,
