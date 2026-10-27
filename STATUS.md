@@ -15,7 +15,7 @@ Stage 0 research candidate. This page records what the repository supports today
 
 | Piece | Stage | Why it is not further along |
 |---|---|---|
-| dOSPO, OMF, ORF | Stage 0 | No independent review is recorded in this repository. |
+| dOSPO, OMF, ORF | Stage 0 | No independent review is filed. The empty directory is [reviews/README.md](reviews/README.md). |
 | QUAID adapter | Stage 0 | Heuristic only. Continuous integration reads a saved fixture. |
 | Reference contracts | Removed | Not restored. |
 
