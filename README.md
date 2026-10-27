@@ -82,6 +82,7 @@ OSF synthesizes Web2 and Web3 precedents into a unified, three-piece closed-loop
 ### Evidence, Research & Scenarios
 - **[`docs/EVIDENCE_REGISTER.md`](./docs/EVIDENCE_REGISTER.md)**: Primary-Source Precedent Audit Matrix & Transferability Ratings.
 - **[`docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md`](./docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md)**: 5-Vector Deep Dives into STF, Protocol Guild, Tidelift, Project Odin, Optimism, Polkadot, and ENS.
+- **[`docs/landscape/README.md`](./docs/landscape/README.md)**: Landscape reference section — 30 evidence profiles of public funders, corporate and security funds, routing rails, foundations, philanthropy and research groups working on open source sustainability, each mapped to dOSPO, OMF and ORF.
 - **[`docs/TIER_1_FEASIBILITY_MODEL.md`](./docs/TIER_1_FEASIBILITY_MODEL.md)**: Financial Scenario Model & Compound Stress Test.
 
 ### Ecosystem precedents
