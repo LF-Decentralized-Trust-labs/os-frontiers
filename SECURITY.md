@@ -7,7 +7,8 @@
 
 Open Source Frontiers Lab takes software and framework security seriously. If you discover a security vulnerability in the repository code, CLI evaluators, or the local preview, please report it immediately:
 
-- **Security Email**: **security@opensourcefrontiers.org** (or **chris@opensourcecowboy.org**)
+- **GitHub private vulnerability reporting**: use the repository's private reporting flow once it is enabled. TODO (Christian): enable private vulnerability reporting for `LF-Decentralized-Trust-labs/os-frontiers` (Settings → Code security → Private vulnerability reporting). Until that is on, do not file a public issue.
+- **Lab security mailbox**: TODO (Christian). This file does not publish a personal address or a consulting-firm address. Add a lab-controlled mailbox here only after one exists.
 
 Please do **NOT** create a public GitHub issue for security vulnerabilities.
 

@@ -30,7 +30,7 @@ LF-Decentralized-Trust-labs/os-frontiers/
 ├── evaluator/              # Assessment tools, adapters, and the local preview
 ├── use-cases/              # Stage 0 use-case research and the submission template
 ├── tools/                  # Tooling and protocol integrations (not precedents)
-├── pitch/                  # Executive Decks & Adoption Templates
+├── outreach/               # Adoption one-pager and governance proposal template
 └── docs/                   # Guides, evidence, and precedents/
 ```
 

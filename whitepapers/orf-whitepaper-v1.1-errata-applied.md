@@ -3,9 +3,9 @@
 ## Closing the Loop on Open Source Sustainability in Web3
 
 > **Edition:** v1.1 (errata-applied manuscript) · **Stage 0** Research Candidate  
-> **Author:** Christian Taylor — CoFounder & Chief Open Source Officer, Open Source Cowboy Consulting  
+> **Author:** Christian Taylor. Affiliation: Open Source Cowboy Consulting (a credit; see AUTHORS.md).  
 > **Date:** 18 August 2026 (v1.0) · **Errata incorporated:** 1 October 2026 PT; Protocol Guild and Cardano POSM errata 9 October 2026 PT  
-> **Organization:** Open Source Cowboy Consulting · Web3 Open Source and Governance Advisory Firm  
+> **Organization:** Open Source Frontiers Lab, LF Decentralized Trust  
 > **Series:** Third installment alongside dOSPO (who decides) and OMF (how resources go out). Each framework usable independently.  
 > **Controlling citation rule:** Where this manuscript differs from `orf-v1.0.pdf`, **this text controls**. Source errata: `whitepapers/ORF_ERRATA.md` / `sources/ORF_ERRATA.md`.  
 > **Honesty banner:** No Hard Gate is marked passed. Specifications under `orf/` remain Stage 0. Do not invent expert quotes or unaudited cash totals.
@@ -269,9 +269,9 @@ Retain remaining v1.0 bibliography entries with **Hoffmann** spelling corrected 
 
 ---
 
-## About Open Source Cowboy
+## About the author
 
-The Open Replenishment Framework was developed by Open Source Cowboy (opensourcecowboy.org) as the third installment of an ongoing body of work on decentralized open source governance, operations, and economic sustainability, alongside the dOSPO and OMF whitepapers and the Open Source Frontiers research repository at LF Decentralized Trust. ORF is designed to be adopted, adapted, and improved through use.
+The Open Replenishment Framework was written by Christian Taylor as the third installment of an ongoing body of work on decentralized open source governance, operations, and economic sustainability, alongside the dOSPO and OMF whitepapers and the Open Source Frontiers research repository at LF Decentralized Trust. His affiliation, Open Source Cowboy Consulting, is a credit recorded in AUTHORS.md. It is not the authoring institution of this repository. ORF is designed to be adopted, adapted, and improved through use.
 
 ---
 

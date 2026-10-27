@@ -57,4 +57,4 @@ Relying indefinitely on token inflation or finite reserves creates a ticking clo
 - **For Maintainers**: Guarantees predictable recurring retainers without sacrificing technical roadmap control.
 - **For Enterprise Sponsors**: Provides a compliant commercial interface to purchase maintenance SLAs, patch commitments, and supply-chain assurances.
 
-*Explore full specifications, templates, and interactive tools at `opensourcecowboy.org`*
+*Specifications and templates: [this repository](https://github.com/LF-Decentralized-Trust-labs/os-frontiers). LF Decentralized Trust labs: [lfdecentralizedtrust.org/projects/labs](https://www.lfdecentralizedtrust.org/projects/labs). This one-pager does not claim the lab is listed on that page.*
