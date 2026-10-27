@@ -9,6 +9,6 @@
   "scripts": {
     "assess": "node index.js ../examples/sample_input_config.json"
   },
-  "author": "Christian Taylor <opensourcecowboy.org>",
+  "author": "OSF Lab contributors",
   "license": "Apache-2.0"
 }

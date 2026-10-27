@@ -4,21 +4,30 @@
 
 ---
 
-## Lab Authors & Maintainers
+## Lab authors and maintainers
 
-- **Christian Taylor**: Lead Architect & Principal Investigator ([@ThatGuyLLC](https://github.com/ThatGuyLLC))
-- **Open Source Frontiers Lab Community**: Contributors, Reviewers, and Domain Experts ([@LF-Decentralized-Trust-labs](https://github.com/LF-Decentralized-Trust-labs))
+- **Christian Taylor** — Lead maintainer ([@ThatGuyLLC](https://github.com/ThatGuyLLC)). Affiliation: Open Source Cowboy Consulting. The affiliation is a credit for the lead maintainer. It is not a second maintainer, and it gets no special status in this project.
+
+## Contributors
+
+- **Serkan Holat** — Contributor to the ORF work.
+
+No other people are listed here. Outside maintainers are not named until they agree to serve. See [`MAINTAINERS.md`](MAINTAINERS.md).
 
 ---
 
-## Precursor & Institutional Acknowledgments
+## Precursor and institutional acknowledgments
 
-We gratefully acknowledge operational precedents, open-source specifications, and comparative insights from:
+The lab is hosted at LF Decentralized Trust. The GitHub organization account is not an individual author.
 
-- **Intersect MBO (Cardano Open Source Committee & POSM Precursor)**
-- **Ethereum Protocol Guild & Protocol Fellowship**
+Operational precedents and comparative notes in this repository refer to work by other projects, including:
+
+- **Intersect MBO (Cardano Open Source Committee and the Paid Open Source Model)**
+- **Ethereum Protocol Guild and Protocol Fellowship**
 - **Sovereign Tech Fund (STF / Germany)**
-- **CNCF & Linux Foundation Mentorship Programs**
-- **Optimism Collective & RetroPGF**
-- **Polkadot OpenGov & Polkadot Fellowship**
-- **Open Source Observer (OSO) & CHAOSS Project**
+- **CNCF and Linux Foundation mentorship programs**
+- **Optimism Collective and RetroPGF**
+- **Polkadot OpenGov and Polkadot Fellowship**
+- **Open Source Observer (OSO) and the CHAOSS project**
+
+The Intersect POSM accelerator never launched. It was only described as intent in the scope of work.

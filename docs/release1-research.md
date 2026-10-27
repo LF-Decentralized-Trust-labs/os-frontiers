@@ -3,7 +3,7 @@
 > **OSFL Release-1 Research Draft** · Open Source Frontiers Lab (LF Decentralized Trust labs · `os-frontiers`)  
 > **Series:** dOSPO (governance) · OMF (maintenance deployment) · ORF (replenishment) — ORF dated 18 Aug 2026 completes the trilogy; each pillar usable alone.  
 > **Author:** Christian Taylor · Open Source Frontiers Lab synthesis pack  
-> **Affiliation options:** Open Source Cowboy Consulting; LF Decentralized Trust Labs (Stage 0 Research Candidate)  
+> **Affiliation:** Open Source Cowboy Consulting is the lead author's consulting affiliation and a credit only. This draft is an Open Source Frontiers Lab synthesis at LF Decentralized Trust.  
 > **Date:** 2026-09-24 America/Los_Angeles · **Revised:** 2026-10-09 PT (Tidelift needs map folded in as §2; later sections renumbered). Pre-revision copy: `synthesis/archive/release1-research.pre-needs-foldin-2026-10-09.md`  
 > **Status:** **Stage 0** research candidate. No Hard Gate marked passed. Where `ORF_ERRATA.md` differs from `orf-v1.0.pdf`, **errata controls**.  
 > **Evidence pack:** `claims/orf-claims-validated.md` (141; SUPPORTS 99 · PARTIAL 35 · ERRATA 5 · CONFLICTS 2; Researchy delta: 0 flips); `use-cases/web2-web3-prototypes.md`; `use-cases/web2-web3-prototypes-expansion.md` (N1–N12); `use-cases/researchy-validation.md`; `claims/implementation-validation.md`; `synthesis/gaps.md`; `surveys/oss-survey-inventory.md` (S01–S30); `surveys/crisis-to-model-map.md`; `surveys/release1-section-2-survey-crisis-map.md`; `surveys/release1-section-2.7-closing-the-gaps.md`  
