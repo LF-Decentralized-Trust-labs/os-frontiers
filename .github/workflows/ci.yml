@@ -2,9 +2,8 @@ name: CI Workflow
 
 on:
   push:
-    branches: [ main, feature/* ]
+    branches: [ main, feature/*, cursor/** ]
   pull_request:
-    branches: [ main ]
 
 jobs:
   test-evaluator-and-integrity:
