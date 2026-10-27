@@ -1,26 +1,19 @@
-# Project Maintainers
+# Project maintainers
 
 > **LF Decentralized Trust · Open Source Frontiers Lab**
 
----
+## Active maintainers
 
-## Active Maintainers
-
-| Name | GitHub Handle | Role | Focus Area |
+| Name | GitHub | Role | Focus |
 |---|---|---|---|
-| Christian Taylor | [@ThatGuyLLC](https://github.com/ThatGuyLLC) | Lead Architect & Principal Investigator | dOSPO Governance, OMF, ORF Feasibility Models |
-| Open Source Frontiers Lab Community | [@LF-Decentralized-Trust-labs](https://github.com/LF-Decentralized-Trust-labs) | Research Contributors & Reviewers | Evaluators, Specifications, Contracts & Profiles |
+| Christian Taylor | [@ThatGuyLLC](https://github.com/ThatGuyLLC) | Lead maintainer | Specifications and the evaluator |
 
----
+Affiliation, recorded as a credit only: Open Source Cowboy Consulting. The lead maintainer's consulting firm gets no special status. See [GOVERNANCE.md](GOVERNANCE.md).
 
-## Bootstrap Governance Model
+The organization account [@LF-Decentralized-Trust-labs](https://github.com/LF-Decentralized-Trust-labs) is the host. It is not a person and it is not a maintainer.
 
-During the **Stage 0 Research Candidate** phase, the repository operates under a bootstrap governance structure led by the founding maintainer alongside LF Decentralized Trust community reviewers.
+## Seats that are open
 
-As external peer review completes and community adoption progresses, maintainership will transition to a multi-entity maintainer committee following standard Linux Foundation open governance principles.
+TODO (Christian): recruit 2 to 4 outside maintainers. No one else is listed because no one else has been asked and has agreed.
 
----
-
-## Becoming a Maintainer
-
-Maintainership is open to active contributors who demonstrate ongoing commitment, high-quality technical/research reviews, and adherence to project governance principles.
+How a person becomes a maintainer, leaves, or replaces the lead is in [GOVERNANCE.md](GOVERNANCE.md).
