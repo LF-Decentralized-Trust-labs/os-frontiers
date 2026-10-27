@@ -25,8 +25,8 @@ No [hard gate](./GLOSSARY.md#hard-gates) is marked passed. The evaluator sample'
 
 The triangle, the closed loop, and the fifteen-indicator scorer are one page.
 
-- Live site: https://lf-decentralized-trust-labs.github.io/os-frontiers/
-- Scorer, on that site: https://lf-decentralized-trust-labs.github.io/os-frontiers/#evaluator
+- Live site: <https://lf-decentralized-trust-labs.github.io/os-frontiers/>
+- Scorer, on that site: <https://lf-decentralized-trust-labs.github.io/os-frontiers/#evaluator>
 - Source: [`docs/index.html`](./docs/index.html)
 
 The scorer is the same 15-indicator preview as `evaluator/preview`. A level it prints is not one of the eight hard gates.
@@ -72,12 +72,14 @@ Each framework can still be used alone. Next file for each door:
 ## Master Document Directory & Navigation
 
 ### Master Architectural Whitepapers Series ([`whitepapers/`](./whitepapers))
+
 - **[`whitepapers/README.md`](./whitepapers/README.md)**: Master Whitepaper Series Index, series position, and which text controls.
 - **dOSPO Whitepaper**: Canonical PDF [`whitepapers/dospo-whitepaper-v1.0.pdf`](./whitepapers/dospo-whitepaper-v1.0.pdf) (March 3, 2026). Pointer: [`whitepapers/DOSPO_WHITEPAPER.md`](./whitepapers/DOSPO_WHITEPAPER.md).
 - **OMF Whitepaper**: Canonical PDF [`whitepapers/open-maintenance-framework-omf-v1.0.pdf`](./whitepapers/open-maintenance-framework-omf-v1.0.pdf) (March 7, 2026). Pointer: [`whitepapers/OMF_WHITEPAPER.md`](./whitepapers/OMF_WHITEPAPER.md). Citation layer: [`whitepapers/OMF_ERRATA.md`](./whitepapers/OMF_ERRATA.md).
 - **ORF Whitepaper**: Canonical text is the v1.1 manuscript [`whitepapers/orf-whitepaper-v1.1-errata-applied.md`](./whitepapers/orf-whitepaper-v1.1-errata-applied.md); the v1.1 PDF is built from it in CI. Previous edition: [`whitepapers/orf-v1.0.pdf`](./whitepapers/orf-v1.0.pdf). Stage 0. No gate is marked passed.
 
 ### Core Architectural Specifications
+
 - **[`dospo/START_HERE.md`](./dospo/START_HERE.md)**: Decentralized OSPO Governance Specification & RACI Matrix.
 - **[`omf/PROGRAM_PORTFOLIO.md`](./omf/PROGRAM_PORTFOLIO.md)**: Maintenance Program Specifications (Retainers, Bounties, Pathways, Resilience, Incubation).
 - **[`orf/START_HERE.md`](./orf/START_HERE.md)**: Open Replenishment Framework Master Introduction & 5 Revenue Families.
@@ -86,6 +88,7 @@ Each framework can still be used alone. Next file for each door:
 - **[`VALIDATION.md`](./VALIDATION.md)**: 4-Stage Research Validation Lifecycle & Honest Stage 0 Labelling. Progress per component: [`STATUS.md`](./STATUS.md).
 
 ### Evidence, Research & Scenarios
+
 - **[`docs/EVIDENCE_REGISTER.md`](./docs/EVIDENCE_REGISTER.md)**: Primary-Source Precedent Audit Matrix & Transferability Ratings.
 - **[`docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md`](./docs/PRIOR_ART_AND_COMPETITIVE_ANALYSIS.md)**: 5-Vector Deep Dives into STF, Protocol Guild, Tidelift, Project Odin, Optimism, Polkadot, and ENS.
 - **[`docs/landscape/README.md`](./docs/landscape/README.md)**: Landscape reference section — 30 evidence profiles of public funders, corporate and security funds, routing rails, foundations, philanthropy and research groups working on open source sustainability, each mapped to dOSPO, OMF and ORF.
@@ -93,6 +96,7 @@ Each framework can still be used alone. Next file for each door:
 - **[`docs/SOURCES.md`](./docs/SOURCES.md)**: Source list for third-party material (URL, access date, SHA-256, archive link). Third-party copies are not stored in this repository.
 
 ### Ecosystem precedents
+
 - **[`docs/precedents/CARDANO_POSM.md`](./docs/precedents/CARDANO_POSM.md)**: Cardano Paid Open Source Model (POSM) funding model. The Intersect POSM accelerator never launched. It was only described as intent in the scope of work.
 - **[`docs/precedents/ETHEREUM_EVM.md`](./docs/precedents/ETHEREUM_EVM.md)**: Protocol Guild, Project Odin, and ENS Endowment Architecture.
 - **[`docs/precedents/OPTIMISM_SUPERCHAIN.md`](./docs/precedents/OPTIMISM_SUPERCHAIN.md)**: Superchain 15% Net Fee Split & OSO Impact Tracing.
@@ -100,6 +104,7 @@ Each framework can still be used alone. Next file for each door:
 - **[`docs/precedents/PROJECT_ODIN.md`](./docs/precedents/PROJECT_ODIN.md)**: Ethereum Foundation Funding Coordination and Renaissance Philanthropy incubation program. A precedent, not a rail.
 
 ### Tool & Infrastructure Specifications
+
 - **[`tools/OPEN_SOURCE_OBSERVER.md`](./tools/OPEN_SOURCE_OBSERVER.md)**: Multi-Ecosystem BigQuery Data Warehouse & Hasura GraphQL API.
 - **[`tools/DRIPS_PROTOCOL.md`](./tools/DRIPS_PROTOCOL.md)**: EVM Smart Contracts for Dependency Graph Fund Splitting (ORF Routing Rail).
 - **[`tools/SUPERFLUID.md`](./tools/SUPERFLUID.md)**: Constant Flow Agreements for Real-Time Streaming Stipends (ORF Routing Rail).
@@ -108,6 +113,7 @@ Each framework can still be used alone. Next file for each door:
 - **[`tools/ANDAMIO.md`](./tools/ANDAMIO.md)**: Cardano Plutus Course Validators & Tokenized Contributor Credentials.
 
 ### Community & Governance
+
 - **[`GOVERNANCE.md`](./GOVERNANCE.md)**: How maintainers join, leave and are replaced; decisions and conflicts of interest.
 - **[`MAINTAINERS.md`](./MAINTAINERS.md)** · **[`AUTHORS.md`](./AUTHORS.md)** · **[`CONTRIBUTING.md`](./CONTRIBUTING.md)** · **[`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md)** · **[`SECURITY.md`](./SECURITY.md)**
 - **[`docs/CALL_FOR_PILOTS.md`](./docs/CALL_FOR_PILOTS.md)**: Call for pilot ecosystems.
