@@ -22,8 +22,8 @@ No [hard gate](GLOSSARY.md#hard-gates) is marked passed. A score from the evalua
 - Maintainer: [docs/MAINTAINER_AUTONOMY_GUIDE.md](docs/MAINTAINER_AUTONOMY_GUIDE.md)
 - Researcher: [START_HERE.md](START_HERE.md)
 
-Also: [GLOSSARY.md](GLOSSARY.md) · [GOVERNANCE.md](GOVERNANCE.md) · [whitepapers/README.md](whitepapers/README.md) · [VALIDATION.md](VALIDATION.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
+Also: [GLOSSARY.md](GLOSSARY.md) · [GOVERNANCE.md](GOVERNANCE.md) · [STATUS.md](STATUS.md) · [whitepapers/README.md](whitepapers/README.md) · [VALIDATION.md](VALIDATION.md) · [CONTRIBUTING.md](CONTRIBUTING.md)
 
-Published page (checked 27 October 2026): https://lf-decentralized-trust-labs.github.io/os-frontiers/
+Published page (checked 27 October 2026): <https://lf-decentralized-trust-labs.github.io/os-frontiers/>
 
 Code is [Apache-2.0](LICENSE). Documentation is [CC-BY-4.0](LICENSE-DOCS). Commits need a [DCO](GLOSSARY.md#dco) sign-off (`git commit -s`).

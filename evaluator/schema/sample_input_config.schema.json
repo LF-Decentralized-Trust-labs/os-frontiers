@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/LF-Decentralized-Trust-labs/os-frontiers/blob/main/evaluator/schema/sample_input_config.schema.json",
+  "title": "Ecosystem assessor input",
+  "description": "Input for evaluator/cli/assess_ecosystem.py. A file that omits hard_gates does not pass the eight governance gates. annual_reserve_expansion_usd is recorded and is not part of portfolio coverage.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["name", "annual_maintenance_budget_usd"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "note": {
+      "type": "string"
+    },
+    "annual_maintenance_budget_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "treasury_reserve_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "annual_tx_fee_inflow_usd": {
+      "type": "number"
+    },
+    "annual_reserve_expansion_usd": {
+      "type": "number",
+      "description": "Inflationary or reserve expansion. Not included in indicator 11 or in portfolio coverage."
+    },
+    "annual_earned_non_inflation_usd": {
+      "type": "number"
+    },
+    "annual_yield_net_usd": {
+      "type": "number",
+      "description": "Counted in portfolio coverage (gate 3) only. Not counted in indicator 11."
+    },
+    "annual_pledges_net_usd": {
+      "type": "number",
+      "description": "Counted in portfolio coverage (gate 3) only when the figure is cash already received. Not counted in indicator 11."
+    },
+    "indicator_1_legitimacy_charter": { "$ref": "#/$defs/indicator" },
+    "indicator_2_neutrality_guarantee": { "$ref": "#/$defs/indicator" },
+    "indicator_3_operator_replaceable": { "$ref": "#/$defs/indicator" },
+    "indicator_4_policy_engine": { "$ref": "#/$defs/indicator" },
+    "indicator_5_transparency_reporting": { "$ref": "#/$defs/indicator" },
+    "indicator_6_maintainer_retainers": { "$ref": "#/$defs/indicator" },
+    "indicator_7_contributor_pathways": { "$ref": "#/$defs/indicator" },
+    "indicator_8_tooling_stewardship": { "$ref": "#/$defs/indicator" },
+    "indicator_9_autonomy_safeguard": { "$ref": "#/$defs/indicator" },
+    "indicator_10_impact_metrics": { "$ref": "#/$defs/indicator" },
+    "indicator_12_fork_resistance": { "$ref": "#/$defs/indicator" },
+    "indicator_13_benefit_bundling_slas": { "$ref": "#/$defs/indicator" },
+    "indicator_14_ips_endowments": { "$ref": "#/$defs/indicator" },
+    "indicator_15_independent_audit": { "$ref": "#/$defs/indicator" },
+    "hard_gates": { "$ref": "#/$defs/hardGates" }
+  },
+  "$defs": {
+    "indicator": {
+      "description": "Boolean true scores 5 and false scores 0. A number scores 5 at 5 or above, 3 at 3 or 4, and 0 below 3. Strings are not scores.",
+      "oneOf": [
+        { "type": "boolean" },
+        { "type": "number" }
+      ]
+    },
+    "hardGates": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Evidence for the eight governance gates. Omitting this object leaves every gate NOT MET.",
+      "properties": {
+        "measurement_verified": {
+          "type": "boolean",
+          "description": "Gate 1. True only when the annual maintenance cost floor is empirically verified. Also requires annual_maintenance_budget_usd > 0."
+        },
+        "cash_evidence_audited": {
+          "type": "boolean",
+          "description": "Gate 2. True only when inflows are audited cash or stablecoin receipts."
+        },
+        "revenue_classes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "description": "Gate 4. At least two distinct correlation classes."
+        },
+        "largest_payer_share": {
+          "type": "number",
+          "description": "Gate 5. Largest single payer share of recurring net inflows. Met only when the share is from 0 through 0.25."
+        },
+        "stress_coverage_ratio": {
+          "type": "number",
+          "description": "Gate 6, with stressed_runway_months. Stress coverage ratio. Met only at 1.0 or above."
+        },
+        "stressed_runway_months": {
+          "type": "number",
+          "description": "Gate 6, with stress_coverage_ratio. Operating liquidity under the compound stress case, in months. Met only at 24 or above."
+        },
+        "liabilities_covered": {
+          "type": "boolean",
+          "description": "Gate 7. True only when contractual obligations and retainers are backed by capacity and wind-down reserves."
+        },
+        "independent_audit_published": {
+          "type": "boolean",
+          "description": "Gate 8. True only when an independent party has published the annual audit."
+        }
+      }
+    }
+  }
+}

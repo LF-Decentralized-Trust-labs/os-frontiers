@@ -4,6 +4,13 @@ const { spawnSync, execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
+const pkg = require("./package.json");
+
+if (process.argv[2] === "--version") {
+    console.log(pkg.version);
+    process.exit(0);
+}
+
 console.log("🔍 Running Open Source Frontiers 3-Piece Evaluator (dOSPO · OMF · ORF)...");
 
 const targetConfig = process.argv[2] ? path.resolve(process.argv[2]) : '';

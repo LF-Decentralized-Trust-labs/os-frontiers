@@ -1,0 +1,24 @@
+{
+  "globs": [
+    "README.md",
+    "START_HERE.md",
+    "QUICKSTART_FOR_TREASURIES.md",
+    "GLOSSARY.md",
+    "GOVERNANCE.md",
+    "MAINTAINERS.md",
+    "AUTHORS.md",
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "STATUS.md",
+    "meetings/**/*.md",
+    "discussions/**/*.md",
+    "outreach/**/*.md",
+    "evaluator/docs/CHAOSS_MAPPING.md",
+    "evaluator/README.md",
+    ".github/ISSUE_TEMPLATE/*.md"
+  ],
+  "config": {
+    "MD013": false
+  }
+}

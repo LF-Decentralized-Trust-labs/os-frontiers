@@ -1,0 +1,40 @@
+{
+  "captured": "2026-10-27",
+  "source": "https://api.github.com/repos/intersectmbo/cardano-node",
+  "note": "Saved GitHub API snapshot for offline CI. Do not call the network when this file is passed as --fixture.",
+  "repo": {
+    "full_name": "IntersectMBO/cardano-node",
+    "stargazers_count": 3175,
+    "forks_count": 763,
+    "open_issues_count": 84,
+    "default_branch": "master"
+  },
+  "files": {
+    "SECURITY.md": {
+      "present": true,
+      "type": "file",
+      "sha": "2cd6304ed4efe14c4c3d764bb7a4361aba960459",
+      "size": 871
+    },
+    ".github/SECURITY.md": {
+      "present": false,
+      "status": 404
+    },
+    "docs/SECURITY.md": {
+      "present": false,
+      "status": 404
+    },
+    "GOVERNANCE.md": {
+      "present": false,
+      "status": 404
+    },
+    ".github/GOVERNANCE.md": {
+      "present": false,
+      "status": 404
+    },
+    "docs/GOVERNANCE.md": {
+      "present": false,
+      "status": 404
+    }
+  }
+}

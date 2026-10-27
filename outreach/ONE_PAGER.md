@@ -7,7 +7,7 @@
 
 ## The Executive Problem
 
-Open-source software powers global digital infrastructure, yet token-funded ecosystems face a structural flaw: **they spend capital on sustainability without collecting value back into the treasury**. 
+Open-source software powers global digital infrastructure, yet token-funded ecosystems face a structural flaw: **they spend capital on sustainability without collecting value back into the treasury**.
 
 Relying indefinitely on token inflation or finite reserves creates a ticking clock. When bear markets arrive, maintenance budgets collapse, core maintainers leave, and infrastructure security degrades.
 
@@ -15,7 +15,7 @@ Relying indefinitely on token inflation or finite reserves creates a ticking clo
 
 ## The Solution: A 3-Piece Recipe (Distinct Functional Mandates)
 
-```
+```text
                      COMMUNITY GOVERNANCE
                   Mandate · Budget · Rules
                             |

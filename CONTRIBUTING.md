@@ -22,7 +22,7 @@ Thank you for your interest in contributing to the **Open Source Frontiers Lab**
 
 Contributions must align with the current repository directory structure:
 
-```
+```text
 LF-Decentralized-Trust-labs/os-frontiers/
 ├── dospo/                  # Decentralized OSPO governance framework
 ├── omf/                    # Open Maintenance Framework
@@ -39,17 +39,17 @@ LF-Decentralized-Trust-labs/os-frontiers/
 └── LICENSE-DOCS            # CC-BY-4.0 for documentation
 ```
 
-There is no `contracts/` directory and no `LICENSE-CODE` file. `CODEOWNERS` does not list `/contracts/`. GitHub Pages for this repository is published at https://lf-decentralized-trust-labs.github.io/os-frontiers/.
+There is no `contracts/` directory and no `LICENSE-CODE` file. `CODEOWNERS` does not list `/contracts/`. GitHub Pages for this repository is published at <https://lf-decentralized-trust-labs.github.io/os-frontiers/>.
 
 ---
 
 ## 3. Developer Certificate of Origin (DCO)
 
-All Linux Foundation repositories strictly enforce the **Developer Certificate of Origin (DCO)**. Every git commit MUST be signed off using `git commit -s`.
+All Linux Foundation repositories strictly enforce the **Developer Certificate of Origin (DCO)**. Every git commit MUST be signed off using `git commit -s`. Pull-request CI checks `Signed-off-by` on each non-merge commit in the pull request and fails if one is missing.
 
 ---
 
 ## 4. Licensing
 
-- **Code & Smart Contracts**: Licensed under [Apache-2.0](LICENSE).
+- **Code**: Licensed under [Apache-2.0](LICENSE). There is no `LICENSE-CODE` file and no `contracts/` directory.
 - **Documentation & Whitepapers**: Licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](LICENSE-DOCS).

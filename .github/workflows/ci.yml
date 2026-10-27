@@ -21,17 +21,32 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Verify DCO Commit Sign-offs
+      - name: Verify DCO sign-off on the pull request range
+        shell: bash
         run: |
-          python -c "
-          import subprocess, sys
-          try:
-              logs = subprocess.check_output(['git', 'log', '-n', '10', '--format=%B']).decode('utf-8', errors='ignore')
-              commits = [c.strip() for c in logs.split('\n\n') if c.strip()]
-              print(f'Checked {len(commits)} recent commits for DCO sign-offs.')
-          except Exception as e:
-              print(f'Notice: Git log DCO check exception: {e}')
-          "
+          set -euo pipefail
+          if [ -n "${GITHUB_BASE_REF:-}" ]; then
+            git fetch origin "${GITHUB_BASE_REF}"
+            RANGE="origin/${GITHUB_BASE_REF}..HEAD"
+          elif git rev-parse --verify origin/main >/dev/null 2>&1; then
+            RANGE="origin/main..HEAD"
+          else
+            RANGE="HEAD"
+          fi
+          missing=0
+          while IFS= read -r sha; do
+            [ -z "$sha" ] && continue
+            if ! git log -1 --format=%B "$sha" | grep -q '^Signed-off-by: '; then
+              echo "Missing Signed-off-by on $sha"
+              git log -1 --oneline "$sha"
+              missing=1
+            fi
+          done < <(git log "$RANGE" --no-merges --format=%H)
+          if [ "$missing" -ne 0 ]; then
+            echo "DCO check failed. Sign commits with git commit -s."
+            exit 1
+          fi
+          echo "DCO sign-off present on non-merge commits in ${RANGE}."
 
       - name: Verify Markdown Links Integrity
         run: |
@@ -62,22 +77,30 @@ jobs:
           print('✅ All markdown relative links verified successfully.')
           "
 
+      - name: Install schema checker
+        run: |
+          python -m pip install 'jsonschema>=4.18'
+
       - name: Run Unit Tests for Evaluator Engine
         run: |
-          python evaluator/tests/test_evaluator.py
+          python -m unittest discover -s evaluator/tests -v
 
       - name: Run Python Evaluator Assessor with Sample Config
         run: |
           python evaluator/cli/assess_ecosystem.py evaluator/examples/sample_input_config.json
 
-      - name: Run QUAID Scanner Adapter
+      - name: Run QUAID Scanner Adapter from the saved fixture
         run: |
-          python evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
+          python evaluator/cli/quaid_adapter.py --fixture evaluator/fixtures/quaid_cardano_node.json intersectmbo/cardano-node
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Lint the front-door markdown
+        run: |
+          npx --yes markdownlint-cli2@0.17.2
 
       - name: Test Node Evaluator CLI with Sample Config
         run: |
