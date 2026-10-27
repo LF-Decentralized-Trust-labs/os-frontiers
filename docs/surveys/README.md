@@ -13,12 +13,12 @@ These are the standalone §2 and §2.7 files. They are not yet folded into [`../
 | [`researchy-section2-pagecheck.md`](./researchy-section2-pagecheck.md) | Researchy's page-by-page check of the Tidelift figures |
 | [`researchy-survey-factcheck.md`](./researchy-survey-factcheck.md) | Researchy's survey fact-check |
 | [`section-2.7-ref-check.md`](./section-2.7-ref-check.md) | Reference check for §2.7 |
-| [`data/tidelift-page-index.md`](./data/tidelift-page-index.md) | Tidelift 2024 / 2023 / 2021 quote and page index |
-| `data/` | HTML captures and text of web pages, captured 9 Oct 2026. Hashes: `data/SHA256SUMS.txt` (web and report captures) and `data/SHA256SUMS-sources.txt` (Researchy's source downloads) |
+| [`data/tidelift-page-index.md`](./data/tidelift-page-index.md) | Tidelift 2024 / 2023 / 2021 quote and page index (lab note; the publisher PDFs are not in the tree) |
+| [`data/`](./data/README.md) | Hash files and the page index. HTML and text captures were removed. URLs and SHA-256: [`../SOURCES.md`](../SOURCES.md). |
 
 ## Source PDFs are not committed
 
-The publishers' PDFs (and their `pdftotext` extractions) are not in this repository, for copyright reasons. Where these files mention a local copy under `surveys/sources/` or a PDF under `surveys/data/`, use the official URL instead. The SHA-256 hashes in `data/` let anyone confirm they hold the same file.
+The publishers' PDFs (and their `pdftotext` extractions) are not in this repository. The HTML and text captures that were in `data/` were removed as well. Where these files mention a local copy, use the official URL. Hashes and archive links: [`../SOURCES.md`](../SOURCES.md). The SHA-256 files in `data/` still let anyone confirm they hold the same bytes.
 
 | Source | Official URL |
 |---|---|

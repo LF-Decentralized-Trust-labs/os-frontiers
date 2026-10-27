@@ -20,7 +20,7 @@
 - **Diagram:** "Paid Open Source Model" circular diagram, © 2024 Intersect, on **p.11** of the POSM whitepaper, *Intersecting Open Source and Sustainability: A Paid Open Source Model for Ecosystems*. Prepared by Christian Taylor (Head of Open Source Office, Intersect) and Terence "Tex" McCutcheon. Dated **20 December 2024**. Contributors include Diane Mueller, Georg Link, Christian Grobmeier, Silona Bonewald, Hart Montgomery, and Patrick Sheridan.
 - **Where it lives:** the Intersect **Open Source Committee GitBook** whitepaper page, which embeds the PDF: https://opensourcecommittee.docs.intersectmbo.org/about/open-source-office-oso/intersecting-open-source-and-sustainability-a-paid-open-source-model-for-ecosystems. The mirror is at `committees.docs.intersectmbo.org/...`. The PDF on GitBook and the copy in GitHub `IntersectMBO/documentation` are byte-identical (SHA-256 `44723107…73bb`).
 - **Not the POSM landing-page image:** the header image on https://opensourcecommittee.docs.intersectmbo.org/about/paid-open-source-model-posm is the possum mascot and wordmark, with no cycle.
-- **Local copies:** `chains/data/posm-cycle-diagram-whitepaper-p11.png` (lossless extraction) and `chains/data/Paid Open Source Model- LIVE.pdf`. Provenance is in `chains/data/POSM-SOURCES.md`. Accessed 9 Oct 2026 ~04:00 PT.
+- **Copies removed:** the p.11 diagram and `Paid Open Source Model- LIVE.pdf` are not in the tree. Provenance and hashes: [`docs/SOURCES.md`](../SOURCES.md) and `chains/data/POSM-SOURCES.md`. Accessed 9 Oct 2026 ~04:00 PT. No open license was recorded for the PDF.
 - **Text availability:** the diagram text isn't in any page HTML. I transcribed it by reading the image (2048×1150).
 
 ## 2. Transcription of the diagram
