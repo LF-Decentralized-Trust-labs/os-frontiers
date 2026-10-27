@@ -13,8 +13,8 @@ These are the standalone §2 and §2.7 files. They are not yet folded into [`../
 | [`researchy-section2-pagecheck.md`](./researchy-section2-pagecheck.md) | Researchy's page-by-page check of the Tidelift figures |
 | [`researchy-survey-factcheck.md`](./researchy-survey-factcheck.md) | Researchy's survey fact-check |
 | [`section-2.7-ref-check.md`](./section-2.7-ref-check.md) | Reference check for §2.7 |
-| [`data/tidelift-page-index.md`](./data/tidelift-page-index.md) | Tidelift 2024 / 2023 / 2021 quote and page index |
-| `data/` | HTML captures and text of web pages, captured 9 Oct 2026. Hashes: `data/SHA256SUMS.txt` (web and report captures) and `data/SHA256SUMS-sources.txt` (Researchy's source downloads) |
+| [`data/tidelift-page-index.md`](./data/tidelift-page-index.md) | Tidelift 2024 / 2023 / 2021 quote and page index (lab note; the publisher PDFs are not in the tree) |
+| [`data/`](./data/README.md) | Hash files and the page index. HTML and text captures were removed. URLs and SHA-256: [`../SOURCES.md`](../SOURCES.md). |
 
 ## Source PDFs are not committed
 

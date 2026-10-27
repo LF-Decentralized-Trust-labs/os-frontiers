@@ -1,5 +1,7 @@
 # POSM diagram: source record
 
+The PDF and the images named below were removed from the tree. SHA-256 values in `SHA256SUMS-posm.txt` still identify those bytes. The public URL list is in [`../../SOURCES.md`](../../SOURCES.md). This file is the lab's note of where the bytes came from. It is not a license to redistribute them.
+
 Access date: **9 Oct 2026, ~04:00–04:10 PT**
 
 | File | What it is | Source URL(s) |
