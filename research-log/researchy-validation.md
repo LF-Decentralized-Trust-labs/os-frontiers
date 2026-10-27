@@ -1,8 +1,8 @@
-# Researchy validation pass — Web2/Web3 prototypes catalog
+# the working check validation pass — Web2/Web3 prototypes catalog
 
 > **Pass date:** 2026-09-24 PT  
 > **Catalog under test:** `use-cases/web2-web3-prototypes-draft.md` (§1–§16 + §17 briefs = **23** rows).  
-> **Method:** Live HTTP (`curl -sI -L`) on every catalog `http(s)` URL; WebFetch/WebSearch for freshness; `/workspace/osfl/sources/ORF_ERRATA.md` controls magnitude claims.  
+> **Method:** Live HTTP (`curl -sI -L`) on every catalog `http(s)` URL; WebFetch/WebSearch for freshness; `whitepapers/ORF_ERRATA.md` controls magnitude claims.  
 > **Stage 0 honesty:** research candidates only — **no Hard Gate passed**.  
 > **Status key:**  
 > - **Validated** — primary URLs live; description still accurate under errata  

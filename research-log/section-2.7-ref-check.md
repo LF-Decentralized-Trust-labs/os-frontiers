@@ -1,6 +1,6 @@
 # Reference check: `release1-section-2.7-closing-the-gaps.md` (Give me Purposise draft) and my own §2 refs
 
-> **Checked:** 9 Oct 2026, ~05:30–05:45 PT. Repo clone `/workspace/osfl-repo` pulled from `origin/main`: still at `9a82a9c` (8 Oct 2026 07:42 PT); no new commits.
+> **Checked:** 9 Oct 2026, ~05:30–05:45 PT. Repo clone `the local clone` pulled from `origin/main`: still at `9a82a9c` (8 Oct 2026 07:42 PT); no new commits.
 > **Canon checked against:** `whitepapers/open-maintenance-framework-omf-v1.0.pdf` (70 pp.), `whitepapers/dospo-whitepaper-v1.0.pdf` (26 pp.), `whitepapers/orf-v1.0.pdf` (50 pp.) with `whitepapers/ORF_ERRATA.md` controlling, using `pdftotext -layout` text. Page numbers are **PDF pages**. `OMF_WHITEPAPER.md` and `DOSPO_WHITEPAPER.md` are 13-line pointer files with no section text.
 > **Section map verified from the PDFs.**
 > - OMF: §1 Web3 Maintainer Crisis p8 · §2 Landscape p10 · §3 Missing p12 · §4 Introducing OMF p14 · §5 Principles p17 · §6 Institutional Legitimacy p19 · §7 Ecosystem Architecture p21 · §8 Program Architecture p23 · §9 Maintainer Sustainment Mechanisms p24 · §10 Contributor Pathways p26 · §11 Infrastructure Lifecycle Support p28 · §12 Funding Architecture p30 (Instrument 1 p31, Instrument 2 p32, Instrument 3 p33) · §13 Operational Governance p36 · §14 Portfolio Stewardship p37 (Dependency Centrality Metric p38) · §15 Implementation Models p40 · §16 Measuring Ecosystem Health p42 · §17 Risks p44 · App A p47 · App B p51 · App C p55 (Federated Co-Funding p56) · App D p58 · App E p61.

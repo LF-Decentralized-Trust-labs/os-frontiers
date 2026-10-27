@@ -24,15 +24,22 @@ Contributions must align with the current repository directory structure:
 
 ```
 LF-Decentralized-Trust-labs/os-frontiers/
-├── dospo/                  # Decentralized OSPO Governance Framework
+├── dospo/                  # Decentralized OSPO governance framework
 ├── omf/                    # Open Maintenance Framework
 ├── orf/                    # Open Replenishment Framework
 ├── evaluator/              # Assessment tools, adapters, and the local preview
 ├── use-cases/              # Stage 0 use-case research and the submission template
 ├── tools/                  # Tooling and protocol integrations (not precedents)
 ├── outreach/               # Adoption one-pager and governance proposal template
-└── docs/                   # Guides, evidence, and precedents/
+├── docs/                   # Guides, evidence, precedents, chains, and surveys
+├── whitepapers/            # Series index, errata, v1.1 manuscript, and the v1.0 PDFs
+├── claims/                 # Claim-validation notes
+├── research-log/           # Working audit trail (not the specification)
+├── LICENSE                 # Apache-2.0 for code
+└── LICENSE-DOCS            # CC-BY-4.0 for documentation
 ```
+
+There is no `contracts/` directory and no `LICENSE-CODE` file. `CODEOWNERS` does not list `/contracts/`. GitHub Pages for this repository is published at https://lf-decentralized-trust-labs.github.io/os-frontiers/.
 
 ---
 

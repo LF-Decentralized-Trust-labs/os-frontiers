@@ -53,7 +53,7 @@ with:
 
 Source: Tidelift 2024, PDF pp. 4–5 and 13 (quotes above). "Entirely unpaid" fits the 47% multi-select answer better than the 60% self-description. Cite the Tidelift 2024 PDF, not the redirecting tidelift.com page. Do not cite STA's 77% (Unverified).
 
-Confidence: High. Both figures were read directly from the publisher's PDFs on 9 October 2026. Tidelift samples are self-selected. Page-by-page verification: [`docs/surveys/researchy-section2-pagecheck.md`](../docs/surveys/researchy-section2-pagecheck.md) and [`docs/surveys/data/tidelift-page-index.md`](../docs/surveys/data/tidelift-page-index.md).
+Confidence: High. Both figures were read directly from the publisher's PDFs on 9 October 2026. Tidelift samples are self-selected. Page-by-page verification: [`docs/surveys/researchy-section2-pagecheck.md`](../research-log/researchy-section2-pagecheck.md) and [`docs/surveys/data/tidelift-page-index.md`](../docs/surveys/data/tidelift-page-index.md).
 
 ## Bibliography lines to add
 

@@ -114,7 +114,7 @@ Unlike donation-based models, POSM attempts to institutionalize open source sust
 - **Where treasury inflow comes from (P6 edge):** each epoch the treasury takes τ = 20% of a reward pot made of transaction fees plus reserve expansion. By Researchy's derivation from on-chain epoch totals (Koios, epochs 588–660), about 0.2% of treasury inflow is fee-derived and about **99.8% is reserve issuance (derived; not an official figure)**. Cite the split as *derived*. Under ORF, issuance is not replenishment, so POSM's return edge is asserted rather than measured.
 - "$300K bounty fully utilized" remains Unverified ($300K was a planned allocation).
 
-Sources and method: [`docs/chains/posm-cycle-chain-map.md`](../chains/posm-cycle-chain-map.md) and [`docs/chains/researchy-chain-check.md`](../chains/researchy-chain-check.md). No Hard Gate is marked passed.
+Sources and method: [`docs/chains/posm-cycle-chain-map.md`](../chains/posm-cycle-chain-map.md) and [`docs/chains/researchy-chain-check.md`](../../research-log/researchy-chain-check.md). No Hard Gate is marked passed.
 
 ---
 

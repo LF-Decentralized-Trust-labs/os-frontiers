@@ -575,7 +575,7 @@ See `synthesis/gaps.md`: expert interviews not done; no independent eight-gate a
 3. Build eight-quarter correlation datasets for Gate 4 Step 1 where history allows.  
 4. Refresh primary packets for Unverified magnitudes (Guild dollars, Polkadot spend, POSM budget lines, Octant epochs, Deep Funding).  
 5. Retypeset ORF PDF incorporating errata; add OMF erratum for the trillion merge.  
-6. Optional: publish the interactive GitHub Pages scaffold under `site/` once the author approves.
+6. The GitHub Pages site is published from `docs/index.html` at https://lf-decentralized-trust-labs.github.io/os-frontiers/ (checked 27 October 2026). There is no separate `site/` directory.
 
 ---
 

@@ -118,7 +118,7 @@ python3 evaluator/cli/quaid_adapter.py intersectmbo/cardano-node
 
 The `PASSED` line from that sample is the hypothetical above. It does not pass a gate.
 
-Local scorer preview, opened from its own folder, not a published site: [`evaluator/preview/index.html`](./evaluator/preview/index.html), with [`evaluator/preview/app.js`](./evaluator/preview/app.js) and [`evaluator/preview/style.css`](./evaluator/preview/style.css). GitHub Pages for this repository is not published.
+The same scorer is published at https://lf-decentralized-trust-labs.github.io/os-frontiers/ (checked 27 October 2026). Source: [`docs/index.html`](./docs/index.html). The files in [`evaluator/preview/`](./evaluator/preview/index.html) are the same preview, and they can still be opened from that folder.
 
 ---
 

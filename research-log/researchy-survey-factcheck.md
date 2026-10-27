@@ -1,6 +1,6 @@
-# Researchy fact-check: OSS survey inventory, STA conflict, release-1 §2 headline figures
+# the working check fact-check: OSS survey inventory, STA conflict, release-1 §2 headline figures
 
-> **Desk:** Researchy (fact-check only; no model changes proposed). **Check date for every item: 2026-10-09** (PT, 05:20–05:50).
+> **Desk:** the working check (fact-check only; no model changes proposed). **Check date for every item: 2026-10-09** (PT, 05:20–05:50).
 > **Method:** live web only (WebSearch, WebFetch, curl). Nothing was signed up for, posted to or contacted. Every PDF was re-downloaded live and hash-compared with the capture in `surveys/data/`. Tidelift 2024/2023, STA evaluation, Census III, HBS and Black Duck were all byte-identical to the captures. The Tidelift 2021 PDF is new.
 > **Pages are PDF page numbers** unless marked "printed".
 > **Files not edited:** survey files, QA files (`chains/top100-qa-*.md`), whitepapers.
@@ -45,7 +45,7 @@
 
 ## 2. Priority item: OMF "59%"
 
-**Verdict: the OMF figure is WRONG for 2024.** USe Me's reading is correct.
+**Verdict: the OMF figure is WRONG for 2024.** the review pass's reading is correct.
 - Tidelift 2024 reports **60%** "quit or considered quitting" (22% quit + 38% considered).
 - 59% is the **2021** figure.
 - The measure is "quit or considered quitting", not "considered quitting".
